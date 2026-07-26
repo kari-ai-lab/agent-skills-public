@@ -25,6 +25,7 @@ If version references conflict with local materials, prefer the official framewo
 
 The following references are required for this skillset and must be cited when producing guidance:
 
+- **Root canon (underneath SAFe itself):** [Agile Manifesto — 12 Principles](https://agilealliance.org/agile101/12-principles-behind-the-agile-manifesto/)
 - **SAFe Lean-Agile Principles (10 principles):** [SAFe Lean-Agile Principles](https://framework.scaledagile.com/safe-lean-agile-principles/)
 - **SAFe Big Picture diagram source:** [SAFe Big Picture](https://framework.scaledagile.com/#big-picture)
 
@@ -33,6 +34,7 @@ Usage requirement:
 - Always validate recommendations against the SAFe Lean-Agile Principles.
 - When team flow, role alignment, event sequencing, or configuration context is discussed, use the SAFe Big Picture as source context.
 - If there is any conflict between local practice and official SAFe guidance, call it out and reference the official source.
+- If a SAFe-specific configuration or ceremony ever conflicts with one of the 12 root Agile principles, flag that conflict explicitly — SAFe's own principles are meant to operationalize the 12, not override them.
 
 ## 📥 Inputs Required
 
@@ -95,11 +97,12 @@ Rules:
 - [ ] Adoption advice separates immediate essentials from phased improvements.
 - [ ] Output references the SAFe Lean-Agile Principles source when defining behavior or decision rules.
 - [ ] Output references the SAFe Big Picture source when describing flow, roles, or event structure.
+- [ ] Any SAFe-specific practice that conflicts with a root Agile Manifesto principle is flagged explicitly, not silently followed.
 
 ---
 
 ## Metadata
 
-- **Version:** 1.0
-- **Last Updated:** 2026-07-19
+- **Version:** 1.1
+- **Last Updated:** 2026-07-25
 - **Author:** Workspace Delivery Skills

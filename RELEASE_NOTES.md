@@ -2,7 +2,7 @@
 
 Status of every skill category in this repo — what's available to use today vs. what's on the roadmap. See [`skills/INDEX.md`](skills/INDEX.md) for the category model and [`README.md`](README.md) for how to use a skill.
 
-## ✅ Available (55 skills across 10 categories)
+## ✅ Available (72 skills across 10 categories)
 
 ### `platform/` — 7 skills
 Engineering/runtime: monorepo, tooling, testing, infra.
@@ -25,7 +25,7 @@ Reusable procedure-style instructions.
 - [`api-builder-google-standard-methods-recipe.md`](skills/recipes/api-builder-google-standard-methods-recipe.md)
 - [`payment-processing-recipe.md`](skills/recipes/payment-processing-recipe.md)
 
-### `delivery/` — 12 skills
+### `delivery/` — 15 skills
 Planning, decomposition, QA, release, workflow execution.
 - [`epic-story-refinement.md`](skills/delivery/epic-story-refinement.md)
 - [`explore-plan-code-commit.md`](skills/delivery/explore-plan-code-commit.md)
@@ -39,8 +39,11 @@ Planning, decomposition, QA, release, workflow execution.
 - [`sprint-goal-drafting.md`](skills/delivery/sprint-goal-drafting.md)
 - [`sprint-success-monitoring.md`](skills/delivery/sprint-success-monitoring.md)
 - [`story-point-calibration.md`](skills/delivery/story-point-calibration.md)
+- [`software-development-life-cycle-modeling.md`](skills/delivery/software-development-life-cycle-modeling.md) — canonical 7-phase SDLC reconciled across Atlassian/IBM/AWS/GeeksforGeeks, plus Waterfall/Iterative/Spiral/Agile model selection
+- [`gherkin-syntax-and-writing-guide.md`](skills/delivery/gherkin-syntax-and-writing-guide.md) — full Gherkin keyword reference and the declarative-vs-imperative writing standard
+- [`behavior-driven-development-and-model-integration.md`](skills/delivery/behavior-driven-development-and-model-integration.md) — BDD's Discovery/Formulation/Automation cycle and Three Amigos model, tied back to DDD, SDLC, and Agile
 
-### `governance/` — 6 skills
+### `governance/` — 9 skills
 Standards, controls, monitoring, policy.
 - [`cost-aware-agent-utilization.md`](skills/governance/cost-aware-agent-utilization.md)
 - [`defect-triage-assistant.md`](skills/governance/defect-triage-assistant.md)
@@ -48,8 +51,11 @@ Standards, controls, monitoring, policy.
 - [`quality-monitoring-model.md`](skills/governance/quality-monitoring-model.md)
 - [`verification-and-self-checking.md`](skills/governance/verification-and-self-checking.md)
 - [`github-push-sensitivity-review.md`](skills/governance/github-push-sensitivity-review.md)
+- [`vulnerability-severity-and-exploit-prioritization.md`](skills/governance/vulnerability-severity-and-exploit-prioritization.md) — combines CVSS severity with EPSS exploit-likelihood into a single remediation-priority tier
+- [`product-security-incident-response-readiness.md`](skills/governance/product-security-incident-response-readiness.md) — audits PSIRT/CSIRT readiness and TLP information-sharing discipline
+- [`privacy-law-awareness-for-product-development.md`](skills/governance/privacy-law-awareness-for-product-development.md) — pre-launch privacy-regime triage across 15+ jurisdictions, feeding legal counsel review
 
-### `Strategy/` — 8 skills
+### `Strategy/` — 10 skills
 Goal-setting, portfolio alignment, strategy evaluation.
 - [`annual-goals-and-quarterly-objectives.md`](skills/Strategy/annual-goals-and-quarterly-objectives.md)
 - [`investment-portfolio-alignment.md`](skills/Strategy/investment-portfolio-alignment.md)
@@ -59,22 +65,33 @@ Goal-setting, portfolio alignment, strategy evaluation.
 - [`product-lifecycle-hierarchy-evaluation-matrix.md`](skills/Strategy/product-lifecycle-hierarchy-evaluation-matrix.md)
 - [`product-revenue-tier-investment-case.md`](skills/Strategy/product-revenue-tier-investment-case.md) (+ interactive companion visual, `product-revenue-tier-investment-case.html`)
 - [`product-proposal-viability-scoring.md`](skills/Strategy/product-proposal-viability-scoring.md)
+- [`target-state-vision-and-phased-roadmap.md`](skills/Strategy/target-state-vision-and-phased-roadmap.md) — target end-state written before vision/roadmap, phased into a 2-3 year roadmap with a year-one client delivery and a continue/rethink guardrail
+- [`house-of-lean-for-product-strategy.md`](skills/Strategy/house-of-lean-for-product-strategy.md) — structural, foundation-up audit of a strategy against the SAFe House of Lean
 
-### `Refinement/` — 3 skills
-Backlog and roadmap refinement techniques.
+### `Refinement/` — 7 skills
+Backlog and roadmap refinement techniques, plus the BRD/PRD/FRD requirements-document family.
 - [`future-workstream-prioritization-wsjf-and-techniques.md`](skills/Refinement/future-workstream-prioritization-wsjf-and-techniques.md)
 - [`refinement-plan-realism-and-capacity-risk.md`](skills/Refinement/refinement-plan-realism-and-capacity-risk.md)
 - [`workstream-prioritization-and-roadmap-refinement.md`](skills/Refinement/workstream-prioritization-and-roadmap-refinement.md)
+- [`business-requirements-document-template.md`](skills/Refinement/business-requirements-document-template.md) — BRD: why (strategic goals, revenue targets, market positioning), bookended for an executive reader
+- [`product-requirements-document-template.md`](skills/Refinement/product-requirements-document-template.md) — PRD: what and for whom, feature/deliverable structure, launch plan
+- [`functional-requirements-document-template.md`](skills/Refinement/functional-requirements-document-template.md) — FRD: how (workflows, system logic, data rules, error handling), plus the canonical NFR category checklist
+- [`product-requirements-discovery-questionnaire.md`](skills/Refinement/product-requirements-discovery-questionnaire.md) — probing interview that pressure-tests a PRD's thinking before drafting
 
 ### `domains/` — 2 skills
 Domain-specific compliance/security guidance.
 - [`pci-dss-req-3-4.md`](skills/domains/pci-dss-req-3-4.md)
 - [`agent-zero-trust-delegation.md`](skills/domains/agent-zero-trust-delegation.md)
 
-### `product/` — 2 skills
+### `product/` — 7 skills
 Product-family overlays.
 - [`systems-thinking-and-domain-driven-design.md`](skills/product/systems-thinking-and-domain-driven-design.md) — foundational lens for this and the `Strategy/`/`Refinement/` categories
 - [`competitor-analysis-synthesizer.md`](skills/product/competitor-analysis-synthesizer.md)
+- [`no-silo-product-operating-model.md`](skills/product/no-silo-product-operating-model.md) — second foundational lens: product's required coupling to corporate strategy and SDLC delivery, plus security/privacy/feature/client-first awareness
+- [`ai-operating-model-for-product-teams.md`](skills/product/ai-operating-model-for-product-teams.md) — diagnoses the AI-adoption "messy middle" and prescribes a paired People/System operating-model redesign
+- [`pm-vs-pmm-role-clarity.md`](skills/product/pm-vs-pmm-role-clarity.md) — PM/PMM scope boundary and Trust/Synergy/Collaboration check
+- [`product-development-life-cycle-modeling.md`](skills/product/product-development-life-cycle-modeling.md) — canonical 7-stage PDLC, with an explicit boundary against SDLC (PDLC contains it, not replaces it)
+- [`product-school-template-toolkit.md`](skills/product/product-school-template-toolkit.md) — catalogs a 25-item external template library with honest gap-flagging against this repo's own skills
 
 ### `Management/` — 6 skills
 Management practice grounded in W. Edwards Deming's work.

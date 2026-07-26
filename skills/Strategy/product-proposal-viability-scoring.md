@@ -6,7 +6,7 @@ Scores a new product/service/solution proposal's viability using three inputs to
 
 ## Target Persona
 
-Chief Product Officer, Head of Product, Portfolio Lead, Strategy Lead, Product Manager sponsoring a new proposal — anyone deciding whether an idea is ready to leave "proposal" and enter refinement (`Refinement/` skills take over from there).
+Chief Product Officer, Head of Product, Portfolio Lead, Strategy Lead, Product Manager sponsoring a new proposal — anyone deciding whether an idea is ready to leave "proposal" and enter refinement (`refinement/` skills take over from there).
 
 ## Inputs Required
 

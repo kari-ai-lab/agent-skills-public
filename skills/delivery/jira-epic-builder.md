@@ -7,7 +7,7 @@ Translates high-level business requirements or a feature brief into structured J
 Product Owner, Technical Product Manager
 
 ## 📥 Inputs Required
-- **Feature Brief:** A paragraph or document explaining what needs to be built and why.
+- **Feature Brief:** A paragraph or document explaining what needs to be built and why. If a full PRD exists (`../refinement/product-requirements-document-template.md`), use its Section 7 Feature/Capability entries directly — one Epic per feature is the expected mapping, with the PRD's Gherkin AC as the starting acceptance criteria rather than written fresh here.
 - **Technical Context (Optional):** Any known architectural constraints or specific systems involved.
 
 ## 📤 Expected Output
@@ -23,7 +23,7 @@ I will provide you with a [Feature Brief].
 Break this feature down into an Agile structure:
 1. **Epic:** Write a concise Epic title and a description that clearly states the user value and business goal.
 2. **User Stories:** Break the Epic down into mutually exclusive, collectively exhaustive User Stories using the format: "As a [User], I want to [Action], so that [Value/Reason]."
-3. **Acceptance Criteria:** For every User Story, write 2-3 Acceptance Criteria using the BDD format (Given [Context], When [Action], Then [Result]).
+3. **Acceptance Criteria:** For every User Story, write 2-3 Acceptance Criteria in Gherkin (Given [Context], When [Action], Then [Result]), written declaratively per `gherkin-syntax-and-writing-guide.md` — describe what the system does, not the literal UI steps, so criteria survive implementation/UI changes.
 
 Ensure the stories are granular enough to be estimated by an engineering team. Do not include implementation details unless specified in the inputs.
 ```
@@ -35,6 +35,6 @@ Ensure the stories are granular enough to be estimated by an engineering team. D
 
 ---
 **Metadata**
-- **Version:** 1.0
-- **Last Updated:** 2024-05-20
+- **Version:** 1.2
+- **Last Updated:** 2026-07-25
 - **Author:** PM Team

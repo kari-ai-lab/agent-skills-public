@@ -4,7 +4,7 @@
 
 Establishes the foundational management lens for this category: W. Edwards Deming's **System of Profound Knowledge** — four interdependent lenses (Appreciation for a System, Knowledge of Variation, Theory of Knowledge, Psychology) that a leader applies together, not separately, before diagnosing a performance problem or changing a management practice.
 
-Like `product/systems-thinking-and-domain-driven-design.md`, this is not a task skill that produces one deliverable — it's a lens run before the other `Management/` skills (`fourteen-points-for-management.md`, `seven-deadly-diseases.md`, `pdsa-improvement-cycle.md`, `red-bead-experiment.md`, `funnel-experiment.md`). Deming was explicit that a leader need not be "eminent in any part" of SoPK to use it — the four parts reinforce each other even when none is mastered in isolation.
+Like `product/systems-thinking-and-domain-driven-design.md`, this is not a task skill that produces one deliverable — it's a lens run before the other `management/` skills (`fourteen-points-for-management.md`, `seven-deadly-diseases.md`, `pdsa-improvement-cycle.md`, `red-bead-experiment.md`, `funnel-experiment.md`). Deming was explicit that a leader need not be "eminent in any part" of SoPK to use it — the four parts reinforce each other even when none is mastered in isolation.
 
 ## 👤 Target Persona
 

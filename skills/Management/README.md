@@ -1,8 +1,10 @@
 # Management Skills
 
-Use this folder for management-practice skills grounded in W. Edwards Deming's work — how leadership diagnoses performance, sets policy, evaluates people, and drives continuous improvement, as distinct from `Strategy/` (what to pursue) and `Refinement/` (what to schedule).
+Use this folder for management-practice skills grounded in W. Edwards Deming's work — how leadership diagnoses performance, sets policy, evaluates people, and drives continuous improvement, as distinct from `strategy/` (what to pursue) and `refinement/` (what to schedule).
 
 > Run `system-of-profound-knowledge.md` first, and treat it alongside `product/systems-thinking-and-domain-driven-design.md` — Deming's "Appreciation for a System" and "Knowledge of Variation" are the same systems-thinking discipline applied specifically to management practice, not a separate philosophy.
+>
+> Historical lineage worth knowing before citing Deming here: per [Lean Manufacturing (Wikipedia)](https://en.wikipedia.org/wiki/Lean_manufacturing), Deming's post-war statistical-quality work in Japan is the direct root of Ohno and Shingo's Toyota Production System, which Womack and Jones later codified as "Lean." The [Lean Enterprise Institute](https://www.lean.org/) and [Lean Essays](https://www.leanessays.com/) (Mary Poppendieck, who first carried lean-manufacturing principles into software) are the living continuation of that lineage — useful supporting sources when a management-practice audit here touches lean/flow reasoning specifically, not just Deming's management writing.
 
 ## Purpose
 
@@ -67,6 +69,6 @@ These skills help leadership:
 
 ## Metadata
 
-- **Version:** 1.0
-- **Last Updated:** 2026-07-24
+- **Version:** 1.1
+- **Last Updated:** 2026-07-25
 - **Author:** Workspace Management Skills

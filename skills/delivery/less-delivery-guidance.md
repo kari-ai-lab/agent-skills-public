@@ -22,6 +22,8 @@ If local playbooks conflict with official LeSS guidance, call out the mismatch a
 
 The following references are required and must be cited when producing guidance:
 
+- **Root canon (underneath LeSS itself):** [Agile Manifesto — 12 Principles](https://agilealliance.org/agile101/12-principles-behind-the-agile-manifesto/)
+- **Craig Larman's wiki** (LeSS co-creator, with Bas Vodde): https://www.craiglarman.com/wiki/index.php?title=Main_Page — his own books, free primers, and adoption case studies (Ericsson, JPMorgan); cite this alongside less.works as a co-creator source, not a secondary opinion.
 - **LeSS framework introduction:** [Introduction](https://less.works/less/framework/introduction)
 - **LeSS principles:** [LeSS Principles Index](https://less.works/less/principles/index)
 - **LeSS rules:** [LeSS Rules](https://less.works/less/rules)
@@ -32,6 +34,7 @@ Usage requirement:
 - Always validate recommendations against LeSS principles and rules.
 - When explaining team structure, events, or end-to-end product flow, use the LeSS Overview Diagram as source context.
 - If an operating model adds layers, handoffs, or local optimizations that conflict with LeSS simplicity, flag it explicitly.
+- If a LeSS-specific rule ever conflicts with one of the 12 root Agile principles, flag that conflict explicitly — LeSS's own principles are meant to operationalize the 12, not override them.
 
 ## 📥 Inputs Required
 
@@ -87,11 +90,12 @@ Rules:
 - [ ] Structural and technical anti-patterns are identified early.
 - [ ] Health indicators and escalation triggers are concrete and actionable.
 - [ ] Output cites principles/rules and uses the LeSS Overview Diagram source when explaining structure.
+- [ ] Any LeSS-specific rule that conflicts with a root Agile Manifesto principle is flagged explicitly, not silently followed.
 
 ---
 
 ## Metadata
 
-- **Version:** 1.0
-- **Last Updated:** 2026-07-19
+- **Version:** 1.2
+- **Last Updated:** 2026-07-25
 - **Author:** Workspace Delivery Skills

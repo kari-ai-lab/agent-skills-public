@@ -4,9 +4,9 @@
 
 Establishes the foundational mindset that every other product skill in this workspace builds on: product thinking starts from systems thinking (structure over symptoms, trade-offs over "perfect solutions," future-orientation over one-off fixes), and Domain-Driven Design (DDD) is the shared discipline that carries that thinking from product decisions into the technical solution — via a common vocabulary and explicit ownership boundaries — so product and engineering make the same call for the same reasons.
 
-This is not a task skill that produces a single deliverable. It is a lens applied before and during other skills (`Strategy/`, `Refinement/`, `delivery/`, `platform/`): run it first on any non-trivial problem, then hand its output into whichever downstream skill fits (strategy definition, roadmap refinement, solution/architecture design).
+This is not a task skill that produces a single deliverable. It is a lens applied before and during other skills (`strategy/`, `refinement/`, `delivery/`, `platform/`): run it first on any non-trivial problem, then hand its output into whichever downstream skill fits (strategy definition, roadmap refinement, solution/architecture design).
 
-See also `Management/system-of-profound-knowledge.md`: Deming's "Appreciation for a System" and "Knowledge of Variation" are this same discipline applied specifically to management practice (performance reviews, targets, reactive policy changes) — use that skill when the decision at hand is about how people or teams are managed, rated, or corrected, rather than about a product/technical solution.
+See also `management/system-of-profound-knowledge.md`: Deming's "Appreciation for a System" and "Knowledge of Variation" are this same discipline applied specifically to management practice (performance reviews, targets, reactive policy changes) — use that skill when the decision at hand is about how people or teams are managed, rated, or corrected, rather than about a product/technical solution.
 
 ## 👤 Target Persona
 

@@ -4,7 +4,7 @@ Use this folder for pre-delivery refinement activities that shape realistic, str
 
 > Run `../product/systems-thinking-and-domain-driven-design.md` first when a workstream involves defining a new solution boundary. Confirm ubiquitous language and bounded-context ownership before a workstream is admitted, so product and engineering aren't discovering term or ownership drift mid-increment.
 >
-> When a workstream is itself a proposed process change (not a product feature), run it through `../Management/pdsa-improvement-cycle.md` as a small-scale, falsifiable trial before admitting it as a full-scope increment, and check any reactive quota/target change against `../Management/funnel-experiment.md` before it's scheduled.
+> When a workstream is itself a proposed process change (not a product feature), run it through `../management/pdsa-improvement-cycle.md` as a small-scale, falsifiable trial before admitting it as a full-scope increment, and check any reactive quota/target change against `../management/funnel-experiment.md` before it's scheduled.
 
 ## Purpose
 
@@ -14,9 +14,23 @@ These skills help teams and product leadership:
 - align planned work to strategy and expected outcomes,
 - enforce category-based capacity allocation (Revenue Generation, Revenue Protection, Platform Stability),
 - evaluate delivery realism without relying on story points,
-- identify early risks for teams/applications with known capacity constraints.
+- identify early risks for teams/applications with known capacity constraints,
+- pressure-test the thinking behind an initiative before it's written up, and write it up across the full requirements hierarchy — BRD (why), PRD (what, for whom), FRD (how) — with non-functional requirements woven into each rather than bolted on separately.
+
+## The Requirements Hierarchy: BRD → PRD → FRD, with NFRs throughout
+
+Three altitudes, one family of documents:
+
+- **BRD** (`business-requirements-document-template.md`) — *why* this is being done: strategic goals, revenue targets, market positioning, at the program/investment level. Approved before a specific initiative is scoped.
+- **PRD** (`product-requirements-document-template.md`) — *what* is being built and for whom, for one specific initiative within an approved BRD.
+- **FRD** (`functional-requirements-document-template.md`) — *how* the system builds it: step-by-step workflows, system logic, data rules, error handling, elaborating one or more PRD features.
+- **Non-Functional Requirements are not a fourth document.** They're woven into every section of all three, at the altitude appropriate to that document (business-level in the BRD, product-level in the PRD, measurable engineering specs in the FRD) — the canonical NFR category checklist lives in the FRD template so it's defined once, not three times inconsistently.
 
 ## Skills Index
+
+- `business-requirements-document-template.md`
+  - The canonical BRD template: Strategic Rationale, Market Positioning, Revenue Targets & Financial Case, Business Objectives, Stakeholders & Governance, Non-Functional Business Requirements, Investment Ask, Risks & Assumptions, Portfolio Fit — bookended by an Executive Summary and Executive Decision Required.
+  - Justifies a program/investment before any specific initiative is scoped into a PRD; draws on `strategy/product-proposal-viability-scoring.md`, `strategy/product-revenue-tier-investment-case.md`, and `strategy/investment-portfolio-alignment.md`.
 
 - `workstream-prioritization-and-roadmap-refinement.md`
   - Defines workstreams using PI/timeline/scope/outcome.
@@ -24,6 +38,18 @@ These skills help teams and product leadership:
   - Applies category capacity allocation and increment admission rules.
   - Produces short-term roadmap sequencing.
   - Captures expected outcomes and non-delivery risks.
+
+- `product-requirements-discovery-questionnaire.md`
+  - Runs a probing, section-by-section interview against the PRD template's structure so a team's thinking is evidenced and owned, not shallow, before drafting begins.
+  - Rates each section Thorough / Partial / Assumption-only and produces owned, dated open questions rather than accepting "we think" as an answer.
+
+- `product-requirements-document-template.md`
+  - The canonical PRD template: Business Overview, Business Case, Constraints, Scope, Problem Statement, Goals & Metrics, Feature/Capability list with Deliverable grouping, Edge & Error Cases, Open Questions, and Launch Plan — bookended by an Executive Summary and Executive Ask per `communication/bookend-communication-structure.md`.
+  - The artifact that satisfies SDLC's Planning/Requirements phase (`delivery/software-development-life-cycle-modeling.md`) and feeds `delivery/jira-epic-builder.md` feature-by-feature; each Feature can be elaborated further into an FRD.
+
+- `functional-requirements-document-template.md`
+  - The canonical FRD template: Actors & Roles, Step-by-Step Workflows, System Logic & Business Rules, Data Requirements, Error Handling & Exception Flows, Integration Requirements, per-topic Non-Functional Requirements, and full traceability back to the PRD/BRD.
+  - Elaborates one or more PRD features into implementation-ready technical detail; consumed at SDLC's Design phase and hosts this workspace's canonical NFR Category Checklist.
 
 - `refinement-plan-realism-and-capacity-risk.md`
   - Validates plan realism without story points.
@@ -36,10 +62,14 @@ These skills help teams and product leadership:
 
 ## Suggested Usage Order
 
-1. Start with `workstream-prioritization-and-roadmap-refinement.md` to define and rank what should be pursued.
-2. Use `future-workstream-prioritization-wsjf-and-techniques.md` to run WSJF-first economic sequencing and apply alternative prioritization methods when needed.
-3. Then run `refinement-plan-realism-and-capacity-risk.md` to test whether the plan is feasible with current readiness and capacity.
-4. Adjust roadmap scope/sequence based on confidence score and risk findings.
+1. For a new program/investment, start with `business-requirements-document-template.md` to build and approve the business case before any specific initiative is scoped.
+2. Within an approved program, use `workstream-prioritization-and-roadmap-refinement.md` to define and rank what should be pursued.
+3. Use `future-workstream-prioritization-wsjf-and-techniques.md` to run WSJF-first economic sequencing and apply alternative prioritization methods when needed.
+4. Once a workstream is admitted, run `product-requirements-discovery-questionnaire.md` to pressure-test the thinking behind it before writing anything up.
+5. Draft the initiative in `product-requirements-document-template.md`, using the questionnaire's answers as input — this is the artifact that gets presented to executives and handed to delivery.
+6. For any feature needing implementation-ready detail, elaborate it in `functional-requirements-document-template.md` before it reaches SDLC Design/Implementation.
+7. Run `refinement-plan-realism-and-capacity-risk.md` against the PRD's feature list to test whether the plan is feasible with current readiness and capacity.
+8. Adjust roadmap scope/sequence based on confidence score and risk findings, then hand the PRD/FRD to `delivery/jira-epic-builder.md` feature-by-feature.
 
 ## Inputs To Gather Before Running These Skills
 
@@ -51,12 +81,19 @@ These skills help teams and product leadership:
 - Historical epic delivery completion counts.
 - Leadership exception policy for over-capacity admissions.
 - Team/application capacity constraints and dependency risks.
+- For a specific initiative moving to PRD: market/competitive research, prior-attempt history, technical constraints from engineering, and the specific ask being made of executive leadership.
+- For a new program moving to BRD: viability/revenue-classification results, competitive positioning, portfolio context, and confirmation of C-level co-authorship.
+- For a feature moving to FRD: the PRD feature's Gherkin ACs, any DDD bounded-context/aggregate-design output, and existing API/data contracts.
 
 ## Output Expectations
 
+- A bookended BRD with a specific fund/don't-fund/prioritize decision requested, business-altitude NFRs stated, and every revenue/market claim sourced.
 - Prioritized, strategy-aligned workstream list.
 - Category-first prioritized list with capacity-fit status.
 - Short-term roadmap with explicit sequencing rationale.
+- A discovery pass rating each PRD section Thorough / Partial / Assumption-only, with owned and dated open questions.
+- A bookended PRD — self-sufficient Executive Summary and Executive Ask, every body section evidenced or explicitly flagged as an open question, non-functional expectations attached per-topic — ready for both executive presentation and delivery handoff.
+- An FRD with precise, implementation-ready workflows, resolved error-handling logic, and per-topic measurable NFRs, fully traceable back to its PRD feature and BRD strategic goal.
 - Certainty score, realism classification, and increment gate recommendation for the plan.
 - Risk register for non-delivery and capacity hotspots.
 
@@ -64,6 +101,6 @@ These skills help teams and product leadership:
 
 ## Metadata
 
-- **Version:** 1.0
-- **Last Updated:** 2026-07-19
+- **Version:** 1.2
+- **Last Updated:** 2026-07-25
 - **Author:** Workspace Refinement Skills

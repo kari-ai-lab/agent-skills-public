@@ -40,12 +40,7 @@ Steps:
 2. For each disease found present, state the incentive or structural root cause sustaining it. A disease rarely persists without something rewarding it — find that mechanism.
 3. Rank found diseases by how directly addressable they are through management practice: 1, 2, 3, 4, and 5 are primarily internal and directly addressable by leadership decision; 6 and 7 are heavily influenced by external systems (healthcare policy, legal system) and require different, often longer-horizon or coalition-based strategies — don't propose the same kind of fix for all seven.
 4. Where Disease 3 (Evaluation of Performance) is present, route to `red-bead-experiment.md` for the underlying variation argument and to `fourteen-points-for-management.md` (12a/12b) for the substitution.
-5. Where Disease 1 or 2 is present, route to `Strategy/product-strategy-and-business-focus.md` and flag the tension directly: a strategy optimized for quarterly numbers cannot simultaneously claim constancy of purpose.
-
-Constraints:
-- Do not diagnose a disease from a single anecdote; require a recurring organizational pattern.
-- Do not propose the same remediation approach for diseases 1-5 as for 6-7 — the latter require different, often external, leverage.
-- Do not let "we have a great mission statement" stand in for evidence against Disease 1 — check whether planning and investment horizons actually match the stated purpose.
+5. Where Disease 1 or 2 is present, route to `strategy/product-strategy-and-business-focus.md` and flag the tension directly: a strategy optimized for quarterly numbers cannot simultaneously claim constancy of purpose.
 ```
 
 ## ✅ Success Criteria / Quality Checklist
@@ -54,7 +49,7 @@ Constraints:
 - [ ] Each disease found present has a stated root-cause incentive or structure, not just a description of the symptom.
 - [ ] Diseases 1-5 and 6-7 are ranked/handled separately given their different addressability.
 - [ ] Disease 3 findings are cross-referenced to `red-bead-experiment.md` and `fourteen-points-for-management.md`.
-- [ ] Disease 1/2 findings are cross-referenced to the relevant `Strategy/` skill with the tension named explicitly.
+- [ ] Disease 1/2 findings are cross-referenced to the relevant `strategy/` skill with the tension named explicitly.
 
 ## Sources
 

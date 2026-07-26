@@ -45,7 +45,10 @@ Produce the result in this order:
      direct/indirect revenue classification and investment gate — don't
      answer this from narrative alone)
    - what does success look like once delivered?
-   - what is the intended client experience?
+   - what is the intended client experience? (pull this from
+     `target-state-vision-and-phased-roadmap.md`'s target end-state
+     description if one exists — don't improvise the future-state
+     experience fresh here)
    - what additional topics, enablers, or dependencies are needed to get there?
 6. Identify what should be de-prioritized or intentionally not pursued.
 7. Summarize the strategic trade-offs and key risks.
@@ -72,6 +75,6 @@ Rules:
 
 ## Metadata
 
-- **Version:** 1.0
-- **Last Updated:** 2026-07-19
+- **Version:** 1.1
+- **Last Updated:** 2026-07-25
 - **Author:** Workspace Strategy Skills

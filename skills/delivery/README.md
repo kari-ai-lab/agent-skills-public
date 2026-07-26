@@ -2,6 +2,24 @@
 
 Use this folder for in-delivery execution support: sprint planning quality, flow monitoring, delivery controls, and continuous improvement practices.
 
+> Root canon check: the [Agile Manifesto's 12 Principles](https://agilealliance.org/agile101/12-principles-behind-the-agile-manifesto/) sit underneath every framework-specific skill in this folder (SAFe, LeSS, or otherwise) — SAFe and LeSS are implementations of these principles, not replacements for them. If a framework-specific practice ever conflicts with a principle (e.g. a process step that works against "working software is the primary measure of progress" or "simplicity — the art of maximizing the amount of work not done"), flag the conflict explicitly rather than silently following the framework.
+>
+> Beyond the Manifesto itself, check the practitioner/thought-leader sources below before authoring or updating a skill here — several of them are the actual co-creators of the methods this folder guides on, not just commentary.
+
+## Reference Sources
+
+Critical sources for agility (agile + lean) skill authoring in this folder — cite the specific page/essay used in a skill's own `## Sources` section.
+
+- **[Ron Jeffries](https://ronjeffries.com/)** — XP co-founder and Agile Manifesto co-author. Personal blog (folding in the earlier XProgramming/SameElephant archives) on TDD, refactoring, and software craftsmanship — practitioner-level, code-in-hand agile writing, not theory.
+- **[Craig Larman's wiki](https://www.craiglarman.com/wiki/index.php?title=Main_Page)** — Craig Larman co-created LeSS (Large-Scale Scrum) with Bas Vodde. Hub for his LeSS books, free primers (feature teams, architecture, use cases), and real adoption case studies (Ericsson, JPMorgan). This is the co-creator's own source — cite it in `less-delivery-guidance.md` alongside less.works, not as a secondary opinion.
+- **[Lean Manufacturing (Wikipedia)](https://en.wikipedia.org/wiki/Lean_manufacturing)** — background on Lean's actual lineage: Deming's post-war statistical-quality work in Japan -> Ohno/Shingo's Toyota Production System -> Womack/Jones's 1996 five principles (Value, Value Stream, Flow, Pull, Perfection). Use this to ground any "Lean" claim in this folder or in `strategy/house-of-lean-for-product-strategy.md` in where the ideas actually came from, rather than treating "Lean" as a SAFe-original term.
+- **[Lean Enterprise Institute (lean.org)](https://www.lean.org/)** — the standing lean-thinking institute (Lean Post articles/podcasts, training, the Lean Summit). Use for current lean-management practice and case studies beyond the historical Wikipedia summary.
+- **[Lean Essays](https://www.leanessays.com/)** — Mary Poppendieck's essay archive (2000-present), the person credited with first applying lean-manufacturing principles to software development. Purpose/Reciprocity/Flow framing; heavy coverage of agile practice, flow, and software delivery specifically, not general manufacturing.
+- **["12 Agile Thought Leaders to Follow" (Agileism)](https://agileism.com/12-agile-thought-leaders-to-follow)** — a discovery index, not a primary source: Jurgen Appelo (Management 3.0), Kent Beck (XP/TDD), Alistair Cockburn (Manifesto co-author, Heart of Agile), James Grenning (Planning Poker), Ron Jeffries, Robert C. Martin (Manifesto co-author, SOLID), Tobias Mayer, Jeff Patton (User Story Mapping), Mary Poppendieck, Michael K Sahota, Ken Schwaber (Scrum co-creator), Dave Snowden (Cynefin). Use this to find the *right* primary source by name rather than citing the listicle itself as the source.
+- **[KPI Fire's "House of Lean"](https://www.kpifire.com/continuous-improvement/house-of-lean/)** — **a different model from SAFe's House of Lean**, do not conflate the two. KPI Fire's version has Respect (for customers/employees/shareholders/environment) as its sole foundation, three objectives (Eliminate Waste, Reduce Variation, Prevent Overburdening) as pillars, and a much larger set of shop-floor tools (SMED, TPM, Standard Work, Kanban, 5S, VSM, Hoshin Kanri) as building blocks — a manufacturing/continuous-improvement-tooling view, versus SAFe's four-pillar/one-goal product-strategy view already captured in `strategy/house-of-lean-for-product-strategy.md`. Treat as complementary background reading on the wider "House of Lean" concept, never as an alternate citation for the SAFe-specific skill.
+- **[MIT Sloan: "10 Agile Ideas Worth Sharing"](https://mitsloan.mit.edu/ideas-made-to-matter/10-agile-ideas-worth-sharing)** — a practitioner-facing list: spiral development cycles, time-boxed sprints, Scrum teams, daily meetings, separating "what" (leadership/priorities) from "how" (team/execution), Kanban, feature prioritization, DevOps, branch-and-merge, and hybridized agile/staged-planning processes. Useful as a quick-reference anchor for these terms when a skill needs a plain, non-vendor explanation of one of them.
+- **[Cucumber documentation](https://cucumber.io/docs/)** — the canonical source for Gherkin syntax and BDD (Behaviour-Driven Development) practice, used in `gherkin-syntax-and-writing-guide.md` and `behavior-driven-development-and-model-integration.md`. BDD is explicitly "a set of plugins for your existing process," not a competing methodology — it runs inside whatever Agile/SAFe/LeSS framework is already in place.
+
 ## Purpose
 
 These skills help teams and delivery leaders:
@@ -14,7 +32,7 @@ These skills help teams and delivery leaders:
 
 ## Relationship To Refinement Folder
 
-Pre-delivery upstream planning now lives in `.agents/skills/Refinement/`.
+Pre-delivery upstream planning now lives in `.agents/skills/refinement/`.
 
 - Use `Refinement` skills to decide what should be committed.
 - Use `delivery` skills to execute and control how committed work is delivered.
@@ -57,6 +75,18 @@ Pre-delivery upstream planning now lives in `.agents/skills/Refinement/`.
 - `explore-plan-code-commit.md`
   - Reinforces the execution discipline of explore, plan, implement, and commit.
 
+- `software-development-life-cycle-modeling.md`
+  - Models the canonical 7-phase SDLC (Planning through Maintenance), reconciled across Atlassian/IBM/AWS/GeeksforGeeks, and the models that arrange those phases differently (Waterfall, Iterative, Spiral, Agile, plus V-Model/Incremental/RAD).
+  - Picks or audits an SDLC model against requirement stability, risk, and team maturity, checks for a DevSecOps checkpoint at every phase, and hands Agile/SAFe/LeSS operational detail to this folder's dedicated skills rather than re-deriving it.
+
+- `gherkin-syntax-and-writing-guide.md`
+  - The full Gherkin keyword reference (Feature/Rule/Scenario/Background/Scenario Outline/Examples/Given-When-Then/tags/Doc Strings/Data Tables) and the declarative-vs-imperative writing standard, with Cucumber's own before/after example.
+  - The syntax/quality standard that `refinement/product-requirements-document-template.md`, `refinement/product-requirements-discovery-questionnaire.md`, and `jira-epic-builder.md` all point to instead of just saying "Gherkin format."
+
+- `behavior-driven-development-and-model-integration.md`
+  - Explains BDD's Discovery/Formulation/Automation cycle and the Three Amigos collaboration model, and connects each step to a workspace skill already using it: Discovery shares Event Storming with DDD's Discover stage; Three Amigos is the concrete mechanism behind `product/no-silo-product-operating-model.md`'s lateral coupling; Formulation's Gherkin output is the PRD/Jira acceptance criteria; Automation runs at SDLC's Testing phase.
+  - Makes explicit that BDD "enhances, doesn't replace" Agile/SAFe/LeSS.
+
 ## Suggested Usage Flow
 
 1. Define sprint intent with `sprint-goal-drafting.md`.
@@ -65,6 +95,8 @@ Pre-delivery upstream planning now lives in `.agents/skills/Refinement/`.
 4. Run day-to-day control using `sprint-success-monitoring.md`.
 5. Apply scaled context when needed via `scaled-agile-delivery-guidance.md` or `less-delivery-guidance.md`.
 6. Close the loop with `retrospective-improvement.md`.
+7. Use `software-development-life-cycle-modeling.md` when standing up a new project's process or auditing an existing one for missing/merged phases — independent of the sprint-by-sprint flow above, since it operates at the model-choice level, not the day-to-day level.
+8. Use `behavior-driven-development-and-model-integration.md` (Discovery via Three Amigos) and `gherkin-syntax-and-writing-guide.md` (Formulation) whenever acceptance criteria are being written — for the PRD's Feature list, for `jira-epic-builder.md`'s Stories, or for a scenario destined for SDLC's Testing phase.
 
 ## Inputs To Gather Before Using Delivery Skills
 
@@ -87,6 +119,6 @@ Pre-delivery upstream planning now lives in `.agents/skills/Refinement/`.
 
 ## Metadata
 
-- **Version:** 1.1
-- **Last Updated:** 2026-07-19
+- **Version:** 1.5
+- **Last Updated:** 2026-07-25
 - **Author:** Workspace Delivery Skills
