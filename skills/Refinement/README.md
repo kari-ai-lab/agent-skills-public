@@ -44,8 +44,9 @@ Three altitudes, one family of documents:
   - Rates each section Thorough / Partial / Assumption-only and produces owned, dated open questions rather than accepting "we think" as an answer.
 
 - `product-requirements-document-template.md`
-  - The canonical PRD template: Business Overview, Business Case, Constraints, Scope, Problem Statement, Goals & Metrics, Feature/Capability list with Deliverable grouping, Edge & Error Cases, Open Questions, and Launch Plan — bookended by an Executive Summary and Executive Ask per `communication/bookend-communication-structure.md`.
+  - The canonical PRD template: Business Overview, Business Case, Constraints, Scope, Problem Statement, Goals & Metrics, Feature/Capability list with Deliverable grouping, Edge & Error Cases, Open Questions, Launch Plan, and a conditional AI Feature Supplement (Section 11) — bookended by an Executive Summary and Executive Ask per `communication/bookend-communication-structure.md`.
   - The artifact that satisfies SDLC's Planning/Requirements phase (`delivery/software-development-life-cycle-modeling.md`) and feeds `delivery/jira-epic-builder.md` feature-by-feature; each Feature can be elaborated further into an FRD.
+  - For AI/LLM-powered initiatives, Section 11 pulls task allocation from `product/ai-human-task-allocation-model.md`, model tier from `platform/llm-model-contract.md`, failure-mode UX from `product/user-flow-mapping.md`, and prompt design from `product/ai-feature-prompt-design.md` — closing Group B's AI PRD/AI User Flow/Prompting Template gaps as an extension of this template rather than parallel documents.
 
 - `functional-requirements-document-template.md`
   - The canonical FRD template: Actors & Roles, Step-by-Step Workflows, System Logic & Business Rules, Data Requirements, Error Handling & Exception Flows, Integration Requirements, per-topic Non-Functional Requirements, and full traceability back to the PRD/BRD.
@@ -60,6 +61,11 @@ Three altitudes, one family of documents:
 - `future-workstream-prioritization-wsjf-and-techniques.md`
   - Applies WSJF-first prioritization with a documented fallback toolkit (MoSCoW, Kano, Priority Poker, 100-dollar test, CoD, ROI, RICE, value vs effort, opportunity scoring) for future workstream sequencing.
 
+- `ai-driven-work-sizing-and-token-budgets.md`
+  - Sizes AI-driven (agent-executed) work using the workspace's collapsed Epic → Task hierarchy (no Story layer; AC lives at the Epic and is validated at delivery), since story-point/sprint-day sizing doesn't transfer to a token-metered executor.
+  - Produces a tier-weighted token budget (`estimated_tokens × tier_cost_weight`, per `platform/llm-model-contract.md`'s fast/primary/heavy tiers, no retry multiplier) alongside a SEPARATE human-hours budget for Human-owned/Never-AI tasks — never blended into one number.
+  - Consumes `product/ai-human-task-allocation-model.md`'s per-task classification as a required input, and feeds `delivery/retrospective-improvement.md`'s estimated-vs-actual token/hours comparison for forward calibration.
+
 ## Suggested Usage Order
 
 1. For a new program/investment, start with `business-requirements-document-template.md` to build and approve the business case before any specific initiative is scoped.
@@ -70,6 +76,7 @@ Three altitudes, one family of documents:
 6. For any feature needing implementation-ready detail, elaborate it in `functional-requirements-document-template.md` before it reaches SDLC Design/Implementation.
 7. Run `refinement-plan-realism-and-capacity-risk.md` against the PRD's feature list to test whether the plan is feasible with current readiness and capacity.
 8. Adjust roadmap scope/sequence based on confidence score and risk findings, then hand the PRD/FRD to `delivery/jira-epic-builder.md` feature-by-feature.
+9. For any Epic that is AI-driven (agent-executed) rather than human-sprint-executed, run `ai-driven-work-sizing-and-token-budgets.md` instead of story-point sizing — after `product/ai-human-task-allocation-model.md` has classified its tasks — to produce the tier-weighted token budget and separate human-hours budget.
 
 ## Inputs To Gather Before Running These Skills
 
@@ -84,6 +91,7 @@ Three altitudes, one family of documents:
 - For a specific initiative moving to PRD: market/competitive research, prior-attempt history, technical constraints from engineering, and the specific ask being made of executive leadership.
 - For a new program moving to BRD: viability/revenue-classification results, competitive positioning, portfolio context, and confirmation of C-level co-authorship.
 - For a feature moving to FRD: the PRD feature's Gherkin ACs, any DDD bounded-context/aggregate-design output, and existing API/data contracts.
+- For an AI-driven Epic: its `product/ai-human-task-allocation-model.md` task classification, the model tier assigned per AI-owned task, raw token estimates, and any historical estimated-vs-actual token/hours data from prior comparable work.
 
 ## Output Expectations
 
@@ -101,6 +109,6 @@ Three altitudes, one family of documents:
 
 ## Metadata
 
-- **Version:** 1.2
-- **Last Updated:** 2026-07-25
+- **Version:** 1.4
+- **Last Updated:** 2026-08-03
 - **Author:** Workspace Refinement Skills

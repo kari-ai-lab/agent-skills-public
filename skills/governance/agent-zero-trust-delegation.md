@@ -7,6 +7,7 @@ A reference skeleton for designing or reviewing how AI agents authenticate and g
 Platform/security engineer designing an agent-to-application authorization model, or an agent reviewing/implementing agent access controls for a system it's integrating with.
 
 ## 📥 Inputs Required
+- **Task allocation decision** — has `product/ai-human-task-allocation-model.md` already classified which tasks in this workflow are AI-owned, Human-owned, Interchangeable, or Never-AI? That skill answers the design-time "should this route to AI at all" question; this skill assumes that answer exists and covers the runtime "how is the agent's access to an AI-owned/Interchangeable task properly bounded" question instead. Run that skill first if it hasn't been.
 - **Platform's existing auth model** — how do human users authenticate today, and what roles/permissions exist to delegate?
 - **Agent use cases** — what workflows does the agent need to perform (read-only lookups, write actions, multi-step workflows)?
 - **Human-in-the-loop model** — is there always a human present who is initiating/supervising the agent's task, or can the agent run unattended?

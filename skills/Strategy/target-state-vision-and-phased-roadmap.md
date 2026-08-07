@@ -4,6 +4,8 @@
 
 Builds product strategy that starts from a concrete target end-state — what "great" looks like and what users should be able to expect once it exists — before any vision statement or roadmap is written. Derives the product vision from that target state, then decomposes the target state into a 2-3 year phased delivery roadmap that guarantees a client-facing delivery inside year one, and applies a binary guardrail (continue vs. full vision rethink) at every phase evaluation.
 
+**This is where "plan big, execute small" thinking actually runs**, per `product/plan-big-execute-small-and-complexity-conservation.md`: the target end-state here is the big, ambitious plan; the year-one client delivery and phased roadmap are the small, fast-feedback execution. If either side collapses into the other — a target end-state quietly scaled down to match what the first release can ship, or a first release trying to ship most of the big vision at once — that's a failure of this pairing, not a reasonable scoping call.
+
 ## Target Persona
 
 Chief Product Officer, Head of Product, Product Director, Founder, Strategy Lead — anyone defining or re-anchoring a multi-year product direction.
@@ -117,6 +119,6 @@ Rules:
 
 ## Metadata
 
-- **Version:** 1.0
-- **Last Updated:** 2026-07-25
+- **Version:** 1.1
+- **Last Updated:** 2026-07-27
 - **Author:** Workspace Strategy Skills

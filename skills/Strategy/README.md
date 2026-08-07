@@ -21,6 +21,7 @@ These skills help product leadership:
 - Evaluate quarterly whether strategy is on track, drifting, or needs correction.
 - Clarify why the organization should invest, what success looks like, and what client experience should become.
 - Audit whether a strategy is structurally sound (leadership foundation, people/culture, flow, innovation, relentless improvement, and a full three-part value goal) rather than just well-argued.
+- Ground pricing, positioning, and macro-risk awareness in established economic models rather than intuition, so a great product doesn't lose its market to a mispriced segment strategy or a macro cycle nobody was watching.
 
 ## Skills Index
 
@@ -45,6 +46,11 @@ These skills help product leadership:
   - Splits the target state into a 2-3 year phased roadmap, each phase naming the assumption it tests and its client feedback mechanism, with a guaranteed client-facing delivery inside year one.
   - Applies a binary guardrail at every phase evaluation: continue (target state still largely reachable — hand adjustment mechanics to `quarterly-strategy-evaluation-and-adjustment.md`) vs. full vision rethink (a core assumption was completely falsified).
 
+- `mission-and-vision-critical-thought.md`
+  - Formulates the mission statement (ongoing, present-tense purpose) as the counterpart to vision (future end-state) — does not re-derive vision, routes to `target-state-vision-and-phased-roadmap.md` if none exists yet.
+  - Scores both mission and vision against a five-test manager checklist (decision-driving, recall, genericness, trade-off survival, Collins' distinctive-impact test), each requiring named evidence against a real recent trade-off.
+  - Produces a five-part operationalization plan (owner + cadence per part) so the statements stay alive rather than becoming wallpaper, and benchmarks against competitor mission/vision language via `product/competitor-analysis-synthesizer.md`.
+
 - `annual-goals-and-quarterly-objectives.md`
   - Defines annual goals and measurable quarterly checkpoints.
   - Establishes review triggers and adjustment cadence across the year.
@@ -66,18 +72,34 @@ These skills help product leadership:
   - Reviews quarterly whether strategy is on track, drifting, or needs reset.
   - Recommends leadership adjustments based on outcomes and changed assumptions.
 
+- `controlled-experiment-design-and-decision-rules.md`
+  - Runs a controlled experiment (A/B test) from hypothesis through a binary SHIP/NO-SHIP/INCONCLUSIVE decision, closing the workspace's gap between shipping a change and knowing whether it actually worked.
+  - Treats pricing experiments as methodologically distinct from UI/feature tests — branches by context (transactional/subscription/negotiated), each with its own duration, guardrails, and a mandatory fairness/legal/trust risk check that runs regardless of the statistical result.
+  - Cross-referenced from `microeconomic-pricing-and-positioning-models.md` (any live price-move recommendation should route through this skill's pricing branch before shipping) and adjacent to, but distinct from, `management/pdsa-improvement-cycle.md` (process improvement) and `management/funnel-experiment.md` (variation/tampering diagnostic).
+
+- `microeconomic-pricing-and-positioning-models.md`
+  - Grounds pricing and positioning decisions in named economic models (Marshall's elasticity, Pigou's price discrimination, Kahneman/Tversky's behavioral framing, Nash's game theory, Robinson/Chamberlin's monopolistic competition, Tirole's two-sided markets, Simonson's compromise effect, the Huber/Payne/Puto decoy effect, Veblen goods) instead of intuition.
+  - Requires a competitive-response check before any price move, an explicit differentiator before claiming a positioning strategy, and — for a full product line — identifies the margin-engine item(s) first before evaluating any premium anchor/decoy by its effect on that item's conversion rather than its own standalone economics.
+
+- `macroeconomic-risk-awareness-for-product-strategy.md`
+  - Grounds macro-risk awareness in named models (Keynes, Friedman, Hayek, Minsky, Schumpeter, Akerlof/Shiller) so systemic economic conditions — not just competitors — are recognized as a threat to even a well-built product.
+  - Carries the practical PESTLE macro-scan (six factors, likelihood/impact scoring, six-month re-run cadence) and an explicit note distinguishing it from Porter's Five Forces (industry structure, not macro-environment).
+
 ## Suggested Usage Order
 
 1. Start with `product-and-solution-portfolio-definition.md` to define products, solutions, overlap boundaries, and offering rationale.
 2. Use `target-state-vision-and-phased-roadmap.md` to define the target end-state and vision before sequencing anything, and to lay out the 2-3 year phased roadmap (with its year-one client delivery and continue/rethink guardrail) that the rest of this folder's skills operate inside of.
-3. Use `product-lifecycle-hierarchy-evaluation-matrix.md` to place the offering on both the lifecycle and value-hierarchy axes before arguing about investment.
-4. Use `product-revenue-tier-investment-case.md` on any product/solution whose continued or new investment is in question, to get a quantitative direct/indirect revenue classification and an explicit investment gate decision.
-5. For a brand-new proposal specifically, use `product-proposal-viability-scoring.md` to combine the grid position, strategic-alignment weight, and evidence bar into a single ready-for-refinement decision before it enters `refinement/`.
-6. Use `annual-goals-and-quarterly-objectives.md` to define year intent and quarterly measures for the current phase of the roadmap.
-7. Use `product-strategy-and-business-focus.md` to determine where to play, what to solve, and what critical business topics must be supported.
-8. Use `investment-portfolio-alignment.md` to connect the strategy to initiatives and investment decisions.
-9. Use `house-of-lean-for-product-strategy.md` as the final structural completeness check before the strategy is considered finalized — a bottom-up audit of foundation, leadership, all four pillars, and the full three-part Value goal, independent of whether the content above scored well on its own terms.
-10. Use `quarterly-strategy-evaluation-and-adjustment.md` each quarter to test whether strategy is being delivered or needs correction; escalate to `target-state-vision-and-phased-roadmap.md`'s guardrail if a phase evaluation reveals complete deviation from the target end-state, not just quarterly drift.
+3. Use `mission-and-vision-critical-thought.md` right after, to formulate the mission counterpart to that vision and run both through the manager critical-thought checklist before treating either as finished.
+4. Use `product-lifecycle-hierarchy-evaluation-matrix.md` to place the offering on both the lifecycle and value-hierarchy axes before arguing about investment.
+5. Use `product-revenue-tier-investment-case.md` on any product/solution whose continued or new investment is in question, to get a quantitative direct/indirect revenue classification and an explicit investment gate decision.
+6. For a brand-new proposal specifically, use `product-proposal-viability-scoring.md` to combine the grid position, strategic-alignment weight, and evidence bar into a single ready-for-refinement decision before it enters `refinement/`.
+7. Use `annual-goals-and-quarterly-objectives.md` to define year intent and quarterly measures for the current phase of the roadmap.
+8. Use `product-strategy-and-business-focus.md` to determine where to play, what to solve, and what critical business topics must be supported.
+9. Use `investment-portfolio-alignment.md` to connect the strategy to initiatives and investment decisions.
+10. Use `house-of-lean-for-product-strategy.md` as the final structural completeness check before the strategy is considered finalized — a bottom-up audit of foundation, leadership, all four pillars, and the full three-part Value goal, independent of whether the content above scored well on its own terms.
+11. Use `quarterly-strategy-evaluation-and-adjustment.md` each quarter to test whether strategy is being delivered or needs correction; escalate to `target-state-vision-and-phased-roadmap.md`'s guardrail if a phase evaluation reveals complete deviation from the target end-state, not just quarterly drift.
+12. Use `microeconomic-pricing-and-positioning-models.md` whenever a pricing or positioning decision is being made, and `macroeconomic-risk-awareness-for-product-strategy.md` (including its PESTLE scan) on the same cadence as step 11's quarterly review — both feed the same evaluation, not a separate process.
+13. Use `controlled-experiment-design-and-decision-rules.md` to validate any shipped or proposed change (UI/feature or pricing) with a controlled experiment before treating step 11/12's outcomes as settled — a pricing recommendation from step 12 should route through this skill's pricing branch rather than ship on its standalone economic rationale alone.
 
 ## Inputs To Gather
 
@@ -91,6 +113,7 @@ These skills help product leadership:
 - Candidate initiatives, investment capacity, and delivery constraints.
 - Current performance baseline and customer experience pain points.
 - Current leadership decision mechanics, flow characteristics between teams/phases, innovation funding model, and improvement cadence, for the House of Lean structural audit.
+- Current pricing model, price-sensitivity signals, and competitive set, for pricing/positioning; current rate/inflation/sentiment conditions and macro-review cadence, for macro-risk awareness.
 
 ## Output Expectations
 
@@ -103,11 +126,12 @@ These skills help product leadership:
 - Explicit view of what success and client experience should look like.
 - A bottom-up House of Lean structural verdict: standing, or the single lowest-level gap (foundation, leadership, a named pillar, or an incomplete Value goal) that must be fixed before the strategy proceeds.
 - Quarterly review outputs showing whether strategy is on track or needs adjustment.
+- A pricing/positioning recommendation naming its specific economic-model justification, and a PESTLE scan with likelihood/impact scoring plus a named next-review date.
 
 ---
 
 ## Metadata
 
-- **Version:** 1.5
-- **Last Updated:** 2026-07-25
+- **Version:** 1.9
+- **Last Updated:** 2026-08-03
 - **Author:** Workspace Strategy Skills

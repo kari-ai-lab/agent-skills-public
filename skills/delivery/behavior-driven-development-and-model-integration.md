@@ -131,6 +131,7 @@ Rules:
 
 ## Related Workspace Skills
 
+- `bdd-framework-selection.md` — decides whether Cucumber/Gherkin is even the right automation tool for this suite (vs. Karate for API/contract-heavy suites, Gauge for very large parallel-runtime-bound suites) before this skill's Automation step commits to Cucumber by default.
 - `gherkin-syntax-and-writing-guide.md` — the syntax/quality standard for BDD's Formulation output.
 - `product/systems-thinking-and-domain-driven-design.md` — shares the Event Storming technique with BDD's Discovery step.
 - `product/no-silo-product-operating-model.md` — the Three Amigos model is a concrete instance of its required lateral coupling to SDLC/engineering.

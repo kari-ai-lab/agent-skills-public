@@ -5,6 +5,8 @@ Use this folder for management-practice skills grounded in W. Edwards Deming's w
 > Run `system-of-profound-knowledge.md` first, and treat it alongside `product/systems-thinking-and-domain-driven-design.md` — Deming's "Appreciation for a System" and "Knowledge of Variation" are the same systems-thinking discipline applied specifically to management practice, not a separate philosophy.
 >
 > Historical lineage worth knowing before citing Deming here: per [Lean Manufacturing (Wikipedia)](https://en.wikipedia.org/wiki/Lean_manufacturing), Deming's post-war statistical-quality work in Japan is the direct root of Ohno and Shingo's Toyota Production System, which Womack and Jones later codified as "Lean." The [Lean Enterprise Institute](https://www.lean.org/) and [Lean Essays](https://www.leanessays.com/) (Mary Poppendieck, who first carried lean-manufacturing principles into software) are the living continuation of that lineage — useful supporting sources when a management-practice audit here touches lean/flow reasoning specifically, not just Deming's management writing.
+>
+> **`team-of-teams-organizational-adaptability.md` is a second, distinct management philosophy in this folder — not Deming-grounded, and not a replacement for the lens above.** Where the Deming skills audit whether a specific *practice* is sound, McChrystal's Team of Teams audits whether the *organizational structure itself* can move information and decisions fast enough for a complex, networked environment. Run both when the question is genuinely structural — they answer different questions and neither substitutes for the other.
 
 ## Purpose
 
@@ -15,6 +17,7 @@ These skills help leadership:
 - Distinguish real signals from ordinary variation, before reacting to a single data point.
 - Run improvement as a disciplined, falsifiable, repeating cycle rather than a one-shot initiative or a slogan.
 - Recognize the deepest, most structural failure modes (the seven diseases) that block improvement regardless of how good any single practice is.
+- Assess whether the organization's structure itself (information flow, decision authority, team autonomy) can adapt fast enough for a complex, networked environment — distinct from whether any single practice is sound.
 
 ## Skills Index
 
@@ -42,6 +45,10 @@ These skills help leadership:
   - Catches tampering: reacting to a single result or normal variation by adjusting a process, policy, quota, or standard, which reliably makes a stable system worse.
   - Names the specific tampering pattern (overcorrection, chasing the last result, recalibrating off the last data point) rather than leaving it as a vague "that seems reactive."
 
+- `team-of-teams-organizational-adaptability.md`
+  - McChrystal's four pillars (Trust, Common Purpose, Shared Consciousness, Empowered Execution) as a structural-adaptability audit, distinct from the Deming-grounded skills above — checks whether the organization's structure moves information/decisions fast enough for a complex, networked environment, not whether a specific practice is well-designed.
+  - Requires confirming the environment actually needs this model (genuinely complex/fast-changing) before recommending it, and a named mechanism as evidence for each pillar rather than an assumed cultural claim.
+
 ## Suggested Usage Order
 
 1. Start with `system-of-profound-knowledge.md` on any non-trivial management decision — it routes to the other five skills.
@@ -49,6 +56,7 @@ These skills help leadership:
 3. Use `fourteen-points-for-management.md` to audit the specific practice once the diagnostics above have run.
 4. Use `seven-deadly-diseases.md` periodically (quarterly/annually) as an organization-level structural check, independent of any single decision.
 5. Use `pdsa-improvement-cycle.md` to actually implement any change that survives the above — as a small-scale, falsifiable test, not a full rollout.
+6. Use `team-of-teams-organizational-adaptability.md` separately, whenever the actual question is about organizational structure/adaptability rather than a specific practice — it doesn't sit in this same sequence, since it answers a different question.
 
 ## Inputs To Gather
 
@@ -57,6 +65,7 @@ These skills help leadership:
 - Whether a control-chart-equivalent baseline exists for what counts as normal variation.
 - Who is compared, rated, or rewarded by the practice, and on what basis.
 - The planning/incentive time horizon currently in force (quarterly vs. multi-year).
+- For a structural-adaptability question: how information/decisions currently flow, evidence for each Team of Teams pillar, and the specific complexity/speed problem in play.
 
 ## Output Expectations
 
@@ -64,11 +73,12 @@ These skills help leadership:
 - Explicit common-cause/special-cause classification before any reactive change is approved.
 - Point-by-point and disease-by-disease audits with named mechanisms and substitutions, not generic restatements.
 - Any change proposed enters a PDSA cycle at small scale with a falsifiable prediction, rather than a full rollout on belief alone.
+- A four-pillar structural-adaptability assessment, with environment-fit confirmed first and the weakest pillar named with a concrete (not slogan-level) fix.
 
 ---
 
 ## Metadata
 
-- **Version:** 1.1
-- **Last Updated:** 2026-07-25
+- **Version:** 1.2
+- **Last Updated:** 2026-07-27
 - **Author:** Workspace Management Skills

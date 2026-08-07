@@ -2,9 +2,9 @@
 
 Status of every skill category in this repo — what's available to use today vs. what's on the roadmap. See [`skills/INDEX.md`](skills/INDEX.md) for the category model and [`README.md`](README.md) for how to use a skill.
 
-## ✅ Available (72 skills across 10 categories)
+## ✅ Available (102 skills across 12 categories)
 
-### `platform/` — 7 skills
+### `platform/` — 8 skills
 Engineering/runtime: monorepo, tooling, testing, infra.
 - [`api-builder.md`](skills/platform/api-builder.md)
 - [`llm-model-contract.md`](skills/platform/llm-model-contract.md)
@@ -13,6 +13,11 @@ Engineering/runtime: monorepo, tooling, testing, infra.
 - [`context-management.md`](skills/platform/context-management.md)
 - [`session-management-and-failure-patterns.md`](skills/platform/session-management-and-failure-patterns.md)
 - [`tooling-and-mcp-servers.md`](skills/platform/tooling-and-mcp-servers.md)
+- [`mcp-server-development.md`](skills/platform/mcp-server-development.md) — adapted from Anthropic's `mcp-builder` skill: the four-phase MCP server build workflow (Research/Plan, Implement, Review/Test via MCP Inspector, Evaluate via 10 realistic questions)
+
+### `engineering/` — 1 skill (new category)
+UI/frontend visual and interaction design discipline.
+- [`frontend-design-principles.md`](skills/engineering/frontend-design-principles.md) — adapted from Anthropic's `frontend-design` skill: ground every choice in the subject, hero-as-thesis, name and avoid the three common AI-generated visual defaults, two-pass brainstorm-then-critique workflow
 
 ### `recipes/` — 8 skills
 Reusable procedure-style instructions.
@@ -25,14 +30,14 @@ Reusable procedure-style instructions.
 - [`api-builder-google-standard-methods-recipe.md`](skills/recipes/api-builder-google-standard-methods-recipe.md)
 - [`payment-processing-recipe.md`](skills/recipes/payment-processing-recipe.md)
 
-### `delivery/` — 15 skills
+### `delivery/` — 17 skills
 Planning, decomposition, QA, release, workflow execution.
 - [`epic-story-refinement.md`](skills/delivery/epic-story-refinement.md)
 - [`explore-plan-code-commit.md`](skills/delivery/explore-plan-code-commit.md)
 - [`jira-epic-builder.md`](skills/delivery/jira-epic-builder.md)
 - [`less-delivery-guidance.md`](skills/delivery/less-delivery-guidance.md)
 - [`prompting-precision.md`](skills/delivery/prompting-precision.md)
-- [`retrospective-improvement.md`](skills/delivery/retrospective-improvement.md)
+- [`retrospective-improvement.md`](skills/delivery/retrospective-improvement.md) — now includes an estimated-vs-actual token/hours comparison step for AI-driven work
 - [`rich-context-input.md`](skills/delivery/rich-context-input.md)
 - [`scaled-agile-delivery-guidance.md`](skills/delivery/scaled-agile-delivery-guidance.md)
 - [`sprint-capacity-planning.md`](skills/delivery/sprint-capacity-planning.md)
@@ -42,8 +47,10 @@ Planning, decomposition, QA, release, workflow execution.
 - [`software-development-life-cycle-modeling.md`](skills/delivery/software-development-life-cycle-modeling.md) — canonical 7-phase SDLC reconciled across Atlassian/IBM/AWS/GeeksforGeeks, plus Waterfall/Iterative/Spiral/Agile model selection
 - [`gherkin-syntax-and-writing-guide.md`](skills/delivery/gherkin-syntax-and-writing-guide.md) — full Gherkin keyword reference and the declarative-vs-imperative writing standard
 - [`behavior-driven-development-and-model-integration.md`](skills/delivery/behavior-driven-development-and-model-integration.md) — BDD's Discovery/Formulation/Automation cycle and Three Amigos model, tied back to DDD, SDLC, and Agile
+- [`bdd-framework-selection.md`](skills/delivery/bdd-framework-selection.md) — decision gate for Cucumber vs. Karate vs. Gauge by test-suite layer, before defaulting to Cucumber
+- [`spec-driven-development.md`](skills/delivery/spec-driven-development.md) — adapted from GitHub's Spec Kit and Kiro: translates an approved FRD into an AI-executable spec, plus a workspace-authored Commercialization Validation Gate (use-case coverage classification, independent human/AI validation, roadmap feedback loop)
 
-### `governance/` — 9 skills
+### `governance/` — 18 skills
 Standards, controls, monitoring, policy.
 - [`cost-aware-agent-utilization.md`](skills/governance/cost-aware-agent-utilization.md)
 - [`defect-triage-assistant.md`](skills/governance/defect-triage-assistant.md)
@@ -54,8 +61,13 @@ Standards, controls, monitoring, policy.
 - [`vulnerability-severity-and-exploit-prioritization.md`](skills/governance/vulnerability-severity-and-exploit-prioritization.md) — combines CVSS severity with EPSS exploit-likelihood into a single remediation-priority tier
 - [`product-security-incident-response-readiness.md`](skills/governance/product-security-incident-response-readiness.md) — audits PSIRT/CSIRT readiness and TLP information-sharing discipline
 - [`privacy-law-awareness-for-product-development.md`](skills/governance/privacy-law-awareness-for-product-development.md) — pre-launch privacy-regime triage across 15+ jurisdictions, feeding legal counsel review
+- [`agent-zero-trust-delegation.md`](skills/governance/agent-zero-trust-delegation.md) — moved from `domains/`; agent identity/delegation-grant/TTL model for AI-agent authorization
+- [`pci-dss-applicability-and-scoping.md`](skills/governance/pci-dss-applicability-and-scoping.md) — PCI compliance entry-point navigator
+- [`pci-dss-req-3-4.md`](skills/governance/pci-dss-req-3-4.md) — moved from `domains/`; PAN-unreadability requirement (numbering corrected to 3.5 under v4.0.1)
+- [`pci-dss-req-4-transmission-encryption.md`](skills/governance/pci-dss-req-4-transmission-encryption.md), [`pci-dss-req-6-secure-systems-and-software.md`](skills/governance/pci-dss-req-6-secure-systems-and-software.md), [`pci-dss-req-8-identify-authenticate-access.md`](skills/governance/pci-dss-req-8-identify-authenticate-access.md) — requirement-level compliance chunks
+- [`pci-secure-software-lifecycle-and-devsecops.md`](skills/governance/pci-secure-software-lifecycle-and-devsecops.md), [`pci-secure-software-standard-requirements.md`](skills/governance/pci-secure-software-standard-requirements.md), [`pci-tsp-token-service-provider-requirements.md`](skills/governance/pci-tsp-token-service-provider-requirements.md) — full PCI compliance family
 
-### `Strategy/` — 10 skills
+### `Strategy/` — 14 skills
 Goal-setting, portfolio alignment, strategy evaluation.
 - [`annual-goals-and-quarterly-objectives.md`](skills/Strategy/annual-goals-and-quarterly-objectives.md)
 - [`investment-portfolio-alignment.md`](skills/Strategy/investment-portfolio-alignment.md)
@@ -67,55 +79,69 @@ Goal-setting, portfolio alignment, strategy evaluation.
 - [`product-proposal-viability-scoring.md`](skills/Strategy/product-proposal-viability-scoring.md)
 - [`target-state-vision-and-phased-roadmap.md`](skills/Strategy/target-state-vision-and-phased-roadmap.md) — target end-state written before vision/roadmap, phased into a 2-3 year roadmap with a year-one client delivery and a continue/rethink guardrail
 - [`house-of-lean-for-product-strategy.md`](skills/Strategy/house-of-lean-for-product-strategy.md) — structural, foundation-up audit of a strategy against the SAFe House of Lean
+- [`mission-and-vision-critical-thought.md`](skills/Strategy/mission-and-vision-critical-thought.md) — formulates mission as vision's counterpart, plus a five-test manager checklist (decision-driving, recall, genericness, trade-off survival, distinctive-impact)
+- [`microeconomic-pricing-and-positioning-models.md`](skills/Strategy/microeconomic-pricing-and-positioning-models.md) — grounds pricing/positioning in named economic models (Marshall, Pigou, Kahneman/Tversky, Nash, Tirole, Simonson, the decoy effect, Veblen goods)
+- [`macroeconomic-risk-awareness-for-product-strategy.md`](skills/Strategy/macroeconomic-risk-awareness-for-product-strategy.md) — Keynes/Friedman/Hayek/Minsky/Schumpeter/Akerlof-Shiller-grounded macro-risk awareness, plus a practical PESTLE scan
+- [`controlled-experiment-design-and-decision-rules.md`](skills/Strategy/controlled-experiment-design-and-decision-rules.md) — A/B test hypothesis-to-decision workflow, with pricing experiments treated as methodologically distinct from UI/feature tests
 
-### `Refinement/` — 7 skills
+### `Refinement/` — 8 skills
 Backlog and roadmap refinement techniques, plus the BRD/PRD/FRD requirements-document family.
 - [`future-workstream-prioritization-wsjf-and-techniques.md`](skills/Refinement/future-workstream-prioritization-wsjf-and-techniques.md)
 - [`refinement-plan-realism-and-capacity-risk.md`](skills/Refinement/refinement-plan-realism-and-capacity-risk.md)
 - [`workstream-prioritization-and-roadmap-refinement.md`](skills/Refinement/workstream-prioritization-and-roadmap-refinement.md)
 - [`business-requirements-document-template.md`](skills/Refinement/business-requirements-document-template.md) — BRD: why (strategic goals, revenue targets, market positioning), bookended for an executive reader
-- [`product-requirements-document-template.md`](skills/Refinement/product-requirements-document-template.md) — PRD: what and for whom, feature/deliverable structure, launch plan
+- [`product-requirements-document-template.md`](skills/Refinement/product-requirements-document-template.md) — PRD: what and for whom, feature/deliverable structure, launch plan, and a conditional AI Feature Supplement (Section 11)
 - [`functional-requirements-document-template.md`](skills/Refinement/functional-requirements-document-template.md) — FRD: how (workflows, system logic, data rules, error handling), plus the canonical NFR category checklist
 - [`product-requirements-discovery-questionnaire.md`](skills/Refinement/product-requirements-discovery-questionnaire.md) — probing interview that pressure-tests a PRD's thinking before drafting
+- [`ai-driven-work-sizing-and-token-budgets.md`](skills/Refinement/ai-driven-work-sizing-and-token-budgets.md) — sizes AI-driven work as a tier-weighted token budget (Epic → Task, no Story layer) alongside a separate human-hours budget
 
-### `domains/` — 2 skills
+### `domains/` — 1 skill
 Domain-specific compliance/security guidance.
-- [`pci-dss-req-3-4.md`](skills/domains/pci-dss-req-3-4.md)
-- [`agent-zero-trust-delegation.md`](skills/domains/agent-zero-trust-delegation.md)
+- [`iso-20022-payment-messaging-standard.md`](skills/domains/iso-20022-payment-messaging-standard.md)
 
-### `product/` — 7 skills
+(`agent-zero-trust-delegation.md` and `pci-dss-req-3-4.md` moved to `governance/` — see that section.)
+
+### `product/` — 18 skills
 Product-family overlays.
 - [`systems-thinking-and-domain-driven-design.md`](skills/product/systems-thinking-and-domain-driven-design.md) — foundational lens for this and the `Strategy/`/`Refinement/` categories
 - [`competitor-analysis-synthesizer.md`](skills/product/competitor-analysis-synthesizer.md)
 - [`no-silo-product-operating-model.md`](skills/product/no-silo-product-operating-model.md) — second foundational lens: product's required coupling to corporate strategy and SDLC delivery, plus security/privacy/feature/client-first awareness
+- [`plan-big-execute-small-and-complexity-conservation.md`](skills/product/plan-big-execute-small-and-complexity-conservation.md) — third foundational lens: plan-big/execute-small, simplicity as editorial work, Tesler's Law of Conservation of Complexity
+- [`ai-human-task-allocation-model.md`](skills/product/ai-human-task-allocation-model.md) — fourth foundational lens: per-task AI-owned/Human-owned/Interchangeable/Never-AI classification, grounded in IBM's human-accountability principle
 - [`ai-operating-model-for-product-teams.md`](skills/product/ai-operating-model-for-product-teams.md) — diagnoses the AI-adoption "messy middle" and prescribes a paired People/System operating-model redesign
 - [`pm-vs-pmm-role-clarity.md`](skills/product/pm-vs-pmm-role-clarity.md) — PM/PMM scope boundary and Trust/Synergy/Collaboration check
 - [`product-development-life-cycle-modeling.md`](skills/product/product-development-life-cycle-modeling.md) — canonical 7-stage PDLC, with an explicit boundary against SDLC (PDLC contains it, not replaces it)
 - [`product-school-template-toolkit.md`](skills/product/product-school-template-toolkit.md) — catalogs a 25-item external template library with honest gap-flagging against this repo's own skills
+- [`value-proposition-canvas.md`](skills/product/value-proposition-canvas.md) — sourced directly from Strategyzer/Osterwalder
+- [`opportunity-solution-tree.md`](skills/product/opportunity-solution-tree.md) — sourced directly from Teresa Torres
+- [`user-persona-development.md`](skills/product/user-persona-development.md), [`customer-journey-mapping.md`](skills/product/customer-journey-mapping.md), [`user-flow-mapping.md`](skills/product/user-flow-mapping.md) (includes an AI-Specific Failure Modes section), [`design-sprint-facilitation.md`](skills/product/design-sprint-facilitation.md) — discovery/UX foundations
+- [`product-launch-checklist.md`](skills/product/product-launch-checklist.md), [`product-growth-metrics-reference.md`](skills/product/product-growth-metrics-reference.md) — launch/growth measurement
+- [`ai-feature-prompt-design.md`](skills/product/ai-feature-prompt-design.md) — product-decision-layer prompt requirements for a product-owned LLM feature
 
-### `Management/` — 6 skills
-Management practice grounded in W. Edwards Deming's work.
+### `Management/` — 7 skills
+Management practice grounded in W. Edwards Deming's work, plus a second distinct management philosophy.
 - [`system-of-profound-knowledge.md`](skills/Management/system-of-profound-knowledge.md)
 - [`fourteen-points-for-management.md`](skills/Management/fourteen-points-for-management.md)
 - [`seven-deadly-diseases.md`](skills/Management/seven-deadly-diseases.md)
 - [`pdsa-improvement-cycle.md`](skills/Management/pdsa-improvement-cycle.md)
 - [`red-bead-experiment.md`](skills/Management/red-bead-experiment.md)
 - [`funnel-experiment.md`](skills/Management/funnel-experiment.md)
+- [`team-of-teams-organizational-adaptability.md`](skills/Management/team-of-teams-organizational-adaptability.md) — McChrystal's four pillars (Trust, Common Purpose, Shared Consciousness, Empowered Execution), a distinct structural-adaptability model alongside the Deming skillset
 
 ### `communication/` — 1 skill
 Structuring written reports, memos, RFCs, briefings.
 - [`bookend-communication-structure.md`](skills/communication/bookend-communication-structure.md)
 
-### `templates/` — 5 authoring templates
+### `Financial impact analysis/` — 1 skill
+Cost modeling, margin governance, and pricing-floor discipline.
+- [`cost-based-pricing-floor-and-margin-governance.md`](skills/Financial%20impact%20analysis/cost-based-pricing-floor-and-margin-governance.md) — two-bucket cost model, dual breakeven views, N-tier discount-approval ladder with absolute never-breach rules
+
+### `templates/` — 6 authoring templates
 Not skills themselves — starting points for writing new ones.
 - [`skill-template.md`](skills/templates/skill-template.md), [`skill-builder-template.md`](skills/templates/skill-builder-template.md)
 - [`recipe-template.md`](skills/templates/recipe-template.md), [`recipe-builder-template.md`](skills/templates/recipe-builder-template.md)
 - [`compliance-chunk-template.md`](skills/templates/compliance-chunk-template.md)
-
-## 🚧 In Progress
-
-### `Financial impact analysis/`
-Category scaffolded, no skill files yet. Goal: guide agents through financial-impact analysis of a proposed change (cost/benefit modeling, ROI framing, budget-impact writeups).
+- [`skill-testing-and-evaluation-framework.md`](skills/templates/skill-testing-and-evaluation-framework.md) — adapted from Anthropic's `skill-creator` skill: a with-skill-vs-baseline testing loop, run after `skill-builder-template.md`'s intake/draft process
 
 ---
 

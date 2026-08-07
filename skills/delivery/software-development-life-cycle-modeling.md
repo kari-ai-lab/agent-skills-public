@@ -40,6 +40,8 @@ GeeksforGeeks additionally names three more specific models worth knowing by nam
 
 **Modern cross-cutting layer:** IBM, AWS, and Atlassian all independently flag that security is no longer a separate post-development phase — **DevSecOps** integrates security testing (threat modeling, code review, penetration testing) across every phase above, not bolted on after Testing. Treat this as a property any of the models above should have, not a fifth model to choose between.
 
+For a concrete, regulator-grade specification of what a DevSecOps checkpoint should actually contain (rather than a generic placeholder), see `../governance/pci-secure-software-lifecycle-and-devsecops.md` — PCI's Secure SLC Standard defines 10 Control Objectives across governance, engineering, data-management, and communications, each mapped there onto these same 7 SDLC phases.
+
 ## 📤 Expected Output
 
 - A confirmed or recommended SDLC model for the project, with the specific reasoning (project size, requirement stability, risk profile, team maturity) — not a default pick.
@@ -120,6 +122,6 @@ Rules:
 
 ## Metadata
 
-- **Version:** 1.1
-- **Last Updated:** 2026-07-25
+- **Version:** 1.2
+- **Last Updated:** 2026-07-27
 - **Author:** Workspace Delivery Skills

@@ -148,6 +148,7 @@ Rules:
 
 ## Related Workspace Skills
 
+- `bdd-framework-selection.md` — run this FIRST if there's any question whether Gherkin/Cucumber is the right tool for the suite in question (a large API/HTTP-heavy suite may fit Karate better; a 500+-scenario suite may fit Gauge better). This skill assumes that decision has already landed on Cucumber/Gherkin.
 - `behavior-driven-development-and-model-integration.md` — the practice (Discovery/Formulation/Automation) this syntax serves; read alongside this skill, not instead of it.
 - `refinement/product-requirements-document-template.md` — Section 7 (Feature/Capability list) and Section 8 (Edge & Error Case Scenarios) both require Gherkin written to this standard.
 - `refinement/product-requirements-discovery-questionnaire.md` — its Feature/Capability question ("is the Gherkin AC testable by someone who didn't write the feature?") is enforced by this skill's declarative-style rule.

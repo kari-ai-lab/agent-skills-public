@@ -74,9 +74,14 @@ Source for resource-oriented design, standard methods, pagination, and error-mod
 ### Prioritization Frameworks (WSJF and related)
 - [`skills/Refinement/future-workstream-prioritization-wsjf-and-techniques.md`](skills/Refinement/future-workstream-prioritization-wsjf-and-techniques.md) — [SAFe WSJF](https://framework.scaledagile.com/wsjf/), [Fibery: Agile Prioritization Techniques](https://fibery.com/blog/product-management/agile-prioritization-techniques/), [Atlassian: Prioritization Framework](https://www.atlassian.com/agile/product-management/prioritization-framework)
 
-### PCI-DSS v4.0
-Publicly published payment-card industry data security standard (PCI Security Standards Council). No specific clause URL is cited in-file; referenced by requirement number.
-- [`skills/domains/pci-dss-req-3-4.md`](skills/domains/pci-dss-req-3-4.md) — Requirement 3.4
+### PCI Security Standards Council documents
+Root canon for the full payment-card compliance skillset, verified directly from the official PDFs/DOCX on file (PCI-DSS v4.0.1, Secure Software Standard v2.0, Secure SLC Standard v1.1, TSP Requirements v1, SAQ Instructions v4.0.1).
+- [`skills/governance/pci-dss-applicability-and-scoping.md`](skills/governance/pci-dss-applicability-and-scoping.md) — entry-point navigator (account-data classification, the 12 requirements, SAQ-type orientation)
+- [`skills/governance/pci-dss-req-3-4.md`](skills/governance/pci-dss-req-3-4.md) — Requirement 3.5 under current v4.0.1 numbering (render PAN unreadable); filename kept for compatibility after a numbering correction
+- [`skills/governance/pci-dss-req-4-transmission-encryption.md`](skills/governance/pci-dss-req-4-transmission-encryption.md), [`skills/governance/pci-dss-req-6-secure-systems-and-software.md`](skills/governance/pci-dss-req-6-secure-systems-and-software.md), [`skills/governance/pci-dss-req-8-identify-authenticate-access.md`](skills/governance/pci-dss-req-8-identify-authenticate-access.md) — requirement-level compliance chunks
+- [`skills/governance/pci-secure-software-lifecycle-and-devsecops.md`](skills/governance/pci-secure-software-lifecycle-and-devsecops.md) — Secure SLC's 10 Control Objectives mapped onto SDLC's per-phase DevSecOps checkpoint
+- [`skills/governance/pci-secure-software-standard-requirements.md`](skills/governance/pci-secure-software-standard-requirements.md) — Secure Software Standard's 11 Core Security Objectives + Modules A-D
+- [`skills/governance/pci-tsp-token-service-provider-requirements.md`](skills/governance/pci-tsp-token-service-provider-requirements.md) — Token Service Provider control areas for EMV Payment Token issuance
 
 ### SMART Goals
 - [`skills/Strategy/annual-goals-and-quarterly-objectives.md`](skills/Strategy/annual-goals-and-quarterly-objectives.md) — [Atlassian: How to write SMART goals](https://www.atlassian.com/blog/productivity/how-to-write-smart-goals), [SNHU: What are SMART goals](https://www.snhu.edu/about-us/newsroom/education/what-are-smart-goals), [UCOP: How to write SMART Goals (PDF)](https://www.ucop.edu/local-human-resources/_files/performance-appraisal/How+to+write+SMART+Goals+v2.pdf), [Harvard Health: Get SMART about your goals](https://www.health.harvard.edu/blog/get-smart-about-your-goals-this-strategy-can-help-you-stay-focused-and-on-track-at-any-age-2017090112113).
@@ -124,6 +129,109 @@ Blog and 25-item template library — role clarity (PM vs. PMM), AI-native opera
 - [`skills/product/ai-operating-model-for-product-teams.md`](skills/product/ai-operating-model-for-product-teams.md) — [The AI Operating Model](https://productschool.com/blog/digital-transformation/the-ai-operating-model-why-product-teams-are-stuck)
 - [`skills/product/pm-vs-pmm-role-clarity.md`](skills/product/pm-vs-pmm-role-clarity.md) — [PM vs PMM](https://productschool.com/blog/job-search/pm-vs-pmm-landing-the-right-role-for-you)
 - [`skills/product/product-school-template-toolkit.md`](skills/product/product-school-template-toolkit.md) — [Template Library](https://productschool.com/resources/templates)
+- [`skills/product/user-persona-development.md`](skills/product/user-persona-development.md) — [User Persona Template](https://productschool.com/resources/templates/user-persona)
+- [`skills/product/customer-journey-mapping.md`](skills/product/customer-journey-mapping.md) — [Customer Journey Map Template](https://productschool.com/resources/templates/customer-journey-map)
+- [`skills/product/user-flow-mapping.md`](skills/product/user-flow-mapping.md) — [User Flow Template](https://productschool.com/resources/templates/user-flow), [AI User Flow Template](https://productschool.com/resources/templates/ai-user-flow) (general framing only — gated content, AI-failure-mode taxonomy is workspace-composed)
+- [`skills/product/design-sprint-facilitation.md`](skills/product/design-sprint-facilitation.md) — [Design Sprint Template](https://productschool.com/resources/templates/design-sprint)
+- [`skills/product/product-launch-checklist.md`](skills/product/product-launch-checklist.md) — [Product Launch Checklist Template](https://productschool.com/resources/templates/product-launch-checklist)
+- [`skills/product/product-growth-metrics-reference.md`](skills/product/product-growth-metrics-reference.md) — [Product Growth Metrics Cheat Sheet](https://productschool.com/resources/templates/product-metrics-cheat-sheet)
+- [`skills/Refinement/product-requirements-document-template.md`](skills/Refinement/product-requirements-document-template.md) Section 11 (AI Feature Supplement) — [Prompting Template](https://productschool.com/resources/templates/ai-prompt), [AI PRD](https://productschool.com/resources/templates/ai-prd)
+- [`skills/product/ai-feature-prompt-design.md`](skills/product/ai-feature-prompt-design.md) — [Prompting Template](https://productschool.com/resources/templates/ai-prompt)
+
+### Strategyzer (Alexander Osterwalder)
+**https://www.strategyzer.com/library/the-value-proposition-canvas**
+The Value Proposition Canvas's originating source — the two-sided Customer Profile/Value Map structure and the "achieve fit" framing.
+- [`skills/product/value-proposition-canvas.md`](skills/product/value-proposition-canvas.md)
+
+### Teresa Torres
+**https://www.producttalk.org/opportunity-solution-tree/**
+The Opportunity Solution Tree's originating source — the four-level structure (desired outcome, opportunities, solutions, assumption tests) and its outcome-tracing discipline.
+- [`skills/product/opportunity-solution-tree.md`](skills/product/opportunity-solution-tree.md)
+
+### IBM
+**https://www.ibm.com/policy/trust-transparency** / **https://www.ibm.com/think/topics/responsible-ai**
+Principles for Trust and Transparency, and "What is responsible AI?" — the human-accountability grounding for a Never-AI task classification (AI augments human intelligence rather than replacing human accountability for an outcome).
+- [`skills/product/ai-human-task-allocation-model.md`](skills/product/ai-human-task-allocation-model.md)
+
+## Testing & Experimentation
+
+### Nielsen Norman Group
+**https://www.nngroup.com/articles/ab-testing/**
+Core A/B testing methodology: definition, sample-size parameters, minimum run duration, and the roughly one-in-seven test win-rate.
+- [`skills/Strategy/controlled-experiment-design-and-decision-rules.md`](skills/Strategy/controlled-experiment-design-and-decision-rules.md)
+
+### Contentful
+**https://www.contentful.com/blog/ab-testing-best-practices/**
+Hypothesis structure, the seven-step testing process, and the "peeking"/early-stopping pitfall.
+- [`skills/Strategy/controlled-experiment-design-and-decision-rules.md`](skills/Strategy/controlled-experiment-design-and-decision-rules.md)
+
+### Kameleoon
+**https://www.kameleoon.com/blog/ab-testing-for-pricing**
+Pricing-specific experiment context split (transactional/subscription/negotiated) and pricing guardrails (inventory dependency, competitor observability).
+- [`skills/Strategy/controlled-experiment-design-and-decision-rules.md`](skills/Strategy/controlled-experiment-design-and-decision-rules.md)
+
+### Statsig
+**https://www.statsig.com/perspectives/ab-testing-pricing-tips**
+The two-billing-cycle minimum for subscription pricing tests, cannibalization/customer-quality risk, and the rule against segmenting by protected characteristics.
+- [`skills/Strategy/controlled-experiment-design-and-decision-rules.md`](skills/Strategy/controlled-experiment-design-and-decision-rules.md)
+
+### Kohavi, Tang & Xu — *Trustworthy Online Controlled Experiments* (not directly cited)
+The original candidate primary source for controlled-experiment design; not freely accessible, so this skill was built from the four practitioner sources above instead — flagged in the skill's own Sources section for a later session rather than force-cited.
+
+### GitHub Spec Kit
+**https://github.com/github/spec-kit**
+Spec-Driven Development's Constitution/Specify/Plan/Tasks/Implement/Converge workflow and the "specifications become executable" framing.
+- [`skills/delivery/spec-driven-development.md`](skills/delivery/spec-driven-development.md)
+
+### Kiro
+**https://kiro.dev/**
+Spec-as-requirements+design+tasks structure, the automated-reasoning contradiction/gap check before code generation, and the explicit contrast with "vibe coding."
+- [`skills/delivery/spec-driven-development.md`](skills/delivery/spec-driven-development.md)
+
+### Tessl (checked, not substantiated)
+**https://www.tessl.io/** / **https://docs.tessl.io/**
+Checked directly per this repo's sourcing standard as a candidate SDD source; neither the site nor its docs describe a spec-driven-development framework in the Spec Kit/Kiro sense (Tessl's own unit of work is "skills," not specs). An honest miss, recorded rather than force-cited.
+- Noted in [`skills/delivery/spec-driven-development.md`](skills/delivery/spec-driven-development.md)'s Sources section
+
+### dev.to — Luis Iñesta Gelabert
+**https://dev.to/luiinge/when-cucumber-grows-too-big-pain-points-lessons-learned-and-alternatives-21pm**
+Cucumber's five compounding failure modes at scale (glue-code explosion, shared-state issues, feature-file drift, scope creep, maintenance burden) and the stakeholder-readability thesis.
+- [`skills/delivery/bdd-framework-selection.md`](skills/delivery/bdd-framework-selection.md)
+
+### QA Skills
+**https://qaskills.sh/blog/comparing-popular-bdd-frameworks-2026-complete-guide**
+Comparative BDD framework strength/fit/weakness table and runtime/memory benchmark numbers (flagged in-skill as single-source, not independently reproduced).
+- [`skills/delivery/bdd-framework-selection.md`](skills/delivery/bdd-framework-selection.md)
+
+### Gauge
+**https://gauge.org/index.html**
+Official project site — markdown-based specs, native parallel execution, and Taiko browser-automation partnership.
+- [`skills/delivery/bdd-framework-selection.md`](skills/delivery/bdd-framework-selection.md)
+
+### Karate Labs
+**https://karatelabs.io/**
+Official project site — "Unified API, UI & AI Test Automation" positioning and the Gherkin-syntax basis underneath its API/contract-testing focus.
+- [`skills/delivery/bdd-framework-selection.md`](skills/delivery/bdd-framework-selection.md)
+
+## Strategy & Economics
+
+### Micah Logan (Forbes)
+**https://www.forbes.com/sites/micahlogan/2024/03/13/simple-guide-to-creating-a-compelling-mission-and-vision-statement/**
+Vision/mission distinction, four blueprint questions, the one-sentence format rule, and the word-level genericness test.
+- [`skills/Strategy/mission-and-vision-critical-thought.md`](skills/Strategy/mission-and-vision-critical-thought.md)
+
+### Jim Collins (single test only)
+"Ten Lessons I Learned from Peter Drucker" — used only for the "wouldn't happen without you" distinctive-impact test; the article itself is about executive self-management, not mission-statement craft, and is not cited beyond that one test.
+- [`skills/Strategy/mission-and-vision-critical-thought.md`](skills/Strategy/mission-and-vision-critical-thought.md)
+
+### Nobel Prize facts pages / Britannica / Econlib / Levy Economics Institute
+Kahneman, Nash, Tirole, Friedman, Hayek, Akerlof, Shiller (Nobel), Marshall, Pigou (Britannica), Keynes, Schumpeter, Robinson/Chamberlin (Econlib), Minsky (Levy Institute) — named economic models grounding pricing/positioning and macro-risk awareness.
+- [`skills/Strategy/microeconomic-pricing-and-positioning-models.md`](skills/Strategy/microeconomic-pricing-and-positioning-models.md), [`skills/Strategy/macroeconomic-risk-awareness-for-product-strategy.md`](skills/Strategy/macroeconomic-risk-awareness-for-product-strategy.md)
+
+### McChrystal Group
+**https://www.mcchrystalgroup.com/about/team-of-teams**
+Four pillars (Trust, Common Purpose, Shared Consciousness, Empowered Execution).
+- [`skills/Management/team-of-teams-organizational-adaptability.md`](skills/Management/team-of-teams-organizational-adaptability.md)
 
 ## Agile & Lean Thought Leadership
 
@@ -152,6 +260,13 @@ Several platform, delivery, and governance skills are adapted from or attributed
 - [`skills/governance/verification-and-self-checking.md`](skills/governance/verification-and-self-checking.md)
 - [`skills/delivery/prompting-precision.md`](skills/delivery/prompting-precision.md)
 - [`skills/delivery/explore-plan-code-commit.md`](skills/delivery/explore-plan-code-commit.md)
+
+### Anthropic — `anthropics/skills` (open-source skill library)
+**https://github.com/anthropics/skills**
+Three skills in this repo are direct adaptations of Anthropic's own published skills — paraphrased into this repo's format with an added "Workspace Customization" section reconciling Anthropic's conventions (YAML frontmatter auto-triggering, bundled `scripts/`/`references/`/`assets/` folders, `benchmark.json` eval tooling) against this repo's own (flat self-contained markdown, manual README/INDEX discovery, mandatory source citation).
+- [`skills/engineering/frontend-design-principles.md`](skills/engineering/frontend-design-principles.md) — from [`frontend-design`](https://github.com/anthropics/skills/tree/main/skills/frontend-design)
+- [`skills/platform/mcp-server-development.md`](skills/platform/mcp-server-development.md) — from [`mcp-builder`](https://github.com/anthropics/skills/tree/main/skills/mcp-builder)
+- [`skills/templates/skill-testing-and-evaluation-framework.md`](skills/templates/skill-testing-and-evaluation-framework.md) — from [`skill-creator`](https://github.com/anthropics/skills/tree/main/skills/skill-creator)
 
 ### Kari Hytoenen
 Credited as the originating author of the rich-context-input technique.

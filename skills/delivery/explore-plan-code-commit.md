@@ -66,6 +66,12 @@ If the requirements are unclear, run the interview phase first:
 "I want to build [description]. Interview me using the AskUserQuestion tool. Ask about technical implementation, UI/UX, edge cases, concerns, and tradeoffs. Don't ask obvious questions — dig into the hard parts. Keep interviewing until we've covered everything, then write a complete spec to SPEC.md."
 Start a fresh session after the spec is complete.
 
+NOTE — for larger or AI-driven initiatives, don't stop at a one-off SPEC.md: this single-session
+Plan phase is not the same as a durable, re-verifiable spec. Use `delivery/spec-driven-development.md`
+instead when the work already has an approved FRD, needs to survive across multiple sessions/agents,
+or needs the Commercialization Validation Gate (independent testing, use-case coverage
+classification, roadmap feedback for gaps) before being treated as production-ready.
+
 ---
 
 Feature to build: $FEATURE_DESCRIPTION

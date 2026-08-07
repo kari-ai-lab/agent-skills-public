@@ -15,6 +15,57 @@ Use this category for shared product-family overlays that apply across a product
   - States and audits the structural principle that product does not operate in a silo: tight upward coupling to corporate/C-level strategy (shared authorship, not just leadership sign-off), tight lateral coupling to SDLC/engineering delivery (an ongoing presence through the cycle, not a spec thrown over a wall), and simultaneous four-lens awareness — security, privacy, feature, client-first thinking — that feeds continuous improvement back toward the target state.
   - Every finding routes to the specific workspace skill that owns that coupling (`strategy/`, `delivery/`, `governance/`, `management/`) rather than a generic "communicate more" recommendation. Run alongside `systems-thinking-and-domain-driven-design.md` as the second foundational lens for this folder.
 
+- `plan-big-execute-small-and-complexity-conservation.md`
+  - Three product-thinking checks: plan-big/execute-small (naming `strategy/target-state-vision-and-phased-roadmap.md` as where this actually runs), simplicity-as-hard-editorial-work (Saint-Exupéry), and Tesler's Law of Conservation of Complexity — a "simpler" product moved its complexity somewhere (business/engineering side or client side), it didn't eliminate it.
+  - The third foundational lens for this folder: run alongside `systems-thinking-and-domain-driven-design.md` and `no-silo-product-operating-model.md` whenever a plan or feature is being reviewed for whether it's genuinely well-scoped or just looks simple.
+
+- `ai-human-task-allocation-model.md`
+  - The fourth foundational lens for this folder, specific to AI-feature workflows: forces a per-task (not per-feature) classification into AI-owned, Human-owned, Interchangeable, or Never-AI, grounded in IBM's human-accountability principle for responsible AI.
+  - Never-AI requires a named accountable person and a concrete high-stakes/irreversible/legal-safety-ethical reason; Interchangeable requires a named deciding factor (cost/speed/context) rather than standing in as an "undecided" default.
+  - Run before any AI PRD, AI User Flow, or Prompting Template work — those should consume this skill's task table rather than re-deriving task ownership. Distinct from, and cross-referenced with, `governance/agent-zero-trust-delegation.md`, which governs runtime execution-trust for an already-allocated AI task rather than the design-time allocation decision itself.
+
+- `ai-feature-prompt-design.md`
+  - Prompt-authoring guidance for a product-owned LLM feature (the system prompt shipped inside the product) — distinct from `delivery/prompting-precision.md`, which coaches engineers prompting Claude Code as an engineering tool.
+  - Requires every Never-AI/Human-owned task from `ai-human-task-allocation-model.md` to appear as an explicit refusal/redirect boundary in the prompt spec, and explicitly hands off model/provider selection to `platform/llm-model-contract.md` and UI failure-mode behavior to `user-flow-mapping.md`'s AI-Specific Failure Modes section, rather than re-deriving either.
+
+## Discovery & UX Foundations
+
+Run these before `refinement/product-requirements-document-template.md` assumes a validated problem and a known user — the workspace's strategy/portfolio/PRD layers all assume discovery already happened somewhere; these six skills are where it happens.
+
+- `value-proposition-canvas.md`
+  - Maps a customer's Jobs/Pains/Gains against the offering's Products & Services/Pain Relievers/Gain Creators, sourced from Strategyzer/Osterwalder directly, and forces an explicit fit check — every Pain Reliever/Gain Creator must name the specific Pain/Gain it addresses.
+  - Feeds `strategy/product-proposal-viability-scoring.md` and the PRD's Problem Statement; seeds `opportunity-solution-tree.md`'s opportunity space.
+
+- `opportunity-solution-tree.md`
+  - Sourced directly from Teresa Torres: a four-level tree (desired outcome → opportunities → solutions → assumption tests) enforcing that no solution is explored without a named opportunity, and no opportunity without tracing to a real business outcome.
+  - Requires the desired outcome from `strategy/target-state-vision-and-phased-roadmap.md` or `strategy/annual-goals-and-quarterly-objectives.md` as a precondition; hands solution-level assumption tests to `strategy/controlled-experiment-design-and-decision-rules.md`.
+
+- `user-persona-development.md`
+  - Builds a research-grounded persona (traits, goals, behaviors, responsibilities, needs), each entry cited to real research rather than internal assumption, and flags assumption-only personas explicitly rather than presenting them with unearned confidence.
+  - Required input to `customer-journey-mapping.md`; grounds the PRD's Problem Statement in a specific, not generic, user.
+
+- `customer-journey-mapping.md`
+  - Maps the customer's relationship-level path (not a single task) from a defined persona's point of view, overlaying real drop-off signals to find and evidence the specific moments customers are lost.
+  - Feeds qualifying loss points to `opportunity-solution-tree.md`; distinct from `user-flow-mapping.md`'s task-level scope.
+
+- `user-flow-mapping.md`
+  - Maps the step-by-step path through one specific task (not the broader relationship), overlaying real drop-off data onto specific steps to find actionable snags.
+  - Feeds `refinement/functional-requirements-document-template.md`'s Step-by-Step Workflows and `delivery/gherkin-syntax-and-writing-guide.md`'s scenario formulation once a flow is finalized.
+
+- `design-sprint-facilitation.md`
+  - Runs a four-day Design Sprint 2.0 (problem → diverge/converge → prototype → user test) to resolve a specific, bounded design problem and reduce production risk before real engineering investment, sourced from Product School.
+  - A validated direction feeds `strategy/product-proposal-viability-scoring.md`; an invalidated one is treated as a real, valuable result, not a wasted week.
+
+## Launch & Growth Measurement
+
+- `product-launch-checklist.md`
+  - A three-phase (Pre-Launch/Launch Day/Post-Launch) cross-functional go/no-go gate that consumes `refinement/product-requirements-document-template.md`'s Section 10 (Launch Plan) as input rather than duplicating it — adds the support/legal/infra/rollback checks a single PRD section isn't built to hold.
+  - Every item resolves to done/not-done/not-applicable with a named owner; any unresolved Pre-Launch item blocks go/no-go unless an explicit executive exception is named.
+
+- `product-growth-metrics-reference.md`
+  - A reference (not a dashboard skill) covering six growth-metric categories — Acquisition, Activation, Engagement, Retention, Referral, Revenue — sourced from Product School, with named anchor metrics per category.
+  - Classifies a specific product question into the relevant category rather than reporting all six regardless of relevance, factors in product lifecycle stage, and hands off to `data:build-dashboard` for any actual visualization request. Explicitly distinct from `governance/quality-monitoring-model.md` (skill-library metrics, not product metrics).
+
 ## Other Skills
 
 - `competitor-analysis-synthesizer.md`

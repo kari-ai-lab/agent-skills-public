@@ -14,7 +14,7 @@ Backend/API engineer defining a new service's contract, adding endpoints to an e
 - **Existing spec file**, if extending one (path in-repo)
 - **Endpoints/resources** to add or change
 - **Auth model** (API key, OAuth2, OIDC, bearer JWT, mTLS, none)
-- **Org conventions** to preserve (naming, versioning scheme, error envelope, pagination style) — check the project's `CLAUDE.md` and any existing OpenAPI specs elsewhere in the codebase before inventing new ones
+- **Org conventions** to preserve (naming, versioning scheme, error envelope, pagination style) — check the project's `CLAUDE.md` and any existing specs (e.g. `platform/apps/*/openapi.yaml`, `api-mapper/` registry) before inventing new ones
 
 ## 📤 Expected Output
 

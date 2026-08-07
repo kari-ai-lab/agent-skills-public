@@ -33,7 +33,7 @@ Non-functional requirements describe **how well** the system operates, not what 
 - **Usability & Accessibility** — response to real user constraints, accessibility standards.
 - **Maintainability & Supportability** — how easily the system can be changed, diagnosed, and operated.
 - **Observability** — logging, monitoring, and alerting requirements.
-- **Compliance** — industry/regulatory standards beyond privacy (e.g. sector-specific requirements named in the BRD).
+- **Compliance** — industry/regulatory standards beyond privacy (e.g. sector-specific requirements named in the BRD). If the feature touches payment card data, start at `governance/pci-dss-applicability-and-scoping.md` rather than writing PCI requirements from scratch — it routes to the specific compliance chunk, Secure Software Standard, Secure SLC, or TSP skill needed.
 
 ## The FRD Template (fillable)
 
@@ -80,6 +80,12 @@ the white-box detail beneath each one):
 - Reference the Bounded Context Canvas / Aggregate Design Canvas from
   `product/systems-thinking-and-domain-driven-design.md` for anything
   touching a non-trivial domain model.
+- **This section is typically where a "simple" client-facing feature's
+  complexity actually lands**, per Tesler's Law
+  (`product/plan-big-execute-small-and-complexity-conservation.md`) — if
+  the PRD's Feature description reads as simple, name explicitly here what
+  logic/state the system is absorbing to make that true, rather than
+  leaving the simplicity unexplained.
 
 ## 4. Data Requirements & Rules
 
@@ -207,6 +213,6 @@ Rules:
 
 ## Metadata
 
-- **Version:** 1.0
-- **Last Updated:** 2026-07-25
+- **Version:** 1.2
+- **Last Updated:** 2026-07-27
 - **Author:** Workspace Refinement Skills

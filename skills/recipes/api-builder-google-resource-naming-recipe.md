@@ -47,7 +47,7 @@ Google's guide (originally Cloud API design guide, now maintained as the AIP ser
 3. Give every resource a `name`/`id`-equivalent field populated with its relative resource name, and document the pattern in the field's `description` (e.g. `publishers/{publisher}/books/{book}`) so it's visible in generated docs.
 4. Reserve full resource names (`//service/...`) for genuine cross-service references; within a single spec, relative names are almost always correct.
 5. Validate resource IDs supplied by clients against the RFC-1034 pattern in the corresponding request schema (see `api-builder-schemas-recipe.md` for how to express this as a `pattern` constraint).
-6. Cross-check terminology against the rest of the spec (and any existing sibling specs elsewhere in the codebase) — reuse the same noun and field vocabulary rather than introducing synonyms.
+6. Cross-check terminology against the rest of the spec (and any existing sibling specs in the workspace, e.g. `platform/apps/*/openapi.yaml`) — reuse the same noun and field vocabulary rather than introducing synonyms.
 
 ## ✅ Quality Checklist
 

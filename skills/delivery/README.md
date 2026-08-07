@@ -19,6 +19,7 @@ Critical sources for agility (agile + lean) skill authoring in this folder — c
 - **[KPI Fire's "House of Lean"](https://www.kpifire.com/continuous-improvement/house-of-lean/)** — **a different model from SAFe's House of Lean**, do not conflate the two. KPI Fire's version has Respect (for customers/employees/shareholders/environment) as its sole foundation, three objectives (Eliminate Waste, Reduce Variation, Prevent Overburdening) as pillars, and a much larger set of shop-floor tools (SMED, TPM, Standard Work, Kanban, 5S, VSM, Hoshin Kanri) as building blocks — a manufacturing/continuous-improvement-tooling view, versus SAFe's four-pillar/one-goal product-strategy view already captured in `strategy/house-of-lean-for-product-strategy.md`. Treat as complementary background reading on the wider "House of Lean" concept, never as an alternate citation for the SAFe-specific skill.
 - **[MIT Sloan: "10 Agile Ideas Worth Sharing"](https://mitsloan.mit.edu/ideas-made-to-matter/10-agile-ideas-worth-sharing)** — a practitioner-facing list: spiral development cycles, time-boxed sprints, Scrum teams, daily meetings, separating "what" (leadership/priorities) from "how" (team/execution), Kanban, feature prioritization, DevOps, branch-and-merge, and hybridized agile/staged-planning processes. Useful as a quick-reference anchor for these terms when a skill needs a plain, non-vendor explanation of one of them.
 - **[Cucumber documentation](https://cucumber.io/docs/)** — the canonical source for Gherkin syntax and BDD (Behaviour-Driven Development) practice, used in `gherkin-syntax-and-writing-guide.md` and `behavior-driven-development-and-model-integration.md`. BDD is explicitly "a set of plugins for your existing process," not a competing methodology — it runs inside whatever Agile/SAFe/LeSS framework is already in place.
+- **[GitHub Spec Kit](https://github.com/github/spec-kit)** and **[Kiro](https://kiro.dev/)** — the two verified primary sources for Spec-Driven Development in `spec-driven-development.md`: specs as executable, durable artifacts (not discarded planning scaffolding) generated and re-verified against, with a Constitution/Specify/Plan/Tasks/Implement workflow and a pre-code contradiction/gap check. Tessl was checked and did not substantiate an SDD framework in its current public materials — an honest miss recorded in that skill's Sources section, not a citation.
 
 ## Purpose
 
@@ -87,6 +88,14 @@ Pre-delivery upstream planning now lives in `.agents/skills/refinement/`.
   - Explains BDD's Discovery/Formulation/Automation cycle and the Three Amigos collaboration model, and connects each step to a workspace skill already using it: Discovery shares Event Storming with DDD's Discover stage; Three Amigos is the concrete mechanism behind `product/no-silo-product-operating-model.md`'s lateral coupling; Formulation's Gherkin output is the PRD/Jira acceptance criteria; Automation runs at SDLC's Testing phase.
   - Makes explicit that BDD "enhances, doesn't replace" Agile/SAFe/LeSS.
 
+- `spec-driven-development.md`
+  - Translates an approved FRD into an AI-executable spec (Constitution → Specify → Plan → Tasks → Implement, reconciled from GitHub's Spec Kit and AWS Kiro) — the spec is a durable, re-verifiable source of truth AI code is generated against, not a one-off session plan like `explore-plan-code-commit.md`'s SPEC.md.
+  - Adds a workspace-authored Commercialization Validation Gate: per-use-case coverage classification (Over/Well/Under-covered/Missed), explicit hallucination/interpretation-error/requirements-gap checks, a mandatory independent validator (never the implementing agent self-certifying), a Ready/Gap Closure Required/Reject decision, and a required roadmap-feedback loop for any gap found.
+
+- `bdd-framework-selection.md`
+  - A decision gate run before the two skills above commit to Cucumber/Gherkin by default: routes UI-driven, stakeholder-readable scenarios to Cucumber (after an explicit stakeholder-readability check — if no non-developer actually reads the `.feature` files, recommends a plain code-based test instead), API/HTTP/contract-heavy suites to Karate, and very large (500+ scenario) parallel-runtime-bound suites to Gauge.
+  - Names the real hybrid pattern ("Karate for API + Cucumber for UI") rather than forcing one tool across a mixed suite, and flags PCI/ISO-20022-adjacent domains as directly actionable for the Karate recommendation.
+
 ## Suggested Usage Flow
 
 1. Define sprint intent with `sprint-goal-drafting.md`.
@@ -97,6 +106,8 @@ Pre-delivery upstream planning now lives in `.agents/skills/refinement/`.
 6. Close the loop with `retrospective-improvement.md`.
 7. Use `software-development-life-cycle-modeling.md` when standing up a new project's process or auditing an existing one for missing/merged phases — independent of the sprint-by-sprint flow above, since it operates at the model-choice level, not the day-to-day level.
 8. Use `behavior-driven-development-and-model-integration.md` (Discovery via Three Amigos) and `gherkin-syntax-and-writing-guide.md` (Formulation) whenever acceptance criteria are being written — for the PRD's Feature list, for `jira-epic-builder.md`'s Stories, or for a scenario destined for SDLC's Testing phase.
+9. Before committing to Cucumber by default (or when an existing Cucumber suite's glue-code/maintenance cost is becoming visible), run `bdd-framework-selection.md` to confirm Cucumber/Gherkin is actually the right tool for the suite's layer, or to route to Karate/Gauge instead.
+10. For a larger or AI-driven initiative with an approved FRD, use `spec-driven-development.md` instead of `explore-plan-code-commit.md`'s single-session SPEC.md — it produces a durable, re-verifiable spec and runs the Commercialization Validation Gate before the work is treated as production-ready.
 
 ## Inputs To Gather Before Using Delivery Skills
 
@@ -119,6 +130,6 @@ Pre-delivery upstream planning now lives in `.agents/skills/refinement/`.
 
 ## Metadata
 
-- **Version:** 1.5
-- **Last Updated:** 2026-07-25
+- **Version:** 1.7
+- **Last Updated:** 2026-08-03
 - **Author:** Workspace Delivery Skills
