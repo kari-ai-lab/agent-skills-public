@@ -153,6 +153,7 @@ Rules:
 - `refinement/product-requirements-document-template.md` — Section 7 (Feature/Capability list) and Section 8 (Edge & Error Case Scenarios) both require Gherkin written to this standard.
 - `refinement/product-requirements-discovery-questionnaire.md` — its Feature/Capability question ("is the Gherkin AC testable by someone who didn't write the feature?") is enforced by this skill's declarative-style rule.
 - `jira-epic-builder.md` — its Acceptance Criteria output should be written to this standard, not ad hoc.
+- `journeys/end-to-end-journey-specification.md` — links the actual `.feature` files this skill governs into each lifecycle segment's Examples/BDD Linkage step, rather than re-describing scenarios in prose.
 
 ---
 

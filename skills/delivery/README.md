@@ -20,6 +20,7 @@ Critical sources for agility (agile + lean) skill authoring in this folder — c
 - **[MIT Sloan: "10 Agile Ideas Worth Sharing"](https://mitsloan.mit.edu/ideas-made-to-matter/10-agile-ideas-worth-sharing)** — a practitioner-facing list: spiral development cycles, time-boxed sprints, Scrum teams, daily meetings, separating "what" (leadership/priorities) from "how" (team/execution), Kanban, feature prioritization, DevOps, branch-and-merge, and hybridized agile/staged-planning processes. Useful as a quick-reference anchor for these terms when a skill needs a plain, non-vendor explanation of one of them.
 - **[Cucumber documentation](https://cucumber.io/docs/)** — the canonical source for Gherkin syntax and BDD (Behaviour-Driven Development) practice, used in `gherkin-syntax-and-writing-guide.md` and `behavior-driven-development-and-model-integration.md`. BDD is explicitly "a set of plugins for your existing process," not a competing methodology — it runs inside whatever Agile/SAFe/LeSS framework is already in place.
 - **[GitHub Spec Kit](https://github.com/github/spec-kit)** and **[Kiro](https://kiro.dev/)** — the two verified primary sources for Spec-Driven Development in `spec-driven-development.md`: specs as executable, durable artifacts (not discarded planning scaffolding) generated and re-verified against, with a Constitution/Specify/Plan/Tasks/Implement workflow and a pre-code contradiction/gap check. Tessl was checked and did not substantiate an SDD framework in its current public materials — an honest miss recorded in that skill's Sources section, not a citation.
+- **[Scrum Guide (scrumguides.org)](https://www.scrumguides.org/scrum-guide.html)** — the official definition of the Daily Scrum, Sprint Review, and Sprint Retrospective (purpose, timebox, attendees), used directly in `../communication/scrum-event-facilitation.md` since nothing in this folder had previously cited the Scrum Guide itself despite covering Scrum-adjacent practice extensively (sprint goals, capacity, retrospectives).
 
 ## Purpose
 
@@ -57,12 +58,14 @@ Pre-delivery upstream planning now lives in `.agents/skills/refinement/`.
 
 - `retrospective-improvement.md`
   - Turns retrospective findings into prioritized, measurable follow-up improvements.
+  - Picks up where `../communication/scrum-event-facilitation.md` leaves off: that skill facilitates the retrospective meeting itself (purpose, timebox, attendees, anti-patterns) and hands off the improvement candidates it surfaces; this skill runs the disciplined follow-through on them.
 
 - `story-point-calibration.md`
   - Supports consistent point calibration when teams estimate with story points.
 
 - `scaled-agile-delivery-guidance.md`
   - Provides SAFe-aligned delivery guidance with mandatory principles and Big Picture references.
+  - For the specific ROAM (Resolved/Owned/Accepted/Mitigated) risk-categorization mechanics named in PI Planning's risk step, see `../communication/roam-risk-communication.md` — that skill owns the risk-communication discipline itself, cross-domain, not just the SAFe context.
 
 - `less-delivery-guidance.md`
   - Provides LeSS-aligned delivery guidance with mandatory principles/rules/overview references.
@@ -130,6 +133,6 @@ Pre-delivery upstream planning now lives in `.agents/skills/refinement/`.
 
 ## Metadata
 
-- **Version:** 1.7
-- **Last Updated:** 2026-08-03
+- **Version:** 1.8
+- **Last Updated:** 2026-08-09
 - **Author:** Workspace Delivery Skills

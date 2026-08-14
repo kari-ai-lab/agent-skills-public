@@ -207,6 +207,7 @@ Rules:
 - `delivery/gherkin-syntax-and-writing-guide.md` — the PRD's black-box behavioral spec that this FRD's workflows elaborate on the white-box side.
 - `delivery/software-development-life-cycle-modeling.md` — this FRD is consumed at SDLC's Design phase (Phase 3).
 - `delivery/jira-epic-builder.md` — this FRD's workflow steps often decompose directly into individual Stories/tasks.
+- `journeys/end-to-end-journey-specification.md` — links this FRD into whichever lifecycle segment it implements, rather than re-describing its workflows; also the source of the SDD spec (`delivery/spec-driven-development.md`) that translates this FRD for AI-driven segments.
 - `governance/vulnerability-severity-and-exploit-prioritization.md`, `governance/privacy-law-awareness-for-product-development.md` — source material for the Security and Privacy NFR categories.
 
 ---

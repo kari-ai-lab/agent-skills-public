@@ -103,6 +103,6 @@ Rules:
 
 ## Metadata
 
-- **Version:** 1.1
-- **Last Updated:** 2026-07-25
+- **Version:** 1.2
+- **Last Updated:** 2026-08-09
 - **Author:** Workspace Delivery Skills

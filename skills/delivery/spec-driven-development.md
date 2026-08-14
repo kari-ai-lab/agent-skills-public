@@ -175,6 +175,7 @@ Rules:
 - `refinement/workstream-prioritization-and-roadmap-refinement.md` / `strategy/target-state-vision-and-phased-roadmap.md` — receive gap feedback from a non-Ready gate decision.
 - `delivery/bdd-framework-selection.md` — Karate Agent's "know what's safe to ship, even when AI wrote it" is the same accountability instinct behind this skill's independent-validator requirement.
 - `delivery/explore-plan-code-commit.md` — a lighter-weight, single-session workflow for work that doesn't warrant a full spec; this skill is the durable, re-verifiable counterpart for larger or AI-driven initiatives.
+- `journeys/end-to-end-journey-specification.md` — links this skill's SDD spec into whichever lifecycle segment is AI-driven, rather than re-describing its content; this skill covers one AI-executable unit of work, that skill covers the full customer lifecycle it's one piece of.
 - `strategy/controlled-experiment-design-and-decision-rules.md` — a different but adjacent gate: that skill decides whether a shipped change moved a live metric; this skill decides whether the implementation actually matches the spec's intent before it ships at all.
 
 ---

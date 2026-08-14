@@ -81,6 +81,10 @@ API actually requires it; resource/method shape follows Google's
 standard-methods conventions where applicable.
 ```
 
+## Related Workspace Skills
+
+- `journeys/end-to-end-journey-specification.md` and `journeys/journey-orchestration-and-verification.md` — link this skill's OpenAPI contracts per lifecycle segment, and require a consumer-driven contract test (Pact-style) for every cross-segment API dependency a journey depends on.
+
 ## ✅ Success Criteria / Quality Checklist
 
 - [ ] Document declares a valid `openapi` version string matching the fields actually used (don't use 3.1-only top-level `webhooks` under a `3.0.x` declaration)

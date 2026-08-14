@@ -339,6 +339,7 @@ Rules:
 - `communication/bookend-communication-structure.md` — the structural discipline behind Sections 0 and 12.
 - `product/ai-human-task-allocation-model.md`, `platform/llm-model-contract.md`, `product/user-flow-mapping.md`, `product/ai-feature-prompt-design.md`, `governance/privacy-law-awareness-for-product-development.md` — feed Section 11 (AI Feature Supplement) for AI/LLM-powered initiatives only.
 - `product/product-launch-checklist.md` — consumes Section 10 (Launch Plan) as its input at GA readiness.
+- `journeys/end-to-end-journey-specification.md` — links this PRD into whichever lifecycle segment(s) it implements, rather than re-describing its features; a PRD is scoped to one initiative, a Journey Spec spans the whole product lifecycle that initiative is one slice of.
 
 ---
 

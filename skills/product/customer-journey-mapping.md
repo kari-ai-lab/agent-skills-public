@@ -85,14 +85,16 @@ Rules:
 
 ## Related Workspace Skills
 
+- `research-synthesis-methodology.md` — the loss points/pain signals this map overlays should trace back to triangulated, evidenced themes from this skill, not raw unsynthesized notes.
 - `user-persona-development.md` — required input; a journey map is built from a specific persona's point of view, not an undefined "the user."
 - `opportunity-solution-tree.md` — receives the loss points this map surfaces as candidate opportunities.
 - `user-flow-mapping.md` — the task-level counterpart to this relationship-level map; use that skill instead when the scope is a single task flow rather than the broader customer relationship.
+- `journeys/end-to-end-journey-specification.md` — consumes this skill's output as UX-level input for the Discovery/Use segments of a full lifecycle Journey Spec, rather than re-deriving the customer's relationship view from scratch.
 
 ---
 
 ## Metadata
 
-- **Version:** 1.0
-- **Last Updated:** 2026-08-03
+- **Version:** 1.1
+- **Last Updated:** 2026-08-09
 - **Author:** Workspace Product Skills

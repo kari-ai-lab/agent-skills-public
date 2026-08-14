@@ -40,7 +40,7 @@ Primary source for the entire `Management/` skillset.
 - [`skills/Management/system-of-profound-knowledge.md`](skills/Management/system-of-profound-knowledge.md) — [Deming the Man](https://deming.org/deming-the-man/), [SoPK](https://deming.org/explore/sopk/)
 - [`skills/Management/fourteen-points-for-management.md`](skills/Management/fourteen-points-for-management.md) — [Fourteen Points](https://deming.org/explore/fourteen-points/)
 - [`skills/Management/seven-deadly-diseases.md`](skills/Management/seven-deadly-diseases.md) — [Seven Deadly Diseases](https://deming.org/explore/seven-deadly-diseases/)
-- [`skills/Management/pdsa-improvement-cycle.md`](skills/Management/pdsa-improvement-cycle.md) — [PDSA](https://deming.org/explore/pdsa/)
+- [`skills/Management/pdsa-improvement-cycle.md`](skills/Management/pdsa-improvement-cycle.md) — [PDSA](https://deming.org/explore/pdsa/) (documented alongside its more common name, PDCA — see [Lean Enterprise Institute](https://www.lean.org/lexicon-terms/pdca/) below)
 - [`skills/Management/red-bead-experiment.md`](skills/Management/red-bead-experiment.md) — [Red Bead Experiment](https://deming.org/explore/red-bead-experiment/)
 - [`skills/Management/funnel-experiment.md`](skills/Management/funnel-experiment.md) — [The Funnel Experiment](https://deming.org/explore/the-funnel-experiment/)
 
@@ -232,6 +232,140 @@ Kahneman, Nash, Tirole, Friedman, Hayek, Akerlof, Shiller (Nobel), Marshall, Pig
 **https://www.mcchrystalgroup.com/about/team-of-teams**
 Four pillars (Trust, Common Purpose, Shared Consciousness, Empowered Execution).
 - [`skills/Management/team-of-teams-organizational-adaptability.md`](skills/Management/team-of-teams-organizational-adaptability.md)
+
+### Lean Enterprise Institute — PDCA Cycle
+**https://www.lean.org/lexicon-terms/pdca/**
+PDCA's Shewhart/Deming/JUSE origin story and its four Plan-Do-Check-Act steps — documented alongside, not instead of, Deming's own Study-over-Check framing above; this source's "functionally equivalent" characterization of PDCA/PDSA is named as a real discrepancy from deming.org's stricter distinction, not smoothed over.
+- [`skills/Management/pdsa-improvement-cycle.md`](skills/Management/pdsa-improvement-cycle.md)
+
+### The Decision Lab / Wikipedia — The OODA Loop
+**https://thedecisionlab.com/reference-guide/computer-science/the-ooda-loop** / **https://en.wikipedia.org/wiki/OODA_loop**
+John Boyd's Observe-Orient-Decide-Act loop: origin, the four-stage definition, Orient as the framework's cognitive core, "operating inside the opponent's loop" as the central competitive-tempo principle, and Michael Hankins' critique that the model is loose enough to fit almost any intuitive decision process after the fact.
+- [`skills/Strategy/ooda-loop-decision-cycle.md`](skills/Strategy/ooda-loop-decision-cycle.md)
+
+## Business & Brand Architecture
+
+### David A. Aaker
+*Building Strong Brands* (1996) — originating source for brand architecture and the Brand Relationship Spectrum.
+- [`skills/Strategy/brand-architecture-house-of-brands-vs-branded-house.md`](skills/Strategy/brand-architecture-house-of-brands-vs-branded-house.md)
+
+### Aaker & Joachimsthaler — The Brand Relationship Spectrum
+**https://cmr.berkeley.edu/2000/08/42-4-the-brand-relationship-spectrum-the-key-to-the-brand-architecture-challenge/**
+*California Management Review*, Vol. 42, No. 4 (Summer 2000) — the formal four-point spectrum: House of Brands, Endorsed Brands, Sub-brands, Branded House.
+- [`skills/Strategy/brand-architecture-house-of-brands-vs-branded-house.md`](skills/Strategy/brand-architecture-house-of-brands-vs-branded-house.md)
+
+### The Branding Journal
+**https://www.thebrandingjournal.com/2022/01/brand-architecture/**
+Practitioner examples: P&G/Yum! (House of Brands), Apple/FedEx (Branded House), Marriott/Toyota-Lexus (hybrid/endorsed).
+- [`skills/Strategy/brand-architecture-house-of-brands-vs-branded-house.md`](skills/Strategy/brand-architecture-house-of-brands-vs-branded-house.md)
+
+### U.S. Trademark Law — Spectrum of Distinctiveness
+*Abercrombie & Fitch Co. v. Hunting World, Inc.*, 537 F.2d 4 (2d Cir. 1976) — the five-category ranking (Generic/Descriptive/Suggestive/Arbitrary/Fanciful) and protectability rules, corroborated via [Manning Fulton](https://www.manningfulton.com/blog/picking-a-strong-trademark-a-spectrum-of-distinctiveness/), [Gleam Law](https://www.gleamlaw.com/blog/trademark-law/understanding-trademark-strengths-the-five-types-explained/), and [BitLaw](https://www.bitlaw.com/trademark/degrees.html).
+- [`skills/Strategy/product-naming-distinctiveness-and-4cs-framework.md`](skills/Strategy/product-naming-distinctiveness-and-4cs-framework.md)
+
+### River + Wolf — The 4Cs: A Product Naming Strategy
+**https://riverandwolf.com/4-ingredients-of-naming/**
+The Character/Construction/Communication/Continuum naming framework.
+- [`skills/Strategy/product-naming-distinctiveness-and-4cs-framework.md`](skills/Strategy/product-naming-distinctiveness-and-4cs-framework.md)
+
+### Nancy Friedman ("Wordworking") — The Five Types of Brand Names
+**https://wordworking.medium.com/the-five-types-of-brand-names-41e51fef8ae3**
+Practitioner naming-consultant corroboration of the distinctiveness spectrum.
+- [`skills/Strategy/product-naming-distinctiveness-and-4cs-framework.md`](skills/Strategy/product-naming-distinctiveness-and-4cs-framework.md)
+
+### Business Architecture Guild — BIZBOK® Guide
+**https://cdn.ymaws.com/www.businessarchitectureguild.org/resource/resmgr/bizbok_10/glossary_v10_final.pdf**
+Version 10.0, Appendix A: Glossary — canonical, verbatim definitions for Capability, Capability Map, Capability Level, Capability Tier, Capability Instance, and Function (defined explicitly to differentiate it from Capability).
+- [`skills/product/product-capability-map-and-competitor-overlay.md`](skills/product/product-capability-map-and-competitor-overlay.md)
+
+### BusinessAnalystMentor — Capability Map
+**https://businessanalystmentor.com/capability-map/**
+The noun-vs-verb operational test distinguishing a capability from a process.
+- [`skills/product/product-capability-map-and-competitor-overlay.md`](skills/product/product-capability-map-and-competitor-overlay.md)
+
+### BPTrends — The Business Capability Map
+**https://bptrends.info/the-business-capability-map-a-critical-yet-often-misunderstood-concept-when-moving-from-program-strategy-to-implementation/**
+The strategy-to-implementation bridge framing and the two named failure modes (low stakeholder awareness, unclear map ownership) behind this skill's mandatory map-owner requirement.
+- [`skills/product/product-capability-map-and-competitor-overlay.md`](skills/product/product-capability-map-and-competitor-overlay.md)
+
+### LeanIX (SAP) — Business Capability Map: Examples and Templates
+**https://www.leanix.net/en/wiki/ea/business-capability-map-examples-and-templates**
+L1/L2/L3 worked structure and industry examples, and the heat-mapping/maturity-overlay mechanic this skill's competitor overlay is modeled on.
+- [`skills/product/product-capability-map-and-competitor-overlay.md`](skills/product/product-capability-map-and-competitor-overlay.md)
+
+## Communication
+
+### The Persimmon Group / Wikipedia — BLUF
+**https://thepersimmongroup.com/bluf-how-these-4-letters-simplify-communication/** / **https://en.wikipedia.org/wiki/BLUF_(communication)**
+Military origin (U.S. Army Regulation 25-50), the three-part structure, and the explicit distinction from an executive summary.
+- [`skills/communication/bluf-bottom-line-up-front.md`](skills/communication/bluf-bottom-line-up-front.md)
+
+### Wikipedia — RAG Status
+**https://en.wikipedia.org/wiki/RAG_status**
+The Red/Amber/Green definition, its use in UK government reporting, and the letters-alongside-color accessibility rule.
+- [`skills/communication/rag-status-reporting.md`](skills/communication/rag-status-reporting.md)
+
+### Planview / Agile Velocity — ROAM
+**https://blog.planview.com/managing-risks-with-roam-in-agile/** / **https://www.agilevelocity.com/blog/roam-risk-model-for-effective-pi-planning**
+The Resolved/Owned/Accepted/Mitigated risk-categorization model and its PI Planning role.
+- [`skills/communication/roam-risk-communication.md`](skills/communication/roam-risk-communication.md)
+
+### Cognitect — Michael Nygard, "Documenting Architecture Decisions" (2011)
+**https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions**
+The original ADR proposal: five-section format and the "conversation with a future developer" writing standard.
+- [`skills/communication/architecture-decision-records.md`](skills/communication/architecture-decision-records.md)
+
+### Scrum Guide
+**https://www.scrumguides.org/scrum-guide.html**
+Official purpose, timebox, and attendee rules for the Daily Scrum, Sprint Review, and Sprint Retrospective.
+- [`skills/communication/scrum-event-facilitation.md`](skills/communication/scrum-event-facilitation.md)
+
+### CoinJar Insights / ProductPlan — Roadmap Whiplash & Stakeholder Communication
+**https://www.coinjarinsights.com/post/roadmap-whiplash** / **https://www.productplan.com/learn/communicate-roadmap-stakeholders**
+The definition and root cause of "roadmap whiplash," and audience-tailored roadmap-change communication practices.
+- [`skills/communication/roadmap-change-communication.md`](skills/communication/roadmap-change-communication.md)
+
+## Product Metrics, Research & Roadmap Presentation
+
+### Amplitude — North Star Framework
+**https://amplitude.com/books/north-star/about-north-star-framework**
+Sean Ellis's original North Star Metric definition and the input-metrics concept.
+- [`skills/product/north-star-metric-and-review-cadence.md`](skills/product/north-star-metric-and-review-cadence.md)
+
+### Mixpanel — Monthly Active Users
+**https://mixpanel.com/blog/mau/**
+DAU/WAU/MAU definitions, the stickiness ratio, and current usage-pattern benchmarks.
+- [`skills/product/north-star-metric-and-review-cadence.md`](skills/product/north-star-metric-and-review-cadence.md)
+
+### Working Backwards — Quarterly & Monthly Business Reviews
+**https://workingbackwards.com/concepts/quarterly-monthly-business-reviews/**
+Amazon's WBR/MBR/QBR cadence structure.
+- [`skills/product/north-star-metric-and-review-cadence.md`](skills/product/north-star-metric-and-review-cadence.md)
+
+### Nielsen Norman Group — Thematic Analysis, Affinity Diagramming, Triangulation
+**https://www.nngroup.com/articles/thematic-analysis/** / **https://www.nngroup.com/articles/affinity-diagram/** / **https://www.nngroup.com/articles/triangulation-better-research-results-using-multiple-ux-methods/**
+The six-step coding-to-theme process, the collaborative clustering version of the same step, and cross-validating a finding against a second independent source.
+- [`skills/product/research-synthesis-methodology.md`](skills/product/research-synthesis-methodology.md)
+
+### ProdPad — Why I Invented the Now-Next-Later Roadmap
+**https://www.prodpad.com/blog/invented-now-next-later-roadmap/**
+Janna Bastow's origin story for the Now/Next/Later format and its certainty-gradient rationale.
+- [`skills/Refinement/roadmap-presentation-and-sequencing-views.md`](skills/Refinement/roadmap-presentation-and-sequencing-views.md)
+
+### ProductPlan — Theme-Based Roadmap
+**https://www.productplan.com/learn/theme-based-roadmap/**
+Theme-based roadmaps' outcome-vs-output framing.
+- [`skills/Refinement/roadmap-presentation-and-sequencing-views.md`](skills/Refinement/roadmap-presentation-and-sequencing-views.md)
+
+### Roman Pichler — OKRs and Product Roadmaps
+**https://www.romanpichler.com/blog/okrs-and-product-roadmaps/**
+OKR-aligned roadmap structures, and an explicit warning against roadmaps becoming a checklist of stakeholder-requested features wearing an OKR label.
+- [`skills/Refinement/roadmap-presentation-and-sequencing-views.md`](skills/Refinement/roadmap-presentation-and-sequencing-views.md)
+
+### Wikipedia — Gantt Chart
+**https://en.wikipedia.org/wiki/Gantt_chart**
+Origin (Henry Gantt; earlier priority credited to Karol Adamiecki) and the "flattens assumptions" limitation under change.
+- [`skills/Refinement/roadmap-presentation-and-sequencing-views.md`](skills/Refinement/roadmap-presentation-and-sequencing-views.md)
 
 ## Agile & Lean Thought Leadership
 

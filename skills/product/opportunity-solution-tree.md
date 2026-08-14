@@ -90,6 +90,7 @@ Rules:
 
 ## Related Workspace Skills
 
+- `research-synthesis-methodology.md` — this tree's rule that "opportunities come from research, not imagination" requires the research to have actually been synthesized first; run this skill to turn raw notes into the evidenced themes this tree's opportunities should trace back to.
 - `strategy/target-state-vision-and-phased-roadmap.md` / `strategy/annual-goals-and-quarterly-objectives.md` — source of the desired outcome this tree must trace back to; run first if no outcome exists yet.
 - `value-proposition-canvas.md` — the Customer Profile's Pains/Gains are natural seed material for this tree's opportunity space.
 - `product/systems-thinking-and-domain-driven-design.md` — shares Event Storming as a discovery technique with this skill's opportunity-surfacing step.
@@ -99,6 +100,6 @@ Rules:
 
 ## Metadata
 
-- **Version:** 1.0
-- **Last Updated:** 2026-08-03
+- **Version:** 1.1
+- **Last Updated:** 2026-08-09
 - **Author:** Workspace Product Skills

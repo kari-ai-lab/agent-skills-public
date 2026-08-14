@@ -30,7 +30,11 @@ Use this category for shared product-family overlays that apply across a product
 
 ## Discovery & UX Foundations
 
-Run these before `refinement/product-requirements-document-template.md` assumes a validated problem and a known user — the workspace's strategy/portfolio/PRD layers all assume discovery already happened somewhere; these six skills are where it happens.
+Run these before `refinement/product-requirements-document-template.md` assumes a validated problem and a known user — the workspace's strategy/portfolio/PRD layers all assume discovery already happened somewhere; these seven skills are where it happens.
+
+- `research-synthesis-methodology.md`
+  - Step zero for this section: turns raw interview transcripts, support tickets, survey open-ends, and field notes into named, evidenced themes — via thematic analysis (coding), affinity mapping (the collaborative version), and triangulation (cross-validating a finding against a second independent source before it drives a decision) — before any of the skills below build on "real research" that was never actually synthesized.
+  - Required input to `opportunity-solution-tree.md`, `user-persona-development.md`, and `customer-journey-mapping.md`, all three of which require findings sourced to real research but never defined the synthesis method themselves.
 
 - `value-proposition-canvas.md`
   - Maps a customer's Jobs/Pains/Gains against the offering's Products & Services/Pain Relievers/Gain Creators, sourced from Strategyzer/Osterwalder directly, and forces an explicit fit check — every Pain Reliever/Gain Creator must name the specific Pain/Gain it addresses.
@@ -66,10 +70,19 @@ Run these before `refinement/product-requirements-document-template.md` assumes 
   - A reference (not a dashboard skill) covering six growth-metric categories — Acquisition, Activation, Engagement, Retention, Referral, Revenue — sourced from Product School, with named anchor metrics per category.
   - Classifies a specific product question into the relevant category rather than reporting all six regardless of relevance, factors in product lifecycle stage, and hands off to `data:build-dashboard` for any actual visualization request. Explicitly distinct from `governance/quality-monitoring-model.md` (skill-library metrics, not product metrics).
 
+- `north-star-metric-and-review-cadence.md`
+  - Defines ONE North Star Metric reflecting genuine customer value (not a revenue/business-output metric) plus a small set of team-actionable input metrics — organizational alignment around a single outcome, distinct from `product-growth-metrics-reference.md`'s per-question category lookup.
+  - Gives DAU/WAU/MAU/stickiness precise, usage-pattern-matched definitions and states what's actually reviewed at weekly/monthly/quarterly cadence (sourced from Amplitude's North Star Framework and Amazon's Working Backwards WBR/MBR/QBR system), handing off meeting-facilitation mechanics to `../communication/scrum-event-facilitation.md`.
+
 ## Other Skills
 
 - `competitor-analysis-synthesizer.md`
   - Synthesizes raw competitor data into a feature comparison matrix, a SWOT, and white-space opportunities.
+
+- `product-capability-map-and-competitor-overlay.md`
+  - Builds a BIZBOK-style hierarchical capability map (L1 domain → L2 → L3, by capability tier) showing what a product does (nouns) with an actor/constituency + channel band across the top, so a user's full path through the product stack is visible layer by layer — the deeper, tiered counterpart to this skill's flat feature matrix.
+  - Enforces the noun-vs-verb test (capability vs. process) and the capability-vs-feature distinction (a feature is one instance of a capability, never a standalone map entry), and supports an optional have/parity/gap competitor overlay with evidence required per cell.
+  - Carries a workspace-authored **Foundation Test**: within a tier, tags an L1 capability Foundation when most/all of its tier-mates would structurally break without it (e.g. Phase Orchestration and AI Agent Orchestration in a first test run against `platform/apps/apdlc/`) — distinct from a usage/popularity or subjective-importance read, and never a new top-level tier.
 
 - `ai-operating-model-for-product-teams.md`
   - Diagnoses whether a product team is stuck in the AI-adoption "messy middle" (individual productivity gains that never reach team/business outcomes) and prescribes a paired People (PM role, pod sizing, manager model, training) and System (shared workspace, SaaS consolidation, agent visibility, planning/shipping loop) operating-model redesign.

@@ -84,6 +84,7 @@ Rules:
 
 ## Related Workspace Skills
 
+- `research-synthesis-methodology.md` — run first: turns the raw interviews/tickets/analytics listed under Inputs Required into coded, evidenced themes via thematic analysis and (optionally) affinity mapping, with a triangulation check before a theme is trusted enough to become a persona trait. This skill assumes that synthesis already happened; it doesn't define the method itself.
 - `value-proposition-canvas.md` — this persona's goals/needs are the raw material a Customer Profile's Jobs/Pains/Gains should be grounded in.
 - `customer-journey-mapping.md` — a journey map is built from this persona's point of view; run this skill first.
 - `refinement/product-requirements-document-template.md` — the PRD's Problem Statement should reference a specific persona, not an undefined "our users."
@@ -92,6 +93,6 @@ Rules:
 
 ## Metadata
 
-- **Version:** 1.0
-- **Last Updated:** 2026-08-03
+- **Version:** 1.1
+- **Last Updated:** 2026-08-09
 - **Author:** Workspace Product Skills

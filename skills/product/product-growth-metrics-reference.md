@@ -96,6 +96,7 @@ Rules:
 
 ## Related Workspace Skills
 
+- `north-star-metric-and-review-cadence.md` — a different job than this skill: that skill picks ONE organization-wide outcome metric plus its input-metric tree and review cadence; this skill picks the right metric/category for a specific question. Use both together, not as substitutes.
 - `governance/quality-monitoring-model.md` — covers skill-library quality metrics; explicitly NOT the same scope as this skill's product growth metrics. Do not conflate the two.
 - `product-launch-checklist.md` — its Post-Launch monitoring step should pull metric definitions from here rather than defining metrics ad hoc.
 - `data:build-dashboard` — the visualization/tracking counterpart; this skill defines what to measure, that one builds how it's displayed.
@@ -104,6 +105,6 @@ Rules:
 
 ## Metadata
 
-- **Version:** 1.0
-- **Last Updated:** 2026-08-03
+- **Version:** 1.1
+- **Last Updated:** 2026-08-09
 - **Author:** Workspace Product Skills

@@ -164,6 +164,7 @@ Rules:
 
 ## Related Workspace Skills
 
+- `brand-architecture-house-of-brands-vs-branded-house.md` — run before finalizing a premium anchor: a Veblen-style anchor item is frequently a separate brand entirely (Lexus), not just a pricing tier within the same brand, and that architecture decision changes what "protecting the anchor" actually requires.
 - `financial-impact-analysis/cost-based-pricing-floor-and-margin-governance.md` — the cost-based floor this skill's demand-side ceiling sits above; run it first for the breakeven/margin constraints any price recommendation here must respect.
 - `product/competitor-analysis-synthesizer.md` — the competitive-landscape input for the game-theory/competitive-response check.
 - `macroeconomic-risk-awareness-for-product-strategy.md` — the macro-conditions companion to this skill's market-level (micro) focus.
@@ -174,6 +175,6 @@ Rules:
 
 ## Metadata
 
-- **Version:** 1.2
-- **Last Updated:** 2026-07-27
+- **Version:** 1.3
+- **Last Updated:** 2026-08-10
 - **Author:** Workspace Strategy Skills

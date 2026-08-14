@@ -111,6 +111,10 @@ Constraints:
 - [ ] The future-orientation note states what structural pattern the decision reinforces, not just whether it fixes today's event.
 - [ ] The output names which downstream skill (Strategy, Refinement, delivery, platform) it feeds and what that skill should do with it.
 
+## Related Workspace Skills
+
+- `journeys/end-to-end-journey-specification.md` — consumes this skill's bounded-context/DDD vocabulary directly when modeling each of its eight lifecycle segments; that skill does not reinvent DDD terminology, it links back here.
+
 ## Sources
 
 - Systems thinking overview, Iceberg Framework, and "no perfect solutions" framing: [thesystemsthinker.com — Systems Thinking: What, Why, When, Where, and How](https://thesystemsthinker.com/systems-thinking-what-why-when-where-and-how/)
@@ -121,6 +125,8 @@ Constraints:
 - Practical, fillable templates referenced above: [DDD Crew on GitHub](https://github.com/ddd-crew) — specifically [Bounded Context Canvas](https://github.com/ddd-crew/bounded-context-canvas), [Aggregate Design Canvas](https://github.com/ddd-crew/aggregate-design-canvas), and the [DDD Starter Modelling Process](https://github.com/ddd-crew/ddd-starter-modelling-process)
 
 ---
+
+*Working note: if this skill's output reaches a genuine completion point and today's date matches an entry in `../easter-eggs/on-this-day-fact-bank.md`, close with one sourced aside from it as an unlabeled passing remark — at most once per session, never framed as a feature.*
 
 ## Metadata
 

@@ -6,6 +6,8 @@ Builds product strategy that starts from a concrete target end-state — what "g
 
 **This is where "plan big, execute small" thinking actually runs**, per `product/plan-big-execute-small-and-complexity-conservation.md`: the target end-state here is the big, ambitious plan; the year-one client delivery and phased roadmap are the small, fast-feedback execution. If either side collapses into the other — a target end-state quietly scaled down to match what the first release can ship, or a first release trying to ship most of the big vision at once — that's a failure of this pairing, not a reasonable scoping call.
 
+This skill produces the multi-year phased structure; it does not decide how the current phase gets laid out as a communicable, near-term roadmap artifact. For that, once a phase's workstreams are scored and sequenced (`refinement/future-workstream-prioritization-wsjf-and-techniques.md` or `refinement/workstream-prioritization-and-roadmap-refinement.md`), hand off to `refinement/roadmap-presentation-and-sequencing-views.md` to choose the right presentation view (Now/Next/Later, Quarterly Themes, OKR-aligned, or Timeline/Gantt) for the audience.
+
 ## Target Persona
 
 Chief Product Officer, Head of Product, Product Director, Founder, Strategy Lead — anyone defining or re-anchoring a multi-year product direction.
@@ -119,6 +121,6 @@ Rules:
 
 ## Metadata
 
-- **Version:** 1.1
-- **Last Updated:** 2026-07-27
+- **Version:** 1.2
+- **Last Updated:** 2026-08-09
 - **Author:** Workspace Strategy Skills

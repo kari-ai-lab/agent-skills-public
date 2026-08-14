@@ -7,6 +7,8 @@ Use this folder for management-practice skills grounded in W. Edwards Deming's w
 > Historical lineage worth knowing before citing Deming here: per [Lean Manufacturing (Wikipedia)](https://en.wikipedia.org/wiki/Lean_manufacturing), Deming's post-war statistical-quality work in Japan is the direct root of Ohno and Shingo's Toyota Production System, which Womack and Jones later codified as "Lean." The [Lean Enterprise Institute](https://www.lean.org/) and [Lean Essays](https://www.leanessays.com/) (Mary Poppendieck, who first carried lean-manufacturing principles into software) are the living continuation of that lineage — useful supporting sources when a management-practice audit here touches lean/flow reasoning specifically, not just Deming's management writing.
 >
 > **`team-of-teams-organizational-adaptability.md` is a second, distinct management philosophy in this folder — not Deming-grounded, and not a replacement for the lens above.** Where the Deming skills audit whether a specific *practice* is sound, McChrystal's Team of Teams audits whether the *organizational structure itself* can move information and decisions fast enough for a complex, networked environment. Run both when the question is genuinely structural — they answer different questions and neither substitutes for the other.
+>
+> **`pdsa-improvement-cycle.md` is a cooperative, non-adversarial improvement loop — do not reach for it when the situation is actively competitive or adversarial (a competitor's move, a live incident, a negotiation).** `../strategy/ooda-loop-decision-cycle.md` (Boyd's Observe-Orient-Decide-Act) is the correct loop there: it optimizes for out-cycling an actively adapting counterpart, not for a falsifiable prediction tested at small scale against a stable system. Forcing PDSA's discipline onto a fast-moving competitive situation loses the tempo advantage; forcing OODA's speed-first discipline onto a stable internal process risks the reactive tampering `funnel-experiment.md` warns against.
 
 ## Purpose
 
@@ -33,9 +35,9 @@ These skills help leadership:
   - Diagnoses organization-level patterns that block improvement structurally: short-termism, management mobility, visible-figures-only management, merit rating, and the harder-to-fix medical/liability cost diseases.
   - Ranks diseases by how directly addressable they are through management decision versus external/policy-level leverage.
 
-- `pdsa-improvement-cycle.md`
+- `pdsa-improvement-cycle.md` (documented under its more common name, PDCA, alongside Deming's PDSA variant)
   - Runs Plan-Do-Study-Act as the operating loop for testing any theory or change at small scale before full rollout.
-  - Enforces Deming's Study-over-Check distinction: compare actual results against a stated prediction, don't just pass/fail the change.
+  - Enforces Deming's Study-over-Check distinction: compare actual results against a stated prediction, don't just pass/fail the change. Names the Lean Enterprise Institute's differing "functionally equivalent" framing of PDCA/PDSA explicitly rather than silently picking a side.
 
 - `red-bead-experiment.md`
   - Tests whether a performance metric used to rate or rank individuals/teams is actually bound by the shared system they work within.
@@ -79,6 +81,6 @@ These skills help leadership:
 
 ## Metadata
 
-- **Version:** 1.2
-- **Last Updated:** 2026-07-27
+- **Version:** 1.3
+- **Last Updated:** 2026-08-09
 - **Author:** Workspace Management Skills

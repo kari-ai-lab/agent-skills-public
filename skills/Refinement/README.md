@@ -59,7 +59,11 @@ Three altitudes, one family of documents:
   - Applies an increment gate recommendation (Pass / Conditional Pass / Fail).
   - Flags at-risk teams/applications due to capacity constraints.
 - `future-workstream-prioritization-wsjf-and-techniques.md`
-  - Applies WSJF-first prioritization with a documented fallback toolkit (MoSCoW, Kano, Priority Poker, 100-dollar test, CoD, ROI, RICE, value vs effort, opportunity scoring) for future workstream sequencing.
+  - Applies WSJF-first prioritization with a documented fallback toolkit for future workstream sequencing, giving real methodological depth (not just a name-drop) to MoSCoW (effort caps per category), Kano (five categories, survey method, the delighter-to-must-have decay dynamic), ICE (Impact × Confidence × Ease, its growth-hacking origin and known Ease-bias/subjectivity limitations versus RICE), and the Value vs Effort matrix (four quadrants, and the "suspiciously full Quick Wins" tell), alongside Priority Poker, the 100-dollar test, CoD, ROI, RICE, and Opportunity Scoring.
+
+- `roadmap-presentation-and-sequencing-views.md`
+  - Takes the already-prioritized list this skill (or `workstream-prioritization-and-roadmap-refinement.md`) produces and lays it out as a roadmap view matched to audience and certainty: Now/Next/Later (the default, avoiding false-precision date commitments), Quarterly Themes (executive-facing, outcome-framed), an OKR-aligned view (when the org already runs OKRs), or Timeline/Gantt (only when a genuinely fixed external date exists).
+  - Sits explicitly beneath `../strategy/target-state-vision-and-phased-roadmap.md`'s multi-year phased roadmap as the near-term presentation layer, and hands off to `../communication/roadmap-change-communication.md` for what happens when the sequence later changes.
 
 - `ai-driven-work-sizing-and-token-budgets.md`
   - Sizes AI-driven (agent-executed) work using the workspace's collapsed Epic → Task hierarchy (no Story layer; AC lives at the Epic and is validated at delivery), since story-point/sprint-day sizing doesn't transfer to a token-metered executor.
@@ -71,6 +75,7 @@ Three altitudes, one family of documents:
 1. For a new program/investment, start with `business-requirements-document-template.md` to build and approve the business case before any specific initiative is scoped.
 2. Within an approved program, use `workstream-prioritization-and-roadmap-refinement.md` to define and rank what should be pursued.
 3. Use `future-workstream-prioritization-wsjf-and-techniques.md` to run WSJF-first economic sequencing and apply alternative prioritization methods when needed.
+3a. Use `roadmap-presentation-and-sequencing-views.md` to lay out the resulting sequence as a roadmap view for a specific audience, once prioritization from step 2 or 3 is settled — this step presents the sequence, it doesn't change it.
 4. Once a workstream is admitted, run `product-requirements-discovery-questionnaire.md` to pressure-test the thinking behind it before writing anything up.
 5. Draft the initiative in `product-requirements-document-template.md`, using the questionnaire's answers as input — this is the artifact that gets presented to executives and handed to delivery.
 6. For any feature needing implementation-ready detail, elaborate it in `functional-requirements-document-template.md` before it reaches SDLC Design/Implementation.
@@ -109,6 +114,6 @@ Three altitudes, one family of documents:
 
 ## Metadata
 
-- **Version:** 1.4
-- **Last Updated:** 2026-08-03
+- **Version:** 1.5
+- **Last Updated:** 2026-08-09
 - **Author:** Workspace Refinement Skills

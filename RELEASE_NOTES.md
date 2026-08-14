@@ -2,7 +2,7 @@
 
 Status of every skill category in this repo — what's available to use today vs. what's on the roadmap. See [`skills/INDEX.md`](skills/INDEX.md) for the category model and [`README.md`](README.md) for how to use a skill.
 
-## ✅ Available (102 skills across 12 categories)
+## ✅ Available (117 skills across 13 categories)
 
 ### `platform/` — 8 skills
 Engineering/runtime: monorepo, tooling, testing, infra.
@@ -67,8 +67,11 @@ Standards, controls, monitoring, policy.
 - [`pci-dss-req-4-transmission-encryption.md`](skills/governance/pci-dss-req-4-transmission-encryption.md), [`pci-dss-req-6-secure-systems-and-software.md`](skills/governance/pci-dss-req-6-secure-systems-and-software.md), [`pci-dss-req-8-identify-authenticate-access.md`](skills/governance/pci-dss-req-8-identify-authenticate-access.md) — requirement-level compliance chunks
 - [`pci-secure-software-lifecycle-and-devsecops.md`](skills/governance/pci-secure-software-lifecycle-and-devsecops.md), [`pci-secure-software-standard-requirements.md`](skills/governance/pci-secure-software-standard-requirements.md), [`pci-tsp-token-service-provider-requirements.md`](skills/governance/pci-tsp-token-service-provider-requirements.md) — full PCI compliance family
 
-### `Strategy/` — 14 skills
+### `Strategy/` — 17 skills
 Goal-setting, portfolio alignment, strategy evaluation.
+- [`ooda-loop-decision-cycle.md`](skills/Strategy/ooda-loop-decision-cycle.md) — Boyd's Observe-Orient-Decide-Act loop for competitive/adversarial situations (competitor moves, incidents, negotiation), explicitly distinct from PDSA's cooperative improvement cycle
+- [`brand-architecture-house-of-brands-vs-branded-house.md`](skills/Strategy/brand-architecture-house-of-brands-vs-branded-house.md) — classifies a product/business on Aaker's Brand Relationship Spectrum via a two-question decision framework
+- [`product-naming-distinctiveness-and-4cs-framework.md`](skills/Strategy/product-naming-distinctiveness-and-4cs-framework.md) — picks and evaluates a candidate name using the USPTO Spectrum of Distinctiveness (legal trademark strength) and the 4Cs (Character, Construction, Communication, Continuum)
 - [`annual-goals-and-quarterly-objectives.md`](skills/Strategy/annual-goals-and-quarterly-objectives.md)
 - [`investment-portfolio-alignment.md`](skills/Strategy/investment-portfolio-alignment.md)
 - [`product-and-solution-portfolio-definition.md`](skills/Strategy/product-and-solution-portfolio-definition.md)
@@ -84,8 +87,9 @@ Goal-setting, portfolio alignment, strategy evaluation.
 - [`macroeconomic-risk-awareness-for-product-strategy.md`](skills/Strategy/macroeconomic-risk-awareness-for-product-strategy.md) — Keynes/Friedman/Hayek/Minsky/Schumpeter/Akerlof-Shiller-grounded macro-risk awareness, plus a practical PESTLE scan
 - [`controlled-experiment-design-and-decision-rules.md`](skills/Strategy/controlled-experiment-design-and-decision-rules.md) — A/B test hypothesis-to-decision workflow, with pricing experiments treated as methodologically distinct from UI/feature tests
 
-### `Refinement/` — 8 skills
+### `Refinement/` — 9 skills
 Backlog and roadmap refinement techniques, plus the BRD/PRD/FRD requirements-document family.
+- [`roadmap-presentation-and-sequencing-views.md`](skills/Refinement/roadmap-presentation-and-sequencing-views.md) — lays out a prioritized workstream list as Now/Next/Later, Quarterly Themes, an OKR-aligned view, or Timeline/Gantt, matched to audience and certainty
 - [`future-workstream-prioritization-wsjf-and-techniques.md`](skills/Refinement/future-workstream-prioritization-wsjf-and-techniques.md)
 - [`refinement-plan-realism-and-capacity-risk.md`](skills/Refinement/refinement-plan-realism-and-capacity-risk.md)
 - [`workstream-prioritization-and-roadmap-refinement.md`](skills/Refinement/workstream-prioritization-and-roadmap-refinement.md)
@@ -101,8 +105,11 @@ Domain-specific compliance/security guidance.
 
 (`agent-zero-trust-delegation.md` and `pci-dss-req-3-4.md` moved to `governance/` — see that section.)
 
-### `product/` — 18 skills
+### `product/` — 21 skills
 Product-family overlays.
+- [`product-capability-map-and-competitor-overlay.md`](skills/product/product-capability-map-and-competitor-overlay.md) — BIZBOK-style hierarchical capability map (L1→L2→L3 by capability tier) with an actor/channel band and optional competitor overlay; includes a workspace-authored Foundation Test for load-bearing capabilities within a tier
+- [`north-star-metric-and-review-cadence.md`](skills/product/north-star-metric-and-review-cadence.md) — one North Star Metric grounded in genuine customer value plus team-owned input metrics, and a weekly/monthly/quarterly review-cadence structure
+- [`research-synthesis-methodology.md`](skills/product/research-synthesis-methodology.md) — turns raw research (interviews, tickets, survey open-ends) into evidenced themes via thematic analysis, affinity mapping, and triangulation
 - [`systems-thinking-and-domain-driven-design.md`](skills/product/systems-thinking-and-domain-driven-design.md) — foundational lens for this and the `Strategy/`/`Refinement/` categories
 - [`competitor-analysis-synthesizer.md`](skills/product/competitor-analysis-synthesizer.md)
 - [`no-silo-product-operating-model.md`](skills/product/no-silo-product-operating-model.md) — second foundational lens: product's required coupling to corporate strategy and SDLC delivery, plus security/privacy/feature/client-first awareness
@@ -128,9 +135,20 @@ Management practice grounded in W. Edwards Deming's work, plus a second distinct
 - [`funnel-experiment.md`](skills/Management/funnel-experiment.md)
 - [`team-of-teams-organizational-adaptability.md`](skills/Management/team-of-teams-organizational-adaptability.md) — McChrystal's four pillars (Trust, Common Purpose, Shared Consciousness, Empowered Execution), a distinct structural-adaptability model alongside the Deming skillset
 
-### `communication/` — 1 skill
+### `communication/` — 7 skills
 Structuring written reports, memos, RFCs, briefings.
 - [`bookend-communication-structure.md`](skills/communication/bookend-communication-structure.md)
+- [`bluf-bottom-line-up-front.md`](skills/communication/bluf-bottom-line-up-front.md) — the actual mechanics of a BLUF line (what needs to be known/done/when), distinct from an executive summary
+- [`rag-status-reporting.md`](skills/communication/rag-status-reporting.md) — Red/Amber/Green status anchored to initiative-specific definitions
+- [`roam-risk-communication.md`](skills/communication/roam-risk-communication.md) — Resolved/Owned/Accepted/Mitigated risk categorization
+- [`architecture-decision-records.md`](skills/communication/architecture-decision-records.md) — the canonical ADR format sourced from Michael Nygard's original proposal
+- [`scrum-event-facilitation.md`](skills/communication/scrum-event-facilitation.md) — Daily Scrum/Sprint Review/Sprint Retrospective run to their actual Scrum Guide purpose, timebox, and attendees
+- [`roadmap-change-communication.md`](skills/communication/roadmap-change-communication.md) — diagnoses "roadmap whiplash" before drafting a roadmap-change message, tailored per audience
+
+### `journeys/` — 2 skills (new category)
+The end-to-end, per-product/solution customer-lifecycle specification (Discovery through Offboarding).
+- [`end-to-end-journey-specification.md`](skills/journeys/end-to-end-journey-specification.md) — eight-segment document (Discovery through Offboarding) modeling each segment as a DDD bounded context, with EventStorming-derived domain events and Feature-Mapping-derived business-goal-to-example structure
+- [`journey-orchestration-and-verification.md`](skills/journeys/journey-orchestration-and-verification.md) — Process Manager vs. choreography vs. manual-gate decision per edge, workflow-as-code promotion criteria, trace-context propagation, and consumer-driven contract testing
 
 ### `Financial impact analysis/` — 1 skill
 Cost modeling, margin governance, and pricing-floor discipline.

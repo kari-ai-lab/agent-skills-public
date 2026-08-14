@@ -2,7 +2,7 @@
 
 ## 🎯 Objective
 
-Turns retrospective input into concrete future improvements by identifying hindrances early, protecting high-performing practices, and creating follow-up work that measurably improves delivery.
+Turns retrospective input into concrete future improvements by identifying hindrances early, protecting high-performing practices, and creating follow-up work that measurably improves delivery. Picks up after the retrospective meeting itself has been facilitated — see `../communication/scrum-event-facilitation.md` for running the meeting to its actual purpose/timebox/attendees and surfacing the raw candidates this skill then prioritizes and tracks.
 
 ## 👤 Target Persona
 
@@ -74,6 +74,6 @@ Rules:
 
 ## Metadata
 
-- **Version:** 1.1
-- **Last Updated:** 2026-08-03
+- **Version:** 1.2
+- **Last Updated:** 2026-08-09
 - **Author:** Workspace Delivery Skills

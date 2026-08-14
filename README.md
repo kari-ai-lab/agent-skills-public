@@ -22,6 +22,7 @@ skills/
 ├── delivery/                     # planning, decomposition, QA, release, workflow execution
 ├── governance/                   # standards, controls, monitoring, policy
 ├── Financial impact analysis/    # cost modeling, margin governance, pricing-floor discipline
+├── journeys/                     # end-to-end, per-product customer-lifecycle specification
 ├── templates/                    # canonical authoring templates for new skills/recipes
 ├── recipes/                      # reusable procedure-style instructions
 └── communication/                # structuring written reports, memos, RFCs, briefings

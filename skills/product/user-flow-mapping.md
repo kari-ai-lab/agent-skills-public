@@ -132,6 +132,7 @@ Rules:
 - `refinement/product-requirements-document-template.md` Section 11 (AI Feature Supplement) — pulls this skill's AI-Specific Failure Modes output as its failure-mode UX input.
 - `product/ai-human-task-allocation-model.md` — source of which steps are AI-owned vs. Human-owned, determining where a low-confidence state should fall back to a human path.
 - `refinement/ai-driven-work-sizing-and-token-budgets.md` — source of the token budget ceiling relevant to the unavailability/rate-limit failure state.
+- `journeys/end-to-end-journey-specification.md` — consumes this skill's output as UX-level input for the Use segment of a full lifecycle Journey Spec.
 
 ---
 

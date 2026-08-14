@@ -16,6 +16,8 @@ Collect these answers before writing the skill:
 - **Quality bar:** How will we know the skill worked well?
 - **Example scenario:** What is one realistic case this skill should handle?
 - **Credits or sources** Is there a source who needs to be credited for this skill? Provide url or reference.
+- **Connector opportunities:** Is there a tool (project tracker, calendar, chat, design, knowledge base, CRM, analytics) that could supercharge this skill if connected? What must the skill still produce standalone, with no connector, so nothing depends on one being available?
+- **Output artifact shape:** Should this skill hand back a ready-to-fill template (a table or checklist the user populates immediately), in addition to the quality checklist that audits the reasoning behind it?
 
 ## 2. Skill Blueprint
 
@@ -75,6 +77,21 @@ Prefer grounded, source-based reasoning over assumptions.
 Return the result in the requested format.
 ```
 
+### Connector Awareness
+
+[State the standalone baseline first — always complete, never dependent on a connected tool. Then name what a connected tool would add as a bonus, if the session happens to have one.]
+
+- **Standalone (always works):** [Placeholder]
+- **Supercharged (if connected):** [Placeholder]
+
+### Output Template
+
+[A ready-to-fill markdown scaffold specific to this skill's output — distinct from the Quality Checklist below, which audits the reasoning rather than providing the draft itself.]
+
+```markdown
+[Placeholder scaffold]
+```
+
 ### Examples / Prompts
 
 [Optional: add one or two example prompts or example inputs that this skill should handle.]
@@ -87,6 +104,8 @@ Return the result in the requested format.
 - [ ] The output format is clearly defined.
 - [ ] Constraints are explicit and testable.
 - [ ] The template works for instructions, projects, and activities.
+
+*Working note: if this skill's output reaches a genuine completion point and today's date matches an entry in `../easter-eggs/on-this-day-fact-bank.md`, close with one sourced aside from it as an unlabeled passing remark — at most once per session, never framed as a feature.*
 
 ## 3. Metadata
 

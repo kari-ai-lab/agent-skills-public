@@ -138,6 +138,7 @@ Rules:
 - `refinement/product-requirements-document-template.md` — Sections 7 and 8 are where Formulation's output and Discovery's failure modes land.
 - `delivery/jira-epic-builder.md` — consumes the same Gherkin scenarios for its Acceptance Criteria.
 - `delivery/software-development-life-cycle-modeling.md` — Automation executes at this skill's Testing phase.
+- `journeys/end-to-end-journey-specification.md` — uses EventStorming (sourced directly from Brandolini's own site) and Feature Mapping to model each lifecycle segment, then links the resulting `.feature` files rather than re-deriving BDD practice; that skill's Segment Modeling section is a sibling application of the same Discovery/Formulation ideas this skill covers, at the whole-journey altitude rather than one feature's.
 
 ---
 
