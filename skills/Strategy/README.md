@@ -37,6 +37,7 @@ These skills help product leadership:
 - `product-naming-distinctiveness-and-4cs-framework.md`
   - Picks and evaluates the actual name for a product/business, once `brand-architecture-house-of-brands-vs-branded-house.md` decides where it sits on the parent-brand spectrum — two independent axes: the USPTO Spectrum of Distinctiveness (legal trademark strength: Generic/Descriptive/Suggestive/Arbitrary/Fanciful) and the 4Cs (Character, Construction, Communication, Continuum) for creative/brand fit.
   - Forces an explicit trade-off statement (fast comprehension vs. defensible long-term asset) and flags formal trademark clearance as a required legal step outside this skill's scope, never a substitute for one.
+  - From a blank slate, runs a five-question Naming Interview (Vision, Target Client, Market, Emotional Association, Five-Word Free Association) and generates a scored shortlist mixing word combinations with merged/blended coinages — never final until the user explicitly confirms, adjusts, or requests regeneration.
 
 - `product-lifecycle-hierarchy-evaluation-matrix.md`
   - Crosses product lifecycle stage (Introduction/Growth/Maturity/Decline) against the value hierarchy tier in a full matrix, for Products, Services, and Solutions.
