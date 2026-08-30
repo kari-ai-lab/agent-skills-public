@@ -190,6 +190,21 @@ The structure/perception/intent framework and three named AI-generated-UI-test f
 Meta's ACH system and its 73% engineer-acceptance trial result.
 - [`skills/engineering/agent-driven-test-generation-and-verification.md`](skills/engineering/agent-driven-test-generation-and-verification.md)
 
+### Google — eng-practices
+**https://google.github.io/eng-practices/review/**
+Twelve-item review-priority checklist; "improves code health, not perfection" approval standard; one-business-day turnaround norm; disagreement-handling procedure.
+- [`skills/engineering/code-review-standards-and-checklist.md`](skills/engineering/code-review-standards-and-checklist.md)
+
+### Jason Cohen — Best Kept Secrets of Peer Code Review (SmartBear/Cisco study)
+**https://smartbear.com/resources/webinars/best-kept-secrets-code-review/**
+Diff-size/review-rate defect-detection findings from a ~2,500-review/3.2M-LOC Cisco study. The primary PDF rendered as an unreadable scanned/legacy-format document to both the fetch tool and a direct PDF-reader retry — cited via secondary description, flagged in the skill's own Sources.
+- [`skills/engineering/code-review-standards-and-checklist.md`](skills/engineering/code-review-standards-and-checklist.md)
+
+### InfoQ — AI Code Review at Scale: LinkedIn's Multi-Agent Approach
+**https://www.infoq.com/news/2026/08/linkedin-ai-code-review/**
+Hallucination/low-signal/missing-context failure modes; multi-independent-reviewer architecture; 63.9% overall acceptance-rate data point (80% logic errors, 100% concurrency bugs).
+- [`skills/engineering/agent-driven-code-review-calibration.md`](skills/engineering/agent-driven-code-review-calibration.md)
+
 ### Nielsen Norman Group
 **https://www.nngroup.com/articles/ab-testing/**
 Core A/B testing methodology: definition, sample-size parameters, minimum run duration, and the roughly one-in-seven test win-rate.
@@ -430,6 +445,7 @@ Several platform, delivery, and governance skills are adapted from or attributed
 - [`skills/delivery/prompting-precision.md`](skills/delivery/prompting-precision.md)
 - [`skills/delivery/explore-plan-code-commit.md`](skills/delivery/explore-plan-code-commit.md)
 - [`skills/engineering/agent-driven-test-generation-and-verification.md`](skills/engineering/agent-driven-test-generation-and-verification.md) — from ["Best practices for Claude Code"](https://code.claude.com/docs/en/best-practices): the verify-your-work discipline, the fresh-subagent adversarial-review pattern, and the "trust-then-verify gap" failure pattern
+- [`skills/engineering/agent-driven-code-review-calibration.md`](skills/engineering/agent-driven-code-review-calibration.md) — same source, cited for its rubber-stamp/false-confidence review-specific content
 
 ### Anthropic — `anthropics/skills` (open-source skill library)
 **https://github.com/anthropics/skills**

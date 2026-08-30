@@ -25,6 +25,13 @@ Status: canonical workspace entry point for shared engineering, coding standards
 - `agent-driven-test-generation-and-verification.md`
   - Agent-driven companion: names the core failure mode where an agent's self-written tests match its own misunderstanding of the spec rather than the actual spec, requires structural independence between the work and its check (grounded directly in Anthropic's own Claude Code guidance and this workspace's `code-review` skill's CONFIRMED/PLAUSIBLE split), requires a failing test before a bug fix rather than after, routes "done" through `governance/verification-and-self-checking.md`'s evidence-over-assertion discipline, names three concrete AI-generated-UI-test failure modes (Ghost Click, State Reversion Race, Timeout Spiral), and adds a mutation-testing spot-check (grounded in Meta's LLM-assisted ACH system) for whether agent-written tests actually assert anything.
 
+- `code-review-standards-and-checklist.md`
+  - Human-driven code review: a fixed priority-ordered checklist (Design → Functionality → Complexity → Tests → Naming → Comments → Style → Consistency → Documentation → Every Line → Context → Good Things), the "improves code health, not perfection" approval standard, sourced turnaround norms (one-business-day first response; response speed over total cycle time), and a collaborative tradeoff-first procedure for resolving author/reviewer disagreement (Google's `eng-practices`, plus Cisco/SmartBear review-size findings).
+  - Paired with `agent-driven-code-review-calibration.md` as this folder's second human-driven/agent-driven split.
+
+- `agent-driven-code-review-calibration.md`
+  - Agent-driven companion: names the rubber-stamp/false-confidence failure mode where an agent asked to find issues tends to report plausible-sounding findings regardless of whether they're grounded in the diff, requires every finding traced to a specific line and failure scenario, names a trust level per reviewer/author configuration (flagging same-context self-review as NOT independent), applies this workspace's `code-review` skill's CONFIRMED/PLAUSIBLE calibration outside that skill's own invocation, and routes agent-vs-agent disagreement to a human rather than letting the two resolve it alone (grounded in Anthropic's Claude Code guidance and LinkedIn's production multi-agent review platform, InfoQ 2026).
+
 - `frontend-design-principles.md`
   - Adapted from Anthropic's own `frontend-design` skill (see `../CREDITS.md`) — a design-lead discipline: ground every visual choice in the subject/audience/page-job, treat the hero element as a thesis rather than a template slot, name and avoid the three common AI-generated visual defaults, and run a two-pass brainstorm-then-critique workflow before writing any code.
   - Cross-references `product/user-persona-development.md`, `product/customer-journey-mapping.md`, and `product/user-flow-mapping.md` for the subject/audience grounding this skill requires, and `delivery/gherkin-syntax-and-writing-guide.md` for the testable-behavior spec once a design is finalized.
@@ -39,8 +46,10 @@ Status: canonical workspace entry point for shared engineering, coding standards
 
 1. Run `testing-strategy-and-the-test-pyramid.md` when setting or auditing a suite's shape, disambiguating a test-double choice, or triaging a flaky test — regardless of who's writing the code.
 2. Run `agent-driven-test-generation-and-verification.md` alongside it whenever an AI agent is the one writing the implementation, the tests, or both — it does not replace step 1's strategy, it adds the independent-verification discipline step 1 doesn't cover.
-3. Run `frontend-design-principles.md` when the work has a user-facing visual/interaction surface, independent of the testing skills above.
-4. Run `capacity-threshold-testing.md` for load/stress/soak capacity planning — a distinct "capacity" question from testing strategy or team capacity; don't conflate the three.
+3. Run `code-review-standards-and-checklist.md` when reviewing a change, being reviewed, or setting review-turnaround norms.
+4. Run `agent-driven-code-review-calibration.md` alongside it whenever an AI agent is doing the reviewing, being reviewed, or both — calibrates how much to trust the findings from step 3's checklist, it doesn't replace what gets checked.
+5. Run `frontend-design-principles.md` when the work has a user-facing visual/interaction surface, independent of the testing/review skills above.
+6. Run `capacity-threshold-testing.md` for load/stress/soak capacity planning — a distinct "capacity" question from testing strategy or team capacity; don't conflate the three.
 
 ## Inputs To Gather
 
@@ -57,6 +66,6 @@ Status: canonical workspace entry point for shared engineering, coding standards
 
 ## Metadata
 
-- **Version:** 1.1
+- **Version:** 1.2
 - **Last Updated:** 2026-08-30
 - **Author:** Workspace Engineering Skills

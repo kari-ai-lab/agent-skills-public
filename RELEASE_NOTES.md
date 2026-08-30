@@ -2,7 +2,7 @@
 
 Status of every skill category in this repo — what's available to use today vs. what's on the roadmap. See [`skills/INDEX.md`](skills/INDEX.md) for the category model and [`README.md`](README.md) for how to use a skill.
 
-## ✅ Available (120 skills across 13 categories)
+## ✅ Available (122 skills across 13 categories)
 
 ### `platform/` — 8 skills
 Engineering/runtime: monorepo, tooling, testing, infra.
@@ -15,8 +15,10 @@ Engineering/runtime: monorepo, tooling, testing, infra.
 - [`tooling-and-mcp-servers.md`](skills/platform/tooling-and-mcp-servers.md)
 - [`mcp-server-development.md`](skills/platform/mcp-server-development.md) — adapted from Anthropic's `mcp-builder` skill: the four-phase MCP server build workflow (Research/Plan, Implement, Review/Test via MCP Inspector, Evaluate via 10 realistic questions)
 
-### `engineering/` — 4 skills
-UI/frontend visual and interaction design discipline, testing strategy, and load/capacity testing.
+### `engineering/` — 6 skills
+UI/frontend visual and interaction design discipline, testing strategy, code review, and load/capacity testing.
+- [`code-review-standards-and-checklist.md`](skills/engineering/code-review-standards-and-checklist.md) — a twelve-item priority-ordered review checklist (design/functionality/complexity/tests first, style last, per Google's eng-practices), the "improves code health, not perfection" approval standard, sourced turnaround norms, and a collaborative disagreement-resolution procedure
+- [`agent-driven-code-review-calibration.md`](skills/engineering/agent-driven-code-review-calibration.md) — the agent-specific companion: the rubber-stamp/false-confidence failure mode, a trust-level table by reviewer/author configuration (an agent reviewing its own same-context output is NOT independent verification), CONFIRMED/PLAUSIBLE finding calibration, and an escalation rule routing agent-vs-agent disagreement to a human
 - [`frontend-design-principles.md`](skills/engineering/frontend-design-principles.md) — adapted from Anthropic's `frontend-design` skill: ground every choice in the subject, hero-as-thesis, name and avoid the three common AI-generated visual defaults, two-pass brainstorm-then-critique workflow
 - [`testing-strategy-and-the-test-pyramid.md`](skills/engineering/testing-strategy-and-the-test-pyramid.md) — the test pyramid shape and ice-cream-cone anti-pattern (Fowler), Google's Small/Medium/Large test-size definitions, precise mock/stub/fake/spy vocabulary and state-vs-behavior verification, TDD as a design-feedback loop with its real limits named, and a four-cause flaky-test quarantine/fix/delete triage procedure
 - [`agent-driven-test-generation-and-verification.md`](skills/engineering/agent-driven-test-generation-and-verification.md) — the agent-specific companion: why an agent's self-written tests can match its own misunderstanding of the spec, an independent-verification discipline grounded in Anthropic's own Claude Code guidance, a failing-test-before-fix rule, named AI-generated-UI-test failure modes (Ghost Click, State Reversion Race, Timeout Spiral), and a mutation-testing spot-check
