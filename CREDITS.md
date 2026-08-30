@@ -155,6 +155,41 @@ Principles for Trust and Transparency, and "What is responsible AI?" — the hum
 
 ## Testing & Experimentation
 
+### Martin Fowler — TestPyramid
+**https://martinfowler.com/bliki/TestPyramid.html**
+The test pyramid shape and the ice-cream-cone anti-pattern, with Mike Cohn's and Jason Huggins' attribution.
+- [`skills/engineering/testing-strategy-and-the-test-pyramid.md`](skills/engineering/testing-strategy-and-the-test-pyramid.md)
+
+### Martin Fowler — Mocks Aren't Stubs
+**https://martinfowler.com/articles/mocksArentStubs.html**
+Precise dummy/fake/stub/spy/mock definitions and the state-vs-behavior verification distinction.
+- [`skills/engineering/testing-strategy-and-the-test-pyramid.md`](skills/engineering/testing-strategy-and-the-test-pyramid.md)
+
+### Google Testing Blog — Test Sizes
+**https://testing.googleblog.com/2010/12/test-sizes.html**
+Simon Stewart's Small/Medium/Large test-size definitions, enforceable rather than name-based.
+- [`skills/engineering/testing-strategy-and-the-test-pyramid.md`](skills/engineering/testing-strategy-and-the-test-pyramid.md)
+
+### Wikipedia — Test-Driven Development
+**https://en.wikipedia.org/wiki/Test-driven_development**
+Kent Beck's attribution, the red-green-refactor cycle, and TDD's named real limits.
+- [`skills/engineering/testing-strategy-and-the-test-pyramid.md`](skills/engineering/testing-strategy-and-the-test-pyramid.md)
+
+### InfoQ — Trisha Gee on Flaky Tests
+**https://www.infoq.com/podcasts/developer-productivity-testing-best-practices/**
+Four named flaky-test cause categories and the quarantine/rerun/refactor-down-the-pyramid triage approach.
+- [`skills/engineering/testing-strategy-and-the-test-pyramid.md`](skills/engineering/testing-strategy-and-the-test-pyramid.md)
+
+### InfoQ — The AI Productivity Paradox in Test Automation
+**https://www.infoq.com/articles/solving-ai-productivity-paradox-test-automation/**
+The structure/perception/intent framework and three named AI-generated-UI-test failure modes.
+- [`skills/engineering/agent-driven-test-generation-and-verification.md`](skills/engineering/agent-driven-test-generation-and-verification.md)
+
+### InfoQ — Meta's LLM-Powered Mutation Testing
+**https://www.infoq.com/news/2026/01/meta-llm-mutation-testing/**
+Meta's ACH system and its 73% engineer-acceptance trial result.
+- [`skills/engineering/agent-driven-test-generation-and-verification.md`](skills/engineering/agent-driven-test-generation-and-verification.md)
+
 ### Nielsen Norman Group
 **https://www.nngroup.com/articles/ab-testing/**
 Core A/B testing methodology: definition, sample-size parameters, minimum run duration, and the roughly one-in-seven test win-rate.
@@ -394,6 +429,7 @@ Several platform, delivery, and governance skills are adapted from or attributed
 - [`skills/governance/verification-and-self-checking.md`](skills/governance/verification-and-self-checking.md)
 - [`skills/delivery/prompting-precision.md`](skills/delivery/prompting-precision.md)
 - [`skills/delivery/explore-plan-code-commit.md`](skills/delivery/explore-plan-code-commit.md)
+- [`skills/engineering/agent-driven-test-generation-and-verification.md`](skills/engineering/agent-driven-test-generation-and-verification.md) — from ["Best practices for Claude Code"](https://code.claude.com/docs/en/best-practices): the verify-your-work discipline, the fresh-subagent adversarial-review pattern, and the "trust-then-verify gap" failure pattern
 
 ### Anthropic — `anthropics/skills` (open-source skill library)
 **https://github.com/anthropics/skills**
