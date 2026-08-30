@@ -205,6 +205,28 @@ Diff-size/review-rate defect-detection findings from a ~2,500-review/3.2M-LOC Ci
 Hallucination/low-signal/missing-context failure modes; multi-independent-reviewer architecture; 63.9% overall acceptance-rate data point (80% logic errors, 100% concurrency bugs).
 - [`skills/engineering/agent-driven-code-review-calibration.md`](skills/engineering/agent-driven-code-review-calibration.md)
 
+### Wikipedia — SOLID
+**https://en.wikipedia.org/wiki/SOLID**
+Five SOLID principles' precise definitions; Robert C. Martin / Michael Feathers attribution.
+- [`skills/engineering/coding-standards-and-design-patterns.md`](skills/engineering/coding-standards-and-design-patterns.md)
+
+### Martin Fowler — CodeSmell & Refactoring Catalog
+**https://martinfowler.com/bliki/CodeSmell.html** / **https://refactoring.com/catalog/**
+Surface-indication definition of a code smell; named-refactoring vocabulary (Extract Function, Rename Variable, etc.).
+- [`skills/engineering/coding-standards-and-design-patterns.md`](skills/engineering/coding-standards-and-design-patterns.md)
+
+### Google — AIP-192: Documentation
+**https://google.aip.dev/192**
+"Documentation... will be the only things a user has" — grounds the Design for the Human Reader First principle applied to naming, interfaces, and comments, not just API docs.
+- [`skills/engineering/coding-standards-and-design-patterns.md`](skills/engineering/coding-standards-and-design-patterns.md)
+- [`skills/engineering/agent-driven-code-generation-discipline.md`](skills/engineering/agent-driven-code-generation-discipline.md)
+- [`skills/engineering/code-review-standards-and-checklist.md`](skills/engineering/code-review-standards-and-checklist.md) (cross-reference)
+
+### InfoQ — AI-Generated Code Creates New Wave of Technical Debt
+**https://www.infoq.com/news/2025/11/ai-code-technical-debt/**
+Ox Security report: "Comments Everywhere" (90-100%) and "Over-Specification" (80-90%) named anti-pattern frequencies in AI-generated code.
+- [`skills/engineering/agent-driven-code-generation-discipline.md`](skills/engineering/agent-driven-code-generation-discipline.md)
+
 ### Nielsen Norman Group
 **https://www.nngroup.com/articles/ab-testing/**
 Core A/B testing methodology: definition, sample-size parameters, minimum run duration, and the roughly one-in-seven test win-rate.

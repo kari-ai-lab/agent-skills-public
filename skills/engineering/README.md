@@ -32,6 +32,15 @@ Status: canonical workspace entry point for shared engineering, coding standards
 - `agent-driven-code-review-calibration.md`
   - Agent-driven companion: names the rubber-stamp/false-confidence failure mode where an agent asked to find issues tends to report plausible-sounding findings regardless of whether they're grounded in the diff, requires every finding traced to a specific line and failure scenario, names a trust level per reviewer/author configuration (flagging same-context self-review as NOT independent), applies this workspace's `code-review` skill's CONFIRMED/PLAUSIBLE calibration outside that skill's own invocation, and routes agent-vs-agent disagreement to a human rather than letting the two resolve it alone (grounded in Anthropic's Claude Code guidance and LinkedIn's production multi-agent review platform, InfoQ 2026).
 
+- `coding-standards-and-design-patterns.md`
+  - Human-driven, implementation-level coding standards: the five SOLID principles precisely defined with a concrete violation/fix shape each, code smells framed as an investigation trigger rather than a verdict (Fowler's "surface indication" definition), and refactoring as a named-catalog activity (Extract Function, Rename Variable, Replace Conditional with Polymorphism, and others from Fowler's own catalog) rather than unstructured cleanup. Includes a **Design for the Human Reader First** section grounded in Google's own AIP-192 documentation standard — the same "this is often the only thing a reader has" reasoning behind API documentation applies directly to naming, interfaces, and comments.
+  - Explicitly scoped below `product/systems-thinking-and-domain-driven-design.md` (architecture-level, where a bounded context boundary goes) — this skill governs whether the code inside a boundary is well-shaped, never where the boundary itself goes.
+  - Paired with `agent-driven-code-generation-discipline.md` as this folder's third human-driven/agent-driven split.
+
+- `agent-driven-code-generation-discipline.md`
+  - Agent-driven companion: names premature abstraction as a real cost asymmetry (an agent's marginal cost to generate an abstraction is near-zero, unlike a human's felt effort), requires a "while I was in here" scope-creep audit against the stated task for every touched file, and inverts the usual comment-noise diagnosis — agents over-explain WHAT (redundant with naming) and under-explain WHY (the load-bearing case), grounded in the same AIP-192 human-reader-first reasoning plus an independent finding (Ox Security via InfoQ) that "Comments Everywhere" and "Over-Specification" are the two most frequent anti-patterns observed in AI-generated code (90–100% and 80–90% respectively).
+  - Primary source is this session's own operating instructions (the "Doing tasks" section) — cited directly as this workspace's own lived agent-coding standard, not restated as if sourced elsewhere.
+
 - `frontend-design-principles.md`
   - Adapted from Anthropic's own `frontend-design` skill (see `../CREDITS.md`) — a design-lead discipline: ground every visual choice in the subject/audience/page-job, treat the hero element as a thesis rather than a template slot, name and avoid the three common AI-generated visual defaults, and run a two-pass brainstorm-then-critique workflow before writing any code.
   - Cross-references `product/user-persona-development.md`, `product/customer-journey-mapping.md`, and `product/user-flow-mapping.md` for the subject/audience grounding this skill requires, and `delivery/gherkin-syntax-and-writing-guide.md` for the testable-behavior spec once a design is finalized.
@@ -48,8 +57,10 @@ Status: canonical workspace entry point for shared engineering, coding standards
 2. Run `agent-driven-test-generation-and-verification.md` alongside it whenever an AI agent is the one writing the implementation, the tests, or both — it does not replace step 1's strategy, it adds the independent-verification discipline step 1 doesn't cover.
 3. Run `code-review-standards-and-checklist.md` when reviewing a change, being reviewed, or setting review-turnaround norms.
 4. Run `agent-driven-code-review-calibration.md` alongside it whenever an AI agent is doing the reviewing, being reviewed, or both — calibrates how much to trust the findings from step 3's checklist, it doesn't replace what gets checked.
-5. Run `frontend-design-principles.md` when the work has a user-facing visual/interaction surface, independent of the testing/review skills above.
-6. Run `capacity-threshold-testing.md` for load/stress/soak capacity planning — a distinct "capacity" question from testing strategy or team capacity; don't conflate the three.
+5. Run `coding-standards-and-design-patterns.md` when shaping or assessing implementation-level code structure (SOLID, smells, refactoring) — distinct from `product/systems-thinking-and-domain-driven-design.md`'s architecture-level bounded-context question.
+6. Run `agent-driven-code-generation-discipline.md` alongside it whenever an AI agent is generating the code — checks premature abstraction, scope creep, and comment discipline that step 5 alone doesn't calibrate for.
+7. Run `frontend-design-principles.md` when the work has a user-facing visual/interaction surface, independent of the testing/review/coding-standards skills above.
+8. Run `capacity-threshold-testing.md` for load/stress/soak capacity planning — a distinct "capacity" question from testing strategy or team capacity; don't conflate the three.
 
 ## Inputs To Gather
 
@@ -66,6 +77,6 @@ Status: canonical workspace entry point for shared engineering, coding standards
 
 ## Metadata
 
-- **Version:** 1.2
+- **Version:** 1.3
 - **Last Updated:** 2026-08-30
 - **Author:** Workspace Engineering Skills
