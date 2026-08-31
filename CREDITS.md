@@ -397,6 +397,33 @@ Official purpose, timebox, and attendee rules for the Daily Scrum, Sprint Review
 The definition and root cause of "roadmap whiplash," and audience-tailored roadmap-change communication practices.
 - [`skills/communication/roadmap-change-communication.md`](skills/communication/roadmap-change-communication.md)
 
+## Monetization & Commercialization
+
+### Zuplo — 8 Types of API Pricing Models
+**https://zuplo.com/blog/8-types-of-api-pricing-models**
+Eight-model pricing taxonomy (Flat Fee, Per-Unit, Tiered, Usage-and-Overage, Credit-Based, Package, Freemium, Outcome-Based).
+- [`skills/product/monetization-model-and-commercialization-levers.md`](skills/product/monetization-model-and-commercialization-levers.md)
+
+### m3ter — Usage-Based Pricing Guide
+**https://www.m3ter.com/guides/usage-based-pricing**
+Metering-unit selection criteria; hybrid-pricing-as-default finding (via OpenView, 2023 — OpenView's own report pages 404'd/redirected during sourcing, cited via m3ter's secondary attribution).
+- [`skills/product/monetization-model-and-commercialization-levers.md`](skills/product/monetization-model-and-commercialization-levers.md)
+
+### Bakos & Brynjolfsson — Bundling Information Goods (NYU Stern, academic)
+**https://pages.stern.nyu.edu/~bakos/big/big.html**
+Pure/mixed bundling definitions; the demand-valuation-averaging profit mechanism and its preconditions (low marginal cost, low demand correlation, comparable valuation magnitude).
+- [`skills/product/monetization-model-and-commercialization-levers.md`](skills/product/monetization-model-and-commercialization-levers.md)
+
+### LimeSpot — Product Bundling Strategy
+**https://limespot.com/blog-posts/product-bundling-strategy**
+Practitioner bundling tactics (cross-sell, value-based, tiered) instantiating the Bakos/Brynjolfsson structures.
+- [`skills/product/monetization-model-and-commercialization-levers.md`](skills/product/monetization-model-and-commercialization-levers.md)
+
+### Userpilot — B2B Loyalty Programs
+**https://userpilot.com/blog/b2b-loyalty-programs/**
+Three named loyalty structures (tiered, value-based/educational, partner/coalition); the Salesforce Trailhead individual-vs-account-targeting example.
+- [`skills/product/monetization-model-and-commercialization-levers.md`](skills/product/monetization-model-and-commercialization-levers.md)
+
 ## Product Metrics, Research & Roadmap Presentation
 
 ### Amplitude — North Star Framework

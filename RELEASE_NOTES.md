@@ -2,7 +2,7 @@
 
 Status of every skill category in this repo — what's available to use today vs. what's on the roadmap. See [`skills/INDEX.md`](skills/INDEX.md) for the category model and [`README.md`](README.md) for how to use a skill.
 
-## ✅ Available (124 skills across 13 categories)
+## ✅ Available (125 skills across 13 categories)
 
 ### `platform/` — 8 skills
 Engineering/runtime: monorepo, tooling, testing, infra.
@@ -112,7 +112,7 @@ Domain-specific compliance/security guidance.
 
 (`agent-zero-trust-delegation.md` and `pci-dss-req-3-4.md` moved to `governance/` — see that section.)
 
-### `product/` — 21 skills
+### `product/` — 22 skills
 Product-family overlays.
 - [`product-capability-map-and-competitor-overlay.md`](skills/product/product-capability-map-and-competitor-overlay.md) — BIZBOK-style hierarchical capability map (L1→L2→L3 by capability tier) with an actor/channel band and optional competitor overlay; includes a workspace-authored Foundation Test for load-bearing capabilities within a tier
 - [`north-star-metric-and-review-cadence.md`](skills/product/north-star-metric-and-review-cadence.md) — one North Star Metric grounded in genuine customer value plus team-owned input metrics, and a weekly/monthly/quarterly review-cadence structure
@@ -131,6 +131,7 @@ Product-family overlays.
 - [`user-persona-development.md`](skills/product/user-persona-development.md), [`customer-journey-mapping.md`](skills/product/customer-journey-mapping.md), [`user-flow-mapping.md`](skills/product/user-flow-mapping.md) (includes an AI-Specific Failure Modes section), [`design-sprint-facilitation.md`](skills/product/design-sprint-facilitation.md) — discovery/UX foundations
 - [`product-launch-checklist.md`](skills/product/product-launch-checklist.md), [`product-growth-metrics-reference.md`](skills/product/product-growth-metrics-reference.md) — launch/growth measurement
 - [`ai-feature-prompt-design.md`](skills/product/ai-feature-prompt-design.md) — product-decision-layer prompt requirements for a product-owned LLM feature
+- [`monetization-model-and-commercialization-levers.md`](skills/product/monetization-model-and-commercialization-levers.md) — three lever categories for commercialization: pricing MODEL selection (eight-type taxonomy, metering-unit criteria), billing-structure/bundling alignment (Bakos & Brynjolfsson bundling economics), and discount/rewards adjustment levers
 
 ### `Management/` — 7 skills
 Management practice grounded in W. Edwards Deming's work, plus a second distinct management philosophy.
