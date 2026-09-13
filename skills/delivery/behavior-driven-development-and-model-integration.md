@@ -131,12 +131,14 @@ Rules:
 
 ## Related Workspace Skills
 
+- `bdd-framework-selection.md` — decides whether Cucumber/Gherkin is even the right automation tool for this suite (vs. Karate for API/contract-heavy suites, Gauge for very large parallel-runtime-bound suites) before this skill's Automation step commits to Cucumber by default.
 - `gherkin-syntax-and-writing-guide.md` — the syntax/quality standard for BDD's Formulation output.
 - `product/systems-thinking-and-domain-driven-design.md` — shares the Event Storming technique with BDD's Discovery step.
 - `product/no-silo-product-operating-model.md` — the Three Amigos model is a concrete instance of its required lateral coupling to SDLC/engineering.
 - `refinement/product-requirements-document-template.md` — Sections 7 and 8 are where Formulation's output and Discovery's failure modes land.
 - `delivery/jira-epic-builder.md` — consumes the same Gherkin scenarios for its Acceptance Criteria.
 - `delivery/software-development-life-cycle-modeling.md` — Automation executes at this skill's Testing phase.
+- `journeys/end-to-end-journey-specification.md` — uses EventStorming (sourced directly from Brandolini's own site) and Feature Mapping to model each lifecycle segment, then links the resulting `.feature` files rather than re-deriving BDD practice; that skill's Segment Modeling section is a sibling application of the same Discovery/Formulation ideas this skill covers, at the whole-journey altitude rather than one feature's.
 
 ---
 

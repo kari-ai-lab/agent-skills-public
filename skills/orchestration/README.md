@@ -2,7 +2,7 @@
 
 Use this folder for **agent-to-agent task mechanics** — how a coordinator agent splits work across specialist agents, hands tasks between them, resolves disagreement, handles failure, and manages shared state — when the coordination unit is AI agents, not customer-journey segments or independently-deployed services.
 
-> This category does not re-cover ground two existing categories already own. `journeys/journey-orchestration-and-verification.md` already decided Process-Manager-vs-choreography, durable execution, tracing, and contract testing at the **customer-journey/service** axis — this folder is that same family of decision applied one level down, at the **agent-to-agent** axis, and reuses that skill's durable-execution and trace-context conventions rather than re-deriving them. `domains/agent-zero-trust-delegation.md` already owns agent **identity and authorization** (is this agent allowed to act, under what scoped grant) — this folder assumes that question is answered and covers what happens once an authorized agent is actually doing bounded work alongside other authorized agents. `governance/cost-aware-agent-utilization.md` and `product/ai-human-task-allocation-model.md` remain the cost-tier-routing and design-time AI-vs-human decisions, respectively — this folder sits between them at runtime, once a task is already AI-owned and needs to be split, handed off, and tracked.
+> This category does not re-cover ground two existing categories already own. `journeys/journey-orchestration-and-verification.md` already decided Process-Manager-vs-choreography, durable execution, tracing, and contract testing at the **customer-journey/service** axis — this folder is that same family of decision applied one level down, at the **agent-to-agent** axis, and reuses that skill's durable-execution and trace-context conventions rather than re-deriving them. `governance/agent-zero-trust-delegation.md` already owns agent **identity and authorization** (is this agent allowed to act, under what scoped grant) — this folder assumes that question is answered and covers what happens once an authorized agent is actually doing bounded work alongside other authorized agents. `governance/cost-aware-agent-utilization.md` and `product/ai-human-task-allocation-model.md` remain the cost-tier-routing and design-time AI-vs-human decisions, respectively — this folder sits between them at runtime, once a task is already AI-owned and needs to be split, handed off, and tracked.
 
 ## Purpose
 
@@ -26,7 +26,7 @@ These skills help engineers and orchestrator agents:
   - When two or more agents disagree: an independence check to rule out fake same-context consensus, then debate (multiagent-debate research), independent arbitration, or mandatory human escalation for high-stakes/persistent disagreement.
 
 - `agent-chain-failure-and-escalation.md`
-  - Retry vs. circuit-breaker treatment for a chain of agent calls, a three-state (Closed/Open/Half-Open) model with named thresholds, and mandatory escalation on every trip — distinct from `domains/agent-zero-trust-delegation.md`'s authorization-focused escalation model.
+  - Retry vs. circuit-breaker treatment for a chain of agent calls, a three-state (Closed/Open/Half-Open) model with named thresholds, and mandatory escalation on every trip — distinct from `governance/agent-zero-trust-delegation.md`'s authorization-focused escalation model.
 
 - `shared-context-and-state-ownership.md`
   - Orchestrator-owns-state, subagents-get-clean-windows ownership model; a concrete distilled-summary return-value budget; a single-writer rule for shared state objects; and reuse (not reinvention) of `journeys/journey-orchestration-and-verification.md`'s durable-execution criteria for long-running orchestrators.
@@ -51,7 +51,7 @@ These skills help engineers and orchestrator agents:
 - The goal being decomposed, and the specialist agents available to execute pieces of it.
 - Any existing trace-context and durable-execution conventions already established by `journeys/journey-orchestration-and-verification.md`, to extend rather than duplicate.
 - The stakes classification (`product/ai-human-task-allocation-model.md`) for each subtask, so failure/disagreement escalation rules apply correctly.
-- Existing delegation-grant infrastructure (`domains/agent-zero-trust-delegation.md`), since a handoff contract's work payload is never a substitute for a valid authorization grant.
+- Existing delegation-grant infrastructure (`governance/agent-zero-trust-delegation.md`), since a handoff contract's work payload is never a substitute for a valid authorization grant.
 
 ## Output Expectations
 

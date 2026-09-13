@@ -2,7 +2,7 @@
 
 ## 🎯 Objective
 
-Defines retry/circuit-breaker/escalation policy specific to a **chain of agent-to-agent calls**, where a failure in one step doesn't just fail — it can silently redirect everything downstream. Anthropic's own account of production multi-agent failures names this precisely: **"One step failing can cause agents to explore entirely different trajectories, leading to unpredictable outcomes."** This is a distinct concern from `domains/agent-zero-trust-delegation.md`, which governs *authorization/trust boundaries* (is this agent allowed to act) — this skill governs *technical failure handling* (what happens when an authorized agent's call fails, times out, or keeps failing).
+Defines retry/circuit-breaker/escalation policy specific to a **chain of agent-to-agent calls**, where a failure in one step doesn't just fail — it can silently redirect everything downstream. Anthropic's own account of production multi-agent failures names this precisely: **"One step failing can cause agents to explore entirely different trajectories, leading to unpredictable outcomes."** This is a distinct concern from `governance/agent-zero-trust-delegation.md`, which governs *authorization/trust boundaries* (is this agent allowed to act) — this skill governs *technical failure handling* (what happens when an authorized agent's call fails, times out, or keeps failing).
 
 ## 👤 Target Persona
 
@@ -36,7 +36,7 @@ Per the Azure Architecture Center's own explicit framing: **"The Retry pattern e
 - **Open** (tripped): calls to this agent fail immediately without being attempted — the orchestrator either invokes a fallback or halts that branch of the chain, and does **not** keep re-invoking a step that's very likely to fail again. A cooldown timer runs before the next state.
 - **Half-Open** (probing recovery): after cooldown, a limited number of trial calls are allowed through. Success reverts to Closed; any failure reverts immediately to Open and restarts (optionally lengthens) the cooldown — Azure names this explicitly as protection against "a recovering service... suddenly being flooded with requests."
 
-**Starting numbers** (name real values, don't leave this to vibes, matching the discipline `domains/agent-zero-trust-delegation.md` already applies to TTLs): trip Open after **2-3 consecutive failures** within a short window (not a lifetime failure count); start the Open cooldown short (seconds to low minutes, scaled to how long the agent/tool typically takes to recover) and **increase it if the Half-Open probe fails again** — Azure's own guidance: **"you can apply an increasing time-out timer to a circuit breaker... if the failure isn't resolved, increase the time-out."**
+**Starting numbers** (name real values, don't leave this to vibes, matching the discipline `governance/agent-zero-trust-delegation.md` already applies to TTLs): trip Open after **2-3 consecutive failures** within a short window (not a lifetime failure count); start the Open cooldown short (seconds to low minutes, scaled to how long the agent/tool typically takes to recover) and **increase it if the Half-Open probe fails again** — Azure's own guidance: **"you can apply an increasing time-out timer to a circuit breaker... if the failure isn't resolved, increase the time-out."**
 
 ## Fold In Anthropic's Own Mitigations
 
@@ -47,7 +47,7 @@ Two concrete practices from Anthropic's production system map directly onto this
 
 ## Escalation Is Mandatory, Not Optional Logging
 
-A circuit tripping Open on a chain is a signal that something in the workflow is structurally broken, not just a retry-log line. Route it to the same audit discipline `domains/agent-zero-trust-delegation.md` already requires for grant issuance/revocation events, and if the failing step is Never-AI or otherwise high-stakes (`product/ai-human-task-allocation-model.md`), **halt and escalate to a human rather than silently falling back to a lower-trust agent or a cached/default response** — a fallback is an acceptable degradation for a low-stakes step; it is a policy violation for a Never-AI one.
+A circuit tripping Open on a chain is a signal that something in the workflow is structurally broken, not just a retry-log line. Route it to the same audit discipline `governance/agent-zero-trust-delegation.md` already requires for grant issuance/revocation events, and if the failing step is Never-AI or otherwise high-stakes (`product/ai-human-task-allocation-model.md`), **halt and escalate to a human rather than silently falling back to a lower-trust agent or a cached/default response** — a fallback is an acceptable degradation for a low-stakes step; it is a policy violation for a Never-AI one.
 
 ## 🤖 Core Prompt / Instructions
 
@@ -120,7 +120,7 @@ Current circuit state: $CIRCUIT_STATE
 ## Related Workspace Skills
 
 - `orchestration/inter-agent-handoff-contract.md` — a handoff reaching `FAILED` or stalling in `WORKING` past a time budget is exactly the event this skill's failure classification acts on.
-- `domains/agent-zero-trust-delegation.md` — the audit/alert discipline this skill's mandatory Open-transition escalation extends to technical (not authorization) failures; also the source of the "name real numbers, don't leave TTLs/thresholds implicit" convention this skill's threshold/cooldown guidance follows.
+- `governance/agent-zero-trust-delegation.md` — the audit/alert discipline this skill's mandatory Open-transition escalation extends to technical (not authorization) failures; also the source of the "name real numbers, don't leave TTLs/thresholds implicit" convention this skill's threshold/cooldown guidance follows.
 - `product/ai-human-task-allocation-model.md` — supplies the Never-AI/stakes classification that forbids silent lower-trust fallback on failure.
 - `orchestration/conflict-and-consensus-resolution.md` — the adjacent but distinct concern of multiple agents producing *contradictory valid-looking outputs*, versus this skill's concern of a single agent/step *failing outright*.
 - `journeys/journey-orchestration-and-verification.md` — the service-level analog; this skill is its agent-to-agent counterpart at a finer grain.

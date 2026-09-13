@@ -184,6 +184,38 @@ question here is how a real gap becomes a launch surprise.)*
 - **Documentation, training, and outreach plan:** Owner and lead time for
   docs/training content, scheduled ahead of GA, not written the week of.
 
+**At GA readiness, run `product/product-launch-checklist.md` against this section** — it
+consumes this Launch Plan as input and adds the cross-functional Pre-Launch/Launch
+Day/Post-Launch gate (support, legal, infra, rollback trigger) that this section alone isn't
+built to hold. Don't treat this section as launch-ready on its own without running that gate.
+
+---
+
+## 11. AI Feature Supplement
+*(Conditional — complete this section only if the initiative includes an AI/LLM-powered
+feature. Skip entirely for non-AI initiatives rather than leaving placeholder text.)*
+
+- **Task allocation:** the per-task AI-owned/Human-owned/Interchangeable/Never-AI
+  classification from `product/ai-human-task-allocation-model.md` — run that skill first if
+  it hasn't been; this section consumes its output rather than re-deriving task ownership.
+- **Model/tier requirement:** which tier (`fast`/`primary`/`heavy`) this feature needs per
+  `platform/llm-model-contract.md`, and why — never a specific hard-coded model name.
+- **Evaluation criteria (the eval bar):** the specific, measurable quality bar the feature
+  must clear before shipping (accuracy/precision-recall target, human-graded rubric, or
+  benchmark), and how it will be measured. A feature with no stated eval bar is not ready for
+  Section 7's feature list.
+- **Failure-mode UX:** what the user sees and can do when the model is uncertain, wrong,
+  slow, or unavailable — pull this from `product/user-flow-mapping.md`'s AI-Specific Failure
+  Modes section rather than leaving it as an unstated assumption that the happy path is the
+  only path.
+- **Risk & compliance:** bias/fairness exposure, data privacy handling (route to
+  `governance/privacy-law-awareness-for-product-development.md` if personal data is in
+  scope), and any Never-AI tasks from the allocation model above that must remain
+  human-gated regardless of this feature's capability.
+- **Prompt design reference:** if this feature relies on a product-authored prompt/system
+  prompt (not just model selection), see `product/ai-feature-prompt-design.md` for the
+  scope-boundary and tone requirements that prompt must satisfy.
+
 ---
 
 ## 12. Executive Ask
@@ -254,6 +286,16 @@ Produce the result in this order:
    since that's where business-level NFRs (compliance, trust posture)
    should already be stated.
 
+9. If (and only if) the initiative includes an AI/LLM-powered feature,
+   complete Section 11 (AI Feature Supplement): pull task allocation from
+   `product/ai-human-task-allocation-model.md`, name the model tier from
+   `platform/llm-model-contract.md`, state a measurable eval bar (a
+   feature with no eval bar is not ready to appear in Section 7), and pull
+   failure-mode UX from `product/user-flow-mapping.md`'s AI-Specific
+   Failure Modes section rather than leaving the non-happy-path
+   unaddressed. Skip this section entirely (do not leave placeholder text)
+   for non-AI initiatives.
+
 Rules:
 - Never leave a section blank — an unanswered field becomes an explicit
   open question with an owner, not a silent gap.
@@ -278,6 +320,7 @@ Rules:
 - [ ] Pilot/beta exit criteria and GA requirements are concrete checklists, not aspirational language.
 - [ ] Market/competitor/prior-attempt claims are sourced or explicitly marked as unvalidated assumptions.
 - [ ] Non-functional expectations are attached per-topic in Sections 6-8, not left as an unwritten fourth document or a disconnected appendix.
+- [ ] For AI/LLM-powered initiatives, Section 11 is complete (task allocation, model tier, eval bar, failure-mode UX, risk/compliance) — or the section is cleanly skipped for a non-AI initiative, never left half-filled.
 
 ## Related Workspace Skills
 
@@ -294,11 +337,14 @@ Rules:
 - `strategy/product-lifecycle-hierarchy-evaluation-matrix.md` — source for Section 2's market-maturity classification.
 - `product/competitor-analysis-synthesizer.md` — source for Section 2's competitive landscape.
 - `communication/bookend-communication-structure.md` — the structural discipline behind Sections 0 and 12.
+- `product/ai-human-task-allocation-model.md`, `platform/llm-model-contract.md`, `product/user-flow-mapping.md`, `product/ai-feature-prompt-design.md`, `governance/privacy-law-awareness-for-product-development.md` — feed Section 11 (AI Feature Supplement) for AI/LLM-powered initiatives only.
+- `product/product-launch-checklist.md` — consumes Section 10 (Launch Plan) as its input at GA readiness.
+- `journeys/end-to-end-journey-specification.md` — links this PRD into whichever lifecycle segment(s) it implements, rather than re-describing its features; a PRD is scoped to one initiative, a Journey Spec spans the whole product lifecycle that initiative is one slice of.
 
 ---
 
 ## Metadata
 
-- **Version:** 1.2
-- **Last Updated:** 2026-07-25
+- **Version:** 1.3
+- **Last Updated:** 2026-08-03
 - **Author:** Workspace Refinement Skills

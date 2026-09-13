@@ -40,7 +40,9 @@ carries all the proof.
    - State the topic/question being addressed in one or two sentences —
      no throat-clearing preamble.
    - Lead with the headline finding or recommendation (BLUF — Bottom Line
-     Up Front). Don't make the reader wait for a "reveal" at the end.
+     Up Front; see `bluf-bottom-line-up-front.md` for the mechanics of
+     writing this line). Don't make the reader wait for a "reveal" at the
+     end.
    - Give an explicit roadmap: what each following section covers, so the
      reader knows the shape of the argument before reading it.
    - State scope boundaries — what's covered and, where relevant, what's
@@ -139,6 +141,6 @@ Format: $FORMAT
 
 ---
 **Metadata**
-- **Version:** 1.1
-- **Last Updated:** 2026-07-21
+- **Version:** 1.2
+- **Last Updated:** 2026-08-09
 - **Author:** Workspace Communication Skills

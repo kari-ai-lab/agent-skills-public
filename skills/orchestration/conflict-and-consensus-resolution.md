@@ -35,7 +35,7 @@ Two agents agreeing is only meaningful evidence if they could plausibly have dis
 `governance/cost-aware-agent-utilization.md` already names the trigger: escalate to the primary agent (or beyond, to a human) **"when... multiple sub-agent outputs conflict"** and the task carries real risk. Extend that rule explicitly here:
 
 - If the underlying decision is Never-AI per `product/ai-human-task-allocation-model.md`, a disagreement between agents must go to a human — never get auto-resolved by picking the higher-confidence side.
-- If disagreement persists after a debate round or independent arbitration, that persistence is itself the signal to stop trying to resolve it computationally and escalate, per `domains/agent-zero-trust-delegation.md`'s trust-boundary model (agent-vs-agent disagreement about a consequential action is not something either agent should get to unilaterally settle).
+- If disagreement persists after a debate round or independent arbitration, that persistence is itself the signal to stop trying to resolve it computationally and escalate, per `governance/agent-zero-trust-delegation.md`'s trust-boundary model (agent-vs-agent disagreement about a consequential action is not something either agent should get to unilaterally settle).
 - If the disagreement is over a judgment call or trade-off rather than a checkable fact, debate/majority mechanisms don't apply at all — judgment calls without a verifiable ground truth go to a human by default, not to whichever agent argued longer.
 
 ## 🤖 Core Prompt / Instructions
@@ -109,7 +109,7 @@ Stakes/classification: $TASK_ALLOCATION_CLASS
 
 - `engineering/agent-driven-code-review-calibration.md` — the code-review-specific instance of the independence requirement this skill generalizes to any multi-agent disagreement.
 - `governance/cost-aware-agent-utilization.md` — names the escalation trigger this skill's step 3 (human escalation) implements in full.
-- `domains/agent-zero-trust-delegation.md` — the trust-boundary model behind routing consequential agent-vs-agent disagreements to a human rather than letting agents self-settle them.
+- `governance/agent-zero-trust-delegation.md` — the trust-boundary model behind routing consequential agent-vs-agent disagreements to a human rather than letting agents self-settle them.
 - `product/ai-human-task-allocation-model.md` — supplies the Never-AI/stakes classification this skill's escalation trigger checks against.
 - `orchestration/agent-chain-failure-and-escalation.md` — the adjacent but distinct concern of a single agent *failing* (error/timeout) rather than multiple agents *disagreeing* (contradictory valid-looking outputs).
 - `orchestration/agent-memory-architecture-and-consolidation.md` — applies this skill's independence-check-then-resolve procedure to the specific case of two agents' *persisted* memories disagreeing about the same fact, rather than two live outputs disagreeing mid-task.

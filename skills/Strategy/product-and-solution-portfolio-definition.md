@@ -74,10 +74,14 @@ Rules:
 - [ ] Product overlap is justified or recommended for change.
 - [ ] Output can be used to validate annual strategy topics and avoid duplicated investment.
 
+## Related Workspace Skills
+
+- `brand-architecture-house-of-brands-vs-branded-house.md` — run immediately after this inventory to classify each product/solution on the Brand Relationship Spectrum (House of Brands, Endorsed, Sub-brand, Branded House); a product overlap justified here on client-problem grounds can still require a separate brand identity if extending the parent brand would dilute it or compromise the parent's own market position.
+
 ---
 
 ## Metadata
 
-- **Version:** 1.0
-- **Last Updated:** 2026-07-19
+- **Version:** 1.1
+- **Last Updated:** 2026-08-10
 - **Author:** Workspace Strategy Skills

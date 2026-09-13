@@ -2,7 +2,7 @@
 
 ## Objective
 
-Closes an upstream *product* question that Group B of the workspace's product-skill gap backlog surfaced independently: `domains/agent-zero-trust-delegation.md` covers whether a human is supervising an *agent's task execution* (an engineering/security trust-boundary question), but nothing in the workspace addressed the earlier design-time question — for a given feature or workflow, which specific tasks should be **designed** to route to AI at all, which must stay human-owned, which are genuinely interchangeable, and which must never be delegated regardless of model capability. Forces an explicit per-task classification rather than a blanket "AI-assisted" label slapped on a whole feature.
+Closes an upstream *product* question that Group B of the workspace's product-skill gap backlog surfaced independently: `governance/agent-zero-trust-delegation.md` covers whether a human is supervising an *agent's task execution* (an engineering/security trust-boundary question), but nothing in the workspace addressed the earlier design-time question — for a given feature or workflow, which specific tasks should be **designed** to route to AI at all, which must stay human-owned, which are genuinely interchangeable, and which must never be delegated regardless of model capability. Forces an explicit per-task classification rather than a blanket "AI-assisted" label slapped on a whole feature.
 
 **This is a foundational lens for this folder**, run alongside `systems-thinking-and-domain-driven-design.md`, `no-silo-product-operating-model.md`, and `plan-big-execute-small-and-complexity-conservation.md` — it is a standing principle every AI-feature workflow should be run through at design time, not a one-off template filled out once per feature.
 
@@ -22,7 +22,7 @@ Product Manager, Product Owner, Head of Product, AI Product Lead — anyone desi
 - A per-task classification table: **AI-owned**, **Human-owned**, **Interchangeable**, or **Never-AI** — never a single blanket label for the whole feature.
 - For every **Never-AI** task, a named accountability reason (who must be answerable, and why a wrong outcome there is high-stakes, hard to reverse, or carries legal/safety/ethical weight) — not a vague risk feeling.
 - For every **Interchangeable** task, the actual deciding factor (cost, speed, or context) — treated as a real category, not a hedge for "we haven't decided yet."
-- A flag on any task where the classification is contested or unclear, routed to `domains/agent-zero-trust-delegation.md` if the open question is really about execution-time trust rather than design-time task ownership.
+- A flag on any task where the classification is contested or unclear, routed to `governance/agent-zero-trust-delegation.md` if the open question is really about execution-time trust rather than design-time task ownership.
 
 ## Core Prompt / Instructions
 
@@ -76,7 +76,7 @@ Produce the result in this order:
    human actually present and supervising when an AI-owned or Interchangeable
    task runs unattended, what credentials/scope it holds, whether it could
    masquerade as a human. If it's the latter, route it explicitly to
-   `domains/agent-zero-trust-delegation.md` rather than resolving an
+   `governance/agent-zero-trust-delegation.md` rather than resolving an
    execution-trust question inside a product-task-allocation exercise.
 
 6. Produce the final per-task table (Task | Classification | Reasoning |
@@ -96,7 +96,7 @@ Rules:
   is not a placeholder for "undecided."
 - Do not resolve an execution-time trust question (is an agent
   impersonating a human, does it hold a scoped/expiring credential) inside
-  this skill — route it to `domains/agent-zero-trust-delegation.md`.
+  this skill — route it to `governance/agent-zero-trust-delegation.md`.
 ```
 
 ## Success Criteria / Quality Checklist
@@ -105,7 +105,7 @@ Rules:
 - [ ] No task carries a blanket feature-level "AI-assisted" label instead of an individual classification.
 - [ ] Every Never-AI task names a specific accountable person/role and a concrete high-stakes/irreversibility/legal-safety-ethical reason.
 - [ ] Every Interchangeable task names the actual deciding factor (cost, speed, or context) rather than being left as an undecided default.
-- [ ] Contested classifications were checked against `domains/agent-zero-trust-delegation.md`'s execution-trust scope before being resolved here.
+- [ ] Contested classifications were checked against `governance/agent-zero-trust-delegation.md`'s execution-trust scope before being resolved here.
 - [ ] The resulting task table is available as an input to any AI PRD / AI User Flow / Prompting Template work for the same feature.
 
 ## Sources
@@ -115,7 +115,7 @@ Rules:
 
 ## Cross-References
 
-- `domains/agent-zero-trust-delegation.md` — same underlying human-accountability instinct, applied one layer down: that skill governs whether an agent executing an AI-owned or Interchangeable task is properly bounded (scoped credentials, TTL, non-impersonation) at runtime. This skill decides *whether* a task should route to AI at design time; that skill decides *how safely* it does so once it's running. Run this skill first — a task allocation decision should exist before its execution-trust model is designed. Cross-referenced in the other direction from `domains/agent-zero-trust-delegation.md`'s Inputs Required.
+- `governance/agent-zero-trust-delegation.md` — same underlying human-accountability instinct, applied one layer down: that skill governs whether an agent executing an AI-owned or Interchangeable task is properly bounded (scoped credentials, TTL, non-impersonation) at runtime. This skill decides *whether* a task should route to AI at design time; that skill decides *how safely* it does so once it's running. Run this skill first — a task allocation decision should exist before its execution-trust model is designed. Cross-referenced in the other direction from `governance/agent-zero-trust-delegation.md`'s Inputs Required.
 
 ---
 

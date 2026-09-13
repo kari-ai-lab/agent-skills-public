@@ -128,7 +128,7 @@ Shared across how many agents: $SHARED_WRITERS
 - `platform/context-management.md` — owns single-session working-context hygiene, explicitly out of scope for this skill's tiered model.
 - `orchestration/conflict-and-consensus-resolution.md` — the required path when two agents' persisted memories disagree, rather than a silent overwrite.
 - `orchestration/inter-agent-handoff-contract.md` — the only sanctioned channel for a non-owning agent to propose a memory change to the writer of record.
-- `domains/agent-zero-trust-delegation.md` — source of the TTL discipline this skill explicitly declines to reuse for memory content, naming why the two risk shapes differ.
+- `governance/agent-zero-trust-delegation.md` — source of the TTL discipline this skill explicitly declines to reuse for memory content, naming why the two risk shapes differ.
 - `governance/privacy-law-awareness-for-product-development.md` — the applicable regime-triage skill when persisted memory contains regulated personal data.
 - `orchestration/harness-selection-and-mapping.md` — a harness decision governs execution, not persistent memory; the two are complementary, not substitutes for each other.
 

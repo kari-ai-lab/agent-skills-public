@@ -10,6 +10,21 @@ Initial planned migrations:
 - 'skill-builder-template.md'
 - 'recipe-builder-template.md'
 
+## Skills Index
+
+- `skill-testing-and-evaluation-framework.md`
+  - Adapted from Anthropic's own `skill-creator` skill (see `../CREDITS.md`): a with-skill-vs-baseline testing loop, run AFTER `skill-builder-template.md`'s intake/draft process rather than replacing it. Adds the evaluation discipline this workspace's authoring process previously lacked entirely — every skill here had been reviewed for content/sourcing quality, never tested against actual task performance.
+  - Includes a "Workspace Customization" section reconciling Anthropic's conventions (YAML frontmatter auto-triggering, bundled `scripts/`/`references/`/`assets/`, `benchmark.json` tooling) against this workspace's actual conventions (flat markdown files, manual README/INDEX discovery, mandatory source citation).
+
+## Standing Authoring Conventions
+
+- **Connector Awareness** — every skill states its standalone baseline (what it produces from user-supplied information alone, always complete, never dependent on a connected tool) and, separately, what a connected tool (project tracker, calendar, chat, design, knowledge base, CRM, analytics) would add if the session happens to have one. Added 2026-08-09 after comparing this workspace's skills against Anthropic's own `product-management` plugin, whose skills explicitly degrade gracefully between "standalone" and "supercharged."
+- **Output Template** — every skill includes a ready-to-fill markdown scaffold (table, checklist, or document skeleton with bracketed placeholders) as a fast first-draft artifact, in addition to the existing Success Criteria / Quality Checklist section. The two serve different jobs: the Output Template is the draft itself, the checklist audits whether the reasoning behind it was sound. Added alongside Connector Awareness, same date and rationale.
+
+Both sections are present in `skill-template.md` and `skill-builder-template.md`'s intake questions and blueprint sections. Existing skills predating 2026-08-09 were not retrofitted as part of this change — apply the convention going forward, and add it to an existing skill only when that skill is otherwise being revised.
+
+- **On-This-Day working note** — a quiet, unheaded, italicized line placed right before a skill's `## Metadata` footer, pointing at `../easter-eggs/on-this-day-fact-bank.md`: if the skill's output reaches a genuine completion point and today's date matches a bank entry, close with one sourced aside from it as an unlabeled passing remark, at most once per session, never announced as a feature. Deliberately not surfaced in a skill's Objective or any user-facing description — the point is that it's a surprise when it fires, not a documented capability. Added 2026-08-13 at direct user request, framed explicitly as "professional easter eggs... not really product tooling." Present in both templates going forward; retrofitted as a working pilot into four high-traffic existing skills only (`product/product-capability-map-and-competitor-overlay.md`, `product/systems-thinking-and-domain-driven-design.md`, `strategy/brand-architecture-house-of-brands-vs-branded-house.md`, `strategy/product-naming-distinctiveness-and-4cs-framework.md`) rather than swept across the whole library — add it to more skills opportunistically, not mechanically.
+
 ## Definitions
 
 - **Skill**: A reusable agent capability that can be invoked by other agents or users to perform a specific task or set of tasks. These are initiated by specific keyworkds

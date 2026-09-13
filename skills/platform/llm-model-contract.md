@@ -1,95 +1,88 @@
-# Skill Name: Offline-First LLM Model Contract
+# LLM Model Contract (Offline-First)
 
-## 🎯 Objective
+Status: canonical workspace policy for how applications obtain LLM capability.
 
-A reusable architecture pattern for multi-app / multi-agent codebases: applications never hard-code a provider or model name. Instead they declare a requirement on an **LLM source** and ask for a capability **tier**, so the same app runs unmodified against a local model, a self-hosted endpoint, or a hosted API, and degrades gracefully when offline.
+## The Contract
 
-## 👤 Target Persona
+Applications in this workspace never hard-code a provider or model name. They
+declare a **requirement on an LLM source** and ask for a **tier**:
 
-Platform/infra engineer building shared LLM-access infrastructure for more than one service or agent, who wants to avoid every app re-implementing provider selection, key handling, and fallback logic independently.
+| Tier | Default model | Use for |
+| --- | --- | --- |
+| `fast` | `gemma3:4b` | classification, routing, cheap summaries |
+| `primary` | `qwen2.5:14b` | chat, agents, general reasoning |
+| `heavy` | `qwen3.6:latest` | long-context / hard reasoning (optional tier) |
 
-## 📥 Inputs Required
+Resolution is implemented in `platform_agents.model_contract`
+(`platform/packages/platform-agents/`). Call `require_llm_source()` once at
+app startup — it resolves the source and verifies it is usable (endpoint
+reachable, `fast` + `primary` models installed, or API key present for hosted
+kinds), raising `LLMSourceUnavailable` with remediation steps otherwise.
 
-- **Provider set:** which LLM sources must be supported (e.g. a local runtime like Ollama, plus one or more hosted APIs)
-- **Tiering needs:** does the workload split cleanly into cost/latency tiers (cheap classification vs. general reasoning vs. long-context/hard reasoning)?
-- **Deployment shape:** monorepo with a shared package, or independently-packaged apps that must still work standalone?
-- **Offline requirement:** must the app function with zero internet access, or are hosted providers acceptable as the default?
+```python
+from platform_agents.model_contract import require_llm_source
 
-## 📤 Expected Output
-
-- A small `require_llm_source()`-style entry point apps call once at startup
-- A resolution order (package default → manifest file → environment variables) so both zero-config and fully-overridden deployments work
-- A shared provider layer (one module per provider) that individual apps consume, never reimplement
-
-## 🤖 Core Prompt / Instructions
-
-```text
-You are a platform engineer designing an LLM access layer shared across
-multiple applications. Apply this contract:
-
-1. THE CONTRACT
-   Apps never hard-code a provider or model name. They call one function
-   (e.g. `require_llm_source()`) at startup, which:
-   - resolves which source to use (local runtime, self-hosted endpoint, or
-     hosted API) via a defined precedence order
-   - verifies the source is actually usable (endpoint reachable, required
-     models installed, or API key present for hosted kinds)
-   - raises a clear, actionable error with remediation steps if not usable
-     ("fail fast, with instructions" — not a mysterious failure on the first
-     real model call)
-
-2. TIERS, NOT MODEL NAMES
-   Define 2-3 capability tiers (e.g. fast / primary / heavy) each mapped to a
-   default model per provider. Application code asks for a tier
-   (`source.model_for("primary")`), never a literal model string — this is
-   the one place model choice changes when the underlying catalog drifts.
-
-3. RESOLUTION ORDER (lowest to highest precedence)
-   a. Package defaults baked into the shared library — an app packaged and
-      distributed independently still works offline against a local runtime
-      with zero configuration.
-   b. A manifest file (e.g. `models.toml`), resolved via an env var override
-      or by walking up from the working directory to a canonical location.
-   c. Environment variables — the bring-your-own-source path for end users:
-      SOURCE_KIND, BASE_URL, API_KEY, and per-tier model overrides.
-
-4. SHARED PROVIDER LAYER
-   Put the concrete provider implementations (one local runtime adapter, one
-   per hosted API, one generic OpenAI-compatible adapter) in a shared
-   package, not duplicated per app. Include: an injected settings/secrets
-   store (so it can run standalone with in-memory defaults, or wired into a
-   real DB by a consuming app), a health/circuit-breaker layer, usage
-   tracking, and a redacting `to_dict()`/logging helper so API keys never hit
-   logs.
-
-5. APP-SPECIFIC PERSISTENCE IS INJECTED, NEVER IMPORTED
-   Each consuming app wires its own settings DB / usage table / audit log
-   into the shared registry; the shared package itself stays app-agnostic
-   with working in-memory defaults so new apps get a functioning registry
-   with zero wiring.
-
-6. RULES OF THUMB
-   - One local runtime instance shared by all apps/containers — no per-app
-     duplicate model stores or volumes.
-   - Offline-first: the local source is the default; hosted providers are
-     optional enhancements, and the app must degrade gracefully with no
-     internet.
-   - Change models in exactly one place (the manifest / package default),
-     and verify against the runtime's actual installed catalog before
-     changing defaults — installed model catalogs drift over time.
-   - Never log a raw API key.
+source = require_llm_source()          # raises with instructions if unusable
+model = source.model_for("primary")    # never hard-code model names
 ```
 
-## ✅ Success Criteria / Quality Checklist
+## Resolution Order (lowest to highest precedence)
 
-- [ ] No application code contains a literal model name — only tier requests
-- [ ] A freshly packaged/independent copy of an app still boots offline against a local runtime with zero configuration
-- [ ] Startup fails fast with actionable remediation text if no usable source is configured, rather than failing on the first model call
-- [ ] Provider implementations live in one shared location, not duplicated per app
-- [ ] API keys are never written to logs (verified via the redacting log helper)
+1. **Package defaults** baked into the platform-agents wheel — an app packaged
+   independently from this workspace still works offline against a host
+   Ollama with zero configuration.
+2. **`models.toml` manifest** — `LLM_MODELS_MANIFEST` env var, or the nearest
+   `models.toml` walking up from the working directory. The workspace
+   canonical manifest is `platform/models.toml`.
+3. **Environment variables** — the bring-your-own-source path for end users:
+   - `LLM_SOURCE_KIND` — `ollama` | `openai_compatible` | `anthropic` | `openai`
+   - `LLM_BASE_URL` — endpoint (alias: `OLLAMA_BASE_URL`)
+   - `LLM_API_KEY` — hosted kinds (`ANTHROPIC_API_KEY` / `OPENAI_API_KEY` honored)
+   - `LLM_MODEL_FAST` / `LLM_MODEL_PRIMARY` / `LLM_MODEL_HEAVY`
+     (aliases: `OLLAMA_MODEL_FAST` / `OLLAMA_MODEL_PRIMARY`)
 
----
-**Metadata**
-- **Version:** 1.0
-- **Last Updated:** 2026-07-19
-- **Author:** northernfried
+## Shared Provider Layer (Phase 2)
+
+The concrete LLM infrastructure also lives in `platform-agents` — providers
+(`platform_agents.providers.{ollama,openai,anthropic,gemini}`),
+`custom_provider` (any OpenAI-compatible endpoint), `provider_registry`
+(injected settings store + secrets codec; in-memory/plaintext defaults so it
+runs standalone), `secure_provider` (trust classification + PII sanitisation
+proxy), `trust_overrides`, `provider_health` (circuit breaker),
+`model_capabilities`, `usage_tracking`, and `last_sent`.
+
+App-specific persistence is injected, never imported: euda wires its settings
+DB, usage table, and egress log in `platform/apps/euda/backend/llm/__init__.py`
+and keeps `backend.llm.*` import paths as aliases. New apps get a working
+registry with zero wiring (`ProviderRegistry()` → in-memory store, default
+model from the contract's `primary` tier).
+
+apdlc (Phase 3) follows the contract via env resolution (its container can't
+see the workspace manifest): `settings.resolved_default_model` = `DEFAULT_MODEL`
+→ `ANTHROPIC_MODEL` if a key is configured → `LLM_MODEL_PRIMARY` (contract
+default `qwen2.5:14b`). Its compose has no ollama service — containers reach
+the host daemon at `host.docker.internal:11434`. Test gotcha: agent test
+harnesses that fake a hosted client must pin settings to that provider
+(`tests/_fakes.py::patch_agent_runtime`), or the offline default routes tests
+at the real host Ollama.
+
+## Rules
+
+- **One Ollama.** The host daemon at `localhost:11434` is the single model
+  store. No per-app Ollama containers or duplicate model volumes. Containers
+  reach it at `http://host.docker.internal:11434`.
+- **Offline-first.** The local source is the default. Hosted providers are
+  optional enhancements; apps must degrade gracefully with no internet.
+- **Fail fast, with instructions.** Apps validate the source at startup via
+  `require_llm_source()` rather than erroring on the first model call.
+- **Change models in one place.** Update `platform/models.toml` (and the
+  package default in
+  `platform-agents/src/platform_agents/data/models.default.toml` when the
+  change should ship with packaged apps). Confirm against `ollama list`
+  before changing defaults — the installed catalog drifts over time.
+- **Never log `api_key`.** Use `LLMSource.to_dict()` for logging; it redacts.
+
+This skill owns model/provider tier selection only. For what a product-owned prompt
+running on a given tier should actually contain (role, audience, goal, scope boundaries),
+see `product/ai-feature-prompt-design.md` — it explicitly defers tier selection back here
+rather than re-deriving it.

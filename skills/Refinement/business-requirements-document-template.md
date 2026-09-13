@@ -188,6 +188,7 @@ Rules:
 - `strategy/product-lifecycle-hierarchy-evaluation-matrix.md`, `product/competitor-analysis-synthesizer.md` — source material for Section 2.
 - `strategy/investment-portfolio-alignment.md` — source material for Section 9.
 - `product/no-silo-product-operating-model.md` — the upward-coupling check behind Section 1.
+- `journeys/end-to-end-journey-specification.md` — links this BRD into whichever lifecycle segment(s) it justifies, at the program/investment altitude; that skill does not re-derive business-case content, it points to it.
 - `communication/bookend-communication-structure.md` — the structural discipline behind Sections 0 and 10.
 
 ---

@@ -187,7 +187,7 @@ Rules:
 
 - `testing-strategy-and-the-test-pyramid.md` — the human-driven companion this skill pairs with; covers pyramid shape, test-double vocabulary, and flaky-test triage, all of which still apply to agent-authored tests, on top of this skill's agent-specific failure modes.
 - `governance/verification-and-self-checking.md` — the general verification discipline this skill specializes for test generation specifically.
-- `domains/agent-zero-trust-delegation.md` — the broader authorization-model question of what an agent may do without confirmation; this skill's escalation rule (route agent-vs-agent disagreements to a human) is a specific application of that same trust boundary to code-review disagreements.
+- `governance/agent-zero-trust-delegation.md` — the broader authorization-model question of what an agent may do without confirmation; this skill's escalation rule (route agent-vs-agent disagreements to a human) is a specific application of that same trust boundary to code-review disagreements.
 - `delivery/spec-driven-development.md` — its Commercialization Validation Gate already requires a mandatory independent validator (human or a different AI agent than the implementer) for spec-vs-implementation coverage; this skill's independent-verification rule is the same discipline applied one layer down, to individual tests rather than a whole spec.
 
 ---

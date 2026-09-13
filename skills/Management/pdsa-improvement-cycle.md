@@ -1,8 +1,22 @@
-# Skill Name: PDSA Improvement Cycle
+# Skill Name: PDSA Improvement Cycle (PDCA)
 
 ## 🎯 Objective
 
-Runs Deming's Plan-Do-Study-Act (PDSA, the "Deming Wheel," originally Walter Shewhart's cycle) as the operating loop for any change proposed after `system-of-profound-knowledge.md` or `fourteen-points-for-management.md` surfaces a theory worth testing. The critical discipline Deming insisted on is **Study**, not **Check**: the point is to predict a result, compare the actual result against that prediction, and learn from the gap — not merely to check whether the change "worked" as a pass/fail.
+Runs Deming's Plan-Do-Study-Act (PDSA, the "Deming Wheel," originally Walter Shewhart's cycle) as the operating loop for any change proposed after `system-of-profound-knowledge.md` or `fourteen-points-for-management.md` surfaces a theory worth testing. The critical discipline Deming insisted on is **Study**, not **Check**: the point is to predict a result, compare the actual result against that prediction, and learn from the gap — not merely to check whether the change "worked" as a pass/fail. This is a cooperative, non-adversarial loop run against a system you control — if the situation is instead competitive or adversarial (a competitor's move, a live incident, a negotiation), use `../strategy/ooda-loop-decision-cycle.md` instead, which optimizes for out-cycling an actively adapting counterpart rather than for a falsifiable small-scale test.
+
+## PDCA — the more common name for this cycle
+
+Most readers encounter this cycle as **PDCA (Plan-Do-Check-Act)**, not PDSA — it's worth documenting explicitly rather than assuming the Deming-specific name is the only entry point.
+
+**Origin, per the Lean Enterprise Institute's own lexicon:** PDCA evolved from Walter Shewhart's three-step cycle (Specify, Produce, Inspect). Deming expanded it into a four-phase model for Japanese audiences in the 1950s, and in 1951 the Japanese Union of Scientists and Engineers (JUSE) refined it into the modern PDCA cycle. Lean.org frames the cycle as the foundation of continuous improvement and kaizen — a scientific-method loop of proposing a change, implementing it, measuring the outcome, and taking corrective action.
+
+**PDCA's four steps, as Lean.org states them:**
+1. **Plan** — determine goals for a process and the changes needed to achieve them.
+2. **Do** — implement the changes.
+3. **Check** — evaluate the results in terms of performance.
+4. **Act** — standardize and stabilize the change, or begin the cycle again.
+
+**A real discrepancy worth naming, not smoothing over:** Lean.org's own lexicon states that "PDCA is also known as PDSA, where the 'S' represents 'study' instead of 'check,' though the methodology remains functionally equivalent." Deming's own institute (deming.org, cited in this skill's Sources below) disagrees with that "functionally equivalent" framing — it insists Study is a meaningfully different, deeper discipline than Check: predicting a result and comparing against that prediction, not a pass/fail evaluation. This skill's operating instructions below follow deming.org's more rigorous Study framing (Deming is the namesake, and the distinction is the whole point of his critique of Check), but readers coming from a Lean/kaizen background should know their term (PDCA/Check) refers to the same underlying loop this skill runs — they are not two different cycles to choose between, just two framings of the same one, held to different rigor depending on the source.
 
 ## 👤 Target Persona
 
@@ -67,11 +81,12 @@ Constraints:
 ## Sources
 
 - PDSA definition, four stages, Shewhart origin, and the Study-vs-Check distinction: [deming.org — PDSA](https://deming.org/explore/pdsa/)
+- PDCA definition, Shewhart/Deming/JUSE origin story, the four Plan-Do-Check-Act steps, and the "functionally equivalent" PDCA/PDSA framing: [Lean Enterprise Institute — PDCA Cycle](https://www.lean.org/lexicon-terms/pdca/)
 
 ---
 
 ## Metadata
 
-- **Version:** 1.0
-- **Last Updated:** 2026-07-24
+- **Version:** 1.2
+- **Last Updated:** 2026-08-13
 - **Author:** Workspace Management Skills

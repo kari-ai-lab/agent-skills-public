@@ -44,8 +44,9 @@ Three altitudes, one family of documents:
   - Rates each section Thorough / Partial / Assumption-only and produces owned, dated open questions rather than accepting "we think" as an answer.
 
 - `product-requirements-document-template.md`
-  - The canonical PRD template: Business Overview, Business Case, Constraints, Scope, Problem Statement, Goals & Metrics, Feature/Capability list with Deliverable grouping, Edge & Error Cases, Open Questions, and Launch Plan — bookended by an Executive Summary and Executive Ask per `communication/bookend-communication-structure.md`.
+  - The canonical PRD template: Business Overview, Business Case, Constraints, Scope, Problem Statement, Goals & Metrics, Feature/Capability list with Deliverable grouping, Edge & Error Cases, Open Questions, Launch Plan, and a conditional AI Feature Supplement (Section 11) — bookended by an Executive Summary and Executive Ask per `communication/bookend-communication-structure.md`.
   - The artifact that satisfies SDLC's Planning/Requirements phase (`delivery/software-development-life-cycle-modeling.md`) and feeds `delivery/jira-epic-builder.md` feature-by-feature; each Feature can be elaborated further into an FRD.
+  - For AI/LLM-powered initiatives, Section 11 pulls task allocation from `product/ai-human-task-allocation-model.md`, model tier from `platform/llm-model-contract.md`, failure-mode UX from `product/user-flow-mapping.md`, and prompt design from `product/ai-feature-prompt-design.md` — closing Group B's AI PRD/AI User Flow/Prompting Template gaps as an extension of this template rather than parallel documents.
 
 - `functional-requirements-document-template.md`
   - The canonical FRD template: Actors & Roles, Step-by-Step Workflows, System Logic & Business Rules, Data Requirements, Error Handling & Exception Flows, Integration Requirements, per-topic Non-Functional Requirements, and full traceability back to the PRD/BRD.
@@ -58,18 +59,29 @@ Three altitudes, one family of documents:
   - Applies an increment gate recommendation (Pass / Conditional Pass / Fail).
   - Flags at-risk teams/applications due to capacity constraints.
 - `future-workstream-prioritization-wsjf-and-techniques.md`
-  - Applies WSJF-first prioritization with a documented fallback toolkit (MoSCoW, Kano, Priority Poker, 100-dollar test, CoD, ROI, RICE, value vs effort, opportunity scoring) for future workstream sequencing.
+  - Applies WSJF-first prioritization with a documented fallback toolkit for future workstream sequencing, giving real methodological depth (not just a name-drop) to MoSCoW (effort caps per category), Kano (five categories, survey method, the delighter-to-must-have decay dynamic), ICE (Impact × Confidence × Ease, its growth-hacking origin and known Ease-bias/subjectivity limitations versus RICE), and the Value vs Effort matrix (four quadrants, and the "suspiciously full Quick Wins" tell), alongside Priority Poker, the 100-dollar test, CoD, ROI, RICE, and Opportunity Scoring.
+
+- `roadmap-presentation-and-sequencing-views.md`
+  - Takes the already-prioritized list this skill (or `workstream-prioritization-and-roadmap-refinement.md`) produces and lays it out as a roadmap view matched to audience and certainty: Now/Next/Later (the default, avoiding false-precision date commitments), Quarterly Themes (executive-facing, outcome-framed), an OKR-aligned view (when the org already runs OKRs), or Timeline/Gantt (only when a genuinely fixed external date exists).
+  - Sits explicitly beneath `../strategy/target-state-vision-and-phased-roadmap.md`'s multi-year phased roadmap as the near-term presentation layer, and hands off to `../communication/roadmap-change-communication.md` for what happens when the sequence later changes.
+
+- `ai-driven-work-sizing-and-token-budgets.md`
+  - Sizes AI-driven (agent-executed) work using the workspace's collapsed Epic → Task hierarchy (no Story layer; AC lives at the Epic and is validated at delivery), since story-point/sprint-day sizing doesn't transfer to a token-metered executor.
+  - Produces a tier-weighted token budget (`estimated_tokens × tier_cost_weight`, per `platform/llm-model-contract.md`'s fast/primary/heavy tiers, no retry multiplier) alongside a SEPARATE human-hours budget for Human-owned/Never-AI tasks — never blended into one number.
+  - Consumes `product/ai-human-task-allocation-model.md`'s per-task classification as a required input, and feeds `delivery/retrospective-improvement.md`'s estimated-vs-actual token/hours comparison for forward calibration.
 
 ## Suggested Usage Order
 
 1. For a new program/investment, start with `business-requirements-document-template.md` to build and approve the business case before any specific initiative is scoped.
 2. Within an approved program, use `workstream-prioritization-and-roadmap-refinement.md` to define and rank what should be pursued.
 3. Use `future-workstream-prioritization-wsjf-and-techniques.md` to run WSJF-first economic sequencing and apply alternative prioritization methods when needed.
+3a. Use `roadmap-presentation-and-sequencing-views.md` to lay out the resulting sequence as a roadmap view for a specific audience, once prioritization from step 2 or 3 is settled — this step presents the sequence, it doesn't change it.
 4. Once a workstream is admitted, run `product-requirements-discovery-questionnaire.md` to pressure-test the thinking behind it before writing anything up.
 5. Draft the initiative in `product-requirements-document-template.md`, using the questionnaire's answers as input — this is the artifact that gets presented to executives and handed to delivery.
 6. For any feature needing implementation-ready detail, elaborate it in `functional-requirements-document-template.md` before it reaches SDLC Design/Implementation.
 7. Run `refinement-plan-realism-and-capacity-risk.md` against the PRD's feature list to test whether the plan is feasible with current readiness and capacity.
 8. Adjust roadmap scope/sequence based on confidence score and risk findings, then hand the PRD/FRD to `delivery/jira-epic-builder.md` feature-by-feature.
+9. For any Epic that is AI-driven (agent-executed) rather than human-sprint-executed, run `ai-driven-work-sizing-and-token-budgets.md` instead of story-point sizing — after `product/ai-human-task-allocation-model.md` has classified its tasks — to produce the tier-weighted token budget and separate human-hours budget.
 
 ## Inputs To Gather Before Running These Skills
 
@@ -84,6 +96,7 @@ Three altitudes, one family of documents:
 - For a specific initiative moving to PRD: market/competitive research, prior-attempt history, technical constraints from engineering, and the specific ask being made of executive leadership.
 - For a new program moving to BRD: viability/revenue-classification results, competitive positioning, portfolio context, and confirmation of C-level co-authorship.
 - For a feature moving to FRD: the PRD feature's Gherkin ACs, any DDD bounded-context/aggregate-design output, and existing API/data contracts.
+- For an AI-driven Epic: its `product/ai-human-task-allocation-model.md` task classification, the model tier assigned per AI-owned task, raw token estimates, and any historical estimated-vs-actual token/hours data from prior comparable work.
 
 ## Output Expectations
 
@@ -101,6 +114,6 @@ Three altitudes, one family of documents:
 
 ## Metadata
 
-- **Version:** 1.2
-- **Last Updated:** 2026-07-25
+- **Version:** 1.5
+- **Last Updated:** 2026-08-09
 - **Author:** Workspace Refinement Skills

@@ -7,6 +7,8 @@ Use this category for policy, safety, security controls, compliance, validation,
 > Root canon for privacy-specific skills: [Wikipedia's Privacy law survey](https://en.wikipedia.org/wiki/Privacy_law) — a jurisdiction-by-jurisdiction map of privacy regimes (GDPR, HIPAA, COPPA, PIPEDA, LGPD, POPI, APPI, and 30+ others) and the principles common across nearly all of them. Privacy triage feeds legal/privacy counsel review — it is never a substitute for it.
 >
 > Root canon for software security standards generally: [NIST's Information Technology Laboratory (ITL)](https://www.nist.gov/itl) — the US federal standards body across cybersecurity, cryptography (including post-quantum), AI standards, and biometrics, via its Computer Security Division / Applied Cybersecurity Division and the Computer Security Resource Center (CSRC). Home of FIPS (Federal Information Processing Standards) and the National Vulnerability Database (NVD). When a governance skill needs a specific standard (e.g. the SP 800 series, the Cybersecurity Framework, the Secure Software Development Framework) rather than FIRST's incident-response-specific frameworks, start at CSRC under ITL rather than guessing at a standard number.
+>
+> Root canon for payment-card compliance: the PCI Security Standards Council's own documents in `docs/PCI/` — PCI-DSS v4.0.1 (the core 12-requirement standard), the PCI Software Security Framework (Secure Software Standard + Secure SLC), the Token Service Provider additional requirements, and the SAQ Instructions and Guidelines. Start at `pci-dss-applicability-and-scoping.md`, which routes to the more specific skills — don't try to hold the full ~380-page standard in one file.
 
 ## Purpose
 
@@ -23,6 +25,7 @@ These skills help engineers, security leads, and delivery leadership:
 - Prioritize vulnerability remediation using severity **and** real-world exploit likelihood, not severity alone.
 - Audit whether a product organization's incident-response function and information-sharing discipline are actually in place before they're tested by a real report or breach.
 - Flag which privacy-law regimes a new product/feature likely triggers, and check it against the core principles nearly every regime shares, before it ships.
+- Determine which PCI DSS obligations, SAQ type, Secure Software Framework requirements, and TSP additions actually apply to a given payment-touching product or feature.
 
 ## Skills Index
 
@@ -32,8 +35,29 @@ These skills help engineers, security leads, and delivery leadership:
 - `agent-zero-trust-delegation.md`
   - Designs/reviews how AI agents authenticate and get authorized: distinct agent principal, no inherited entitlements, short-TTL scoped delegation grants, masquerade defenses.
 
+- `pci-dss-applicability-and-scoping.md`
+  - Entry point for PCI: account-data classification, the 12 requirements at the principal level, and SAQ-type orientation (A/A-EP/B/B-IP/C-VT/C/P2PE/SPoC/D). Routes to the more detailed PCI skills below rather than holding the full standard in one file.
+
 - `pci-dss-req-3-4.md`
-  - Atomic compliance chunk for PCI-DSS Requirement 3.4 (rendering PAN unreadable at rest) — trigger/exemption criteria and required recipe linkage.
+  - Atomic compliance chunk for PCI-DSS Requirement 3.5 (rendering PAN unreadable at rest — filename kept as `3-4` for compatibility; content corrected from the old v3.x numbering) — trigger/exemption criteria and required recipe linkage.
+
+- `pci-dss-req-4-transmission-encryption.md`
+  - Requirement-level compliance chunk for PCI-DSS Requirement 4 (protecting PAN with strong cryptography during transmission over open/public networks).
+
+- `pci-dss-req-6-secure-systems-and-software.md`
+  - Requirement-level compliance chunk for PCI-DSS Requirement 6 (secure systems/software development, vulnerability management, public-facing web app protection, secure change management) — the requirement where PCI DSS and this workspace's own SDLC/DevSecOps modeling most directly meet.
+
+- `pci-dss-req-8-identify-authenticate-access.md`
+  - Requirement-level compliance chunk for PCI-DSS Requirement 8 (user identification, authentication lifecycle, mandatory MFA into the CDE).
+
+- `pci-secure-software-lifecycle-and-devsecops.md`
+  - Maps PCI Secure SLC's 10 Control Objectives onto `delivery/software-development-life-cycle-modeling.md`'s per-phase DevSecOps checkpoint, giving it a regulator-grade specification instead of a generic placeholder.
+
+- `pci-secure-software-standard-requirements.md`
+  - Checklist for products that are themselves payment software: 11 Core Security Objectives plus Modules A (Account-Data Protection), B (POI Device Software), C (Publicly-accessible Software), D (SDKs).
+
+- `pci-tsp-token-service-provider-requirements.md`
+  - The 8 additional Token Service Provider control areas layered on PCI DSS 1-12, scoped to Token Vault/EMV Payment Token issuance — directly relevant to `platform/apps/tokenvault`.
 
 - `verification-and-self-checking.md`
   - Forces validation against explicit success criteria (tests, reference outputs, screenshots, build commands) before a task is declared complete.
@@ -65,7 +89,7 @@ These skills help engineers, security leads, and delivery leadership:
 ## Suggested Usage Order
 
 1. Use `permissions-and-safety.md` and `agent-zero-trust-delegation.md` when setting up or reviewing how agents/tools are permissioned and authorized in a system.
-2. Use `pci-dss-req-3-4.md` (and other compliance chunks as they're added) whenever a feature trigger matches its applicability criteria.
+2. Start any PCI question at `pci-dss-applicability-and-scoping.md`; it routes to `pci-dss-req-3-4.md` / `-req-4-...` / `-req-6-...` / `-req-8-...` (and other compliance chunks as they're added) whenever a feature trigger matches, or to `pci-secure-software-standard-requirements.md`, `pci-secure-software-lifecycle-and-devsecops.md`, or `pci-tsp-token-service-provider-requirements.md` for the deeper vendor/TSP-specific skills.
 3. Use `vulnerability-severity-and-exploit-prioritization.md` whenever there are more vulnerability findings than remediation capacity for the current cycle.
 4. Use `product-security-incident-response-readiness.md` periodically (and always before it's needed for real) to confirm the org can actually receive, triage, and disclose a vulnerability report — this is the structural check that `vulnerability-severity-and-exploit-prioritization.md` assumes is already in place.
 5. Use `github-push-sensitivity-review.md` before any repository (new or existing) is pushed to a remote, especially a public one.
@@ -84,6 +108,7 @@ These skills help engineers, security leads, and delivery leadership:
 - Current information-sharing practice and whether TLP labeling is actually applied.
 - Repository contents before any GitHub push.
 - What personal data a new product/feature touches, user/data geography, sector, and cross-border data movement.
+- For PCI questions: the entity's role (merchant/processor/software vendor/TSP), what account data or Payment Tokens the product touches, and current SDLC/crypto/key-management practices.
 
 ## Output Expectations
 
@@ -93,11 +118,12 @@ These skills help engineers, security leads, and delivery leadership:
 - A clean, secret-free repository state before any push.
 - Explicit pass/fail verification against stated success criteria before any task is called done.
 - A named list of privacy regimes triggered by a new product/feature, a per-principle present/partial/missing check, and an explicit escalation to legal/privacy counsel — never a self-certified launch clearance.
+- A PCI applicability determination (which requirements, which SAQ type, which vendor/TSP standards) with routing to the specific compliance chunk or deeper skill needed, rather than an attempt to answer everything from one file.
 
 ---
 
 ## Metadata
 
-- **Version:** 1.3
+- **Version:** 1.4
 - **Last Updated:** 2026-07-25
 - **Author:** Workspace Governance Skills

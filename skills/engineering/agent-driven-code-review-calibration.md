@@ -41,7 +41,7 @@ Apply the same discipline outside that specific skill's own invocation, any time
 
 ## Escalation: Never Let Two Agents Settle a Disagreement Alone
 
-When an agent reviewer and an agent author disagree — the reviewer flags something the author's original reasoning didn't account for, or the author pushes back on a finding — **route the disagreement to a human rather than letting the two agents resolve it between themselves.** Two agents converging on a shared answer is not independent confirmation of anything if they arrive there by talking each other into agreement rather than by checking against an actual ground truth (a test that passes, a spec requirement, a real failure reproduction). This mirrors `agent-driven-test-generation-and-verification.md`'s identical rule for test disagreements, and is the same underlying trust-boundary question `domains/agent-zero-trust-delegation.md` already governs for agent task execution generally — applied here specifically to the review-disagreement case.
+When an agent reviewer and an agent author disagree — the reviewer flags something the author's original reasoning didn't account for, or the author pushes back on a finding — **route the disagreement to a human rather than letting the two agents resolve it between themselves.** Two agents converging on a shared answer is not independent confirmation of anything if they arrive there by talking each other into agreement rather than by checking against an actual ground truth (a test that passes, a spec requirement, a real failure reproduction). This mirrors `agent-driven-test-generation-and-verification.md`'s identical rule for test disagreements, and is the same underlying trust-boundary question `governance/agent-zero-trust-delegation.md` already governs for agent task execution generally — applied here specifically to the review-disagreement case.
 
 ## AI-Assisted Code Review at Scale: What Naive Approaches Get Wrong
 
@@ -159,7 +159,7 @@ Rules:
 
 - **Anthropic — ["Best practices for Claude Code"](https://code.claude.com/docs/en/best-practices)** — the "reviewer prompted to find gaps will usually report some, even when the work is sound" rubber-stamp warning and its "flag only gaps that affect correctness... treat the rest as optional" corrective; the fresh-subagent-context independence framing. Same source already verified for `agent-driven-test-generation-and-verification.md`; re-cited here for its review-specific content.
 - **In-repo/system source:** this workspace's own `code-review` marketplace skill and its CONFIRMED/PLAUSIBLE verdict structure with `ReportFindings`'s required per-finding `failure_scenario` field — the concrete, already-implemented version of this skill's calibration discipline.
-- **In-repo/system source:** `domains/agent-zero-trust-delegation.md` — the general agent-execution trust-boundary model this skill's escalation rule (route agent-vs-agent disagreement to a human) applies specifically to code-review disputes.
+- **In-repo/system source:** `governance/agent-zero-trust-delegation.md` — the general agent-execution trust-boundary model this skill's escalation rule (route agent-vs-agent disagreement to a human) applies specifically to code-review disputes.
 - [InfoQ — "AI Code Review at Scale: LinkedIn's Multi-Agent Approach"](https://www.infoq.com/news/2026/08/linkedin-ai-code-review/) (Sergio De Simone, published 2026-08-22) — the hallucination/low-signal-noise/missing-context failure-mode taxonomy, the multiple-independent-reviewers cross-validation architecture, and the 63.9% overall acceptance-rate (80% logic errors, 100% concurrency bugs) calibration data point. Verified via live fetch this session, per `INDEX.md`'s standing InfoQ-first rule for `engineering/` skills.
 
 ## Related Workspace Skills
@@ -167,7 +167,7 @@ Rules:
 - `code-review-standards-and-checklist.md` — the human-driven companion this skill pairs with; that skill's priority-ordered checklist is still what gets checked, this skill calibrates how much to trust an agent's findings against it.
 - `agent-driven-test-generation-and-verification.md` — the parallel discipline one layer over, for tests specifically; shares this skill's independence-requires-fresh-context and route-disagreements-to-a-human rules.
 - `governance/verification-and-self-checking.md` — the general explicit-success-criteria discipline both agent-driven skills in this folder specialize for their own domain.
-- `domains/agent-zero-trust-delegation.md` — the broader authorization-model question this skill's escalation rule is a specific application of.
+- `governance/agent-zero-trust-delegation.md` — the broader authorization-model question this skill's escalation rule is a specific application of.
 
 ---
 

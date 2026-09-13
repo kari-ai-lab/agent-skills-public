@@ -35,7 +35,7 @@ Product must operate tightly with engineering so that what actually gets built i
 
 Product must hold these four lenses simultaneously, not sequentially or as an afterthought once a feature is already built:
 
-- **Security thinking** — `governance/vulnerability-severity-and-exploit-prioritization.md`, `governance/product-security-incident-response-readiness.md`.
+- **Security thinking** — `governance/vulnerability-severity-and-exploit-prioritization.md`, `governance/product-security-incident-response-readiness.md`; for any product touching payment card data, add `governance/pci-dss-applicability-and-scoping.md`.
 - **Privacy thinking** — `governance/privacy-law-awareness-for-product-development.md`.
 - **Feature thinking** — market/competitive feature awareness: `product/competitor-analysis-synthesizer.md`, `product/product-school-template-toolkit.md`.
 - **Client-first thinking** — the target end-state and client experience, not the internal roadmap's convenience: `strategy/target-state-vision-and-phased-roadmap.md`'s target end-state, `strategy/house-of-lean-for-product-strategy.md`'s Respect-for-People-and-Culture pillar.
@@ -93,7 +93,9 @@ Produce the result in this order:
    claim that the team "keeps these in mind." Route each gap to its
    matching skill:
    - security -> `governance/vulnerability-severity-and-exploit-prioritization.md`,
-     `governance/product-security-incident-response-readiness.md`
+     `governance/product-security-incident-response-readiness.md`, and
+     `governance/pci-dss-applicability-and-scoping.md` if payment card
+     data is involved
    - privacy -> `governance/privacy-law-awareness-for-product-development.md`
    - feature -> `product/competitor-analysis-synthesizer.md`,
      `product/product-school-template-toolkit.md`
@@ -139,6 +141,6 @@ Rules:
 
 ## Metadata
 
-- **Version:** 1.0
-- **Last Updated:** 2026-07-25
+- **Version:** 1.1
+- **Last Updated:** 2026-07-27
 - **Author:** Workspace Product Skills

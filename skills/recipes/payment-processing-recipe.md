@@ -7,8 +7,9 @@
 Mandatory architectural and security requirements for any system, feature, or project that touches Primary Account Numbers (PAN) or sensitive authentication data.
 
 ## 🛡️ Required Compliance Frameworks
-- **PCI-DSS:** Requirement 3.4 (Masking/Encrypting PAN) -> See: `../compliance/pci_dss_req_3_4.md`
-- **PCI-DSS:** Requirement 4.2 (Encryption in transit)
+- **PCI-DSS:** Requirement 3.5 (Render PAN unreadable wherever stored — hashing/truncation/tokenization/strong cryptography) -> See: `../governance/pci-dss-req-3-4.md` (filename kept for compatibility; content corrected to 3.5 under v4.0.1 numbering)
+- **PCI-DSS:** Requirement 3.4 (Restrict display/copy access to full PAN — masking) -> distinct from 3.5 above, not yet a separate chunk
+- **PCI-DSS:** Requirement 4 (Protect cardholder data with strong cryptography during transmission, incl. 4.2) -> See: `../governance/pci-dss-req-4-transmission-encryption.md`
 
 ## 🏢 Firm Controls
 - **Control SEC-110:** "Zero-Trust Payment Flow" - No raw PAN data may ever touch application logging systems or analytics databases.

@@ -11,7 +11,7 @@ Engineer building a multi-agent system where one agent's output must become anot
 ## 📥 Inputs Required
 
 - The bounded subtask specification from `orchestration/task-decomposition-and-routing.md` (objective, output format, tool guidance, boundaries).
-- Sender and receiver agent identities, per `domains/agent-zero-trust-delegation.md`'s distinct-principal model.
+- Sender and receiver agent identities, per `governance/agent-zero-trust-delegation.md`'s distinct-principal model.
 - Any existing trace-context convention already in use (per `journeys/journey-orchestration-and-verification.md`), so agent-to-agent handoffs can be correlated into the same end-to-end trace as service-to-service calls.
 - The scope/size limits already set by `orchestration/shared-context-and-state-ownership.md` for what a subagent is allowed to return.
 
@@ -19,7 +19,7 @@ Engineer building a multi-agent system where one agent's output must become anot
 
 - A handoff object with mandatory fields: `task_id`, `sender`, `receiver`, `objective`, `boundaries`, `input_payload`, `output_contract`, `state`, `trace_id`.
 - An explicit state machine governing every handoff, modeled on A2A's own `TaskState` enum.
-- A rule separating this contract's WORK payload from the delegation grant's AUTHORIZATION envelope (`domains/agent-zero-trust-delegation.md`) — both required on a real call, neither substituting for the other.
+- A rule separating this contract's WORK payload from the delegation grant's AUTHORIZATION envelope (`governance/agent-zero-trust-delegation.md`) — both required on a real call, neither substituting for the other.
 
 ## The Contract, Grounded in A2A
 
@@ -43,7 +43,7 @@ Required fields, every handoff:
   parent goal's ID) — generated once, referenced on every subsequent status
   update for this task.
 - sender / receiver: the distinct agent identities involved, per
-  domains/agent-zero-trust-delegation.md's principal model. Never let an
+  governance/agent-zero-trust-delegation.md's principal model. Never let an
   agent's own reasoning stand in for an explicit identity field.
 - objective / boundaries / output_contract: carried over verbatim from
   orchestration/task-decomposition-and-routing.md's subtask specification —
@@ -68,7 +68,7 @@ Rules:
   attempt.
 - This contract carries WORK (what to do, with what, returning what) — it
   is not an authorization mechanism. A receiving agent must still hold a
-  valid delegation grant under domains/agent-zero-trust-delegation.md
+  valid delegation grant under governance/agent-zero-trust-delegation.md
   independently of receiving a well-formed handoff object. A complete
   handoff contract from an unauthorized sender is still a rejected call.
 - INPUT_REQUIRED must name exactly what input is missing — an interrupted
@@ -97,7 +97,7 @@ Trace context: $TRACE_ID
 ## Related Workspace Skills
 
 - `orchestration/task-decomposition-and-routing.md` — produces the bounded subtask specification (objective, output format, tool guidance, boundaries) this skill's contract carries unchanged.
-- `domains/agent-zero-trust-delegation.md` — the authorization envelope this contract's WORK payload is orthogonal to; a well-formed handoff from an unauthorized sender must still be rejected.
+- `governance/agent-zero-trust-delegation.md` — the authorization envelope this contract's WORK payload is orthogonal to; a well-formed handoff from an unauthorized sender must still be rejected.
 - `journeys/journey-orchestration-and-verification.md` — source of the trace-context propagation convention this skill's `trace_id` field extends to agent-to-agent calls, and the service-level analog of this same handoff problem.
 - `orchestration/agent-chain-failure-and-escalation.md` — what happens when a handoff doesn't reach a terminal state within an acceptable window, or reaches `FAILED`.
 - `orchestration/shared-context-and-state-ownership.md` — sets the size/scope discipline for what belongs in a handoff's `input_payload`/`artifacts` versus what stays owned by the orchestrator.
