@@ -2,7 +2,30 @@
 
 Status of every skill category in this repo — what's available to use today vs. what's on the roadmap. See [`skills/INDEX.md`](skills/INDEX.md) for the category model and [`README.md`](README.md) for how to use a skill.
 
-## ✅ Available (72 skills across 10 categories)
+## ✅ Available (95 skills across 14 categories)
+
+### `orchestration/` — 7 skills
+Agent-to-agent task mechanics for multi-agent systems.
+- [`task-decomposition-and-routing.md`](skills/orchestration/task-decomposition-and-routing.md) — bounded subtask specification (objective, output format, tool guidance, boundaries), grounded in Anthropic's own published multi-agent research system and its named duplicate-work failure mode
+- [`inter-agent-handoff-contract.md`](skills/orchestration/inter-agent-handoff-contract.md) — a concrete task-object schema and lifecycle, grounded in Google's Agent2Agent (A2A) protocol
+- [`conflict-and-consensus-resolution.md`](skills/orchestration/conflict-and-consensus-resolution.md) — an independence check to rule out fake same-context consensus, then debate, arbitration, or mandatory human escalation
+- [`agent-chain-failure-and-escalation.md`](skills/orchestration/agent-chain-failure-and-escalation.md) — a Closed/Open/Half-Open circuit-breaker model for a chain of agent calls, adapted from the Azure Architecture Center's own Circuit Breaker pattern
+- [`shared-context-and-state-ownership.md`](skills/orchestration/shared-context-and-state-ownership.md) — orchestrator-owns-state ownership model, a distilled-summary return-value budget, and a single-writer rule for shared state
+- [`harness-selection-and-mapping.md`](skills/orchestration/harness-selection-and-mapping.md) — maps those decisions onto a concrete runtime (LangGraph, A2A/Google ADK, OpenAI Agents SDK, or Claude Code's own subagent model)
+- [`agent-memory-architecture-and-consolidation.md`](skills/orchestration/agent-memory-architecture-and-consolidation.md) — tiered, encrypted-at-rest, confidence-and-source persistent agent memory, grounded in MemGPT's tiered-memory research
+
+### `journeys/` — 2 skills
+End-to-end customer-lifecycle specification and its technical enforcement backbone.
+- [`end-to-end-journey-specification.md`](skills/journeys/end-to-end-journey-specification.md) — an eight-segment lifecycle document (Discovery through Offboarding), each segment modeled as a DDD bounded context with EventStorming-derived domain events
+- [`journey-orchestration-and-verification.md`](skills/journeys/journey-orchestration-and-verification.md) — decides, per segment-transition, Process Manager vs. choreography vs. a manual gate, when to promote to durable workflow-as-code, and requires trace-context propagation and consumer-driven contract testing
+
+### `engineering/` — 8 skills
+Coding standards, testing strategy, and code review — each a human-driven skill paired with an agent-driven companion.
+- [`testing-strategy-and-the-test-pyramid.md`](skills/engineering/testing-strategy-and-the-test-pyramid.md) + [`agent-driven-test-generation-and-verification.md`](skills/engineering/agent-driven-test-generation-and-verification.md)
+- [`code-review-standards-and-checklist.md`](skills/engineering/code-review-standards-and-checklist.md) + [`agent-driven-code-review-calibration.md`](skills/engineering/agent-driven-code-review-calibration.md) — the agent-driven half names the specific failure mode where an AI reviewer reports plausible findings regardless of whether the code actually has problems
+- [`coding-standards-and-design-patterns.md`](skills/engineering/coding-standards-and-design-patterns.md) + [`agent-driven-code-generation-discipline.md`](skills/engineering/agent-driven-code-generation-discipline.md)
+- [`frontend-design-principles.md`](skills/engineering/frontend-design-principles.md)
+- [`capacity-threshold-testing.md`](skills/engineering/capacity-threshold-testing.md)
 
 ### `platform/` — 7 skills
 Engineering/runtime: monorepo, tooling, testing, infra.
@@ -83,8 +106,9 @@ Domain-specific compliance/security guidance.
 - [`pci-dss-req-3-4.md`](skills/domains/pci-dss-req-3-4.md)
 - [`agent-zero-trust-delegation.md`](skills/domains/agent-zero-trust-delegation.md)
 
-### `product/` — 7 skills
+### `product/` — 8 skills
 Product-family overlays.
+- [`ai-human-task-allocation-model.md`](skills/product/ai-human-task-allocation-model.md) — per-task (not per-feature) classification into AI-owned, Human-owned, Interchangeable, or Never-AI, grounded in IBM's human-accountability principle for responsible AI
 - [`systems-thinking-and-domain-driven-design.md`](skills/product/systems-thinking-and-domain-driven-design.md) — foundational lens for this and the `Strategy/`/`Refinement/` categories
 - [`competitor-analysis-synthesizer.md`](skills/product/competitor-analysis-synthesizer.md)
 - [`no-silo-product-operating-model.md`](skills/product/no-silo-product-operating-model.md) — second foundational lens: product's required coupling to corporate strategy and SDLC delivery, plus security/privacy/feature/client-first awareness

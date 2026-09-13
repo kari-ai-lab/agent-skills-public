@@ -21,9 +21,13 @@ Entry point for this skill library. Each category below is a directory of focuse
 - `templates/`: canonical authoring templates for new skills, recipes, and compliance chunks.
 - `recipes/`: reusable procedure-style instructions with strong implementation guidance.
 - `communication/`: structuring and delivering written communications (reports, memos, RFCs, briefings).
+- `orchestration/`: agent-to-agent task mechanics — decomposition/routing, inter-agent handoff contracts, conflict/consensus resolution, chain-level failure/escalation, harness selection, and persistent agent memory when multiple AI agents coordinate on one workflow.
+- `journeys/`: end-to-end customer-lifecycle specification (Discovery through Offboarding) and the technical backbone (orchestration mechanism, durable execution, tracing, contract testing) that keeps each lifecycle-segment transition enforced, not just documented.
+- `engineering/`: cross-project coding standards, testing strategy, and code-review practice — each with a human-driven skill (the underlying discipline) paired with an agent-driven companion (the specific failure modes and calibration required when an AI agent is doing the writing or reviewing).
 
 ## Notable Skills
 
+- `orchestration/` — five multi-agent task-mechanics skills plus harness selection and persistent memory: `task-decomposition-and-routing.md` (bounded subtask specification, grounded in Anthropic's own published multi-agent research system), `inter-agent-handoff-contract.md` (a concrete task-object schema and lifecycle, grounded in Google's Agent2Agent/A2A protocol), `conflict-and-consensus-resolution.md` (real vs. fake consensus, debate, and mandatory human escalation), `agent-chain-failure-and-escalation.md` (a Closed/Open/Half-Open circuit-breaker model for agent chains), `shared-context-and-state-ownership.md` (context-budget and single-writer discipline), `harness-selection-and-mapping.md` (mapping those decisions onto a concrete runtime — LangGraph, A2A/ADK, OpenAI Agents SDK, or Claude Code's own subagent model), and `agent-memory-architecture-and-consolidation.md` (tiered, encrypted-at-rest, confidence-and-source persistent memory).
 - `platform/api-builder.md` — designs/extends REST API contracts against the OpenAPI Specification and Google's API design guide (AIPs); orchestrates the `api-builder-*` sub-recipes in `recipes/`.
 - `platform/llm-model-contract.md` — offline-first LLM provider abstraction pattern (tiers, resolution order, shared provider layer) for multi-app/agent codebases.
 - `recipes/payment-processing-recipe.md` + `domains/pci-dss-req-3-4.md` — a worked example of linking a compliance requirement to a mandatory implementation recipe.

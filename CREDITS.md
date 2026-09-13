@@ -125,6 +125,128 @@ Blog and 25-item template library — role clarity (PM vs. PMM), AI-native opera
 - [`skills/product/pm-vs-pmm-role-clarity.md`](skills/product/pm-vs-pmm-role-clarity.md) — [PM vs PMM](https://productschool.com/blog/job-search/pm-vs-pmm-landing-the-right-role-for-you)
 - [`skills/product/product-school-template-toolkit.md`](skills/product/product-school-template-toolkit.md) — [Template Library](https://productschool.com/resources/templates)
 
+## Multi-Agent Systems & Agentic AI Engineering
+
+Primary sources for the `orchestration/` and `journeys/` skillsets — each verified via live fetch against the source's own page, not cited from memory.
+
+### Anthropic — "How we built our multi-agent research system"
+**https://www.anthropic.com/engineering/multi-agent-research-system**
+The lead-agent decompose-and-spawn pattern, the four-field subtask specification (objective, output format, tool guidance, boundaries), the named duplicate-search failure mode from vague task descriptions, the compounding-error/trajectory-shift failure mode and its resumability/graceful-adaptation mitigations, and the 1,000-2,000 token distilled-summary return-value figure.
+- [`skills/orchestration/task-decomposition-and-routing.md`](skills/orchestration/task-decomposition-and-routing.md), [`skills/orchestration/conflict-and-consensus-resolution.md`](skills/orchestration/conflict-and-consensus-resolution.md), [`skills/orchestration/agent-chain-failure-and-escalation.md`](skills/orchestration/agent-chain-failure-and-escalation.md), [`skills/orchestration/agent-memory-architecture-and-consolidation.md`](skills/orchestration/agent-memory-architecture-and-consolidation.md)
+
+### Anthropic — "Effective context engineering for AI agents"
+**https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents**
+Context as a finite resource, the orchestrator/clean-subagent-context-window ownership split, and the compaction mechanism.
+- [`skills/orchestration/shared-context-and-state-ownership.md`](skills/orchestration/shared-context-and-state-ownership.md)
+
+### A2A Protocol (Google)
+**https://a2a-protocol.org/latest/topics/what-is-a2a/**
+The Agent Card discovery mechanism, the Task object's `id`/`status`/`artifacts` fields, the full `TaskState` lifecycle enum, and the Message object's `role`/`parts` fields.
+- [`skills/orchestration/inter-agent-handoff-contract.md`](skills/orchestration/inter-agent-handoff-contract.md), [`skills/orchestration/harness-selection-and-mapping.md`](skills/orchestration/harness-selection-and-mapping.md)
+
+### Microsoft — Azure Architecture Center, Circuit Breaker Pattern
+**https://learn.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker**
+The Retry-vs-Circuit-Breaker distinction, the Closed/Open/Half-Open state machine, and the increasing-timeout recovery guidance.
+- [`skills/orchestration/agent-chain-failure-and-escalation.md`](skills/orchestration/agent-chain-failure-and-escalation.md)
+
+### Du, Li, Torralba, Tenenbaum & Mordatch — "Improving Factuality and Reasoning in Language Models through Multiagent Debate"
+**https://arxiv.org/abs/2305.14325**
+The multi-round agent-debate mechanism and its factuality/hallucination-reduction result.
+- [`skills/orchestration/conflict-and-consensus-resolution.md`](skills/orchestration/conflict-and-consensus-resolution.md)
+
+### LangGraph — Persistence
+**https://docs.langchain.com/oss/python/langgraph/persistence**
+The checkpointer/thread-scoped state-persistence model and its named use cases (conversation continuity, human-in-the-loop, time travel, fault tolerance).
+- [`skills/orchestration/harness-selection-and-mapping.md`](skills/orchestration/harness-selection-and-mapping.md)
+
+### OpenAI Agents SDK — Handoffs
+**https://openai.github.io/openai-agents-python/handoffs/**
+The tool-based agent delegation pattern and the `HandoffInputData` context-carrying mechanism.
+- [`skills/orchestration/harness-selection-and-mapping.md`](skills/orchestration/harness-selection-and-mapping.md)
+
+### Sun, Chen, Zhu, et al. — "MemGPT: Towards LLMs as Operating Systems"
+**https://arxiv.org/abs/2310.08560**
+The OS-inspired hierarchical/tiered memory framing. The fetched abstract did not itself name specific tier labels or an eviction/paging decision rule — the skill's tier design beyond the OS-paging analogy is original, not a verbatim restatement.
+- [`skills/orchestration/agent-memory-architecture-and-consolidation.md`](skills/orchestration/agent-memory-architecture-and-consolidation.md)
+
+### Enterprise Integration Patterns — Process Manager
+**https://www.enterpriseintegrationpatterns.com/patterns/messaging/ProcessManager.html** (Gregor Hohpe & Bobby Woolf)
+The centralized-orchestration pattern, its hub-and-spoke mechanism, and its named bottleneck trade-off.
+- [`skills/journeys/journey-orchestration-and-verification.md`](skills/journeys/journey-orchestration-and-verification.md)
+
+### Temporal — Understanding Temporal
+**https://docs.temporal.io/evaluate/understanding-temporal**
+The Workflow Definition as executable business logic, the durable Event History mechanism, and Temporal's own stated fit ("order fulfillment, customer onboarding, and payment processing").
+- [`skills/journeys/journey-orchestration-and-verification.md`](skills/journeys/journey-orchestration-and-verification.md)
+
+### W3C Trace Context
+**https://www.w3.org/TR/trace-context/**
+The cross-vendor trace-correlation problem and the `traceparent`/`tracestate` header mechanism (trace-id, parent-id).
+- [`skills/journeys/journey-orchestration-and-verification.md`](skills/journeys/journey-orchestration-and-verification.md)
+
+### Pact
+**https://pact.io/**
+Consumer-driven contract testing's own framing — verifying compatibility in isolation rather than via full end-to-end environments.
+- [`skills/journeys/journey-orchestration-and-verification.md`](skills/journeys/journey-orchestration-and-verification.md)
+
+### Alberto Brandolini — EventStorming
+**https://www.eventstorming.com/**
+The collaborative-workshop-format definition and its four styles (Improve, Envision, Explore, Design).
+- [`skills/journeys/end-to-end-journey-specification.md`](skills/journeys/end-to-end-journey-specification.md)
+
+### John Ferguson Smart — Feature Mapping
+**https://johnfergusonsmart.com/feature-mapping-a-lightweight-requirements-discovery-practice-for-agile-teams/**
+The sticky-note structure (blue/rules, green/examples, yellow/steps, purple/consequences) bridging a business goal to Given-When-Then BDD scenarios.
+- [`skills/journeys/end-to-end-journey-specification.md`](skills/journeys/end-to-end-journey-specification.md)
+
+### IBM — Principles for Trust and Transparency
+**https://www.ibm.com/policy/trust-transparency**
+Human-accountability grounding for classifying which tasks should route to AI at all.
+- [`skills/product/ai-human-task-allocation-model.md`](skills/product/ai-human-task-allocation-model.md)
+
+## Software Engineering Practice
+
+Primary sources for the `engineering/` skillset.
+
+### Martin Fowler — "TestPyramid" / "Mocks Aren't Stubs" / "CodeSmell" / Refactoring Catalog
+**https://martinfowler.com/**
+Pyramid shape and ice-cream-cone anti-pattern (Mike Cohn/Jason Huggins attribution); precise dummy/fake/stub/spy/mock definitions and state-vs-behavior verification; code smells framed as an investigation trigger, not an automatic verdict; the named-refactoring vocabulary (Extract Function, Rename Variable, and others).
+- [`skills/engineering/testing-strategy-and-the-test-pyramid.md`](skills/engineering/testing-strategy-and-the-test-pyramid.md), [`skills/engineering/coding-standards-and-design-patterns.md`](skills/engineering/coding-standards-and-design-patterns.md)
+
+### Google Testing Blog — "Test Sizes"
+**https://testing.googleblog.com/2010/12/test-sizes.html** (Simon Stewart, 2010)
+Enforceable Small/Medium/Large test-size definitions.
+- [`skills/engineering/testing-strategy-and-the-test-pyramid.md`](skills/engineering/testing-strategy-and-the-test-pyramid.md)
+
+### Wikipedia — "Test-driven development" / "SOLID"
+**https://en.wikipedia.org/**
+Kent Beck attribution and the red-green-refactor cycle, with TDD's own named real limits; the five SOLID principles' precise definitions (Robert C. Martin / Michael Feathers attribution).
+- [`skills/engineering/testing-strategy-and-the-test-pyramid.md`](skills/engineering/testing-strategy-and-the-test-pyramid.md), [`skills/engineering/coding-standards-and-design-patterns.md`](skills/engineering/coding-standards-and-design-patterns.md)
+
+### Google — `eng-practices`
+**https://google.github.io/eng-practices/review/**
+The twelve-item review-priority checklist, the "improves code health, not perfection" approval standard, the one-business-day turnaround norm, and the collaborative disagreement-handling procedure.
+- [`skills/engineering/code-review-standards-and-checklist.md`](skills/engineering/code-review-standards-and-checklist.md)
+
+### Google — AIP-192: Documentation
+**https://google.aip.dev/192**
+"Documentation... will be the only things a user has" — grounds the Design-for-the-Human-Reader-First principle applied to naming, interfaces, and comments.
+- [`skills/engineering/coding-standards-and-design-patterns.md`](skills/engineering/coding-standards-and-design-patterns.md), [`skills/engineering/agent-driven-code-generation-discipline.md`](skills/engineering/agent-driven-code-generation-discipline.md), [`skills/engineering/code-review-standards-and-checklist.md`](skills/engineering/code-review-standards-and-checklist.md)
+
+### Jason Cohen — *Best Kept Secrets of Peer Code Review*
+SmartBear/Cisco study on diff-size vs. defect-detection rate. The primary PDF is an unreadable legacy scanned format for automated tools — cited via secondary description, flagged honestly in the skill's own Sources rather than presented as directly verified.
+- [`skills/engineering/code-review-standards-and-checklist.md`](skills/engineering/code-review-standards-and-checklist.md)
+
+### InfoQ
+**https://www.infoq.com/**
+Several specific reports: "AI Code Review at Scale: LinkedIn's Multi-Agent Approach" (Sergio De Simone, 2026-08-22 — hallucination/low-signal/missing-context failure modes, multi-independent-reviewer architecture, a 63.9% acceptance-rate data point); "Taming Flaky Tests" (Trisha Gee podcast, 2025-04-18 — four named flaky-test cause categories); "The AI Productivity Paradox in Test Automation" (Chowdhury & Gummadavelli, 2026-06-01 — Ghost Click, State Reversion Race, Timeout Spiral failure modes); "Meta Applies Mutation Testing with LLM..." (2026-01-06 — Meta's ACH system, 73% engineer-acceptance result); "AI-Generated Code Creates New Wave of Technical Debt" (2025-11-18 — Ox Security's "Comments Everywhere"/"Over-Specification" anti-pattern frequencies).
+- [`skills/engineering/agent-driven-code-review-calibration.md`](skills/engineering/agent-driven-code-review-calibration.md), [`skills/engineering/testing-strategy-and-the-test-pyramid.md`](skills/engineering/testing-strategy-and-the-test-pyramid.md), [`skills/engineering/agent-driven-test-generation-and-verification.md`](skills/engineering/agent-driven-test-generation-and-verification.md), [`skills/engineering/agent-driven-code-generation-discipline.md`](skills/engineering/agent-driven-code-generation-discipline.md)
+
+### Anthropic — "Best practices for Claude Code"
+**https://code.claude.com/docs/en/best-practices**
+The "reviewer prompted to find gaps will usually report some, even when the work is sound" rubber-stamp warning, its corrective, and the fresh-subagent-context independence framing.
+- [`skills/engineering/agent-driven-test-generation-and-verification.md`](skills/engineering/agent-driven-test-generation-and-verification.md), [`skills/engineering/agent-driven-code-review-calibration.md`](skills/engineering/agent-driven-code-review-calibration.md)
+
 ## Agile & Lean Thought Leadership
 
 Practitioner/primary sources for the `delivery/` and `Strategy/` skillsets — several are the actual co-creators of the methods those skills guide on, cited alongside (not instead of) the frameworks' own official sites.
@@ -161,7 +283,7 @@ Credited as the originating author of the rich-context-input technique.
 
 Several skills carry a generic internal-team byline rather than a named external source — these were authored in-house rather than adapted from a public source, so there's no external link to credit:
 
-- "Workspace Delivery Skills", "Workspace Strategy Skills", "Workspace Refinement Skills", "Workspace Governance Skills", "Workspace Product Skills" — internal authoring placeholders across `skills/delivery/`, `skills/Strategy/`, `skills/Refinement/`, `skills/governance/`, `skills/product/`
+- "Workspace Delivery Skills", "Workspace Strategy Skills", "Workspace Refinement Skills", "Workspace Governance Skills", "Workspace Product Skills", "Workspace Orchestration Skills", "Workspace Journeys Skills", "Workspace Engineering Skills" — internal authoring placeholders across `skills/delivery/`, `skills/Strategy/`, `skills/Refinement/`, `skills/governance/`, `skills/product/`, `skills/orchestration/`, `skills/journeys/`, `skills/engineering/`
 - [`skills/product/no-silo-product-operating-model.md`](skills/product/no-silo-product-operating-model.md) — a workspace-authored operating principle (cross-functional coupling + four-lens awareness), not adapted from an external source; it routes to the specific external/internal sources listed elsewhere in this file for each of its component checks.
 - "PM Team" — `skills/product/competitor-analysis-synthesizer.md`, `skills/delivery/jira-epic-builder.md`, `skills/governance/defect-triage-assistant.md`
 
