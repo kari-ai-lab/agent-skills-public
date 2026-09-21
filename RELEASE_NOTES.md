@@ -2,7 +2,7 @@
 
 Status of every skill category in this repo — what's available to use today vs. what's on the roadmap. See [`skills/INDEX.md`](skills/INDEX.md) for the category model and [`README.md`](README.md) for how to use a skill.
 
-## ✅ Available (132 skills across 14 categories)
+## ✅ Available (133 skills across 14 categories)
 
 ### `orchestration/` — 7 skills (new category)
 Agent-to-agent task mechanics for multi-agent systems.
@@ -84,9 +84,10 @@ Standards, controls, monitoring, policy.
 - [`pci-dss-req-4-transmission-encryption.md`](skills/governance/pci-dss-req-4-transmission-encryption.md), [`pci-dss-req-6-secure-systems-and-software.md`](skills/governance/pci-dss-req-6-secure-systems-and-software.md), [`pci-dss-req-8-identify-authenticate-access.md`](skills/governance/pci-dss-req-8-identify-authenticate-access.md) — requirement-level compliance chunks
 - [`pci-secure-software-lifecycle-and-devsecops.md`](skills/governance/pci-secure-software-lifecycle-and-devsecops.md), [`pci-secure-software-standard-requirements.md`](skills/governance/pci-secure-software-standard-requirements.md), [`pci-tsp-token-service-provider-requirements.md`](skills/governance/pci-tsp-token-service-provider-requirements.md) — full PCI compliance family
 
-### `Strategy/` — 17 skills
+### `Strategy/` — 18 skills
 Goal-setting, portfolio alignment, strategy evaluation.
 - [`ooda-loop-decision-cycle.md`](skills/Strategy/ooda-loop-decision-cycle.md) — Boyd's Observe-Orient-Decide-Act loop for competitive/adversarial situations (competitor moves, incidents, negotiation), explicitly distinct from PDSA's cooperative improvement cycle
+- [`negotiation-concession-strategy-and-tradeoff-framework.md`](skills/Strategy/negotiation-concession-strategy-and-tradeoff-framework.md) — a pre-agreed three-tier concession strategy required before any negotiation opens: free trade-aways (zero cost, zero risk, valued by the counterpart), priced trades (never free; a reason and an exchange), and protected terms (hard wall or gated, senior-approved exception), mapped onto BATNA/ZOPA, reciprocity, and logrolling
 - [`brand-architecture-house-of-brands-vs-branded-house.md`](skills/Strategy/brand-architecture-house-of-brands-vs-branded-house.md) — classifies a product/business on Aaker's Brand Relationship Spectrum via a two-question decision framework
 - [`product-naming-distinctiveness-and-4cs-framework.md`](skills/Strategy/product-naming-distinctiveness-and-4cs-framework.md) — picks and evaluates a candidate name using the USPTO Spectrum of Distinctiveness (legal trademark strength) and the 4Cs (Character, Construction, Communication, Continuum)
 - [`annual-goals-and-quarterly-objectives.md`](skills/Strategy/annual-goals-and-quarterly-objectives.md)

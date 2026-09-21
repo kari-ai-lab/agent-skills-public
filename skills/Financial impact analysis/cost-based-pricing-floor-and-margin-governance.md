@@ -160,11 +160,12 @@ Rules:
 - `strategy/quarterly-strategy-evaluation-and-adjustment.md` — the review cadence for margin-rate targets.
 - `refinement/business-requirements-document-template.md` Sections 2–3 (Business Case & Justification, Constraints) — where cost/margin inputs should inform the business case, not be re-derived from scratch.
 - `strategy/product-revenue-tier-investment-case.md` — the direct/indirect revenue classification this cost model feeds.
+- `strategy/negotiation-concession-strategy-and-tradeoff-framework.md` — uses this skill's cost floor and discount ladder to set price-related Tier 2 limits and to classify a below-breakeven price or negative-ROI line item as a Tier 3 protected term; its post-session reconciliation re-runs this skill's deal-level ROI check.
 
 ---
 
 ## Metadata
 
-- **Version:** 1.0
-- **Last Updated:** 2026-07-27
+- **Version:** 1.1
+- **Last Updated:** 2026-09-21
 - **Author:** Workspace Financial Impact Analysis Skills

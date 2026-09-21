@@ -170,11 +170,12 @@ Rules:
 - `macroeconomic-risk-awareness-for-product-strategy.md` — the macro-conditions companion to this skill's market-level (micro) focus.
 - `strategy/product-revenue-tier-investment-case.md` — where a pricing/segmentation recommendation should feed into the revenue case.
 - `refinement/business-requirements-document-template.md` Section 2 (Business Case & Justification) — the document these models should inform, not re-derive from scratch each time.
+- `negotiation-concession-strategy-and-tradeoff-framework.md` — when a price is being negotiated with a specific counterpart rather than set for a segment, this skill's ceiling and competitive-response check inform the price topics on that skill's three-tier strategy sheet.
 
 ---
 
 ## Metadata
 
-- **Version:** 1.3
-- **Last Updated:** 2026-08-10
+- **Version:** 1.4
+- **Last Updated:** 2026-09-21
 - **Author:** Workspace Strategy Skills

@@ -23,6 +23,7 @@ These skills help product leadership:
 - Audit whether a strategy is structurally sound (leadership foundation, people/culture, flow, innovation, relentless improvement, and a full three-part value goal) rather than just well-argued.
 - Ground pricing, positioning, and macro-risk awareness in established economic models rather than intuition, so a great product doesn't lose its market to a mispriced segment strategy or a macro cycle nobody was watching.
 - Run a faster, competitive decision cycle when a competitor, incident, or adversarial condition is actively changing the situation faster than the standard quarterly review cadence can absorb.
+- Enter every negotiation (proposal, contract, product terms, or internal scope/date tradeoff) with a pre-agreed three-tier concession strategy — free trade-aways, priced trades, and protected terms — so concessions are never improvised under live pressure.
 
 ## Skills Index
 
@@ -86,6 +87,11 @@ These skills help product leadership:
   - Runs Boyd's Observe-Orient-Decide-Act loop for competitive/adversarial situations (competitor moves, incidents, negotiation) where out-cycling an actively adapting counterpart is the point — explicitly distinct from `management/pdsa-improvement-cycle.md`'s cooperative, non-adversarial process-improvement cycle.
   - Gives Orient the most scrutiny (cultural/doctrinal/experiential inputs shaping interpretation), requires a tempo assessment naming the bottleneck stage, and names the model's own limitation (a decision-speed heuristic, not a correctness guarantee).
 
+- `negotiation-concession-strategy-and-tradeoff-framework.md`
+  - Requires a three-tier strategy sheet, agreed in advance, before any negotiation opens: **Tier 1 Free Trade-Aways** (zero financial cost, zero risk, pre-agreed, valued by the counterpart — the psychological "they got something" currency), **Tier 2 Priced Trades** (valuable, negotiable only with a stated reason and an exchange, never free), **Tier 3 Protected Terms** (significant risk or definitive financial burden — hard wall, or gated exception with senior written approval).
+  - Anchors the tiers in verified negotiation concepts (BATNA/reservation point, ZOPA, reciprocity, logrolling, interests-not-positions) while labeling the enforceable rules — the four Tier 1 tests, the Tier 3 exception path, no tier drift in the room — as workspace design rather than sourced findings.
+  - Carries a Concession Ledger for in-session discipline, an honesty guardrail (never present a free give as a costly sacrifice), and the same structure applied to internal scope/date/quality tradeoffs. Complements `ooda-loop-decision-cycle.md` (tempo) and `../financial-impact-analysis/cost-based-pricing-floor-and-margin-governance.md` (cost floor and approval ladder).
+
 - `controlled-experiment-design-and-decision-rules.md`
   - Runs a controlled experiment (A/B test) from hypothesis through a binary SHIP/NO-SHIP/INCONCLUSIVE decision, closing the workspace's gap between shipping a change and knowing whether it actually worked.
   - Treats pricing experiments as methodologically distinct from UI/feature tests — branches by context (transactional/subscription/negotiated), each with its own duration, guardrails, and a mandatory fairness/legal/trust risk check that runs regardless of the statistical result.
@@ -117,6 +123,7 @@ These skills help product leadership:
 14. Use `microeconomic-pricing-and-positioning-models.md` whenever a pricing or positioning decision is being made, and `macroeconomic-risk-awareness-for-product-strategy.md` (including its PESTLE scan) on the same cadence as step 13's quarterly review — both feed the same evaluation, not a separate process.
 15. Use `controlled-experiment-design-and-decision-rules.md` to validate any shipped or proposed change (UI/feature or pricing) with a controlled experiment before treating step 13/14's outcomes as settled — a pricing recommendation from step 14 should route through this skill's pricing branch rather than ship on its standalone economic rationale alone.
 16. Use `ooda-loop-decision-cycle.md` separately, whenever a competitor move, incident, or other adversarial situation demands a faster decision cycle than the quarterly cadence in step 13 allows — it doesn't sit in this same annual/quarterly sequence, since it answers a tempo question rather than a planning question.
+17. Use `negotiation-concession-strategy-and-tradeoff-framework.md` separately, before any negotiation opens (customer/partner proposal, vendor contract, product terms, or an internal scope/date tradeoff) — like step 16 it sits outside the annual/quarterly sequence, since it is triggered by an upcoming negotiation rather than a planning cadence. Complete and get the three-tier sheet approved *first*; pull in step 16's OODA loop on top of it only if the counterpart is fast-moving or adversarial. For price topics, run `../financial-impact-analysis/cost-based-pricing-floor-and-margin-governance.md` while building the sheet and again in post-session reconciliation.
 
 ## Inputs To Gather
 
@@ -132,6 +139,7 @@ These skills help product leadership:
 - Candidate initiatives, investment capacity, and delivery constraints.
 - Current performance baseline and customer experience pain points.
 - Current leadership decision mechanics, flow characteristics between teams/phases, innovation funding model, and improvement cadence, for the House of Lean structural audit.
+- For a negotiation: the full issue list, our cost/risk per topic, what the counterpart values (interests, not just positions), our BATNA, and the approvers for each of the three concession tiers.
 - Current pricing model, price-sensitivity signals, and competitive set, for pricing/positioning; current rate/inflation/sentiment conditions and macro-review cadence, for macro-risk awareness.
 
 ## Output Expectations
@@ -148,11 +156,12 @@ These skills help product leadership:
 - A bottom-up House of Lean structural verdict: standing, or the single lowest-level gap (foundation, leadership, a named pillar, or an incomplete Value goal) that must be fixed before the strategy proceeds.
 - Quarterly review outputs showing whether strategy is on track or needs adjustment.
 - A pricing/positioning recommendation naming its specific economic-model justification, and a PESTLE scan with likelihood/impact scoring plus a named next-review date.
+- For any negotiation: an approved-in-advance Strategy Sheet (every topic in exactly one of Free Trade-Aways / Priced Trades / Protected Terms, a stated BATNA and ZOPA check), an in-session Concession Ledger, and a post-session reconciliation of the final deal against the sheet.
 
 ---
 
 ## Metadata
 
-- **Version:** 1.12
-- **Last Updated:** 2026-08-13
+- **Version:** 1.13
+- **Last Updated:** 2026-09-21
 - **Author:** Workspace Strategy Skills

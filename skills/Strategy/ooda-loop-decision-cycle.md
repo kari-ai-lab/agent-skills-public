@@ -134,16 +134,22 @@ Decision authority and execution owner: $DECISION_AUTHORITY
 - [ ] Execution has a named owner and an immediate next-Observe trigger — the loop restarts rather than ending after one pass.
 - [ ] A tempo assessment was made: which stage is the bottleneck, and how the loop's speed compares to the counterpart's.
 - [ ] The model's own limitation (it describes an intuitive process more than it proves a correct one) was acknowledged rather than treated as a guarantee of good decisions.
+- [ ] If the situation is a negotiation, `negotiation-concession-strategy-and-tradeoff-framework.md`'s three-tier strategy sheet was completed and approved first — OODA governs how fast to re-orient in the room, not what may be conceded.
 
 ## Sources
 
 - [The Decision Lab — "The OODA Loop"](https://thedecisionlab.com/reference-guide/computer-science/the-ooda-loop) — John Boyd's origin and 1970s development, the four-stage definition, Orient as the framework's cognitive core (cultural traditions, genetic heritage, prior experience, psychophysical abilities), "operating inside the opponent's loop" as the central competitive principle, and the multiple-feedback-loop (non-sequential) structure including implicit guidance vs. real-time observation.
 - [Wikipedia — OODA loop](https://en.wikipedia.org/wiki/OODA_loop) — confirms Boyd's Air Force Colonel background and early-1970s origin, the four-stage definitions, the continuous-feedback/late-commitment agility mechanism, applications beyond military use (litigation, business, law enforcement, management education, cybersecurity/cyberwarfare — including a reported use by JPMorgan Chase's Jamie Dimon), and Michael Hankins' critique that the model is vague enough to be read into almost any intuitive decision process and is "not unique or especially profound."
 
+## Related Workspace Skills
+
+- `negotiation-concession-strategy-and-tradeoff-framework.md` — for negotiation specifically, run this first: it fixes what may be traded (free trade-aways, priced trades, protected terms) before the session, so the fast in-room decisions this loop optimizes for stay inside pre-agreed limits rather than conceding a protected term to keep tempo.
+- `../management/pdsa-improvement-cycle.md` — the cooperative, non-adversarial counterpart to this loop.
+
 ---
 
 ## Metadata
 
-- **Version:** 1.0
-- **Last Updated:** 2026-08-09
+- **Version:** 1.1
+- **Last Updated:** 2026-09-21
 - **Author:** Workspace Strategy Skills

@@ -315,6 +315,21 @@ PDCA's Shewhart/Deming/JUSE origin story and its four Plan-Do-Check-Act steps �
 John Boyd's Observe-Orient-Decide-Act loop: origin, the four-stage definition, Orient as the framework's cognitive core, "operating inside the opponent's loop" as the central competitive-tempo principle, and Michael Hankins' critique that the model is loose enough to fit almost any intuitive decision process after the fact.
 - [`skills/Strategy/ooda-loop-decision-cycle.md`](skills/Strategy/ooda-loop-decision-cycle.md)
 
+### Wikipedia — Best Alternative to a Negotiated Agreement / Getting to Yes / Zone of Possible Agreement
+**https://en.wikipedia.org/wiki/Best_alternative_to_a_negotiated_agreement** / **https://en.wikipedia.org/wiki/Getting_to_Yes** / **https://en.wikipedia.org/wiki/Zone_of_possible_agreement**
+Fisher and Ury's BATNA and principled negotiation (interests not positions, objective criteria) and the book's critical reception; ZOPA and reservation prices, including the enlarge-or-walk consequence when no overlap exists. Verified via live fetch 2026-09-21.
+- [`skills/Strategy/negotiation-concession-strategy-and-tradeoff-framework.md`](skills/Strategy/negotiation-concession-strategy-and-tradeoff-framework.md)
+
+### Wikipedia — Reciprocity (social psychology) / Door-in-the-face technique
+**https://en.wikipedia.org/wiki/Reciprocity_(social_psychology)** / **https://en.wikipedia.org/wiki/Door-in-the-face_technique**
+The reciprocity norm and reciprocal concessions (Cialdini); the 1975 door-in-the-face study and its boundary conditions (same requester, short delay, backfire when the first request seems unreasonable). Verified via live fetch 2026-09-21.
+- [`skills/Strategy/negotiation-concession-strategy-and-tradeoff-framework.md`](skills/Strategy/negotiation-concession-strategy-and-tradeoff-framework.md)
+
+### Harvard Program on Negotiation — Value Creation in Negotiation / Procurement Tactics — Logrolling Negotiation
+**https://www.pon.harvard.edu/daily/negotiation-skills-daily/value-creation-in-negotiation/** / **https://procurementtactics.com/logrolling-negotiation/**
+Logrolling (trading across issues valued differently), multi-issue package proposals, and logrolling's stated limits — Harvard PON is the primary source; Procurement Tactics is a secondary practitioner source used only for the limits. Verified via live fetch 2026-09-21.
+- [`skills/Strategy/negotiation-concession-strategy-and-tradeoff-framework.md`](skills/Strategy/negotiation-concession-strategy-and-tradeoff-framework.md)
+
 ## Business & Brand Architecture
 
 ### David A. Aaker
