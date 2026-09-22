@@ -1,3 +1,8 @@
+---
+name: sprint-goal-drafting
+description: "Use when planning a sprint and you need a sprint goal: drafts an outcome-focused goal (max three bullets) describing the usable end-to-end capability, checks the early-sprint exception, and lists the minimum work items needed."
+---
+
 # Skill Name: Sprint Goal Drafting
 
 ## 🎯 Objective
@@ -16,12 +21,36 @@ Scrum Master, Product Owner, Engineering Manager, Delivery Lead
 - **Release Constraints:** Deadlines, dependencies, environments, or rollout limitations.
 - **Delivery Stage:** Whether this is an early sprint for a completely new software solution or a mature product increment.
 
+**Minimum viable input:** the candidate work items. Infer the consumer from the items themselves and state the inference. If the candidate scope genuinely cannot produce an end-to-end usable outcome, say so plainly and define how the demo will validate delivery instead — that is the documented exception, not a reason to write a vague goal that hides the problem.
+
 ## 📤 Expected Output
 
 - One clear sprint goal statement.
 - A short explanation of the end-to-end capability that will be usable by the consumer at sprint end.
 - Any exceptions or caveats if the sprint is an early-solution bootstrap sprint.
 - A communication-ready summary that can be shared with the team.
+
+## 🔗 Routing / Related Skills
+
+Check these before running; each fires on something visible in the input.
+
+- If capacity has not been calculated → `sprint-capacity-planning.md` first.
+- If the items are vague or oversized → `epic-story-refinement.md`.
+- To track the goal through the sprint → `sprint-success-monitoring.md`.
+
+## 📋 Output Template
+
+A ready-to-fill draft — fill this in first, then use the Core Prompt below for the reasoning behind it.
+
+```markdown
+## Sprint goal — [sprint / dates]
+- [Goal 1 — outcome language, one sentence]   (max three)
+
+**Usable at sprint end:** [the end-to-end capability the consumer can use]
+**Early-sprint exception applies?** [No / Yes — why, and how the demo validates delivery]
+**Essential work items:** [the minimum stories needed to meet the goal]
+**Team message (repeat in planning and standups):** [one or two sentences]
+```
 
 ## 🤖 Core Prompt / Instructions
 

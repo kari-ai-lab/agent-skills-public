@@ -1,3 +1,8 @@
+---
+name: bluf-bottom-line-up-front
+description: "Use when writing any email, memo or status update that needs a reader to know something or act: puts the conclusion, the required action and the deadline in the first line, with supporting context after."
+---
+
 # Skill Name: BLUF (Bottom Line Up Front)
 
 ## 🎯 Objective
@@ -15,10 +20,20 @@ Anyone writing an email, Slack message, status update, memo, or the opening of a
 - **The deadline or timing**, if the action is time-bound.
 - **The five Ws context** (who, what, where, when, why) available to support the bottom line, for use in the body/follow-up, not the BLUF line itself.
 
+**Minimum viable input:** the fact to convey and who reads it. A full draft is not required — BLUF applies to the opening, so it can be written before the body exists. If there is genuinely no deadline, write "no deadline" explicitly rather than omitting the line; a missing deadline reads as an oversight, a stated absence reads as a decision.
+
 ## 📤 Expected Output
 
 - A single BLUF statement (labeled `BLUF:` or structurally equivalent) placed as the very first line of the message, stating what needs to be known, what needs to be done, and when — before any narrative, background, or scene-setting.
 - Supporting context, background, and the five-Ws detail following the BLUF line, in descending order of importance (mirroring journalism's inverted pyramid).
+
+## 🔗 Routing / Related Skills
+
+Check these before running; each fires on something visible in the input.
+
+- If the message reports initiative or milestone health → `rag-status-reporting.md` for the status line itself.
+- If it announces a delay, re-sequence or scope change → `roadmap-change-communication.md`.
+- If it names risks the reader must act on → `roam-risk-communication.md` so each ends with an owner.
 
 ## 🤖 Core Prompt / Instructions
 

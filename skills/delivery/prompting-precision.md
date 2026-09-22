@@ -1,3 +1,8 @@
+---
+name: prompting-precision
+description: "Helps engineers write sharper, more effective prompts for Claude Code — whether requesting a task or asking a codebase question."
+---
+
 # Skill Name: Prompting Precision
 
 ## 🎯 Objective

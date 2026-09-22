@@ -1,3 +1,8 @@
+---
+name: permissions-and-safety
+description: "Helps engineers configure Claude Code's permission system to reduce approval fatigue without over-permissioning."
+---
+
 # Skill Name: Permissions and Safety Configuration
 
 ## 🎯 Objective

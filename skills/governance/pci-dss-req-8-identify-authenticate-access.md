@@ -1,3 +1,9 @@
+---
+name: pci-dss-req-8-identify-authenticate-access
+kind: reference
+description: "PCI-DSS v4.0.1 chunk — Requirement 8 (Identify Users and Authenticate Access to System Components): the requirement text and when it applies to a feature."
+---
+
 # Compliance Framework: PCI-DSS v4.0.1
 ## Clause / Identifier: Requirement 8 (Identify Users and Authenticate Access to System Components)
 

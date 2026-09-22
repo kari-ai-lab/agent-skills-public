@@ -1,3 +1,8 @@
+---
+name: plan-big-execute-small-and-complexity-conservation
+description: "Three product-thinking heuristics to check any plan, PRD, or scoping decision against — each one a check against a specific, common failure mode:."
+---
+
 # Skill Name: Plan Big, Execute Small, and the Conservation of Complexity
 
 ## 🎯 Objective
@@ -14,7 +19,7 @@ Product Manager, Product Owner, Head of Product — anyone reviewing a plan, a P
 
 ## 📥 Inputs Required
 
-- The target end-state/vision in question (ideally already run through `target-state-vision-and-phased-roadmap.md`).
+- The target end-state/vision in question (ideally already run through `../strategy/target-state-vision-and-phased-roadmap.md`).
 - The proposed first release/phase scope.
 - What's being called "simple" in the current design, and what happens to the complexity that a simple surface implies is absent.
 
@@ -22,7 +27,7 @@ Product Manager, Product Owner, Head of Product — anyone reviewing a plan, a P
 
 The target end-state should be the ambitious, whole-picture version of what "great" looks like — not hedged down to what feels achievable in the first release. The execution path to it should be the opposite: the smallest slice that gets real client feedback fastest, not the largest chunk a team can justify building at once.
 
-**This is exactly the mechanic `target-state-vision-and-phased-roadmap.md` already enforces** — its target end-state (Step 1) is the "big" plan; its guaranteed year-one client-facing delivery (Step 4) and phased 2–3 year roadmap are the "small" execution. Don't re-derive this heuristic separately from that skill; use it directly. The failure mode this principle catches: a vision that's been quietly shrunk to match the first release's scope (small plan, not a big one), or a first release that tries to ship most of the big vision at once (big execution, not a small one) — either failure defeats the pairing.
+**This is exactly the mechanic `../strategy/target-state-vision-and-phased-roadmap.md` already enforces** — its target end-state (Step 1) is the "big" plan; its guaranteed year-one client-facing delivery (Step 4) and phased 2–3 year roadmap are the "small" execution. Don't re-derive this heuristic separately from that skill; use it directly. The failure mode this principle catches: a vision that's been quietly shrunk to match the first release's scope (small plan, not a big one), or a first release that tries to ship most of the big vision at once (big execution, not a small one) — either failure defeats the pairing.
 
 ## 2. Complex Products Are Easy to Build; Simple Products Are Complex to Build
 
@@ -69,7 +74,7 @@ Produce the result in this order:
    ambitious (not quietly scaled down to match the first release), and
    is the first release genuinely small (not an attempt to ship most of
    the big vision at once)? If either side has collapsed into the other,
-   route back to `target-state-vision-and-phased-roadmap.md` to re-separate
+   route back to `../strategy/target-state-vision-and-phased-roadmap.md` to re-separate
    them rather than patching the symptom here.
 
 2. For anything described as "simple," ask what was specifically removed
@@ -126,7 +131,7 @@ Rules:
 - Antoine de Saint-Exupéry, *Terre des Hommes* (1939) / *Wind, Sand and Stars*, Ch. III: quote verified via Wikiquote.
 - Steve Jobs, "Simple can be harder than complex..." (full quote): https://www.inc.com/marcel-schwantes/steve-jobs-said-your-overall-success-may-be-tied-to-this-powerful-thinking-habit.html (the ultimate origin is commonly cited as a 1997–98 BusinessWeek interview, not independently re-accessed; this Inc.com piece — supplied directly by the user — is the source actually cited).
 
-**Not independently sourced — flagged rather than force-cited:** a single canonical named source for "plan big, execute small" as a discrete named principle (it overlaps with IBM Enterprise Design Thinking's iterative framing and Lean Startup's build-measure-learn cycle, but no single origin was confirmed — this workspace's own operationalization of the idea in `target-state-vision-and-phased-roadmap.md` is the load-bearing citation instead).
+**Not independently sourced — flagged rather than force-cited:** a single canonical named source for "plan big, execute small" as a discrete named principle (it overlaps with IBM Enterprise Design Thinking's iterative framing and Lean Startup's build-measure-learn cycle, but no single origin was confirmed — this workspace's own operationalization of the idea in `../strategy/target-state-vision-and-phased-roadmap.md` is the load-bearing citation instead).
 
 ## Related Workspace Skills
 
@@ -135,11 +140,12 @@ Rules:
 - `refinement/functional-requirements-document-template.md` — where Tesler's-Law complexity that lands on the business/engineering side gets specified (system logic, data rules, NFRs).
 - `product/systems-thinking-and-domain-driven-design.md` — the broader systems-thinking lens this skill's Tesler's-Law reasoning is a specific instance of (trade-offs, no perfect solutions).
 - `product/no-silo-product-operating-model.md` — the other foundational product lens in this folder.
+- `product/laws-of-ux-decision-and-interaction-cost.md`, `product/laws-of-ux-perception-and-memory.md`, `product/laws-of-ux-gestalt-grouping-principles.md`, `product/laws-of-ux-system-design-heuristics.md` — the four companion `laws-of-ux-*.md` skills from the same lawsofux.com source family, covering interaction cost, perception/memory, visual grouping, and broader system-design heuristics respectively; this skill's Tesler's Law section is the canonical treatment of complexity-conservation specifically and is cross-referenced, not repeated, in `laws-of-ux-system-design-heuristics.md`. That file's Ashby's Law of Requisite Variety (cybernetics, not lawsofux.com) is the underlying mechanism that explains *why* Tesler's Law holds — a system's regulatory capacity can't exceed its own internal variety, so complexity kept off the client surface has to become real system-side variety, not just an appearance of simplicity.
 
 ---
 
 ## Metadata
 
-- **Version:** 1.1
-- **Last Updated:** 2026-07-27
+- **Version:** 1.3
+- **Last Updated:** 2026-09-11
 - **Author:** Workspace Product Skills

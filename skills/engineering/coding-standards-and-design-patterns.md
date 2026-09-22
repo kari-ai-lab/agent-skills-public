@@ -1,3 +1,8 @@
+---
+name: coding-standards-and-design-patterns
+description: "Closes the third of three declared-but-empty sub-areas in engineering/'s own README (Testing Strategy and Code Review & Quality — now closed; Coding Standards & Patterns; UI/Frontend Design)."
+---
+
 # Skill Name: Coding Standards and Design Patterns
 
 ## 🎯 Objective

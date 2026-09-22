@@ -1,3 +1,8 @@
+---
+name: spec-driven-development
+description: "Closes Group H of the workspace's product-skill gap backlog: nothing in this workspace treated a specification as a persistent, machine-consumable source of truth that AI-generated code is built from and re-verified against."
+---
+
 # Skill Name: Spec-Driven Development (SDD)
 
 ## Objective

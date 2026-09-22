@@ -1,3 +1,8 @@
+---
+name: verification-and-self-checking
+description: "Ensures Claude validates its own work against explicit success criteria — tests, reference outputs, screenshots, or build commands — before declaring a task complete."
+---
+
 # Skill Name: Verification and Self-Checking
 
 ## 🎯 Objective
@@ -11,10 +16,20 @@ Software Engineer who wants Claude to close the feedback loop itself rather than
 - **Verification method:** One of: test suite command, expected output sample, reference screenshot, build/lint command, or Bash assertion
 - **Success condition:** What does passing look like? (e.g., "all tests green", "output matches reference", "screenshot matches design")
 
+**Minimum viable input:** the claim about to be made and the condition that would prove it. If no checkable condition exists, that is the finding — a task whose completion cannot be checked cannot honestly be reported as done, only as attempted.
+
 ## 📤 Expected Output
 - Implemented code or fix
 - Verification run output (test results, command output, or screenshot comparison)
 - Explicit PASS or FAIL verdict with a diff if FAIL — never a silent assumption of success
+
+## 🔗 Routing / Related Skills
+
+Check these before running; each fires on something visible in the input.
+
+- Run before declaring any task complete, including tasks from other skills in this library.
+- If the claim concerns a deployed or running system → verify runtime state, not just code state.
+- If the claim goes into a status report → `../communication/rag-status-reporting.md`, where an unverified Green is the costliest error.
 
 ## 🤖 Core Prompt / Instructions
 ```text

@@ -1,3 +1,8 @@
+---
+name: bookend-communication-structure
+description: "Structures any analytical or business communication (report, memo, RFC, research writeup, briefing) so a reader who reads only the introduction and only the conclusion walks away with a complete."
+---
+
 # Skill Name: Bookend Communication Structure
 
 ## 🎯 Objective

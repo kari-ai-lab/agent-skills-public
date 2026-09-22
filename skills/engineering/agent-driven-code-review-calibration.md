@@ -1,3 +1,8 @@
+---
+name: agent-driven-code-review-calibration
+description: "The agent-driven companion to code-review-standards-and-checklist.md. That skill covers what a good human review checks and how humans resolve disagreement; this one covers how an AI agent doing the reviewing."
+---
+
 # Skill Name: Agent-Driven Code Review Calibration
 
 ## 🎯 Objective

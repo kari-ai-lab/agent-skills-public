@@ -1,3 +1,9 @@
+---
+name: quality-monitoring-model
+kind: reference
+description: "To ensure the Agentic PM Skills Library remains highly effective, accurate, and relevant, we must treat the \"Skills\" (prompts and workflows) as product features."
+---
+
 # Skill Quality & Governance Model
 
 To ensure the Agentic PM Skills Library remains highly effective, accurate, and relevant, we must treat the "Skills" (prompts and workflows) as product features. They require monitoring, user feedback, and iterative improvement.

@@ -1,8 +1,13 @@
+---
+name: opportunity-solution-tree
+description: "Closes a gap flagged in product-school-template-toolkit.md and Group A of .agents/skills/SKILLS-GAP-BACKLOG.md: nothing in this workspace structured discovery so that every feature traces back to a business outcome."
+---
+
 # Skill Name: Opportunity Solution Tree
 
 ## Objective
 
-Closes a gap flagged in `product-school-template-toolkit.md` and Group A of `docs/PRODUCT_SKILL_GAP_BACKLOG.md`: nothing in this workspace structured discovery so that every feature traces back to a business outcome. Sourced directly from Teresa Torres, the framework's originator, rather than a secondary summary. Forces a four-level structure — desired outcome, opportunities, solutions, assumption tests — and enforces the discipline that no solution is explored without a named opportunity beneath it and no opportunity is explored without tracing to the root outcome.
+Closes a gap flagged in `product-school-template-toolkit.md` and Group A of `.agents/skills/SKILLS-GAP-BACKLOG.md`: nothing in this workspace structured discovery so that every feature traces back to a business outcome. Sourced directly from Teresa Torres, the framework's originator, rather than a secondary summary. Forces a four-level structure — desired outcome, opportunities, solutions, assumption tests — and enforces the discipline that no solution is explored without a named opportunity beneath it and no opportunity is explored without tracing to the root outcome.
 
 ## Target Persona
 

@@ -1,8 +1,13 @@
+---
+name: ai-feature-prompt-design
+description: "Closes a gap flagged in product-school-template-toolkit.md and Group B of .agents/skills/SKILLS-GAP-BACKLOG.md: prompt-authoring guidance for a product-owned LLM feature."
+---
+
 # Skill Name: AI Feature Prompt Design
 
 ## Objective
 
-Closes a gap flagged in `product-school-template-toolkit.md` and Group B of `docs/PRODUCT_SKILL_GAP_BACKLOG.md`: prompt-authoring guidance for a **product-owned LLM feature** — the system prompt or prompt template shipped inside the product itself. Distinct from `delivery/prompting-precision.md`, which coaches engineers on prompting Claude Code (an engineering tool) for engineering tasks. This skill operates at the product-decision layer — what the shipped prompt must guarantee for the end user (scope boundary, tone, failure behavior) — and explicitly hands off model/provider selection mechanics to `platform/llm-model-contract.md` rather than re-deriving them.
+Closes a gap flagged in `product-school-template-toolkit.md` and Group B of `.agents/skills/SKILLS-GAP-BACKLOG.md`: prompt-authoring guidance for a **product-owned LLM feature** — the system prompt or prompt template shipped inside the product itself. Distinct from `delivery/prompting-precision.md`, which coaches engineers on prompting Claude Code (an engineering tool) for engineering tasks. This skill operates at the product-decision layer — what the shipped prompt must guarantee for the end user (scope boundary, tone, failure behavior) — and explicitly hands off model/provider selection mechanics to `platform/llm-model-contract.md` rather than re-deriving them.
 
 ## Target Persona
 

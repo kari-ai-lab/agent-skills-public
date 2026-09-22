@@ -1,3 +1,8 @@
+---
+name: pci-tsp-token-service-provider-requirements
+description: "The additional PCI security requirements that apply specifically to entities operating a Token Vault and issuing EMV Payment Tokens — i.e."
+---
+
 # Skill Name: PCI Token Service Provider (TSP) Requirements
 
 ## 🎯 Objective
@@ -27,6 +32,8 @@ The single most important applicability rule in this framework:
 And two principles for applying PCI DSS Requirements 1–12 to the TDE:
 - Where a PCI DSS requirement specifically mentions the CDE, it also applies to the TDE.
 - Where a PCI DSS requirement specifically mentions PAN or cardholder data, it also applies to Payment Tokens or Payment Token Data, respectively, within the TDE.
+
+**The out-of-scope rule has a qualifying bar, confirmed directly by PCI SSC (FAQ 1326, see Sources)**: a token only earns the "outside the TDE, not in scope" treatment if it "incorporate[s] dynamic cryptograms or domain controls sufficient to prevent fraud and must not allow PAN recovery from the token itself." A token lacking a dynamic cryptogram or domain restriction, or one a PAN can be derived from, does not automatically get the reduced-scope treatment just because it's called a "token" — this is exactly what TSP 1's scope-validation control exists to confirm on an ongoing basis, not a one-time assumption.
 
 ## The 8 TSP Control Areas (as sourced)
 
@@ -133,17 +140,19 @@ Rules:
 
 - PCI Token Service Providers — Additional Security Requirements and Assessment Procedures for Token Service Providers (EMV Payment Tokens), v1.0 (Dec 2015) — `docs/PCI/PCI_TSP_Requirements_v1.pdf`
 - PCI TSP Attestation of Compliance (AOC) v1 — `docs/PCI/PCI_TSP_AOC_v1.docx` (the fillable sign-off form paired with the requirements above; not itself normative content).
+- [PCI Security Standards Council — FAQ 1326: How does PCI DSS apply to EMVCo Payment Tokens?](https://www.pcisecuritystandards.org/faqs/1326/) — PCI SSC's own restatement of this skill's "Payment Token Scope Rule" above: a properly implemented token outside the TDE "is not considered Account Data and is therefore not in scope for PCI DSS," while PCI DSS "continues to apply wherever actual account data (such as PANs) is stored, processed, or transmitted." Also names the qualifying bar a token must meet to earn that reduced scope — a dynamic cryptogram or domain control, and no PAN recoverability from the token itself — a precondition this skill's scope rule states as settled fact but that TSP 1's scope-validation control (above) is exactly the mechanism for confirming on an ongoing basis. Verified via live fetch. Cross-referenced from `practitioner/payment-network-tokenization-and-account-updater.md` (Section 2), which cites the same FAQ from the practitioner/network-mechanics side of this same rule.
 
 ## Related Workspace Skills
 
 - `pci-dss-applicability-and-scoping.md` — the navigator this skill hangs off of; run PCI DSS Requirements 1-12 there first, then layer these TSP additions on top.
 - `pci-dss-req-3-4.md` — TSP 3's key-management additions build on PCI DSS 3.5-3.6, referenced here directly.
 - `pci-secure-software-standard-requirements.md` Module A (Account-Data Protection) — the product-level companion when the Token Vault software itself is being assessed, not just its operating environment.
+- `practitioner/payment-network-tokenization-and-account-updater.md` Section 2 — the practitioner/network-mechanics side of this same PCI SSC scope rule: which specific vendor tokenization products (VTS, Mastercard COF, AETS, Discover Stored Token Services) exist, their provisioning failure rates, and the standing PAN-based PCI-exposure populations this skill's scope rule applies to.
 
 ---
 
 ## Metadata
 
-- **Version:** 1.0
-- **Last Updated:** 2026-07-27
+- **Version:** 1.1
+- **Last Updated:** 2026-09-15
 - **Author:** Workspace Governance Skills

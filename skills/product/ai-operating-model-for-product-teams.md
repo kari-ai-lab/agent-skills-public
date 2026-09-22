@@ -1,3 +1,8 @@
+---
+name: ai-operating-model-for-product-teams
+description: "Diagnoses and helps escape the \"messy middle\" of AI adoption: most product teams get individual productivity gains from AI tools but never translate them into team-level or business-level outcomes."
+---
+
 # Skill Name: AI Operating Model for Product Teams
 
 ## 🎯 Objective

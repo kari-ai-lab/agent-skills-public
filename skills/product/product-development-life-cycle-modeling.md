@@ -1,3 +1,8 @@
+---
+name: product-development-life-cycle-modeling
+description: "Models the Product Development Life Cycle (PDLC) as a canonical stage sequence, reconciled across two sources (GeeksforGeeks, Atlassian)."
+---
+
 # Skill Name: Product Development Life Cycle (PDLC) Modeling
 
 ## 🎯 Objective
@@ -12,14 +17,14 @@ Product Manager, Head of Product, Founder — anyone standing up a product devel
 
 - The product idea or initiative in question, and how far along it already is (raw idea vs. validated concept vs. built product awaiting launch).
 - Any existing market research, customer feedback, or prototype/MVP data.
-- Current product vision/target-state work, if any (see `target-state-vision-and-phased-roadmap.md`).
+- Current product vision/target-state work, if any (see `../strategy/target-state-vision-and-phased-roadmap.md`).
 - Business case / investment context, if the product's continued funding is in question (see `strategy/product-proposal-viability-scoring.md`, `strategy/product-revenue-tier-investment-case.md`).
 
 ## Canonical PDLC Stages (reconciled across sources)
 
 GeeksforGeeks (8 stages) and Atlassian (7 stages, from Booz Allen's classic New Product Development model) describe the same underlying flow with different granularity. Reconciled here as **7 stages**:
 
-1. **Ideation** — brainstorming what product/feature to build; GeeksforGeeks calls this "Develop the Idea." Should be grounded in a target end-state, not built idea-first — run `target-state-vision-and-phased-roadmap.md` before this stage produces a shortlist, not after.
+1. **Ideation** — brainstorming what product/feature to build; GeeksforGeeks calls this "Develop the Idea." Should be grounded in a target end-state, not built idea-first — run `../strategy/target-state-vision-and-phased-roadmap.md` before this stage produces a shortlist, not after.
 2. **Idea Screening / Validation** — evaluate each idea against business goals and customer needs before investing further; GeeksforGeeks calls this "Validate the Idea." This is the natural point to run `strategy/product-proposal-viability-scoring.md`'s evidence-quality gate rather than screening on narrative conviction alone.
 3. **Concept Development & Prototyping** — build a minimum viable product or prototype to get hands-on customer feedback and surface real-world viability problems before further investment.
 4. **Business Analysis** — assess market demand and willingness to pay; this is where a proposal that fails viability should be sent back to Ideation, not carried forward on momentum. GeeksforGeeks folds messaging/marketing-strategy work in around this point ("Create the Messaging"). Once a proposal clears this stage, write it up with `refinement/product-requirements-document-template.md` (paired with `refinement/product-requirements-discovery-questionnaire.md`) — that PRD is the actual artifact handed into stage 5.
@@ -27,12 +32,12 @@ GeeksforGeeks (8 stages) and Atlassian (7 stages, from Booz Allen's classic New 
 6. **Testing / Market Testing** — QA verification of functionality and security (SDLC-level testing) *and* a larger-scale market test (a limited release, beta, or regional launch) to validate the business case at real scale, not just the build's correctness.
 7. **Release / Commercialization** — full launch to market, with production scaled to meet demand.
 
-Both sources agree the cycle doesn't end at launch: ongoing feedback collection and iteration ("Improve the Product") feeds back into Ideation for the next cycle, the same way `target-state-vision-and-phased-roadmap.md`'s phase-gate guardrail (continue vs. rethink) re-enters step 1 on a full vision rethink.
+Both sources agree the cycle doesn't end at launch: ongoing feedback collection and iteration ("Improve the Product") feeds back into Ideation for the next cycle, the same way `../strategy/target-state-vision-and-phased-roadmap.md`'s phase-gate guardrail (continue vs. rethink) re-enters step 1 on a full vision rethink.
 
 ## 📤 Expected Output
 
 - A stage classification for the product/initiative in question: which of the 7 stages it's actually in, not just which stage its team believes it's in.
-- For anything at or past Business Analysis, confirmation that a viability gate (`product-proposal-viability-scoring.md`) was actually passed, not skipped under momentum.
+- For anything at or past Business Analysis, confirmation that a viability gate (`../strategy/product-proposal-viability-scoring.md`) was actually passed, not skipped under momentum.
 - A named handoff point into SDLC at stage 5, so engineering doesn't start building before Concept/Business Analysis have actually validated the idea.
 - A closed loop: what post-launch feedback mechanism feeds back into stage 1 for the next cycle.
 

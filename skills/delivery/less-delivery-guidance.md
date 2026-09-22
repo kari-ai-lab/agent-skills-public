@@ -1,3 +1,8 @@
+---
+name: less-delivery-guidance
+description: "Helps teams apply LeSS delivery practices with a single Product Backlog, feature teams, short feedback loops, and strong technical excellence, while keeping guidance grounded in official less.works references."
+---
+
 # Skill Name: LeSS Delivery Guidance (Large-Scale Scrum)
 
 ## 🎯 Objective

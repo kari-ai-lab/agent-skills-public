@@ -1,3 +1,8 @@
+---
+name: task-decomposition-and-routing
+description: "Decides HOW a coordinator (\"lead\" or \"orchestrator\") agent splits one goal into bounded subtasks and assigns each to a specialist subagent — the structural decomposition question for multi-agent systems."
+---
+
 # Skill Name: Task Decomposition and Routing
 
 ## 🎯 Objective

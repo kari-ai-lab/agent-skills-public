@@ -21,12 +21,12 @@ skills/
 ├── domains/                      # payments, pricing, compliance, security
 ├── platform/                     # engineering/runtime: monorepo, tooling, testing, infra
 ├── product/                      # product overlays shared across a product family
-├── Strategy/                     # product-leadership strategy: portfolio, investment cases, annual goals
-├── Refinement/                   # pre-delivery workstream prioritization and plan-realism checks
-├── Management/                   # management practice grounded in W. Edwards Deming's work
+├── strategy/                     # product-leadership strategy: portfolio, investment cases, annual goals
+├── refinement/                   # pre-delivery workstream prioritization and plan-realism checks
+├── management/                   # management practice grounded in W. Edwards Deming's work
 ├── delivery/                     # planning, decomposition, QA, release, workflow execution
 ├── governance/                   # standards, controls, monitoring, policy
-├── Financial impact analysis/    # cost modeling, margin governance, pricing-floor discipline
+├── financial-impact-analysis/    # cost modeling, margin governance, pricing-floor discipline
 ├── templates/                    # canonical authoring templates for new skills/recipes
 ├── recipes/                      # reusable procedure-style instructions
 └── communication/                # structuring written reports, memos, RFCs, briefings
@@ -42,7 +42,7 @@ Start at [`skills/INDEX.md`](skills/INDEX.md).
 - [`skills/engineering/agent-driven-code-review-calibration.md`](skills/engineering/agent-driven-code-review-calibration.md) — names the specific failure mode where an AI reviewer reports plausible-looking findings regardless of whether the code actually has problems, and requires every finding traced to a diff line and a concrete failure scenario before it's trusted.
 - [`skills/recipes/payment-processing-recipe.md`](skills/recipes/payment-processing-recipe.md) + [`skills/governance/pci-dss-req-3-4.md`](skills/governance/pci-dss-req-3-4.md) — a worked example of tracing a specific compliance requirement (PCI-DSS Req 3.4, now numbered 3.5 under v4.0.1) into a mandatory, agent-checkable implementation recipe.
 - [`skills/product/systems-thinking-and-domain-driven-design.md`](skills/product/systems-thinking-and-domain-driven-design.md) — the foundational lens for product decisions: the Iceberg model and Meadows' leverage-points hierarchy for diagnosing a problem, then DDD's ubiquitous language and Bounded Context Canvas for carrying that decision into a technical solution.
-- [`skills/Management/`](skills/Management/) — six skills grounded in W. Edwards Deming's work: the System of Profound Knowledge, the Fourteen Points, the Seven Deadly Diseases, PDSA, and the Red Bead / Funnel experiments for telling system-caused variation apart from real signal before rating people or reacting to a single data point.
+- [`skills/management/`](skills/management/) — six skills grounded in W. Edwards Deming's work: the System of Profound Knowledge, the Fourteen Points, the Seven Deadly Diseases, PDSA, and the Red Bead / Funnel experiments for telling system-caused variation apart from real signal before rating people or reacting to a single data point.
 
 ## Finding a skill (semantic search)
 

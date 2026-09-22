@@ -1,8 +1,13 @@
+---
+name: product-growth-metrics-reference
+description: "Closes a gap flagged in product-school-template-toolkit.md and Group C of .agents/skills/SKILLS-GAP-BACKLOG.md: the workspace had no reference set of growth metrics."
+---
+
 # Skill Name: Product Growth Metrics Reference
 
 ## Objective
 
-Closes a gap flagged in `product-school-template-toolkit.md` and Group C of `docs/PRODUCT_SKILL_GAP_BACKLOG.md`: the workspace had no reference set of growth metrics, distinct from `governance/quality-monitoring-model.md` (which covers skill-library quality metrics, not product growth). This is a **reference skill**, deliberately scoped to metric definitions and when-to-use guidance — not a dashboard-building exercise, which is `data:build-dashboard`'s job.
+Closes a gap flagged in `product-school-template-toolkit.md` and Group C of `.agents/skills/SKILLS-GAP-BACKLOG.md`: the workspace had no reference set of growth metrics, distinct from `governance/quality-monitoring-model.md` (which covers skill-library quality metrics, not product growth). This is a **reference skill**, deliberately scoped to metric definitions and when-to-use guidance — not a dashboard-building exercise, which is `data:build-dashboard`'s job.
 
 ## Target Persona
 

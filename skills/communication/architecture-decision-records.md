@@ -1,3 +1,8 @@
+---
+name: architecture-decision-records
+description: "Documents an architecturally significant decision as a short, standalone record — what was decided, the forces that shaped it, and the resulting consequences — so a future reader understands not just what was decided but why."
+---
+
 # Skill Name: Architecture Decision Records (ADRs)
 
 ## 🎯 Objective
@@ -15,6 +20,8 @@ Tech lead, architect, senior engineer, or PM co-authoring a technical decision w
 - **Alternatives considered**, if any, and why they weren't chosen.
 - **Who is making the call** and its current status (proposed, or already accepted).
 
+**Minimum viable input:** the decision and the options considered. Capture it while the decision is being made — a reconstructed ADR records the winning rationale and loses the rejected options, which is the part future readers actually need.
+
 ## 📤 Expected Output
 
 - A single numbered ADR: Title, Status, Context, Decision, Consequences.
@@ -25,6 +32,14 @@ Tech lead, architect, senior engineer, or PM co-authoring a technical decision w
 
 - **Standalone (always works):** The user supplies the decision, its context, and alternatives directly; the skill drafts the ADR from that material.
 - **Supercharged (if connected):** A knowledge-base/docs connector could pull prior ADRs to check the next sequential number and flag a conflicting or duplicate decision already on record; a project tracker connector could link the ADR to the epic/ticket that prompted it.
+
+## 🔗 Routing / Related Skills
+
+Check these before running; each fires on something visible in the input.
+
+- If the decision changes delivery sequencing → `roadmap-change-communication.md`.
+- If it carries risk needing an owner → `roam-risk-communication.md`.
+- If it touches cardholder scope → `../governance/pci-dss-applicability-and-scoping.md`.
 
 ## 📋 Output Template
 

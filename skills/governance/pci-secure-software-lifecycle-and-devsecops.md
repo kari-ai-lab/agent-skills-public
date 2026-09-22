@@ -1,3 +1,8 @@
+---
+name: pci-secure-software-lifecycle-and-devsecops
+description: "Gives delivery/software-development-life-cycle-modeling.md's generic \"DevSecOps checkpoint per phase\" a concrete."
+---
+
 # Skill Name: PCI Secure SLC and DevSecOps Mapping
 
 ## 🎯 Objective
@@ -17,20 +22,20 @@ Engineering Lead, Security Lead, Tech Lead building software that stores/process
 
 ## The 10 Control Objectives, Mapped to SDLC Phases (as sourced)
 
-PCI's Secure SLC groups its 10 Control Objectives into 4 domains. Reconciled here against `software-development-life-cycle-modeling.md`'s 7 canonical phases, so a DevSecOps checkpoint has an actual specification behind it instead of a generic "add security here" note:
+PCI's Secure SLC groups its 10 Control Objectives into 4 domains. Reconciled here against `../delivery/software-development-life-cycle-modeling.md`'s 7 canonical phases, so a DevSecOps checkpoint has an actual specification behind it instead of a generic "add security here" note:
 
 | Secure SLC Domain | Control Objective | Primary SDLC Phase(s) | What it actually requires |
 | --- | --- | --- | --- |
 | Software Security Governance | CO1: Security Responsibility and Resources | Planning | A named, resourced security function exists before development starts — not an unfunded side duty. |
 | Software Security Governance | CO2: Software Security Policy and Strategy | Planning | A documented security policy/strategy governs the SDLC, not ad hoc decisions per project. |
-| Secure Software Engineering | CO3: Threat Identification and Mitigation | Design | Threat modeling is performed at design time and mitigations are tracked — matches the Design-phase threat-modeling note already in `software-development-life-cycle-modeling.md`. |
+| Secure Software Engineering | CO3: Threat Identification and Mitigation | Design | Threat modeling is performed at design time and mitigations are tracked — matches the Design-phase threat-modeling note already in `../delivery/software-development-life-cycle-modeling.md`. |
 | Secure Software Engineering | CO4: Vulnerability Detection and Mitigation | Implementation, Testing | Code review, static/dynamic analysis, and vulnerability remediation are built into these phases, not bolted on after. Feed findings into `vulnerability-severity-and-exploit-prioritization.md`'s CVSS+EPSS triage rather than an ad hoc fix list. |
 | Secure Software and Data Management | CO5: Change Management | Implementation, Deployment | Changes to the software are controlled and traceable — ties to the same change-management discipline expected across SDLC's Implementation/Deployment phases. |
 | Secure Software and Data Management | CO6: Software Integrity Protection | Deployment | The software's integrity is verifiable at deployment (e.g., signing, checksums) — a Deployment-phase gate, not assumed. |
 | Secure Software and Data Management | CO7: Sensitive Data Protection | Design, Implementation | Sensitive data (account data) handling is designed and implemented per PCI DSS Requirements 3 and 4 — cross-reference `pci-dss-req-3-4.md` (3.5, render unreadable at rest) and `pci-dss-req-4-transmission-encryption.md` directly here rather than re-deriving crypto requirements. |
 | Security Communications | CO8: Software Vendor Implementation Guidance | Deployment, Maintenance | Customers/integrators receive explicit guidance on deploying the software securely — not left to infer it. |
 | Security Communications | CO9: Stakeholder Communications | Maintenance | Ongoing security communication with stakeholders — this is the same discipline `governance/product-security-incident-response-readiness.md` already requires (PSIRT disclosure/notification); run that skill for the mechanics rather than treating this as a separate obligation. |
-| Security Communications | CO10: Software Update Information | Maintenance | Customers are told what's in a security update and why — ties to the same Maintenance-phase patch cadence in `software-development-life-cycle-modeling.md`. |
+| Security Communications | CO10: Software Update Information | Maintenance | Customers are told what's in a security update and why — ties to the same Maintenance-phase patch cadence in `../delivery/software-development-life-cycle-modeling.md`. |
 
 ## 📤 Expected Output
 

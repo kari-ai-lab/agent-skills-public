@@ -1,3 +1,8 @@
+---
+name: roam-risk-communication
+description: "Use in a risk review or planning session: puts every named risk into exactly one of Resolved, Owned, Accepted or Mitigated, with a named owner, rationale or action, and an escalation flag, so the discussion ends in decisions."
+---
+
 # Skill Name: ROAM Risk Communication
 
 ## 🎯 Objective
@@ -15,6 +20,8 @@ Release Train Engineer, program manager, PM, or Scrum Master running a risk revi
 - **The team/program's own authority boundary** — what can be decided at this level versus what requires a decision above it.
 - **Review cadence** — how often the ROAM board gets revisited, not just built once.
 
+**Minimum viable input:** the list of named risks. A risk with no owner still gets categorized — propose an owner and mark it **proposed**, because an unowned risk on a list is the exact failure this skill exists to prevent. Risks too vague to categorize get rewritten as a testable statement first.
+
 ## 📤 Expected Output
 
 - Every risk assigned to exactly one of Resolved / Owned / Accepted / Mitigated.
@@ -27,6 +34,14 @@ Release Train Engineer, program manager, PM, or Scrum Master running a risk revi
 
 - **Standalone (always works):** The user pastes or describes the current risk list; the skill categorizes and boards it directly.
 - **Supercharged (if connected):** A project tracker connector could surface risks already logged as blockers, flagged issues, or at-risk tickets automatically instead of requiring manual compilation; a chat connector could post the updated ROAM board to the team channel after each review.
+
+## 🔗 Routing / Related Skills
+
+Check these before running; each fires on something visible in the input.
+
+- If risks are capacity or plan-realism related → `../refinement/refinement-plan-realism-and-capacity-risk.md`.
+- When feeding a health report → `rag-status-reporting.md`.
+- In a PI Planning risk step → `../delivery/scaled-agile-delivery-guidance.md` for where this sits in the event.
 
 ## 📋 Output Template
 

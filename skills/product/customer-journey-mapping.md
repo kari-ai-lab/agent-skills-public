@@ -1,8 +1,13 @@
+---
+name: customer-journey-mapping
+description: "Closes a gap flagged in product-school-template-toolkit.md and Group A of .agents/skills/SKILLS-GAP-BACKLOG.md: nothing in this workspace forced a view of the product end-to-end from the customer's side."
+---
+
 # Skill Name: Customer Journey Mapping
 
 ## Objective
 
-Closes a gap flagged in `product-school-template-toolkit.md` and Group A of `docs/PRODUCT_SKILL_GAP_BACKLOG.md`: nothing in this workspace forced a view of the product end-to-end from the customer's side, across the full relationship rather than a single task. Builds a visual map of the steps a user takes while using the product and interacting with the company, specifically to find the moments customers are lost — not just to produce a diagram for its own sake.
+Closes a gap flagged in `product-school-template-toolkit.md` and Group A of `.agents/skills/SKILLS-GAP-BACKLOG.md`: nothing in this workspace forced a view of the product end-to-end from the customer's side, across the full relationship rather than a single task. Builds a visual map of the steps a user takes while using the product and interacting with the company, specifically to find the moments customers are lost — not just to produce a diagram for its own sake.
 
 ## Target Persona
 

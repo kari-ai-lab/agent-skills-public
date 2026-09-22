@@ -1,3 +1,8 @@
+---
+name: retrospective-improvement
+description: "Turns retrospective input into concrete future improvements by identifying hindrances early, protecting high-performing practices, and creating follow-up work that measurably improves delivery."
+---
+
 # Skill Name: Retrospective Improvement Planning
 
 ## 🎯 Objective
@@ -17,6 +22,8 @@ Scrum Master, Engineering Manager, Product Owner, Team Lead
 - **Follow-Up Constraints (Optional):** Ownership, timing, capacity, or cross-team dependencies.
 - **AI-Driven Work Only — Token Budget Actuals:** For any Epic sized with `refinement/ai-driven-work-sizing-and-token-budgets.md`, the estimated vs. actual tokens consumed per Task/Epic, and the actual human review hours vs. the estimated human-hours budget.
 
+**Minimum viable input:** what the retro surfaced, in whatever rough form it was captured. If no actions were agreed, that is the finding: an improvement item with no owner and no place in the next sprint is indistinguishable from one that was never raised.
+
 ## 📤 Expected Output
 
 - A prioritized list of hindrances and their likely impact.
@@ -25,6 +32,14 @@ Scrum Master, Engineering Manager, Product Owner, Team Lead
 - Guidance on which strong areas should remain unchanged unless KPI evidence declines.
 - Suggested owners and timing for the most important follow-up actions.
 - **AI-Driven Work Only:** an estimated-vs-actual token spend comparison per Epic/Task, and an estimated-vs-actual human-hours comparison, each feeding forward to calibrate the next cycle's `refinement/ai-driven-work-sizing-and-token-budgets.md` estimates — the AI-development equivalent of a velocity trend.
+
+## 🔗 Routing / Related Skills
+
+Check these before running; each fires on something visible in the input.
+
+- For running the retro itself → `../communication/scrum-event-facilitation.md`.
+- If improvements never get capacity → `sprint-capacity-planning.md` to make the trade explicit.
+- If the same theme recurs across retros → `wip-limits-and-flow-protection.md`, or `../management/organizational-change-readiness-and-team-disruption-penalty.md` when the cause is structural.
 
 ## 🤖 Core Prompt / Instructions
 

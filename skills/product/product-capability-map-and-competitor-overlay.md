@@ -1,3 +1,8 @@
+---
+name: product-capability-map-and-competitor-overlay
+description: "Builds a hierarchical capability map — a BIZBOK-style Level-1/Level-2/Level-3 structure showing *what* a product or product suite does (capabilities, stated as nouns)."
+---
+
 # Skill Name: Product Capability Map & Competitor Overlay
 
 ## 🎯 Objective

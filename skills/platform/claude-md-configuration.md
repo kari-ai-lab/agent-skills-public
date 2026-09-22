@@ -1,3 +1,8 @@
+---
+name: claude-md-configuration
+description: "Helps engineers create, populate, and maintain effective CLAUDE.md files — the persistent configuration that Claude reads at the start of every session."
+---
+
 # Skill Name: CLAUDE.md Configuration
 
 ## 🎯 Objective

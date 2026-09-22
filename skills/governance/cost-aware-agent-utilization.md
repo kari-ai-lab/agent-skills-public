@@ -1,3 +1,8 @@
+---
+name: cost-aware-agent-utilization
+description: "Guide agents to route work to the cheapest capable sub-agent or model, reserving the primary agent for synthesis, judgment, and human-facing consolidation."
+---
+
 # Skill Name: Cost-Aware Agent Utilization
 
 ## Objective

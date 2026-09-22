@@ -60,6 +60,12 @@ Run these before `refinement/product-requirements-document-template.md` assumes 
   - Runs a four-day Design Sprint 2.0 (problem → diverge/converge → prototype → user test) to resolve a specific, bounded design problem and reduce production risk before real engineering investment, sourced from Product School.
   - A validated direction feeds `strategy/product-proposal-viability-scoring.md`; an invalidated one is treated as a real, valuable result, not a wasted week.
 
+- **Laws of UX family** (`lawsofux.com`, same source as this section's Tesler's Law above) — four skills, run against whatever interface a Design Sprint or flow-mapping pass produces, not standalone:
+  - `laws-of-ux-decision-and-interaction-cost.md` — Hick's Law (choice count slows decisions), Fitts's Law (target size/distance, applied asymmetrically to the primary action — distinct from Von Restorff's visual-distinctiveness concern below), Jakob's Law (unjustified deviation from convention costs relearning time), Doherty Threshold (the <400ms perceived-performance pacing bar).
+  - `laws-of-ux-perception-and-memory.md` — Law of Proximity (nearness implies relationship), Miller's Law (7±2 working-memory limit — a chunking cue, not a hard design target), Von Restorff Effect (the visually distinct item is the memorable one), Serial Position Effect (edges of a list are remembered, the middle isn't), Peak-End Rule (an experience is judged by its peak and its ending), Zeigarnik Effect (an unfinished task is remembered better and pulls at attention — use for genuine unfinished value, not manufactured urgency).
+  - `laws-of-ux-gestalt-grouping-principles.md` — Law of Prägnanz (ambiguity resolves to the simplest form), Law of Similarity (alike elements read as related, even when separated), Law of Uniform Connectedness (a visual line/frame/shared color is the strongest grouping signal — reserve it accordingly).
+  - `laws-of-ux-system-design-heuristics.md` — Postel's Law (strict output, tolerant-but-bounded input — direct application to `platform/api-builder.md`), Parkinson's Law (a padded time allotment tends to get fully consumed even when the real task is smaller), Occam's Razor (prefer fewer assumptions between equally-functional designs — the same discipline as this section's own "complex products are easy to build" principle, from a different named source), and **Ashby's Law of Requisite Variety** (cybernetics, W. Ross Ashby 1956, not lawsofux.com — a regulator can't handle more variety/disturbance than it has internal states to respond with; the mechanism that explains *why* Tesler's Law holds and why Postel's "anticipate a wide range of input" is a hard requirement, not a nicety).
+
 ## Launch & Growth Measurement
 
 - `product-launch-checklist.md`
@@ -77,7 +83,7 @@ Run these before `refinement/product-requirements-document-template.md` assumes 
 ## Other Skills
 
 - `competitor-analysis-synthesizer.md`
-  - Synthesizes raw competitor data into a feature comparison matrix, a SWOT, and white-space opportunities.
+  - Default flow: synthesizes raw competitor data into a feature comparison matrix, a SWOT, and white-space opportunities. Beyond that default, this is the workspace's competitive/market strategic-analysis toolkit: a Framework Selection Guide routes the actual question to Porter's Five Forces (industry competitive structure — fulfilling the cross-reference `strategy/macroeconomic-risk-awareness-for-product-strategy.md` already makes to this file), Value Chain Analysis (where value is created/wasted), VRIO (is an advantage actually durable, or just copyable), McKinsey 7-S (internal execution alignment), or a TOWS SO/WO/ST/WT strategy-pairing step (what to actually do with a completed SWOT) — plus SOAR/NOISE as strengths-forward SWOT alternatives for workshop contexts. Explicitly routes PESTLE, audience analysis, and journey/scenario mapping elsewhere rather than rebuilding them here.
 
 - `product-capability-map-and-competitor-overlay.md`
   - Builds a BIZBOK-style hierarchical capability map (L1 domain → L2 → L3, by capability tier) showing what a product does (nouns) with an actor/constituency + channel band across the top, so a user's full path through the product stack is visible layer by layer — the deeper, tiered counterpart to this skill's flat feature matrix.
@@ -98,7 +104,7 @@ Run these before `refinement/product-requirements-document-template.md` assumes 
 
 - `product-development-life-cycle-modeling.md`
   - Models the canonical 7-stage PDLC (Ideation through Release/Commercialization), reconciled across GeeksforGeeks/Atlassian, and draws an explicit boundary against SDLC: PDLC is the containing business/product cycle; SDLC (`delivery/software-development-life-cycle-modeling.md`) is nested inside its Product Design & Development stage.
-  - Routes Ideation through `target-state-vision-and-phased-roadmap.md`, Idea Screening/Business Analysis through `strategy/product-proposal-viability-scoring.md`'s evidence gate, and closes the loop from Release back to Ideation.
+  - Routes Ideation through `../strategy/target-state-vision-and-phased-roadmap.md`, Idea Screening/Business Analysis through `strategy/product-proposal-viability-scoring.md`'s evidence gate, and closes the loop from Release back to Ideation.
 
 - `monetization-model-and-commercialization-levers.md`
   - The deep-dive on this stage: three lever categories — pricing MODEL selection (an eight-type taxonomy from Flat Fee through Outcome-Based, with a metering-unit selection framework and a hybrid-by-default finding), billing-structure alignment as the product grows (pure vs. mixed bundling, grounded in Bakos & Brynjolfsson's academic bundling economics, with add-on/value-based/tiered/dynamic tactics), and adjustment levers (discounts, routed to `../financial-impact-analysis/cost-based-pricing-floor-and-margin-governance.md`'s governance mechanics rather than re-derived; rewards/loyalty, with three named B2B structures and an individual-vs-account targeting distinction).

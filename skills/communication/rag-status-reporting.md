@@ -1,3 +1,8 @@
+---
+name: rag-status-reporting
+description: "Use when reporting initiative or milestone health: assigns Red, Amber or Green against definitions set for that initiative, always with the letter beside the colour, a trend, and for anything not green a reason, owner and next action."
+---
+
 # Skill Name: RAG Status Reporting
 
 ## 🎯 Objective
@@ -16,6 +21,8 @@ PM, project lead, or engineering manager reporting the health of an initiative, 
 - **Known blockers or risks**, if the status is not Green.
 - **Reporting cadence** — how often this status gets reassessed.
 
+**Minimum viable input:** the initiative and its current state. Where no RAG definitions were agreed for this initiative, state the definitions used inline in the report — an unqualified Amber means nothing, and publishing the definition is what makes the next report comparable to this one.
+
 ## 📤 Expected Output
 
 - A single RAG status (color + letter, never color alone) per initiative.
@@ -27,6 +34,14 @@ PM, project lead, or engineering manager reporting the health of an initiative, 
 
 - **Standalone (always works):** The user describes current progress, blockers, and prior status directly; the skill anchors RAG definitions and produces the status line from that description.
 - **Supercharged (if connected):** A project tracker connector could pull actual ticket/epic completion percentages and days-until-due to sanity-check the proposed color against real data rather than the reporter's own read of the situation; a calendar connector could auto-schedule the stated next-review date.
+
+## 🔗 Routing / Related Skills
+
+Check these before running; each fires on something visible in the input.
+
+- Wrap the status in `bluf-bottom-line-up-front.md` so the reader gets the letter before the narrative.
+- For anything not Green with named risks → `roam-risk-communication.md`, so each ends with an owner.
+- If the cause is a date or sequence change → `roadmap-change-communication.md`.
 
 ## 📋 Output Template
 

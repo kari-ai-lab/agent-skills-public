@@ -1,3 +1,8 @@
+---
+name: conflict-and-consensus-resolution
+description: "Decides what happens when two or more agents produce contradictory or overlapping outputs on the same question."
+---
+
 # Skill Name: Conflict and Consensus Resolution
 
 ## 🎯 Objective

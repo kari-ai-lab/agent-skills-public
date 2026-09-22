@@ -1,3 +1,8 @@
+---
+name: mcp-server-development
+description: "Adapted from Anthropic's own mcp-builder skill (see Sources) — closes a real gap this workspace had: tooling-and-mcp-servers.md answers *when* to reach for an MCP server versus a CLI tool, hook, skill, or subagent."
+---
+
 # Skill Name: MCP Server Development
 
 ## Objective

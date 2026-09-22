@@ -1,3 +1,9 @@
+---
+name: api-builder-webhooks-examples-recipe
+kind: reference
+description: "The last mile: outbound notifications the API sends to consumers, sample payloads that make the spec usable in Swagger UI/Redoc, and response links that describe follow-up requests."
+---
+
 # Recipe Name: Webhooks, Callbacks, Examples & Documentation Polish
 
 > Part of the [API Builder](../platform/api-builder.md) skill. Covers the Callback Object, top-level `webhooks` (3.1), Example Object, and Link Object.

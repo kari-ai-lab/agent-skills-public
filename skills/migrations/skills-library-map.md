@@ -28,7 +28,7 @@ Purpose: map legacy `Skills library/` content into the canonical `.agents/skills
 | `Skills library/anthropic-skills/prompting-precision.md` | `.agents/skills/delivery/prompting-precision.md` | Execution and delivery quality |
 | `Skills library/anthropic-skills/rich-context-input.md` | `.agents/skills/delivery/rich-context-input.md` | Upstream input preparation |
 | `Skills library/anthropic-skills/explore-plan-code-commit.md` | `.agents/skills/delivery/explore-plan-code-commit.md` | Delivery workflow |
-| `Skills library/compliance/pci_dss_req_3_4.md` | `.agents/skills/domains/pci-dss-req-3-4.md` | Payment-security domain chunk |
+| `Skills library/compliance/pci_dss_req_3_4.md` | `.agents/skills/governance/pci-dss-req-3-4.md` | Re-homed from the original `domains/` target to `governance/` alongside the rest of the PCI family (see `governance/README.md`'s root-canon note); corrected 2026-09-16, this row previously still pointed at the stale `domains/` path |
 | `Skills library/delivery/jira_epic_builder.md` | `.agents/skills/delivery/jira-epic-builder.md` | Delivery workflow asset |
 | `Skills library/governance/quality_monitoring_model.md` | `.agents/skills/governance/quality-monitoring-model.md` | Governance asset |
 | `Skills library/intelligence/competitor_analysis_synthesizer.md` | `.agents/skills/product/competitor-analysis-synthesizer.md` | Strategy and product overlay |

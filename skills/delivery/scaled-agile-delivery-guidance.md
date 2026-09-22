@@ -1,3 +1,8 @@
+---
+name: scaled-agile-delivery-guidance
+description: "Helps teams using Scaled Agile execute day-to-day and iteration-to-PI delivery with the latest official guidance, while keeping a practical checklist for planning, execution, inspect/adapt, and continuous improvement."
+---
+
 # Skill Name: Scaled Agile Delivery Guidance (Core SAFe 6.0 + AI-Native Early Access)
 
 ## 🎯 Objective
@@ -44,6 +49,8 @@ Usage requirement:
 - **Governance Context (Optional):** Portfolio guardrails, compliance constraints, and architecture runway expectations.
 - **Transformation Context (Optional):** Maturity level, pain points, and adoption targets.
 
+**Minimum viable input:** the number of teams and what they share. Applies partially and usefully below full SAFe — take the coordination mechanics that fit and say which were deliberately left out, rather than adopting or rejecting the whole framework.
+
 ## 📤 Expected Output
 
 - A step-by-step SAFe-aligned delivery plan for the team.
@@ -52,6 +59,14 @@ Usage requirement:
 - Clear inspect-and-adapt signals and corrective action triggers.
 - A note indicating where AI-Native SAFe practices can be piloted safely.
 - Explicit reference notes showing which guidance is grounded in SAFe Lean-Agile Principles and when the Big Picture source was used.
+
+## 🔗 Routing / Related Skills
+
+Check these before running; each fires on something visible in the input.
+
+- For the PI Planning risk step → `../communication/roam-risk-communication.md`.
+- For increment capacity allocation → `../refinement/backlog-capacity-and-staleness-policy.md` then `../refinement/future-workstream-prioritization-wsjf-and-techniques.md`.
+- Before adopting it for an existing team → `../management/organizational-change-readiness-and-team-disruption-penalty.md`.
 
 ## 🤖 Core Prompt / Instructions
 

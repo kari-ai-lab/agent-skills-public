@@ -1,3 +1,8 @@
+---
+name: software-development-life-cycle-modeling
+description: "Models the Software Development Life Cycle as a canonical phase sequence, reconciled across four independent sources (Atlassian, IBM, AWS, GeeksforGeeks) rather than taken from a single vendor's framing."
+---
+
 # Skill Name: Software Development Life Cycle (SDLC) Modeling
 
 ## 🎯 Objective

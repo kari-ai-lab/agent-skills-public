@@ -1,3 +1,8 @@
+---
+name: roadmap-change-communication
+description: "Use when the roadmap changes (delay, re-sequence, scope change): first diagnoses legitimate reprioritization versus unweighted churn, then drafts an audience-tailored note stating what changed, the specific reason, and what stays the same."
+---
+
 # Skill Name: Roadmap Change Communication
 
 ## 🎯 Objective
@@ -15,6 +20,8 @@ PM or product lead communicating a roadmap update, delay, or re-priority across 
 - **Who is affected** and by how much.
 - **When the roadmap was last communicated** — to know if this is part of an established cadence or the first update in a while.
 
+**Minimum viable input:** what changed and the real reason. If the honest reason is "someone senior asked", that is the churn signal this skill exists to catch — run the reprioritization-versus-churn diagnosis before drafting, and do not launder it into a strategic-sounding rationale in the note.
+
 ## 📤 Expected Output
 
 - An audience-tailored change communication naming what changed, why (grounded in a specific, named decision criterion), and what stays the same.
@@ -25,6 +32,14 @@ PM or product lead communicating a roadmap update, delay, or re-priority across 
 
 - **Standalone (always works):** The user describes the change and its reason directly; the skill drafts the tailored communication from that.
 - **Supercharged (if connected):** A project tracker connector could generate the actual before/after backlog diff automatically instead of requiring it described manually; a chat connector could route each audience-specific version to the right channel.
+
+## 🔗 Routing / Related Skills
+
+Check these before running; each fires on something visible in the input.
+
+- To show the new sequence → `../refinement/roadmap-presentation-and-sequencing-views.md`.
+- If the churn came from too much in flight → `../delivery/wip-limits-and-flow-protection.md`.
+- Open the note with `bluf-bottom-line-up-front.md`.
 
 ## 📋 Output Template
 

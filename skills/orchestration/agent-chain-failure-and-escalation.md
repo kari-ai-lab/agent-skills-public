@@ -1,3 +1,8 @@
+---
+name: agent-chain-failure-and-escalation
+description: "Defines retry/circuit-breaker/escalation policy specific to a chain of agent-to-agent calls, where a failure in one step doesn't just fail — it can silently redirect everything downstream."
+---
+
 # Skill Name: Agent-Chain Failure, Retry, and Escalation
 
 ## 🎯 Objective

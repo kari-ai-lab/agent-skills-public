@@ -1,3 +1,9 @@
+---
+name: api-builder-document-structure-recipe
+kind: reference
+description: "Every OpenAPI document is one JSON/YAML object with a fixed set of legal top-level fields. Get this scaffold right first — everything else (paths, schemas, security) hangs off it."
+---
+
 # Recipe Name: OpenAPI Document Structure
 
 > Part of the [API Builder](../platform/api-builder.md) skill. Covers the root OpenAPI Object and top-level metadata.

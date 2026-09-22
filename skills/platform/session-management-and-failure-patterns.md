@@ -1,3 +1,8 @@
+---
+name: session-management-and-failure-patterns
+description: "Serves as an operational runbook for Claude Code sessions — covering how to steer, rewind, compact, scale, and recover when things go wrong."
+---
+
 # Skill Name: Session Management and Failure Pattern Recovery
 
 ## 🎯 Objective

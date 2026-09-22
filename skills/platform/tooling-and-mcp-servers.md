@@ -1,3 +1,8 @@
+---
+name: tooling-and-mcp-servers
+description: "Helps engineers extend Claude Code's capabilities beyond the base model — connecting external services via CLI tools and MCP servers, automating deterministic actions via hooks, packaging reusable domain knowledge as skills."
+---
+
 # Skill Name: Tooling, MCP Servers, Hooks, Skills, and Subagents
 
 ## 🎯 Objective

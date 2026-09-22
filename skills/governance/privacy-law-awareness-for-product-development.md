@@ -1,3 +1,8 @@
+---
+name: privacy-law-awareness-for-product-development
+description: "Gives product teams a trigger-based checklist for identifying which privacy-law regimes likely apply to a new product, feature, or release — before it ships."
+---
+
 # Skill Name: Privacy Law Awareness for Product Development
 
 ## 🎯 Objective

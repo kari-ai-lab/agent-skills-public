@@ -1,3 +1,8 @@
+---
+name: context-management
+description: "Helps engineers understand and actively manage Claude's context window — the single most important resource in any Claude Code session."
+---
+
 # Skill Name: Context Window Management
 
 ## 🎯 Objective

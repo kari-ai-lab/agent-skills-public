@@ -1,3 +1,8 @@
+---
+name: iso-20022-payment-messaging-standard
+description: "Explains ISO 20022 — the ISO standard for electronic data interchange between financial institutions — as the messaging/data-contract layer underneath payments, securities, and settlement systems."
+---
+
 # Skill Name: ISO 20022 Payment Messaging Standard
 
 ## 🎯 Objective

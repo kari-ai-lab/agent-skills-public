@@ -1,3 +1,8 @@
+---
+name: api-builder
+description: "Guides an agent through designing, extending, or reviewing a REST API contract strictly against the OpenAPI Specification (Swagger) for document mechanics."
+---
+
 # Skill Name: API Builder (OpenAPI / Swagger Specification)
 
 ## 🎯 Objective
@@ -84,6 +89,8 @@ standard-methods conventions where applicable.
 ## Related Workspace Skills
 
 - `journeys/end-to-end-journey-specification.md` and `journeys/journey-orchestration-and-verification.md` — link this skill's OpenAPI contracts per lifecycle segment, and require a consumer-driven contract test (Pact-style) for every cross-segment API dependency a journey depends on.
+- `product/laws-of-ux-system-design-heuristics.md` — Postel's Law (the Robustness Principle) applies directly to this skill's contract design: strict, spec-conformant output, tolerant-but-bounded input validation with clear feedback on rejection.
+- `practitioner/api-gateway-and-developer-portal-operations.md` — the operational-judgment companion to this skill's contract mechanics: composed-system throughput, versioning cadence/deprecation numbers, object-modeling discipline, adoption drivers, rate-limit calibration, and gateway/portal ownership.
 
 ## ✅ Success Criteria / Quality Checklist
 
@@ -98,7 +105,7 @@ standard-methods conventions where applicable.
 
 ---
 **Metadata**
-- **Version:** 1.1
-- **Last Updated:** 2026-07-19
+- **Version:** 1.3
+- **Last Updated:** 2026-09-14
 - **Author:** Workspace skills
 - **Source URL:** https://swagger.io/specification/, https://docs.cloud.google.com/apis/design

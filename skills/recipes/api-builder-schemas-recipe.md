@@ -1,3 +1,9 @@
+---
+name: api-builder-schemas-recipe
+kind: reference
+description: "Defines the reusable data shapes (components) and how individual schemas describe request/response bodies."
+---
+
 # Recipe Name: Schemas & Data Models
 
 > Part of the [API Builder](../platform/api-builder.md) skill. Covers the Components Object and Schema Object.

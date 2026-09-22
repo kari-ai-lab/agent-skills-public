@@ -1,8 +1,13 @@
+---
+name: product-launch-checklist
+description: "Closes a gap flagged in product-school-template-toolkit.md and Group C of .agents/skills/SKILLS-GAP-BACKLOG.md: refinement/product-requirements-document-template.md's Section 10 (Launch Plan) already captures the marketing comms."
+---
+
 # Skill Name: Product Launch Checklist
 
 ## Objective
 
-Closes a gap flagged in `product-school-template-toolkit.md` and Group C of `docs/PRODUCT_SKILL_GAP_BACKLOG.md`: `refinement/product-requirements-document-template.md`'s Section 10 (Launch Plan) already captures the marketing comms plan, pilot/beta exit criteria, and GA requirements — but a single PRD section isn't built to hold the full cross-functional "did we forget anything" gate a real launch needs. This skill is that gate: a three-phase (pre-launch / launch-day / post-launch) checklist that consumes the PRD's Launch Plan as input rather than duplicating it, and forces the cross-functional checks (support, legal, infra, rollback) a single document section tends to miss.
+Closes a gap flagged in `product-school-template-toolkit.md` and Group C of `.agents/skills/SKILLS-GAP-BACKLOG.md`: `refinement/product-requirements-document-template.md`'s Section 10 (Launch Plan) already captures the marketing comms plan, pilot/beta exit criteria, and GA requirements — but a single PRD section isn't built to hold the full cross-functional "did we forget anything" gate a real launch needs. This skill is that gate: a three-phase (pre-launch / launch-day / post-launch) checklist that consumes the PRD's Launch Plan as input rather than duplicating it, and forces the cross-functional checks (support, legal, infra, rollback) a single document section tends to miss.
 
 ## Target Persona
 

@@ -1,8 +1,13 @@
+---
+name: value-proposition-canvas
+description: "Closes a gap flagged in product-school-template-toolkit.md and Group A of .agents/skills/SKILLS-GAP-BACKLOG.md: the workspace's strategy/portfolio/PRD layers assume a validated problem going in."
+---
+
 # Skill Name: Value Proposition Canvas
 
 ## Objective
 
-Closes a gap flagged in `product-school-template-toolkit.md` and Group A of `docs/PRODUCT_SKILL_GAP_BACKLOG.md`: the workspace's strategy/portfolio/PRD layers assume a validated problem going in, but nothing upstream forced a structured check that the product's value proposition actually maps to a real customer job, pain, or gain. Sourced from Strategyzer (Alexander Osterwalder), the tool's originator, rather than a secondary summary. Maps customer reality (Jobs, Pains, Gains) against the offering (Products & Services, Pain Relievers, Gain Creators) and forces an explicit fit check between the two sides before treating a value proposition as validated.
+Closes a gap flagged in `product-school-template-toolkit.md` and Group A of `.agents/skills/SKILLS-GAP-BACKLOG.md`: the workspace's strategy/portfolio/PRD layers assume a validated problem going in, but nothing upstream forced a structured check that the product's value proposition actually maps to a real customer job, pain, or gain. Sourced from Strategyzer (Alexander Osterwalder), the tool's originator, rather than a secondary summary. Maps customer reality (Jobs, Pains, Gains) against the offering (Products & Services, Pain Relievers, Gain Creators) and forces an explicit fit check between the two sides before treating a value proposition as validated.
 
 ## Target Persona
 

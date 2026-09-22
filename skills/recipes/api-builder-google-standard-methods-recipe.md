@@ -1,3 +1,9 @@
+---
+name: api-builder-google-standard-methods-recipe
+kind: reference
+description: "Five standard methods cover the overwhelming majority of resource operations. Reach for a custom method (AIP-136) only when an action genuinely isn't Get/List/Create/Update/Delete."
+---
+
 # Recipe Name: Google Standard Methods, Pagination & Errors
 
 > Part of the [API Builder](../platform/api-builder.md) skill. Companion to `api-builder-google-resource-naming-recipe.md` — apply both together, alongside `api-builder-paths-operations-recipe.md` for OpenAPI mechanics. Google's guide is proto/gRPC-first; the HTTP mappings below are its REST projection and translate directly into OpenAPI path/operation definitions.

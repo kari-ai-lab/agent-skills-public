@@ -32,10 +32,10 @@ These skills help engineers and orchestrator agents:
   - Orchestrator-owns-state, subagents-get-clean-windows ownership model; a concrete distilled-summary return-value budget; a single-writer rule for shared state objects; and reuse (not reinvention) of `journeys/journey-orchestration-and-verification.md`'s durable-execution criteria for long-running orchestrators.
 
 - `harness-selection-and-mapping.md`
-  - Maps the other four skills' decisions onto a concrete runtime — durable-checkpointed (LangGraph), cross-org (A2A/Google ADK), lightweight in-process (OpenAI Agents SDK handoffs), or Claude Code/Agent SDK's own subagent model — illustrated with two concrete harness shapes (a phase-based pipeline harness, a chat-orchestrator harness), kept separate from the portable, framework-agnostic recommendation.
+  - Maps the other four skills' decisions onto a concrete runtime — durable-checkpointed (LangGraph), cross-org (A2A/Google ADK), lightweight in-process (OpenAI Agents SDK handoffs), or Claude Code/Agent SDK's own subagent model — with this workspace's own two real harnesses (`apdlc`, `euda`) named as the worked example, kept separate from the portable, framework-agnostic recommendation.
 
 - `agent-memory-architecture-and-consolidation.md`
-  - Persistent, cross-session agent memory (episodic + semantic/preference tiers, confidence-and-source per fact, encryption-at-rest that preserves retrieval, single-writer-of-record, staleness review distinct from an auth-grant TTL) — distinct from this folder's own ephemeral `shared-context-and-state-ownership.md` and from `platform/context-management.md`'s single-session hygiene. Grounded in MemGPT's tiered-memory framing and a real production worked example.
+  - Persistent, cross-session agent memory (episodic + semantic/preference tiers, confidence-and-source per fact, encryption-at-rest that preserves retrieval, single-writer-of-record, staleness review distinct from an auth-grant TTL) — distinct from this folder's own ephemeral `shared-context-and-state-ownership.md` and from `platform/context-management.md`'s single-session hygiene. Grounded in MemGPT's tiered-memory framing and this workspace's own already-implemented `euda` memory system.
 
 ## Suggested Usage Order
 

@@ -4,6 +4,8 @@ Use this folder for in-delivery execution support: sprint planning quality, flow
 
 > Root canon check: the [Agile Manifesto's 12 Principles](https://agilealliance.org/agile101/12-principles-behind-the-agile-manifesto/) sit underneath every framework-specific skill in this folder (SAFe, LeSS, or otherwise) — SAFe and LeSS are implementations of these principles, not replacements for them. If a framework-specific practice ever conflicts with a principle (e.g. a process step that works against "working software is the primary measure of progress" or "simplicity — the art of maximizing the amount of work not done"), flag the conflict explicitly rather than silently following the framework.
 >
+> **Before reaching for any specific framework in this folder, run `delivery-method-selection-and-value-orientation.md` first.** No framework here (Agile, Scrum, Lean, Waterfall, XP, SAFe, LeSS, Kanban) is the goal — maximizing value return (revenue increase, cost savings, client satisfaction) is the goal, and the framework is only the mechanism. That skill diagnoses which method actually fits the organization's context (via the Cynefin framework), treats the choice as a stable commitment rather than something re-litigated per project, and defines how the chosen process gets more predictable over time through accumulated data and team learning rather than framework-hopping.
+>
 > Beyond the Manifesto itself, check the practitioner/thought-leader sources below before authoring or updating a skill here — several of them are the actual co-creators of the methods this folder guides on, not just commentary.
 
 ## Reference Sources
@@ -30,7 +32,9 @@ These skills help teams and delivery leaders:
 - refine backlog items for implementation readiness,
 - monitor day-to-day sprint health and delivery risk,
 - apply scaled delivery guidance (SAFe and LeSS),
-- improve outcomes via retrospectives and better prompting/workflow habits.
+- improve outcomes via retrospectives and better prompting/workflow habits,
+- protect committed WIP from silent overload when new initiatives are proposed before current work finishes,
+- stay oriented on value return rather than framework identity, choosing and holding a delivery method that fits the actual context instead of chasing trends.
 
 ## Relationship To Refinement Folder
 
@@ -40,6 +44,10 @@ Pre-delivery upstream planning now lives in `.agents/skills/refinement/`.
 - Use `delivery` skills to execute and control how committed work is delivered.
 
 ## Skills Index
+
+- `delivery-method-selection-and-value-orientation.md`
+  - Keeps a PM oriented on value return (revenue increase, cost savings, client satisfaction) rather than framework identity: diagnoses which delivery method actually fits a workstream's context using the Cynefin framework (Simple/Complicated/Complex/Chaotic/Disorder), instead of picking by trend or preference.
+  - Treats the chosen method as a stable commitment — changing it per project or per product without a genuine domain-shift trigger is named as the actual problem, not routine — and defines how the process gets more predictable over time via accumulated historical delivery data and PDSA-style team learning, never by swapping frameworks in search of a better one.
 
 - `sprint-goal-drafting.md`
   - Drafts outcome-focused sprint goals tied to usable end-to-end capability.
@@ -99,8 +107,13 @@ Pre-delivery upstream planning now lives in `.agents/skills/refinement/`.
   - A decision gate run before the two skills above commit to Cucumber/Gherkin by default: routes UI-driven, stakeholder-readable scenarios to Cucumber (after an explicit stakeholder-readability check — if no non-developer actually reads the `.feature` files, recommends a plain code-based test instead), API/HTTP/contract-heavy suites to Karate, and very large (500+ scenario) parallel-runtime-bound suites to Gauge.
   - Names the real hybrid pattern ("Karate for API + Cucumber for UI") rather than forcing one tool across a mixed suite, and flags PCI/ISO-20022-adjacent domains as directly actionable for the Karate recommendation.
 
+- `wip-limits-and-flow-protection.md`
+  - Makes the cost of adding a new initiative on top of already-committed WIP visible using Little's Law (WIP = Throughput × Cycle Time, with its stability/steady-state assumption checked first) and Gerald Weinberg's context-switching heuristic table, so leadership decides to add work with the real cost in front of them instead of it being silently absorbed.
+  - Supplies the actual data behind the "leadership exception" mechanism `refinement/future-workstream-prioritization-wsjf-and-techniques.md` and `refinement/refinement-plan-realism-and-capacity-risk.md` already require but don't operationalize on their own.
+
 ## Suggested Usage Flow
 
+0. Before choosing or defending any specific framework below, run `delivery-method-selection-and-value-orientation.md` to confirm the method actually fits the diagnosed Cynefin domain and is oriented on value return — not a trend-driven or inherited default. Re-run only when a genuine domain shift occurs, never per project or per product on its own.
 1. Define sprint intent with `sprint-goal-drafting.md`.
 2. Validate realistic load with `sprint-capacity-planning.md`.
 3. Improve backlog readiness with `epic-story-refinement.md` or `jira-epic-builder.md`.
@@ -111,6 +124,7 @@ Pre-delivery upstream planning now lives in `.agents/skills/refinement/`.
 8. Use `behavior-driven-development-and-model-integration.md` (Discovery via Three Amigos) and `gherkin-syntax-and-writing-guide.md` (Formulation) whenever acceptance criteria are being written — for the PRD's Feature list, for `jira-epic-builder.md`'s Stories, or for a scenario destined for SDLC's Testing phase.
 9. Before committing to Cucumber by default (or when an existing Cucumber suite's glue-code/maintenance cost is becoming visible), run `bdd-framework-selection.md` to confirm Cucumber/Gherkin is actually the right tool for the suite's layer, or to route to Karate/Gauge instead.
 10. For a larger or AI-driven initiative with an approved FRD, use `spec-driven-development.md` instead of `explore-plan-code-commit.md`'s single-session SPEC.md — it produces a durable, re-verifiable spec and runs the Commercialization Validation Gate before the work is treated as production-ready.
+11. Whenever leadership proposes a new initiative before current WIP is finished (independent of the sprint-by-sprint flow above — this fires whenever the trigger occurs, not on a fixed cadence), use `wip-limits-and-flow-protection.md` to make the Little's-Law cycle-time cost and any context-switching cost visible before the initiative is approved, deferred, or made to displace existing committed work.
 
 ## Inputs To Gather Before Using Delivery Skills
 
@@ -128,11 +142,13 @@ Pre-delivery upstream planning now lives in `.agents/skills/refinement/`.
 - Daily delivery health and early risk visibility.
 - Explicit actions for de-scope, re-prioritization, or escalation when needed.
 - Improvement backlog from retrospective evidence.
+- A structured, data-backed decision request whenever new-initiative pressure threatens committed WIP, routed through the org's existing leadership-exception mechanism rather than silently absorbed.
+- A per-workstream Cynefin domain diagnosis and value-oriented method recommendation, with methodology changes tied to a named domain-shift trigger rather than trend or preference, and a predictability-tracking mechanism built on accumulated data rather than framework-hopping.
 
 ---
 
 ## Metadata
 
-- **Version:** 1.8
-- **Last Updated:** 2026-08-09
+- **Version:** 2.0
+- **Last Updated:** 2026-08-17
 - **Author:** Workspace Delivery Skills

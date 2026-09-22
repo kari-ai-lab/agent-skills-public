@@ -1,8 +1,13 @@
+---
+name: design-sprint-facilitation
+description: "Closes a gap flagged in product-school-template-toolkit.md and Group A of .agents/skills/SKILLS-GAP-BACKLOG.md: nothing in this workspace covered a time-boxed ideate/prototype/test cycle for resolving a specific."
+---
+
 # Skill Name: Design Sprint Facilitation
 
 ## Objective
 
-Closes a gap flagged in `product-school-template-toolkit.md` and Group A of `docs/PRODUCT_SKILL_GAP_BACKLOG.md`: nothing in this workspace covered a time-boxed ideate/prototype/test cycle for resolving a specific, high-uncertainty design problem quickly, before committing real engineering investment. Sourced from Product School's Design Sprint 2.0 template. Runs a four-day, timeboxed sprint from problem to testable prototype, explicitly to reduce production risk before the solution is built for real.
+Closes a gap flagged in `product-school-template-toolkit.md` and Group A of `.agents/skills/SKILLS-GAP-BACKLOG.md`: nothing in this workspace covered a time-boxed ideate/prototype/test cycle for resolving a specific, high-uncertainty design problem quickly, before committing real engineering investment. Sourced from Product School's Design Sprint 2.0 template. Runs a four-day, timeboxed sprint from problem to testable prototype, explicitly to reduce production risk before the solution is built for real.
 
 ## Target Persona
 

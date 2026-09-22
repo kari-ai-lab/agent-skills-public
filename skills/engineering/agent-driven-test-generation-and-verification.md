@@ -1,3 +1,8 @@
+---
+name: agent-driven-test-generation-and-verification
+description: "The agent-driven companion to testing-strategy-and-the-test-pyramid.md. That skill covers how a person writes and organizes a good test suite; this one covers how an AI coding agent doing the same work fails differently."
+---
+
 # Skill Name: Agent-Driven Test Generation and Verification
 
 ## 🎯 Objective

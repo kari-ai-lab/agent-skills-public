@@ -26,6 +26,9 @@ These skills help engineers, security leads, and delivery leadership:
 - Audit whether a product organization's incident-response function and information-sharing discipline are actually in place before they're tested by a real report or breach.
 - Flag which privacy-law regimes a new product/feature likely triggers, and check it against the core principles nearly every regime shares, before it ships.
 - Determine which PCI DSS obligations, SAQ type, Secure Software Framework requirements, and TSP additions actually apply to a given payment-touching product or feature.
+- Establish, per market, whether consumer authentication is mandated by default or triggered by fraud performance — and therefore whether authentication can be modelled as an optional approval-rate lever at all.
+- Give Product Owners a ready-to-use Definition of Done addendum, significant-change trigger list, and BAU-cadence map for turning already-confirmed PCI DSS obligations into real backlog/release mechanics.
+- Audit what a model's internal components are actually doing — via automated interpretability agents — before trusting its outputs at face value, and hunt proactively for spurious features and subgroup bias rather than waiting for a complaint to surface one.
 
 ## Skills Index
 
@@ -37,6 +40,12 @@ These skills help engineers, security leads, and delivery leadership:
 
 - `pci-dss-applicability-and-scoping.md`
   - Entry point for PCI: account-data classification, the 12 requirements at the principal level, and SAQ-type orientation (A/A-EP/B/B-IP/C-VT/C/P2PE/SPoC/D). Routes to the more detailed PCI skills below rather than holding the full standard in one file.
+
+- `pci-requirements-for-product-owners.md`
+  - For after applicability is already confirmed: a PCI-aware Definition of Done addendum (Req 6.5.1-6.5.4, 6.1.2), a significant-change trigger list to catch at refinement instead of at deploy (Req 12.5.2 + Section 5 BAU), a Requirement 12.3.1 targeted-risk-analysis business-justification draft, and a map of ongoing BAU activities onto existing product ceremonies.
+
+- `authentication-mandates-and-sca-by-region.md`
+  - Classifies each market as mandate-by-default (EEA/PSD2 SCA-RTS), performance-triggered (Australia/AusPayNet CNP Framework), or scheme-driven; lists claimable exemptions with who must qualify and how often qualification is re-tested; distinguishes exemptions from out-of-scope transactions (MIT/MOTO/one-leg-out); and names the fraud-rate feedback loop that stops authentication being a static approval lever. Complements `pci-dss-applicability-and-scoping.md` — that one covers card-data scope, this one covers whether the transaction must be authenticated.
 
 - `pci-dss-req-3-4.md`
   - Atomic compliance chunk for PCI-DSS Requirement 3.5 (rendering PAN unreadable at rest — filename kept as `3-4` for compatibility; content corrected from the old v3.x numbering) — trigger/exemption criteria and required recipe linkage.
@@ -86,10 +95,15 @@ These skills help engineers, security leads, and delivery leadership:
   - Flags which privacy-law regimes a new product/feature likely triggers, from a jurisdiction/data-type trigger map, and checks it against 11 principles common across nearly every regime (consent, purpose limitation, minimization, notice, access/correction, erasure, security, integrity, accountability, breach notification, cross-border transfer).
   - A triage step feeding legal/privacy counsel review, explicitly never a launch clearance on its own; unlisted jurisdictions are marked unconfirmed and escalated rather than assumed safe.
 
+- `automated-interpretability-agents-for-ai-model-auditing.md`
+  - Applies MIT CSAIL's MAIA (Multimodal Automated Interpretability Agent) method — hypothesize, experiment, refine — to audit what a model's internal components are actually responding to, using real activating examples and targeted synthetic experiments rather than a label asserted from a component's name or position.
+  - Proactively hunts for spurious features and subgroup bias (the labrador-color example), and requires the evidence-vs-hypothesis judgment to route through an independent check rather than the same pass that generated the hypothesis — the same self-certification guard `verification-and-self-checking.md` already requires generally.
+  - Explicitly not self-certifying: MAIA's own published evaluation failed roughly half its benchmark's harder, noisier cases — findings here feed a human-accountability or privacy/fairness escalation decision, they don't close one out on their own.
+
 ## Suggested Usage Order
 
 1. Use `permissions-and-safety.md` and `agent-zero-trust-delegation.md` when setting up or reviewing how agents/tools are permissioned and authorized in a system.
-2. Start any PCI question at `pci-dss-applicability-and-scoping.md`; it routes to `pci-dss-req-3-4.md` / `-req-4-...` / `-req-6-...` / `-req-8-...` (and other compliance chunks as they're added) whenever a feature trigger matches, or to `pci-secure-software-standard-requirements.md`, `pci-secure-software-lifecycle-and-devsecops.md`, or `pci-tsp-token-service-provider-requirements.md` for the deeper vendor/TSP-specific skills.
+2. Start any PCI question at `pci-dss-applicability-and-scoping.md`; it routes to `pci-dss-req-3-4.md` / `-req-4-...` / `-req-6-...` / `-req-8-...` (and other compliance chunks as they're added) whenever a feature trigger matches, or to `pci-secure-software-standard-requirements.md`, `pci-secure-software-lifecycle-and-devsecops.md`, or `pci-tsp-token-service-provider-requirements.md` for the deeper vendor/TSP-specific skills. Once applicability is confirmed, a Product Owner doing backlog refinement or release sequencing on the confirmed-in-scope work moves to `pci-requirements-for-product-owners.md`.
 3. Use `vulnerability-severity-and-exploit-prioritization.md` whenever there are more vulnerability findings than remediation capacity for the current cycle.
 4. Use `product-security-incident-response-readiness.md` periodically (and always before it's needed for real) to confirm the org can actually receive, triage, and disclose a vulnerability report — this is the structural check that `vulnerability-severity-and-exploit-prioritization.md` assumes is already in place.
 5. Use `github-push-sensitivity-review.md` before any repository (new or existing) is pushed to a remote, especially a public one.
@@ -97,6 +111,7 @@ These skills help engineers, security leads, and delivery leadership:
 7. Use `defect-triage-assistant.md` for a routine bug/ticket triage pass; use `cost-aware-agent-utilization.md` when routing multi-agent work.
 8. Use `quality-monitoring-model.md` periodically to review whether the skills library itself needs updates.
 9. Use `privacy-law-awareness-for-product-development.md` whenever a new product, feature, or release touches personal data — before launch, not after — and route anything it flags to actual legal/privacy counsel.
+10. Use `automated-interpretability-agents-for-ai-model-auditing.md` before a model or a model component is trusted in a high-stakes decision path — its subgroup-bias findings feed directly into step 9's privacy/fairness escalation and into `product/ai-human-task-allocation-model.md`'s Never-AI/Human-owned classification.
 
 ## Inputs To Gather
 
@@ -109,6 +124,7 @@ These skills help engineers, security leads, and delivery leadership:
 - Repository contents before any GitHub push.
 - What personal data a new product/feature touches, user/data geography, sector, and cross-border data movement.
 - For PCI questions: the entity's role (merchant/processor/software vendor/TSP), what account data or Payment Tokens the product touches, and current SDLC/crypto/key-management practices.
+- For a model-interpretability audit: the specific model/component under review, a representative dataset, input-synthesis capability if available, and the stakes of the decision the component feeds.
 
 ## Output Expectations
 
@@ -119,11 +135,13 @@ These skills help engineers, security leads, and delivery leadership:
 - Explicit pass/fail verification against stated success criteria before any task is called done.
 - A named list of privacy regimes triggered by a new product/feature, a per-principle present/partial/missing check, and an explicit escalation to legal/privacy counsel — never a self-certified launch clearance.
 - A PCI applicability determination (which requirements, which SAQ type, which vendor/TSP standards) with routing to the specific compliance chunk or deeper skill needed, rather than an attempt to answer everything from one file.
+- A completed PCI-aware Definition of Done addendum with named owners per item, a significant-change yes/no determination with required follow-ups, and a named ceremony/cadence for each ongoing BAU activity — never a generic "Security handles it."
+- A per-component interpretability report (hypothesis, experiment, evidence, independent check, calibrated confidence) for any model audited, with named spurious features or subgroup biases and an explicit downstream-escalation pointer rather than a self-contained close-out.
 
 ---
 
 ## Metadata
 
-- **Version:** 1.4
-- **Last Updated:** 2026-07-25
+- **Version:** 1.6
+- **Last Updated:** 2026-09-16
 - **Author:** Workspace Governance Skills

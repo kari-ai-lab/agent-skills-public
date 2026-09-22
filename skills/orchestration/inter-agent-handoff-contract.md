@@ -1,3 +1,8 @@
+---
+name: inter-agent-handoff-contract
+description: "Defines the minimal required schema and lifecycle for handing a bounded task (as produced by orchestration/task-decomposition-and-routing.md) from one agent to another."
+---
+
 # Skill Name: Inter-Agent Handoff Contract
 
 ## 🎯 Objective

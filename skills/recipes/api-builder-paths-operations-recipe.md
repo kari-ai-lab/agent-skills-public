@@ -1,3 +1,9 @@
+---
+name: api-builder-paths-operations-recipe
+kind: reference
+description: "This is the core request/response contract: which URLs exist, which HTTP methods they support, what goes in and what comes back."
+---
+
 # Recipe Name: Paths, Operations, Parameters & Responses
 
 > Part of the [API Builder](../platform/api-builder.md) skill. Covers the Paths Object, Path Item Object, Operation Object, Parameter Object, Request Body Object, and Responses Object.

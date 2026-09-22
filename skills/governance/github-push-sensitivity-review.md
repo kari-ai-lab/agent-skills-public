@@ -1,3 +1,8 @@
+---
+name: github-push-sensitivity-review
+description: "Helps an agent (or engineer) audit a repository for sensitive information before it's pushed to GitHub — what must never be committed, what belongs in a gitignored .env vs. a tracked .env.example."
+---
+
 # Skill Name: GitHub Push Sensitivity Review
 
 ## 🎯 Objective

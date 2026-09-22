@@ -1,3 +1,9 @@
+---
+name: pci-dss-req-3-4
+kind: reference
+description: "PCI-DSS v4.0.1 chunk — Requirement 3.5: the requirement text and when it applies to a feature."
+---
+
 # Compliance Framework: PCI-DSS v4.0.1
 ## Clause / Identifier: Requirement 3.5
 

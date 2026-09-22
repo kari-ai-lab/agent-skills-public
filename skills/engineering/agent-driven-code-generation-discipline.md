@@ -1,3 +1,8 @@
+---
+name: agent-driven-code-generation-discipline
+description: "The agent-driven companion to coding-standards-and-design-patterns.md. That skill covers SOLID, code smells, and named refactorings as a human-driven discipline."
+---
+
 # Skill Name: Agent-Driven Code Generation Discipline
 
 ## 🎯 Objective

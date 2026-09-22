@@ -1,8 +1,13 @@
+---
+name: user-flow-mapping
+description: "Closes a gap flagged in product-school-template-toolkit.md and Group A of .agents/skills/SKILLS-GAP-BACKLOG.md: nothing in this workspace mapped the specific step-by-step path a user takes to complete one task."
+---
+
 # Skill Name: User Flow Mapping
 
 ## Objective
 
-Closes a gap flagged in `product-school-template-toolkit.md` and Group A of `docs/PRODUCT_SKILL_GAP_BACKLOG.md`: nothing in this workspace mapped the specific step-by-step path a user takes to complete one task, to find snags and drop-off before they reach engineering as a vague bug report. Distinct from `customer-journey-mapping.md`: a journey map covers the customer's broader relationship with the product and company across stages; a user flow is the concrete screen-by-screen or step-by-step path through a single task.
+Closes a gap flagged in `product-school-template-toolkit.md` and Group A of `.agents/skills/SKILLS-GAP-BACKLOG.md`: nothing in this workspace mapped the specific step-by-step path a user takes to complete one task, to find snags and drop-off before they reach engineering as a vague bug report. Distinct from `customer-journey-mapping.md`: a journey map covers the customer's broader relationship with the product and company across stages; a user flow is the concrete screen-by-screen or step-by-step path through a single task.
 
 ## Target Persona
 
@@ -23,7 +28,7 @@ Product Manager, UX Designer, Product Designer — anyone mapping how a user act
 ## AI-Specific Failure Modes (for AI/LLM-powered task flows)
 
 Closes the "AI User Flow" gap from `product-school-template-toolkit.md` and Group B of
-`docs/PRODUCT_SKILL_GAP_BACKLOG.md`, as a section here rather than a separate skill — the
+`.agents/skills/SKILLS-GAP-BACKLOG.md`, as a section here rather than a separate skill — the
 core discipline above (map actual steps, pin snags to a specific step, use real data) is
 identical; only the failure-mode vocabulary is AI-specific. The source page for this topic
 (Product School's AI User Flow template) is gated behind an email signup and its fetched

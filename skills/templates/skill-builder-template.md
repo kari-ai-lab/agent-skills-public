@@ -115,6 +115,15 @@ Return the result in the requested format.
 - **Source Type:** [instructions | project | activity | mixed | Person]
 - **Source URL** [url source]
 
+## 3a. Finish — Wire It In
+
+After the skill is drafted:
+
+- Make sure it starts with frontmatter: `name` (= the filename) and a `description` that says what it does **and when to use it**.
+- Run `.agents/tools/skills_wiring.py build` — it validates the skill and regenerates `CATALOG.md` and the Daily Kit table in `INDEX.md`. (The script is executable with a `python3` shebang; prefix `python3` if you want an explicit interpreter, never plain `python`.)
+- Decide whether it belongs in the **Daily Kit** (used week to week by a product owner). If so, create `.agents/kit/<name>/` per `INDEX.md`'s "Adding or Changing a Skill".
+- If it cites a new external source, add a row to `CREDITS.md` and a bullet to `REFERENCE-SOURCES.md`; add a line to `CHANGELOG.md`.
+
 ## 4. Optional Fill-In Notes
 
 Use this area to capture quick interview answers before finalizing the skill.

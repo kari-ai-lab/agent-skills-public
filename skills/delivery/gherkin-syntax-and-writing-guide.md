@@ -1,3 +1,8 @@
+---
+name: gherkin-syntax-and-writing-guide
+description: "Defines correct Gherkin syntax and, more importantly, how to write *good* Gherkin — closing a gap that existed across this workspace: refinement/product-requirements-document-template.md."
+---
+
 # Skill Name: Gherkin Syntax and Writing Guide
 
 ## 🎯 Objective

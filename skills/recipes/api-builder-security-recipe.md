@@ -1,3 +1,9 @@
+---
+name: api-builder-security-recipe
+kind: reference
+description: "Declares *how* clients authenticate (schemes, under components.securitySchemes) and *where* auth is required (requirements, at document or operation level)."
+---
+
 # Recipe Name: Security Schemes & Requirements
 
 > Part of the [API Builder](../platform/api-builder.md) skill. Covers the Security Scheme Object and Security Requirement Object.

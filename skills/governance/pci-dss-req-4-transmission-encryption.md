@@ -1,3 +1,9 @@
+---
+name: pci-dss-req-4-transmission-encryption
+kind: reference
+description: "PCI-DSS v4.0.1 chunk — Requirement 4 (Protect Cardholder Data with Strong Cryptography During Transmission Over Open, Public Networks): the requirement text and when it applies to a feature."
+---
+
 # Compliance Framework: PCI-DSS v4.0.1
 ## Clause / Identifier: Requirement 4 (Protect Cardholder Data with Strong Cryptography During Transmission Over Open, Public Networks)
 

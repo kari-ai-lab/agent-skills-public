@@ -1,3 +1,8 @@
+---
+name: end-to-end-journey-specification
+description: "Closes a gap this workspace's existing document families don't cover: refinement/'s BRD→PRD→FRD hierarchy specifies *one feature or initiative*, delivery/spec-driven-development.md specifies *one AI-executable unit of work*."
+---
+
 # Skill Name: End-to-End Journey Specification
 
 ## Objective

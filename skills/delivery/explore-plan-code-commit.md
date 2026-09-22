@@ -1,3 +1,8 @@
+---
+name: explore-plan-code-commit
+description: "Guides engineers through Claude Code's recommended 4-phase development workflow — Explore, Plan, Implement, Commit — preventing wasted effort from jumping straight to code."
+---
+
 # Skill Name: Explore-Plan-Code-Commit Workflow
 
 ## 🎯 Objective

@@ -1,3 +1,9 @@
+---
+name: llm-model-contract
+kind: reference
+description: "Canonical workspace policy for how applications obtain LLM capability."
+---
+
 # LLM Model Contract (Offline-First)
 
 Status: canonical workspace policy for how applications obtain LLM capability.
@@ -12,6 +18,18 @@ declare a **requirement on an LLM source** and ask for a **tier**:
 | `fast` | `gemma3:4b` | classification, routing, cheap summaries |
 | `primary` | `qwen2.5:14b` | chat, agents, general reasoning |
 | `heavy` | `qwen3.6:latest` | long-context / hard reasoning (optional tier) |
+| `embed` | `nomic-embed-text` | vector embeddings for semantic search (optional tier) |
+
+`embed` is never in `require_llm_source()`'s default `required_tiers` — most
+apps never call it, so its absence must never block ordinary startup. A
+caller that does need it passes `required_tiers=("embed",)` explicitly.
+Calling it: `provider.embed(source.model_for("embed"), texts) -> list[list[float]]`
+on `platform_agents.providers.ollama.OllamaProvider` — the only provider with
+a real implementation today; hosted kinds raise `NotImplementedError` until a
+provider adds support. See `orchestration/harness-selection-and-mapping.md`
+and `orchestration/agent-memory-architecture-and-consolidation.md` for where
+this tier gets used (skill-corpus semantic search, episodic-memory
+retrieval).
 
 Resolution is implemented in `platform_agents.model_contract`
 (`platform/packages/platform-agents/`). Call `require_llm_source()` once at

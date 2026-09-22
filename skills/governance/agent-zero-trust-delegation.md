@@ -1,3 +1,8 @@
+---
+name: agent-zero-trust-delegation
+description: "A reference skeleton for designing or reviewing how AI agents authenticate and get authorized against a platform/application."
+---
+
 # Skill Name: Agent Zero-Trust Delegation Skeleton
 
 ## 🎯 Objective

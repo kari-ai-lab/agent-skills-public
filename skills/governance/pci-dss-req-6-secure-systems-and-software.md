@@ -1,3 +1,9 @@
+---
+name: pci-dss-req-6-secure-systems-and-software
+kind: reference
+description: "PCI-DSS v4.0.1 chunk — Requirement 6 (Develop and Maintain Secure Systems and Software): the requirement text and when it applies to a feature."
+---
+
 # Compliance Framework: PCI-DSS v4.0.1
 ## Clause / Identifier: Requirement 6 (Develop and Maintain Secure Systems and Software)
 

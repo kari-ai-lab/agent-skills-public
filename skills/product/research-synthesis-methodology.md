@@ -1,3 +1,8 @@
+---
+name: research-synthesis-methodology
+description: "Turns raw qualitative research — interview transcripts, support tickets, survey open-ends, field notes — into evidenced, named themes *before* a persona, journey map, or opportunity tree is built from it."
+---
+
 # Skill Name: Research Synthesis Methodology
 
 ## 🎯 Objective

@@ -1,3 +1,8 @@
+---
+name: bdd-framework-selection
+description: "Closes an amendment gap this workspace had: gherkin-syntax-and-writing-guide.md teaches correct Gherkin syntax and behavior-driven-development-and-model-integration.md teaches the BDD practice around it."
+---
+
 # Skill Name: BDD Framework Selection
 
 ## Objective

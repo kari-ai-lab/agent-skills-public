@@ -1,3 +1,8 @@
+---
+name: pci-dss-applicability-and-scoping
+description: "The entry point for every PCI-related question in this workspace: which PCI Security Standards Council (PCI SSC) obligations actually apply to a given product/feature, what account-data scope it touches."
+---
+
 # Skill Name: PCI DSS Applicability and Scoping Navigator
 
 ## 🎯 Objective
@@ -64,6 +69,7 @@ Organizations are responsible for confirming their own eligibility for a chosen 
 - **The software vendor's own development lifecycle/governance** (how you build, not what you build) → `pci-secure-software-lifecycle-and-devsecops.md`.
 - **Operating a Token Vault or issuing EMV Payment Tokens** (this workspace has `platform/apps/tokenvault`) → `pci-tsp-token-service-provider-requirements.md`.
 - **A specific sub-requirement is gating a specific PR right now** → the matching compliance chunk (`pci-dss-req-*.md`), or write a new one following `templates/compliance-chunk-template.md` if none exists yet.
+- **Applicability is already confirmed and a Product Owner needs to turn it into backlog/release mechanics** (Definition of Done, significant-change triggers, BAU cadence) → `pci-requirements-for-product-owners.md`.
 
 ## 🤖 Core Prompt / Instructions
 
@@ -134,6 +140,7 @@ Rules:
 
 - `pci-dss-req-3-4.md`, `pci-dss-req-4-transmission-encryption.md`, `pci-dss-req-6-secure-systems-and-software.md`, `pci-dss-req-8-identify-authenticate-access.md` — individual compliance chunks.
 - `pci-secure-software-standard-requirements.md`, `pci-secure-software-lifecycle-and-devsecops.md`, `pci-tsp-token-service-provider-requirements.md` — deeper skills for specific entity types.
+- `pci-requirements-for-product-owners.md` — the Product Owner operating guide once applicability/scope is already confirmed.
 - `templates/compliance-chunk-template.md` — the format to follow when writing a new compliance chunk on demand.
 - `recipes/payment-processing-recipe.md` — the existing mandatory firm-wide payment implementation recipe that several of these chunks are required by.
 
@@ -141,6 +148,6 @@ Rules:
 
 ## Metadata
 
-- **Version:** 1.0
-- **Last Updated:** 2026-07-27
+- **Version:** 1.1
+- **Last Updated:** 2026-09-16
 - **Author:** Workspace Governance Skills

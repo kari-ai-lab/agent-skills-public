@@ -1,3 +1,8 @@
+---
+name: product-security-incident-response-readiness
+description: "Audits whether a product organization actually has the incident-response function and information-sharing discipline required to handle a vulnerability report or active security incident."
+---
+
 # Skill Name: Product Security Incident Response Readiness (PSIRT/CSIRT + TLP)
 
 ## 🎯 Objective

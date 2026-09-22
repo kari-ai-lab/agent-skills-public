@@ -1,3 +1,8 @@
+---
+name: sprint-capacity-planning
+description: "Use before sprint commitment to calculate realistic team capacity: separates availability from delivery capacity, subtracts leave, ceremonies and interrupts, and gives a conservative, target and stretch range with risks."
+---
+
 # Skill Name: Sprint Capacity Planning
 
 ## 🎯 Objective
@@ -17,12 +22,38 @@ Scrum Master, Engineering Manager, Product Owner, Delivery Lead
 - **Historical Delivery Data (Optional):** Velocity from the last 3-5 sprints, completed story points, or completed ticket counts.
 - **Work Intake Constraints (Optional):** Known dependencies, blocked work, or hard deadlines.
 
+**Minimum viable input:** team size and sprint length. Apply documented defaults for ceremonies and interrupt load when actuals are unknown, label them as defaults, and show the arithmetic so a team member can correct one number without re-running everything. Leave must be asked for — it is the input most often missing and the one that most distorts the result.
+
 ## 📤 Expected Output
 
 - A capacity summary table by team member and for the full sprint.
 - Explicit assumptions used in the calculation.
 - A recommended planning range such as conservative, target, and stretch capacity. Including uncertainty range indicators (known normal drift experience by team due to production incidents, distractions and similar topics)
 - Risks that may reduce actual delivery capacity.
+
+## 🔗 Routing / Related Skills
+
+Check these before running; each fires on something visible in the input.
+
+- Once capacity is known → `sprint-goal-drafting.md`, so the goal is set against a real number.
+- If candidate items are too vague to size → `epic-story-refinement.md` first.
+- If interrupt load is the dominant subtraction → `wip-limits-and-flow-protection.md`.
+
+## 📋 Output Template
+
+A ready-to-fill draft — fill this in first, then use the Core Prompt below for the reasoning behind it.
+
+```markdown
+## Capacity — [sprint dates]
+| Person | Role | Raw days | Leave / holidays | Ceremonies, support, interrupts | Effective capacity |
+|---|---|---|---|---|---|
+| [name] | [role] | [n] | [n] | [n] | [n] |
+| **Team total** | | | | | **[n]** |
+
+**Assumptions:** focus factor [x]; non-feature load [x]; velocity history [x] — conflicts with the calculation? [Y/N]
+**Planning range:** Conservative [n] · Target [n] · Stretch [n] · Normal drift to expect: [x]
+**Risks and missing inputs before commitment:** [list]
+```
 
 ## 🤖 Core Prompt / Instructions
 

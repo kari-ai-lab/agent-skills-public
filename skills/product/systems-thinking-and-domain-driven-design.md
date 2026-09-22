@@ -1,3 +1,8 @@
+---
+name: systems-thinking-and-domain-driven-design
+description: "Establishes the foundational mindset that every other product skill in this workspace builds on: product thinking starts from systems thinking."
+---
+
 # Skill Name: Systems Thinking and Domain-Driven Design Foundations
 
 ## 🎯 Objective

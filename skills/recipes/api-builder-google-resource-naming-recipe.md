@@ -1,3 +1,9 @@
+---
+name: api-builder-google-resource-naming-recipe
+kind: reference
+description: "Google's guide (originally Cloud API design guide, now maintained as the AIP series) is resource-oriented: model the API as a set of named resources acted on by a small number of standard methods."
+---
+
 # Recipe Name: Google Resource-Oriented Design & Naming
 
 > Part of the [API Builder](../platform/api-builder.md) skill. This recipe layers Google's API Improvement Proposals (AIPs) on top of the OpenAPI mechanics recipes — OpenAPI describes *how* to write the contract document; this describes *what shape* a well-designed REST resource API should have. Apply it alongside `api-builder-paths-operations-recipe.md` and `api-builder-schemas-recipe.md`, not instead of them.

@@ -1,8 +1,13 @@
+---
+name: agent-memory-architecture-and-consolidation
+description: "Covers persistent, cross-session agent memory — facts and preferences an agent should still know tomorrow."
+---
+
 # Skill Name: Agent Memory Architecture and Consolidation
 
 ## 🎯 Objective
 
-Covers **persistent, cross-session** agent memory — facts and preferences an agent should still know tomorrow — which is a different problem from two related concerns: `orchestration/shared-context-and-state-ownership.md` covers ephemeral, mid-workflow context between a live orchestrator and its subagents (gone when the workflow ends); `platform/context-management.md` covers a single Claude Code session's own working-context hygiene (`/compact`, `/clear`, one human operating one agent). This skill is the third, often-missing leg: what an agent remembers *after* the session or workflow that created the memory is over, how that memory is stored safely, who's allowed to write to it, and what happens when two agents' persisted memories disagree.
+Covers **persistent, cross-session** agent memory — facts and preferences an agent should still know tomorrow — which is a different problem from two skills already in this workspace: `orchestration/shared-context-and-state-ownership.md` covers ephemeral, mid-workflow context between a live orchestrator and its subagents (gone when the workflow ends); `platform/context-management.md` covers a single Claude Code session's own working-context hygiene (`/compact`, `/clear`, one human operating one agent). This skill is the third, previously-missing leg: what an agent remembers *after* the session or workflow that created the memory is over, how that memory is stored safely, who's allowed to write to it, and what happens when two agents' persisted memories disagree.
 
 ## 👤 Target Persona
 
@@ -31,21 +36,21 @@ MemGPT's own framing names the underlying constraint directly: LLMs have **"limi
 ## Recommendation (Portable)
 
 - **Episodic memory**: a vector store (Chroma, pgvector, or a managed vector DB) indexed on embeddings of past interaction content, retrieved by semantic similarity to the current query — not a flat log an agent re-reads in full.
-- **Semantic/preference memory**: a structured store (relational or document) where every record carries the preference/fact itself **plus a confidence value and a source** — never assert persisted knowledge without a traceable origin. The same fabrication-prohibition rule that applies to any AI-generated numeric or factual claim (never invent, extrapolate, or round a value without a traceable source) applies identically to a "learned" memory fact.
+- **Semantic/preference memory**: a structured store (relational or document) where every record carries the preference/fact itself **plus a confidence value and a source** — never assert persisted knowledge without a traceable origin. This generalizes a rule this workspace already enforces for a different kind of fabrication risk: `domains/agent-driven-pricing-change-governance.md`'s "never invent, extrapolate, or round a value without a traceable source" applies identically to a "learned" memory fact.
 - **Encryption at rest for sensitive content**: encrypt the stored document/fact content, but compute embeddings from the plaintext *before* encryption, so semantic retrieval keeps working without ever storing plaintext sensitive content at rest. This is a generic technique (any authenticated-encryption scheme — Fernet, AES-GCM, or your platform's existing field-encryption helper), not something novel to name after one implementation.
 - **Write policy**: exactly one writer of record per memory collection or table (extending `orchestration/shared-context-and-state-ownership.md`'s single-writer rule to the persistent-store case). Every write must validate against a defined schema/allowlist for that agent — an agent should not be able to write an arbitrary free-form key into long-term memory. Any other agent that wants to add or change a memory does so by proposing it through `orchestration/inter-agent-handoff-contract.md` to the writer of record, not by writing directly.
 - **Consolidation**: run extraction/consolidation as a periodic or post-interaction background pass, not inline in the critical path of a user-facing response — new memories get merged/deduplicated against existing ones rather than accumulating unbounded near-duplicates.
-- **Forgetting/review, not a fixed short TTL**: an agent's authorization-grant TTL discipline (short-lived, minutes-scale, because standing access is the risk) does not transfer to persisted *knowledge* — a true fact doesn't stop being true after 30 minutes. Instead of a fixed expiry, apply a periodic staleness/relevance review (does this preference still reflect current behavior? has this fact been contradicted since?) and prune or re-confirm on that basis. Reusing an authorization TTL for memory content misapplies a security control to a knowledge-quality problem.
+- **Forgetting/review, not a fixed short TTL**: `governance/agent-zero-trust-delegation.md`'s TTL discipline governs *authorization grants* and is deliberately short (minutes) because standing access is the risk. Persisted *knowledge* is a different risk shape — a true fact doesn't stop being true after 30 minutes. Instead of a fixed expiry, apply a periodic staleness/relevance review (does this preference still reflect current behavior? has this fact been contradicted since?) and prune or re-confirm on that basis. Naming these as the same kind of TTL would misapply a security control to a knowledge-quality problem.
 - **Multi-agent conflict**: when two agents' persisted memories disagree about the same fact, that is a conflict, not a race to overwrite — route it through `orchestration/conflict-and-consensus-resolution.md`'s independence-check-then-resolve procedure rather than last-write-wins.
 
-## Worked Example
+## Worked Example (This Workspace)
 
-A production implementation of this pattern typically looks like:
+`platform/apps/euda/backend/memory/` already implements this tiered model end to end:
 
-- **Episodic**: a ChromaDB (or pgvector) collection with document content **encrypted at rest** (e.g. Fernet/AES) while **embeddings are computed from the plaintext before encryption, so semantic search still works — only the stored document content is opaque.**
-- **Semantic/preference**: a per-agent context builder that combines learned preferences (a structured table, each row carrying a confidence value and a source) with categorized facts and episodic memories retrieved from the vector store, returned as one enriched-context object to the calling agent.
-- **Write policy**: a background extraction pass runs after each interaction (non-blocking, off the response critical path) and validates every extracted preference against a per-agent allowlist of valid keys — e.g. an email-handling agent may only write `vip_sender`, `ignored_sender`, `summary_style`, `focus_keyword`, nothing else — the concrete implementation of "every write validates against a schema, not free-form key/value."
-- **Working-tier boundary**: session-level conversation history gets trimmed/summarized by a separate mechanism — this is the working tier this skill deliberately excludes, already covered by `platform/context-management.md`.
+- **Episodic**: `vector_store.py`'s `AgentVectorMemory` — ChromaDB-backed, with document content **encrypted at rest using Fernet (AES-128-CBC)** while **"Embeddings are computed from plaintext before encryption, so semantic search still works — only the stored document content is opaque."** This is the concrete, already-running instance of the encryption-at-rest technique named generically above.
+- **Semantic/preference**: `context_manager.py`'s `get_agent_context` combines learned `preferences` (SQLite, with confidence/source per the file's own docstring) with `facts` (categorized, sourced) and episodic `memories` (ChromaDB), returned as one enriched-context dict to the calling agent.
+- **Write policy**: `learning_engine.py` runs as a **non-blocking background task after each assistant response** and validates every extracted preference against a per-agent `VALID_KEYS` allowlist (e.g. the `email` agent may only write `vip_sender`, `ignored_sender`, `summary_style`, `focus_keyword` — nothing else) — the concrete implementation of "every write validates against a schema, not free-form key/value."
+- **Working-tier boundary**: `context_window.py` trims and summarizes session-level conversation history — this is the working tier this skill deliberately excludes, already covered by `platform/context-management.md`.
 
 ## 🤖 Core Prompt / Instructions
 
@@ -90,10 +95,10 @@ defined owner.
 
 6. REVIEW FOR STALENESS — DO NOT REUSE AN AUTHORIZATION TTL
    Persisted knowledge decays by relevance/contradiction, not by a fixed
-   short clock. Do not apply an agent-authorization grant's minutes-scale
-   TTL to memory content — that TTL protects against standing unauthorized
-   access, a different risk than a fact going stale. Apply a periodic
-   staleness/relevance review instead.
+   short clock. Do not apply governance/agent-zero-trust-delegation.md's
+   minutes-scale grant TTL to memory content — that TTL protects against
+   standing unauthorized access, a different risk than a fact going stale.
+   Apply a periodic staleness/relevance review instead.
 
 7. ROUTE MULTI-AGENT DISAGREEMENT TO CONFLICT RESOLUTION
    If two agents' persisted memories disagree about the same fact, do not
@@ -120,7 +125,9 @@ Shared across how many agents: $SHARED_WRITERS
 
 ## Sources
 
-- [Sun, Chen, Zhu, et al. — "MemGPT: Towards LLMs as Operating Systems"](https://arxiv.org/abs/2310.08560) (arXiv 2310.08560) — the OS-inspired hierarchical/tiered memory framing and its "extended context within the LLM's limited context window" objective. The fetched abstract did not itself name specific tier labels (e.g. "main context" vs. "archival storage") or the exact eviction/paging decision rule, so this skill's tier names and write/consolidation mechanics beyond the OS-paging analogy are original design, not a verbatim restatement of MemGPT's internal architecture.
+- [Sun, Chen, Zhu, et al. — "MemGPT: Towards LLMs as Operating Systems"](https://arxiv.org/abs/2310.08560) (arXiv 2310.08560) — the OS-inspired hierarchical/tiered memory framing and its "extended context within the LLM's limited context window" objective. Verified via live fetch this session; the fetched abstract did not itself name specific tier labels (e.g. "main context" vs. "archival storage") or the exact eviction/paging decision rule, so this skill's tier names and write/consolidation mechanics beyond the OS-paging analogy are this workspace's own design, not a verbatim restatement of MemGPT's internal architecture.
+- **In-repo/system source:** `platform/apps/euda/backend/memory/vector_store.py`, `context_manager.py`, `learning_engine.py`, `context_window.py` — this workspace's own real, already-implemented tiered memory system (encrypted-at-rest ChromaDB episodic store, confidence/source-tagged preferences and facts, schema-validated background write extraction, session-level working-context trimming), used as the primary worked example rather than a hypothetical.
+- **In-repo/system source:** `domains/agent-driven-pricing-change-governance.md`'s fabrication-prohibition rule, generalized here from priced values to persisted memory facts.
 
 ## Related Workspace Skills
 

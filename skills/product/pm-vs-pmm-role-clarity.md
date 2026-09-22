@@ -1,3 +1,8 @@
+---
+name: pm-vs-pmm-role-clarity
+description: "Clarifies the scope boundary between a Product Manager (internal: roadmap, engineering collaboration, feature prioritization, development metrics) and a Product Marketing Manager."
+---
+
 # Skill Name: PM vs. PMM Role Clarity and Collaboration
 
 ## 🎯 Objective

@@ -1,3 +1,8 @@
+---
+name: pci-secure-software-standard-requirements
+description: "Checklist for products that are themselves payment software — not just an operating environment that happens to touch payment data."
+---
+
 # Skill Name: PCI Secure Software Standard Requirements
 
 ## 🎯 Objective

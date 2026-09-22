@@ -1,8 +1,13 @@
+---
+name: user-persona-development
+description: "Closes a gap flagged in product-school-template-toolkit.md and Group A of .agents/skills/SKILLS-GAP-BACKLOG.md: the workspace had no grounded way to answer \"who is the user."
+---
+
 # Skill Name: User Persona Development
 
 ## Objective
 
-Closes a gap flagged in `product-school-template-toolkit.md` and Group A of `docs/PRODUCT_SKILL_GAP_BACKLOG.md`: the workspace had no grounded way to answer "who is the user, specifically" before a PRD's Problem Statement or a Customer Journey Map assumes one. Builds a research-grounded user persona — not a demographic stereotype — and requires it to be traceable to real evidence before it's used to justify a product decision.
+Closes a gap flagged in `product-school-template-toolkit.md` and Group A of `.agents/skills/SKILLS-GAP-BACKLOG.md`: the workspace had no grounded way to answer "who is the user, specifically" before a PRD's Problem Statement or a Customer Journey Map assumes one. Builds a research-grounded user persona — not a demographic stereotype — and requires it to be traceable to real evidence before it's used to justify a product decision.
 
 ## Target Persona
 

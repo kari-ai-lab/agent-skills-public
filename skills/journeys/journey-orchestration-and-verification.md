@@ -1,3 +1,8 @@
+---
+name: journey-orchestration-and-verification
+description: "End-to-end-journey-specification.md states WHAT must hold true at every segment-transition edge in a product's customer journey."
+---
+
 # Skill Name: Journey Orchestration and Verification
 
 ## Objective

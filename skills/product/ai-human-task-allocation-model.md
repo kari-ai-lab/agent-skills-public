@@ -1,3 +1,8 @@
+---
+name: ai-human-task-allocation-model
+description: "Closes an upstream *product* question that Group B of the workspace's product-skill gap backlog surfaced independently: governance/agent-zero-trust-delegation.md covers whether a human is supervising an *agent's task execution*."
+---
+
 # Skill Name: AI vs. Human Task Allocation Model
 
 ## Objective

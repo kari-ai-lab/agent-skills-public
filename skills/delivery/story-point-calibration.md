@@ -1,3 +1,8 @@
+---
+name: story-point-calibration
+description: "Calibrates story point estimates against previously delivered work so the team uses a stable internal scale instead of reinterpreting point values every sprint."
+---
+
 # Skill Name: Story Point Calibration
 
 ## 🎯 Objective
@@ -16,12 +21,21 @@ Engineering Team, Scrum Master, Product Owner, Engineering Manager
 - **Complexity Factors:** Unknowns, dependencies, test scope, coordination needs, and operational risk.
 - **Definition of Point Scale (Optional):** Existing team guidance for what 1, 2, 3, 5, or 8 points mean.
 
+**Minimum viable input:** a handful of recently completed stories the team agrees on. Calibration needs shared reference points, not history — if the team has no agreed anchors, establishing two or three is the output of the session.
+
 ## 📤 Expected Output
 
 - A calibrated estimate recommendation for each candidate story.
 - The closest historical comparison story or stories.
 - A short rationale explaining why the new estimate should be similar, lower, or higher.
 - Warnings when the team is drifting away from its established point scale.
+
+## 🔗 Routing / Related Skills
+
+Check these before running; each fires on something visible in the input.
+
+- If the stories being sized are vague → `epic-story-refinement.md` first; unclear stories produce unstable points.
+- Feeds the capacity figure in `sprint-capacity-planning.md`.
 
 ## 🤖 Core Prompt / Instructions
 

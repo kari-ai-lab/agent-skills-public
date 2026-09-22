@@ -1,3 +1,8 @@
+---
+name: sprint-success-monitoring
+description: "Helps Product and Scrum roles monitor sprint success day by day by combining engineering execution signals."
+---
+
 # Skill Name: Sprint Success Monitoring (Daily Forecast)
 
 ## 🎯 Objective
@@ -20,6 +25,8 @@ Product Owner, Scrum Master, Engineering Manager, Delivery Lead
 - **Scope Change Inputs (Optional):** New requests, urgent incidents, and dependency changes.
 - **Dependency identification and monitoring:** Where stories or Epics related to stories have identified dependencies that are not being worked on or being completed, early risk signal needs to be raised.
 
+**Minimum viable input:** the sprint goal and the current board state. Where flow metrics are not instrumented, use item counts and ages by column — a crude flow signal read daily beats a precise one reconstructed at sprint end, which is the failure this skill exists to prevent.
+
 ## 📤 Expected Output
 
 - A daily sprint health snapshot (Green/Amber/Red) with confidence trend.
@@ -30,6 +37,15 @@ Product Owner, Scrum Master, Engineering Manager, Delivery Lead
   - de-scope/reprioritize,
   - or safely add limited new work.
 - Clear next-day actions for Product, Scrum Master, and team.
+
+## 🔗 Routing / Related Skills
+
+Check these before running; each fires on something visible in the input.
+
+- If the goal is unclear or item-shaped → `sprint-goal-drafting.md`.
+- If work is piling up mid-sprint → `wip-limits-and-flow-protection.md`.
+- Roll findings into the retro via `retrospective-improvement.md`.
+- For the weekly status readout → `../communication/rag-status-reporting.md`.
 
 ## 🤖 Core Prompt / Instructions
 

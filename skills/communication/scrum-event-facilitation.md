@@ -1,3 +1,8 @@
+---
+name: scrum-event-facilitation
+description: "Facilitates the three Scrum events most often run poorly — the Daily Scrum, Sprint Review, and Sprint Retrospective — to their actual stated purpose and timebox, per the official Scrum Guide."
+---
+
 # Skill Name: Scrum Event Facilitation
 
 ## 🎯 Objective
@@ -15,6 +20,8 @@ Scrum Master, team lead, or anyone facilitating team ceremonies who wants each e
 - **Team size and composition** — Developers, Product Owner, Scrum Master.
 - **For Sprint Review specifically**: who the external stakeholders are.
 
+**Minimum viable input:** which event is being run and who attends. Works without a prepared agenda — the event's own purpose supplies the shape, and a missing agenda is itself worth naming in the opening.
+
 ## 📤 Expected Output
 
 - A facilitation plan per event: purpose, correctly-scaled timebox, attendee list, structure, and the specific anti-pattern to watch for in that event.
@@ -24,6 +31,14 @@ Scrum Master, team lead, or anyone facilitating team ceremonies who wants each e
 
 - **Standalone (always works):** The user states team size, sprint length, and (for Review) the stakeholder list directly; the skill produces the facilitation plan from that.
 - **Supercharged (if connected):** A calendar connector could book the correctly-scaled timebox automatically and invite the right attendee list (Developers only for Daily Scrum; Scrum Team + stakeholders for Review; Scrum Team only for Retrospective); a project tracker connector could pull the actual Sprint Backlog and increment for Review instead of requiring it pasted in.
+
+## 🔗 Routing / Related Skills
+
+Check these before running; each fires on something visible in the input.
+
+- For the planning artifacts → `../delivery/sprint-goal-drafting.md` and `../delivery/sprint-capacity-planning.md`.
+- After a retro, to make improvements real → `../delivery/retrospective-improvement.md`.
+- If risks surface in any event → `roam-risk-communication.md`.
 
 ## 📋 Output Template
 

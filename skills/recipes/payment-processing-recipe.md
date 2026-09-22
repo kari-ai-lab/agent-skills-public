@@ -1,3 +1,9 @@
+---
+name: payment-processing-recipe
+kind: reference
+description: "Mandatory architectural and security requirements for any system, feature, or project that touches Primary Account Numbers (PAN) or sensitive authentication data."
+---
+
 # Recipe Name: Payment Card Processing & Storage
 
 > 🔒 **GLOBAL RECIPE - IMMUTABLE BY PRODUCT MANAGERS**

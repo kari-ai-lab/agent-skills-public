@@ -1,3 +1,8 @@
+---
+name: defect-triage-assistant
+description: "Analyzes a dump of recent customer support tickets or bug reports to categorize defects, assess SLA breaches, and recommend prioritization for the next sprint."
+---
+
 # Skill Name: Feature Defect & SLA Triage Assistant
 
 ## 🎯 Objective

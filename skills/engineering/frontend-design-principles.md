@@ -1,3 +1,8 @@
+---
+name: frontend-design-principles
+description: "Adapted from Anthropic's own frontend-design skill (see Sources) — the first real content in this workspace's engineering/ category, which previously held only a placeholder README."
+---
+
 # Skill Name: Frontend Design Principles
 
 ## Objective

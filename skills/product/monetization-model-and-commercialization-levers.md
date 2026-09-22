@@ -1,3 +1,8 @@
+---
+name: monetization-model-and-commercialization-levers
+description: "Gives a Product Manager a structured set of levers to reason through at the Commercialization stage of the product lifecycle (product-development-life-cycle-modeling.md's stage 7)."
+---
+
 # Skill Name: Monetization Model and Commercialization Levers
 
 ## 🎯 Objective
@@ -7,7 +12,6 @@ Gives a Product Manager a structured set of levers to reason through at the Comm
 **Distinct from three existing workspace skills, on purpose:**
 - `strategy/microeconomic-pricing-and-positioning-models.md` — the demand-side *economic theory* of where to set a price once a model is chosen (elasticity, price discrimination, anchoring, positioning against competitors). This skill answers a prior question: what *kind* of pricing mechanism to use in the first place.
 - `financial-impact-analysis/cost-based-pricing-floor-and-margin-governance.md` — the cost floor and the *governance* mechanics of a discount-approval ladder. This skill names discounting as a lever category and routes its governance mechanics there rather than re-deriving them.
-- A **DDD bounded-context model of your own pricing implementation** (entities, rate resolution, data structures), if one exists — this skill is upstream of that kind of model: the lever choices made here (a metered-usage model, a cross-product bundle, a discount tier) are exactly the kind of decision a pricing domain model has to be capable of expressing structurally, but this skill never assumes or requires a specific implementation.
 
 ## 👤 Target Persona
 

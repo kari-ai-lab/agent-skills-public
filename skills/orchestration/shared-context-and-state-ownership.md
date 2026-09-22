@@ -1,3 +1,8 @@
+---
+name: shared-context-and-state-ownership
+description: "Decides who owns state and context mid-workflow when multiple agents coordinate on one task, so no two agents silently overwrite the same state and the orchestrator's own context budget doesn't get consumed by raw subagent work."
+---
+
 # Skill Name: Shared Context and State Ownership
 
 ## 🎯 Objective

@@ -1,3 +1,9 @@
+---
+name: product-school-template-toolkit
+kind: reference
+description: "Catalogs Product School's Product Management Template Library as a ready-to-use toolset, organized by category, with an honest cross-reference to whichever workspace skill already covers the same ground."
+---
+
 # Skill Name: Product School Template Toolkit
 
 ## 🎯 Objective

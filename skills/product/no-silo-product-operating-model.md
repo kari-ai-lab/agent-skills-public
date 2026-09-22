@@ -1,3 +1,8 @@
+---
+name: no-silo-product-operating-model
+description: "States and enforces a single structural principle: a product organization does not operate in a silo."
+---
+
 # Skill Name: No-Silo Product Operating Model (Cross-Functional Coupling)
 
 ## 🎯 Objective
@@ -15,7 +20,7 @@ CPO, Head of Product, Product Director, Product Manager — anyone who might be 
 - Current corporate/company strategy and how (or whether) product strategy was built with it, not after it.
 - Current relationship between product and engineering: is there a real feedback loop through the SDLC, or a one-way handoff (spec thrown over a wall)?
 - Current state of the four awareness lenses (security, privacy, feature, client-first) for the product/initiative in question.
-- The organization's stated target end-state, if one exists (see `target-state-vision-and-phased-roadmap.md`).
+- The organization's stated target end-state, if one exists (see `../strategy/target-state-vision-and-phased-roadmap.md`).
 
 ## The Three Couplings (and the fourth-lens set they depend on)
 
@@ -35,7 +40,7 @@ Product must operate tightly with engineering so that what actually gets built i
 
 Product must hold these four lenses simultaneously, not sequentially or as an afterthought once a feature is already built:
 
-- **Security thinking** — `governance/vulnerability-severity-and-exploit-prioritization.md`, `governance/product-security-incident-response-readiness.md`; for any product touching payment card data, add `governance/pci-dss-applicability-and-scoping.md`.
+- **Security thinking** — `governance/vulnerability-severity-and-exploit-prioritization.md`, `governance/product-security-incident-response-readiness.md`; for any product touching payment card data, add `governance/pci-dss-applicability-and-scoping.md` for the initial applicability read and `governance/pci-requirements-for-product-owners.md` for turning confirmed applicability into ongoing backlog/release mechanics.
 - **Privacy thinking** — `governance/privacy-law-awareness-for-product-development.md`.
 - **Feature thinking** — market/competitive feature awareness: `product/competitor-analysis-synthesizer.md`, `product/product-school-template-toolkit.md`.
 - **Client-first thinking** — the target end-state and client experience, not the internal roadmap's convenience: `strategy/target-state-vision-and-phased-roadmap.md`'s target end-state, `strategy/house-of-lean-for-product-strategy.md`'s Respect-for-People-and-Culture pillar.
@@ -93,9 +98,11 @@ Produce the result in this order:
    claim that the team "keeps these in mind." Route each gap to its
    matching skill:
    - security -> `governance/vulnerability-severity-and-exploit-prioritization.md`,
-     `governance/product-security-incident-response-readiness.md`, and
+     `governance/product-security-incident-response-readiness.md`,
      `governance/pci-dss-applicability-and-scoping.md` if payment card
-     data is involved
+     data is touched, and `governance/pci-requirements-for-product-owners.md`
+     once applicability is confirmed and the PO needs backlog/release
+     mechanics
    - privacy -> `governance/privacy-law-awareness-for-product-development.md`
    - feature -> `product/competitor-analysis-synthesizer.md`,
      `product/product-school-template-toolkit.md`

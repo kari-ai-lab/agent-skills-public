@@ -1,3 +1,8 @@
+---
+name: code-review-standards-and-checklist
+description: "Closes the second of three declared-but-empty sub-areas in engineering/'s own README (Testing Strategy — now closed; Coding Standards & Patterns; Code Review & Quality; UI/Frontend Design)."
+---
+
 # Skill Name: Code Review Standards and Checklist
 
 ## 🎯 Objective

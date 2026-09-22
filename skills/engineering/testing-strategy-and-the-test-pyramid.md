@@ -1,3 +1,8 @@
+---
+name: testing-strategy-and-the-test-pyramid
+description: "Closes the first of three declared-but-empty sub-areas in engineering/'s own README (Testing Strategy; Coding Standards & Patterns; Code Review & Quality — only the fourth, UI/Frontend Design, had a skill before this one)."
+---
+
 # Skill Name: Testing Strategy and the Test Pyramid
 
 ## 🎯 Objective

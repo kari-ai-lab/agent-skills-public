@@ -1,3 +1,8 @@
+---
+name: rich-context-input
+description: "Teaches engineers all the mechanisms for feeding context to Claude Code efficiently — @-file references, images, piped data, URLs, and self-fetching."
+---
+
 # Skill Name: Rich Context Input
 
 ## 🎯 Objective

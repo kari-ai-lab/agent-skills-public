@@ -1,3 +1,8 @@
+---
+name: behavior-driven-development-and-model-integration
+description: "Explains BDD as a practice — Discovery, Formulation, Automation, run by a \"Three Amigos\" collaboration."
+---
+
 # Skill Name: Behaviour-Driven Development (BDD) and Model Integration
 
 ## 🎯 Objective

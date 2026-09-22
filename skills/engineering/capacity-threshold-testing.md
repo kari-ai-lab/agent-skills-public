@@ -1,3 +1,8 @@
+---
+name: capacity-threshold-testing
+description: "Structures load, stress, and soak testing around three named thresholds instead of a single pass/fail \"max load\" number:."
+---
+
 # Skill Name: Capacity Threshold Testing — Sustainability, Degradation, and Failure Points
 
 ## 🎯 Objective

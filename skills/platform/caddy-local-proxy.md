@@ -1,3 +1,8 @@
+---
+name: caddy-local-proxy
+description: "Explains the shared Caddy reverse proxy setup used across local development projects on this machine."
+---
+
 # Skill Name: Caddy Local HTTPS Proxy
 
 ## 🎯 Objective

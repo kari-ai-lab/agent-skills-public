@@ -1,3 +1,8 @@
+---
+name: epic-story-refinement
+description: "Use when a draft epic or story set is vague: restates the epic, rewrites stories in As-a / I-want / so-that form, splits oversized ones, adds acceptance criteria, and rates each item ready, nearly ready or not ready for estimation."
+---
+
 # Skill Name: Epic & Story Refinement
 
 ## 🎯 Objective
@@ -17,6 +22,8 @@ Product Manager, Product Owner, Engineering Manager, Tech Lead
 - **Definition of Done (Optional):** Team-specific readiness or completion expectations.
 - **Non-Functional Requirements (Optional):** Performance, security, auditability, accessibility, or supportability needs.
 
+**Minimum viable input:** the draft story set alone. Infer personas and outcome from the items and the surrounding code or docs, state each inference inline as an assumption, and convert everything still missing into an Open-questions entry on the row it affects. Never stall to collect the list above — an unrefined backlog is the normal starting condition, not a reason to decline.
+
 ## 📤 Expected Output
 
 - A refined Epic statement with scope and business outcome.
@@ -24,6 +31,32 @@ Product Manager, Product Owner, Engineering Manager, Tech Lead
 - Recommended story splits where scope is too large or ambiguous.
 - Acceptance criteria and refinement questions for unresolved gaps.
 - A short readiness assessment indicating whether each item is ready for estimation.
+
+## 🔗 Routing / Related Skills
+
+Check these against the input before refining; each fires on something visible in the items themselves.
+
+- If any story touches card data, a payment flow, or a cardholder data environment → apply the Definition of Done addendum in `../governance/pci-requirements-for-product-owners.md` (change documentation, security-impact assessment, approval, rollback) instead of assuming a generic DoD covers it.
+- If the refined set is headed for a tracker → `jira-epic-builder.md` for Gherkin acceptance criteria.
+- If refinement shows the set is larger than the increment → `sprint-capacity-planning.md` before committing.
+
+## 📋 Output Template
+
+A ready-to-fill draft — fill this in first, then use the Core Prompt below for the reasoning behind it.
+
+```markdown
+## Epic — [title]
+**User value / business outcome:** [plain language]
+
+| Story ("As a [user], I want [action], so that [value]") | Split? | Acceptance criteria | Open questions / dependencies | Readiness |
+|---|---|---|---|---|
+| [story] | [no / into A, B] | [testable criteria] | [gaps, assumptions] | Ready / Nearly ready / Not ready — [why] |
+| [oversized story] | **split into A/B** | — | [why it splits] | Not ready |
+| ↳ **A.** [child story] | — | [its own criteria] | [its own gaps] | [its own rating] |
+| ↳ **B.** [child story] | — | [its own criteria] | [its own gaps] | [its own rating] |
+
+A split parent keeps the seam and the reason; each `↳` child carries its own criteria, gaps and rating, because children are rarely equally ready — that asymmetry is usually the most useful thing the split reveals.
+```
 
 ## 🤖 Core Prompt / Instructions
 
