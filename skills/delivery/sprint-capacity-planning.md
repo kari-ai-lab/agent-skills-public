@@ -76,6 +76,14 @@ Rules:
 - Distinguish clearly between availability, capacity, and forecast.
 - Prefer a range over a single exact number when uncertainty is material.
 - Flag when historical velocity conflicts with the calculated capacity.
+- Before subtracting anything from a velocity-derived figure, check whether that
+  velocity ALREADY absorbs it. A trailing 3-sprint velocity is an empirical
+  measurement of a team that was already attending ceremonies and already taking
+  support interrupts, so subtracting them again double-counts and typically
+  under-commits the sprint by 30-40%. Bottom-up subtraction is for converting raw
+  availability into capacity; it is not a discount to apply on top of measured
+  output. When both exist, reconcile them and say which one the commitment rests
+  on, rather than silently stacking them.
 - State assumptions explicitly instead of hiding them in the math.
 
 If the inputs are incomplete, identify the minimum missing data needed to make the estimate credible.
@@ -88,6 +96,7 @@ If the inputs are incomplete, identify the minimum missing data needed to make t
 - [ ] Assumptions and confidence level are explicit.
 - [ ] Recommendation avoids false precision and provides a usable planning range.
 - [ ] Risks and missing inputs are surfaced before commitment.
+- [ ] If historical velocity was used, the output states explicitly that ceremonies and interrupt load were not subtracted twice.
 
 ---
 
