@@ -5,38 +5,48 @@ scoring a proposal that landed by escalation, writing the status nobody trusts, 
 to say no to. The skills are the method. **This file is about the other half — the facts only
 you have — and why that half is where the value actually is.**
 
-Everything below is measured, not asserted: each case was pre-registered and graded against
-an unaided control. In this public repository the per-case records are kept in the private working repository, because the test material is real internal project data — the method and the harness that produced them are published here.
+Everything below is measured, not asserted: each case pre-registered and graded against an
+unaided control. In this repository the three `synthetic` cases are published in [`evals/`](evals/), with the fictional workspaces they use in [`examples/`](examples/). The other cases were built on internal project data and are kept in the private working repository.
 
-## The finding that shapes everything here
+## What the evidence says — including where we were wrong
 
-A modern model is already good at product method, and already knows your industry.
+Eight cases, each with symmetric arms — one with the skill, one without, same prompt, same
+model, same file access. Assertions written before any output was seen.
 
-We tested six cases with symmetric arms — one with the skill, one without, same prompt, same
-model, same tools. Assertions written before any output was seen.
-
-| What the case tested | Domain | Lift over no-skill |
+| What the case tested | Workspace | Lift over no-skill |
 |---|---|---|
-| Method: capacity arithmetic | neutral | +13.0 — **fail** |
-| Method: status reporting | neutral | +13.0 — **fail** |
-| Method + domain substance | payments | +11.9 — **fail** |
-| Injected team facts | neutral | **+75.7 — pass** |
-| Injected org facts | clinical trials | **+85.0 — pass** |
+| Method only — capacity, status, proposal scoring | none | +10.7 · +11.9 · +13.0 · +13.0 — **fail** |
+| Injected team facts | large, many projects; unaided model never looked | **+75.7 — pass** |
+| Injected org facts (clinical trials) | large; unaided model never looked | **+85.0 — pass** |
+| Injected team facts (synthetic) | small, one file; unaided model found it | 0.0 — **fail** |
+| Injected org facts (synthetic, K-12) | small, one file; unaided model found it | +11.9 — **fail** |
 
-In the payments case the unaided control produced decline taxonomy, scheme retry caps, SCA
-regional variation, idempotency risk and holdout measurement design — unprompted, all of it.
-In the clinical-trials case it produced 21 CFR Part 11 scope analysis, eSource determination,
-eConsent amendment states and sponsor protocol confidentiality. It needed no help with either
-industry.
+We first published the two passes as the headline. Reproducing them on synthetic material
+showed they were conditional: **when the context file was easy to find, the unaided model found
+it and used it exactly as well as the skill did.** Both arms of the synthetic team case reached
+the same answer to the decimal — 12.6 delivery person-days, commit about 15 points.
 
-**What it could not do, in both cases, was know the company.** It named sponsors as the buyer
-for a business that sells to CROs. It costed a sprint with five wrong numbers, every one
-optimistic.
+Three findings survive:
 
-So the useful claim is narrow and specific:
+1. **The context file is what changes the answer.** On a byte-identical prompt, adding one page
+   of team facts moved the recommended sprint commitment from 21–25 points to about 15, for the
+   unaided model and the skill alike. That 30–40% correction is the largest effect we measured,
+   and it needed no skill at all.
+2. **A skill makes sure the file is read when it is not the obvious thing to look at.** That is
+   what the two large-workspace passes actually show. It is real, and narrower than we first
+   said: two runs, both in the same workspace.
+3. **The skill's one reproducible contribution is refusal.** Declining to scope an unevidenced
+   build when a helpful model scopes one anyway. Where it was the only difference between the
+   arms it was worth exactly +11.9, twice.
 
-> The model brings the method and the industry. You bring your instantiation of it. A context
-> file is how you hand it over once instead of re-explaining it every session.
+In every case the unaided model already knew the method and the industry. In payments it
+produced decline taxonomy, retry caps and SCA variation unprompted; in clinical trials, Part 11
+scope and eSource; in K-12, student-data agreements and school-year release constraints. What it
+could not know, without being handed a file, was the company.
+
+So the practical advice is simple: **write the context file first.** It is the single highest-
+leverage thing in this repository. Put it where your agent will look, and use the skills to
+make sure it gets read and to supply the refusals a helpful model will not make on its own.
 
 ## What this means for other industries
 
@@ -44,10 +54,10 @@ The daily-use kit is domain-neutral — sprint capacity, epic refinement, RAG st
 goals, WSJF, PRD discovery carry no industry assumptions. The fintech content is concentrated
 in `skills/domains/` and `skills/practitioner/`, which are separate from the kit.
 
-**You do not need to rewrite `domains/` for your industry.** That was our first assumption and
-the evidence contradicts it: general industry knowledge is already in the model, so writing it
-down buys nothing. The clinical-trials case scored +85.0 with **no** clinical-trials skill in
-the library — only a context file describing one company's position.
+**You do not need to rewrite `domains/` for your industry.** General industry knowledge is
+already in the model, so writing it down buys nothing. Clinical trials and K-12 education, with
+no skill for either, behaved exactly like the payments cases: the model brought the industry,
+and a context file describing one company brought everything else.
 
 ## Writing a context file
 
@@ -77,25 +87,26 @@ exists to prevent.
 
 ## The honest limits
 
-- **Two data points per side.** The separation is wide and consistent across unrelated
-  domains, but it is not many cases. Treat it as a strong signal, not a settled law.
+- **Small numbers.** Eight cases, two of them the passes that did not reproduce. Treat the three
+  findings above as well-supported directions, not settled law.
+- **The skill's advantage depends on discoverability.** In a small workspace the unaided model
+  found the context itself; in a large one it did not. We have not yet tested the middle ground —
+  a realistic workspace where the context file is one directory among many.
 - **Method genuinely ties.** Do not expect a skill to out-reason the model. Four cases say it
   will not.
-- **Staleness is unsolved.** Nothing here detects a context file that has drifted from
-  reality, and a wrong file is worse than no file. Ownership and a refresh cadence are your
-  responsibility; the tooling cannot help yet. This is the largest open risk in the design.
-- **One encouraging sign, not a solution:** given a context file that described a *different*
-  team, a skill recognised the mismatch and refused to use its numbers — "treat as illustrative
-  of the shape of the problem, not as this team's numbers." Detecting misapplied context is not
-  the same as detecting stale context.
-- **Refusal is real but small.** Skills reliably decline things a helpful model does — scoping
-  an unevidenced build, giving a single-point estimate. Measured at roughly 12% of a case:
-  genuine, and not enough on its own to justify a skill.
+- **Staleness is unsolved.** Nothing here detects a context file that has drifted from reality,
+  and a wrong file is worse than no file — both arms will use it confidently. Ownership and a
+  refresh cadence are your responsibility.
+- **One encouraging sign, not a solution:** every arm that read an example file caught that its
+  "last verified" date was in the future — an authoring error, since corrected. Models will
+  notice obvious staleness. They will not notice a plausible but outdated number.
 
 ## Reproducing any of this
 
 ```bash
 tools/skill_eval.py status                 # three tiers: good / attention / bad
+tools/skill_eval.py status --profile exploratory   # same evidence, your thresholds
+tools/skill_eval.py policy                 # weights, thresholds, profiles in force
 tools/skill_eval.py new <skill> --case x   # scaffold a case
 tools/skill_eval.py lock <skill>__x        # hash the prompt and assertions
 tools/skill_eval.py arms <skill>__x        # emit two symmetric prompts to dispatch
@@ -109,5 +120,5 @@ implying opposite actions, and this library's own status was once misreported as
 passing" when the truth was two proven, one failing and fifteen unmeasured.
 
 Cases are pre-registered and tamper-evident: `grade` voids itself if the prompt or assertions
-changed after `lock`. Every claim on this page traces to a pre-registered case, including
-the ones that failed; the per-case records are kept in the private working repository, because the test material is real internal project data — the method and the harness that produced them are published here.
+changed after `lock`. Every claim on this page traces to a pre-registered case, including the
+ones that failed; the three `synthetic` cases are published in [`evals/`](evals/), with the fictional workspaces they use in [`examples/`](examples/). The other cases were built on internal project data and are kept in the private working repository.

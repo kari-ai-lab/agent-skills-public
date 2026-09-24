@@ -16,18 +16,29 @@ writing the status report people can act on, deciding what to say no to and bein
 defend it. The **Daily Kit** installs as auto-triggering skills, so they
 fire from the work rather than needing to be remembered.
 
-**The method alone is not the value, and we measured that.** Across six pre-registered
-with/without comparisons, skills that supply only method beat an unaided model by +11.9 to
-+13.0 — below the bar we set. Skills that carry the organisation's own facts beat it by
-**+75.7** and **+85.0**. A modern model already knows product method and already knows your
-industry; what it cannot know is your instantiation of either.
+**What we measured — including where we were wrong.** Eight pre-registered with/without
+comparisons, graded against an unaided model given the same prompt and the same file access.
+Three findings survive:
 
-**Which is why this works outside fintech.** The kit is domain-neutral; the fintech content is
-confined to `skills/domains/` (and, in the private working repo, `skills/practitioner/`). The +85.0 result above came from a
-clinical-trials proposal with **no** clinical-trials skill in the library — only a context file
-describing one company's buyer, regulatory posture, release freezes, account concentration,
-measured estimation multipliers, and what it had already tried and abandoned. The unaided
-control wrote an expert answer about the industry and a naive one about the company.
+1. **Method alone does not clear the bar.** Four method-only cases landed between +10.7 and
+   +13.0. A modern model already knows product method, and already knows your industry.
+2. **A context file changes the answer more than any skill does.** On a byte-identical sprint
+   prompt, adding a one-page `context/team.md` moved the recommended commitment from 21–25
+   points to about 15 — for the unaided model *and* the skill alike. It needed no skill.
+3. **What a skill reliably adds is refusal.** Declining to scope an unevidenced build, where a
+   helpful model scopes one anyway. In the two cases where it was the only difference, it was
+   worth exactly +11.9 both times.
+
+Our first context runs scored **+75.7** and **+85.0** — in a large multi-project workspace where
+the unaided model never went looking for the file. Reproduced in small synthetic workspaces
+holding only the context file, the unaided model found it itself and the gap fell to **0.0** and
+**+11.9**. So the honest claim is narrower than the one we first published: *a skill makes sure
+your context gets read when it is not the obvious thing to look at.*
+
+**This is not fintech-bound.** The kit is domain-neutral; fintech content is confined to
+`skills/domains/` (and, in the private working repo, `skills/practitioner/`). Clinical-trials and K-12 education cases — no skill
+in the library for either — behaved exactly like the payments cases: the model supplied the
+industry, and a context file supplied the company.
 
 See [`CONTEXT.md`](CONTEXT.md) for how to write those files, the full evidence table, and the
 limits — including the one this design does not yet solve, which is detecting a context file
@@ -71,8 +82,9 @@ flowchart LR
     class CTX,TM,DM ctx
 ```
 
-**The thick edge is the one that matters.** Everything else is plumbing; `context/` is where
-the measured benefit comes from.
+**The thick edge is the one that matters.** On an identical prompt, adding a context file moved
+a sprint commitment by 30–40% — for an unaided model and a skill alike. Everything else is
+plumbing.
 
 ### The evidence gate
 
@@ -107,23 +119,91 @@ skill, because assertions taken from a skill's own claims are passed by construc
 
 ```mermaid
 flowchart TB
-    Q["Does this skill beat an unaided model?"]
-    Q --> METHOD["<b>method only</b><br/>capacity arithmetic · status reporting<br/>proposal scoring"]
-    Q --> CONTEXT["<b>carries your facts</b><br/>reads context/"]
-    METHOD --> MR["+11.9 · +13.0 · +13.0<br/><b>below the bar</b><br/><i>the model already has the method</i>"]
-    CONTEXT --> CR["+75.7 · +85.0<br/><b>clears it comfortably</b><br/><i>the model cannot know your numbers</i>"]
+    Q["Does the skill beat an unaided model<br/>given the same prompt and the same files?"]
+    Q --> M["<b>method only</b><br/>no context available"]
+    Q --> CL["<b>context file, large workspace</b><br/>unaided model never looked"]
+    Q --> CS["<b>context file, small workspace</b><br/>unaided model found it"]
+    M --> MR["+10.7 · +11.9 · +13.0 · +13.0<br/><b>below the bar</b>"]
+    CL --> CLR["+75.7 · +85.0<br/><b>clears it</b>"]
+    CS --> CSR["0.0 · +11.9<br/><b>below the bar</b>"]
 
     classDef bad fill:#f8514922,stroke:#f85149,stroke-width:2px
     classDef good fill:#2ea04322,stroke:#2ea043,stroke-width:2px
-    class MR bad
-    class CR good
+    class MR,CSR bad
+    class CLR good
 ```
 
-The +85.0 came from a **clinical-trials** proposal with no clinical-trials skill in the
-library — only a context file describing one company. The failures and one withdrawn verdict
-are recorded alongside the passes; the per-case records are kept in the private working repository, because the test material is real internal project data — the method and the harness that produced them are published here.
+Read together: **the context file is what fixes the answer; the skill's job is making sure it
+gets read.** Where the file was easy to find, an unaided model read it without help. The +11.9
+that recurs is refusal — the one thing a skill added every time. In this repository the three `synthetic` cases are published in [`evals/`](evals/), with the fictional workspaces they use in [`examples/`](examples/). The other cases were built on internal project data and are kept in the private working repository. Re-run the synthetic cases, or
+re-score them under your own thresholds with `--profile`.
 
-> **What is in this repository and what is not.** The diagrams describe the whole system. This public repository carries the skills, [`CONTEXT.md`](CONTEXT.md), and both tools in [`tools/`](tools/). The installable `kit/` run cards and the `evals/` case records are kept in the private working repository.
+> **What is in this repository and what is not.** The diagrams describe the whole system. Published here: the skills, [`CONTEXT.md`](CONTEXT.md), both tools in [`tools/`](tools/), the scoring policy [`evals/eval-config.toml`](evals/eval-config.toml), three synthetic eval cases, and the fictional workspaces in [`examples/`](examples/). The installable `kit/` run cards and the internal eval cases are kept in the private working repository.
+
+## Evaluating skills yourself
+
+**A kit skill should be installed on evidence, not assertion.** `tools/skill_eval.py` runs a
+with-skill vs without-skill comparison and enforces the three things that went wrong the
+first two times this library tried it:
+
+```bash
+tools/skill_eval.py new <skill>     # scaffold evals/<skill>.md
+tools/skill_eval.py lock <skill>    # hash the prompt + assertions (tamper-evident)
+tools/skill_eval.py arms <skill>    # print two symmetric prompts to dispatch as subagents
+tools/skill_eval.py grade <skill>   # verify the hash, score against the bar
+tools/skill_eval.py status          # which kit skills have a passing eval
+```
+
+- **Symmetry.** Both arms come from one template and differ only in the skill file. Running
+  one arm yourself and the other as a subagent measures the runner, not the skill — that
+  mistake produced a headline finding that had to be withdrawn.
+- **Trap condition.** A case must declare what has to be present in the prompt for the
+  claimed edge to be testable. A rule against double-counting cannot be tested on a prompt
+  with nothing to double-count.
+- **Pre-registration.** The prompt, trap condition and assertions are hashed at `lock`;
+  `grade` voids itself if they changed. Assertions written after seeing output grade
+  themselves.
+
+**Evidence and policy are kept apart.** A case file is *evidence*: a locked prompt, locked
+assertions, and whether each arm passed each one. [`evals/eval-config.toml`](evals/eval-config.toml)
+is *policy*: what each kind of assertion is worth and what counts as good enough. Change the
+policy and `status` re-scores every case from its locked results — nothing is re-run, and no
+verdict written under an old policy survives unexamined.
+
+| kind | default weight | what it tests |
+|---|---|---|
+| `refusal` | 25 | declines or withholds where a helpful model would proceed |
+| `decision` | 25 | a different number, sequence or conclusion |
+| `context` | 20 | uses an injected fact the model cannot know |
+| `convention` | 15 | applies a house rule the model cannot guess |
+| `format` | 5 | presentation only — deliberately cheap |
+
+Three thresholds decide a pass — **lift** (skill score minus baseline score, both 0-100), the
+skill's own **minimum score**, and **maximum regression** (weight lost on assertions the
+baseline passed). They come in named profiles you can switch per run:
+
+```bash
+tools/skill_eval.py policy                     # what is in force, and every profile
+tools/skill_eval.py status --profile strict    # lift ≥ +25, skill ≥ 80, 0% regression
+tools/skill_eval.py status --profile exploratory
+```
+
+Add your own profile in the config. The one rule worth keeping: **choose the policy before
+you look at a result.** A threshold moved to rescue a failure stops meaning anything.
+
+**Two guards are about how a case is built, not how it is scored**, and `lock` enforces both.
+A case whose non-format weight cannot reach the lift threshold is refused, so no skill passes
+on formatting. And at least 40% of weight must have `origin: independent` — written from what
+a good answer to the *prompt* contains, without reference to the skill. The first cases run
+here were built from the skill's own claims; the skill passed them by construction, scored
+exactly 100.0 every time, and `lift` quietly became `100 - baseline`.
+
+**Workspaces.** A case may set `workspace:` to a directory both arms may read — and nothing
+outside it, so neither can read the case file and see the assertions. That is how context
+files are tested fairly: same access for both arms, and neither is told the file exists.
+
+A skill that fails is repositioned onto an axis it can win — a convention only you know, an
+injected fact, or a refusal an unaided model will not make — or retired.
 
 ## Layout
 

@@ -1,0 +1,71 @@
+# Scoring policy for tools/skill_eval.py
+#
+# The case files in this directory are EVIDENCE: a locked prompt, locked assertions, and
+# whether each arm passed each one. This file is POLICY: how much each kind of assertion is
+# worth, and what counts as good enough. The evidence is fixed; the policy is yours.
+#
+# Change anything below and run `tools/skill_eval.py status`. Every verdict is recomputed
+# from the locked results — nothing needs re-running, and no stale verdict survives a
+# policy change. `tools/skill_eval.py policy` prints what is currently in force.
+#
+# One rule worth keeping: decide your policy BEFORE you look at a result, not after. A
+# threshold moved to rescue a failure stops meaning anything. Record why you changed it.
+
+# Which profile applies when --profile is not given. Override per run with
+#   tools/skill_eval.py status --profile strict
+profile = "default"
+
+# ---------------------------------------------------------------------------------------
+# What each kind of assertion is worth. A number in a case's `weight` column overrides the
+# default for that one assertion (and is part of the locked evidence).
+#
+# The defaults encode one finding: a skill rarely out-reasons a modern model on method,
+# but reliably beats it on facts it cannot know and on refusals it will not make. So
+# refusal, decision and context weigh most; formatting weighs least by design.
+[kind_weights]
+refusal    = 25   # declines or withholds where a helpful model would proceed
+decision   = 25   # reaches a different number, sequence or conclusion
+context    = 20   # uses an injected fact the model cannot know
+convention = 15   # applies a house rule the model cannot guess
+format     =  5   # presentation only
+
+# ---------------------------------------------------------------------------------------
+# Rules for how a case must be BUILT, enforced at `lock`.
+[case]
+# Share of assertion weight that must be written independently of the skill's own claims.
+# Below ~40%, the skill passes its own assertions by construction and `lift` degrades into
+# "100 minus the baseline". Lower this only if you understand that trade.
+min_independent = 40
+
+# ---------------------------------------------------------------------------------------
+# Pass thresholds. A case passes when ALL three hold:
+#   lift            skill score minus baseline score, both on a 0-100 scale
+#   min_skill_score the skill's own score — it must be good, not just better
+#   max_regression  % of weight the skill lost on assertions the baseline passed
+#
+# Pick the profile that matches the cost of a wrong answer in your context.
+
+[profiles.default]
+# A skill must add clear, measurable value, and never make an answer worse.
+min_lift        = 15
+min_skill_score = 70
+max_regression  = 0
+
+[profiles.strict]
+# Regulated or high-stakes work: a skill must add a lot, and be very good on its own.
+min_lift        = 25
+min_skill_score = 80
+max_regression  = 0
+
+[profiles.exploratory]
+# Early days: surface anything that helps at all, and tolerate a little regression while
+# you learn what your skills are for. Do not use this to decide what to keep installed.
+min_lift        = 5
+min_skill_score = 60
+max_regression  = 5
+
+# Add your own, e.g.
+# [profiles.team-standard]
+# min_lift        = 10
+# min_skill_score = 75
+# max_regression  = 0
