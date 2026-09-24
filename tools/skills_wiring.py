@@ -340,6 +340,13 @@ def validate(quiet=False):
             r = re.sub(r"^(\.\./)+", "", ref)
             if r in ("reference.md", "SKILL.md"):
                 continue
+            # `context/...` refs are workspace-root paths, not library paths — a skill that
+            # consumes injected context points outside skills/ by design. Still checked, so
+            # a context file that does not exist is reported rather than silently trusted.
+            if r.startswith("context/"):
+                if not (ROOT.parent / r).exists():
+                    dangling.add(f"{doc.relative_to(SKILLS)}: `{ref}` (workspace context file not found)")
+                continue
             if r not in all_md and str(base / r) not in all_md:
                 dangling.add(f"{doc.relative_to(SKILLS)}: `{ref}`")
     for d in sorted(dangling):

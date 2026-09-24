@@ -23,6 +23,17 @@ Chief Product Officer, Head of Product, Portfolio Lead, Strategy Lead, Product M
 
 **Minimum viable input:** the proposal in whatever form it arrived — an email, a slide, a paragraph. Missing evidence is the output of this gate, not a blocker to running it: score the proposal "not yet" and name precisely which evidence would move it to ready. A proposal cannot fail this gate for being briefly written, only for being unevidenced.
 
+## Context Consumed
+
+- `context/domains/<domain>.md` at the workspace root — the organisation's own instantiation
+  of its industry: who it actually sells to, its specific regulatory posture, release
+  constraints, commercial concentration, measured estimation multipliers, and what it has
+  already tried and abandoned. **Read the file matching this proposal's domain before
+  scoring.** A model already knows the industry in general; it cannot know any of the above.
+- `context/team.md` — for delivery-capacity claims made in a proposal.
+- If no matching domain file exists, say so and score on general knowledge, naming which
+  judgements are therefore unevidenced rather than presenting them as informed.
+
 ## Expected Output
 
 - A grid-position sanity check (is the proposal aiming at a structurally viable cell, or a rare/weak one?)

@@ -113,6 +113,42 @@ Rules:
   signal, not a reason to keep tinkering.
 ```
 
+## Reporting the outcome — three tiers, never a score
+
+An evaluation that produces a correct number and an unclear report has not finished. Report
+results in exactly three tiers, because that is what a reader acts on:
+
+| Tier | Means | The action it implies |
+|---|---|---|
+| **Good** | Measured, and the evidence shows benefit | Keep it; it earns its slot |
+| **Attention** | **Not known.** Untested, inconclusive, or a result you do not trust | Measure it — the gap is information, not quality |
+| **Bad** | Measured, and it did not clear the bar | Reposition onto context or refusal, or retire it |
+
+**The rule that matters: never collapse Attention into Bad.** Untested is an unknown; failed
+is a finding. They imply opposite actions — one says *go measure*, the other says *go fix* —
+and a reader given one number for both will act on the wrong one.
+
+This rule exists because it was broken. This library's own status was reported as "0/18
+passing", which read as eighteen failures. The true state was two proven, one measured and
+failing, and fifteen never measured. The headline was wrong in both directions at once: it
+invented seventeen failures that did not exist, and it buried the actual finding, which was
+that method-only skills scored +11.9 to +13.0 while context-carrying skills scored +75.7 and
++85.0. A ratio hid a direction.
+
+Three further rules, all learned the same way:
+
+- **Never report a bare ratio as the headline.** "2/18" is a score. A score invites a reader
+  to judge rather than decide. Lead with the tier counts and the action each implies.
+- **State the direction, not just the totals.** "0 of 3 method-only skills passed; 2 of 2
+  context-carrying skills passed" is the same data and a completely different message — and
+  the second one tells you what to build next.
+- **Say plainly when a number is bad news.** Fifteen unevaluated skills load into every
+  session and consume context with no measured return. That is a cost, not a neutral gap, and
+  framing it as "an honest starting point" is self-congratulation. Rigour about measurement is
+  not a substitute for a good result.
+
+`tools/skill_eval.py status` emits this shape directly; match it when reporting by hand.
+
 ## Success Criteria / Quality Checklist
 
 - [ ] 2-3 realistic (not abstract) test prompts exist and were confirmed before running.

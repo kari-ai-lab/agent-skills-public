@@ -31,6 +31,13 @@ Scrum Master, Engineering Manager, Product Owner, Delivery Lead
 - A recommended planning range such as conservative, target, and stretch capacity. Including uncertainty range indicators (known normal drift experience by team due to production incidents, distractions and similar topics)
 - Risks that may reduce actual delivery capacity.
 
+## 📎 Context Consumed
+
+- `context/team.md` at the workspace root — roster, measured ceremony and support load,
+  velocity caveats, booked leave, ramp data. **Read it before calculating anything.** A
+  measured figure there always beats a default below. If it is missing or a figure is stale,
+  name which numbers are therefore assumptions.
+
 ## 🔗 Routing / Related Skills
 
 Check these before running; each fires on something visible in the input.
