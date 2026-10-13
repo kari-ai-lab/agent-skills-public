@@ -24,7 +24,7 @@ This folder is the source of truth for skills that apply across multiple project
 - `templates/`: canonical authoring templates for new skills, recipes, and compliance chunks.
 - `recipes/`: reusable procedure-style instructions with strong implementation guidance.
 - `communication/`: structuring and delivering written communications (reports, memos, RFCs, briefings).
-- `orchestration/`: agent-to-agent task mechanics — decomposition/routing, inter-agent handoff contracts, conflict/consensus resolution, chain-level failure/escalation, harness selection, and persistent agent memory when multiple AI agents coordinate on one workflow.
+- `orchestration/`: agent-to-agent task mechanics — decomposition/routing, inter-agent handoff contracts, conflict/consensus resolution, chain-level failure/escalation, harness selection, persistent agent memory, and loop engineering (verifiable goals, independent verification, persistent state and human gates for iterative agent loops) when multiple AI agents coordinate on one workflow.
 - `financial-impact-analysis/`: cost/margin/ROI modeling — the cost-based pricing floor beneath `strategy/`'s demand-side pricing ceiling.
 - `journeys/`: the end-to-end, per-product/solution customer-lifecycle specification (Discovery through Offboarding) — a distinct time/lifecycle axis linking into, not replacing, `refinement/` (feature-scope requirements), `delivery/` (single-unit specs and behavior), and `product/` (single-task/relationship UX artifacts). Also supplies the orchestration mechanism, durable execution, tracing, and contract-testing backbone that keeps each lifecycle-segment transition enforced, not just documented.
 - `migrations/`: move maps and migration notes from legacy locations.
