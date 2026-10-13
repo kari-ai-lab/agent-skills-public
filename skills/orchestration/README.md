@@ -28,6 +28,9 @@ These skills help engineers and orchestrator agents:
 - `agent-chain-failure-and-escalation.md`
   - Retry vs. circuit-breaker treatment for a chain of agent calls, a three-state (Closed/Open/Half-Open) model with named thresholds, and mandatory escalation on every trip — distinct from `governance/agent-zero-trust-delegation.md`'s authorization-focused escalation model.
 
+- `loop-engineering-for-agentic-workflows.md`
+  - Designing the loop around an agent: checkable goal and stop condition, environment-grounded observation, separate verifier, persistent state, hard limits and named human gates — with an evidence table separating measured from vendor-asserted claims.
+
 - `shared-context-and-state-ownership.md`
   - Orchestrator-owns-state, subagents-get-clean-windows ownership model; a concrete distilled-summary return-value budget; a single-writer rule for shared state objects; and reuse (not reinvention) of `journeys/journey-orchestration-and-verification.md`'s durable-execution criteria for long-running orchestrators.
 

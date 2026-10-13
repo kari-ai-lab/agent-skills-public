@@ -495,6 +495,51 @@ The lead-agent decompose-and-spawn pattern, the four-field subtask specification
 Context as a finite resource, the orchestrator/clean-subagent-context-window ownership split, and the compaction mechanism.
 - [`skills/orchestration/shared-context-and-state-ownership.md`](skills/orchestration/shared-context-and-state-ownership.md)
 
+### IBM Think — What is loop engineering?
+**https://www.ibm.com/think/topics/loop-engineering**
+Primary definition (17 Jul 2026): goal/action/observation/adjustment, components, comprehension and intent debt. Vendor explainer, no measured outcomes.
+- [`skills/orchestration/loop-engineering-for-agentic-workflows.md`](skills/orchestration/loop-engineering-for-agentic-workflows.md)
+
+### Lulla et al. — Loop Engineering: Building Blocks, Adoption, and Impact (arXiv:2608.21884)
+**https://arxiv.org/abs/2608.21884**
+Preprint, not peer reviewed; building blocks and repo adoption; does not measure benefits.
+- [`skills/orchestration/loop-engineering-for-agentic-workflows.md`](skills/orchestration/loop-engineering-for-agentic-workflows.md)
+
+### LangChain — The Art of Loop Engineering
+**https://www.langchain.com/blog/the-art-of-loop-engineering**
+Four loop types and graders; vendor blog.
+- [`skills/orchestration/loop-engineering-for-agentic-workflows.md`](skills/orchestration/loop-engineering-for-agentic-workflows.md)
+
+### Datadog — Closing the verification loop
+**https://www.datadoghq.com/blog/ai/harness-first-agents/**
+Harness-first verification; internal results; notes 2-3x specification cost.
+- [`skills/orchestration/loop-engineering-for-agentic-workflows.md`](skills/orchestration/loop-engineering-for-agentic-workflows.md)
+
+### Anthropic — Building effective agents
+**https://www.anthropic.com/engineering/building-effective-agents**
+Evaluator-optimizer, environment ground truth, max-iteration stops, human checkpoints.
+- [`skills/orchestration/loop-engineering-for-agentic-workflows.md`](skills/orchestration/loop-engineering-for-agentic-workflows.md)
+
+### Anthropic — Effective harnesses for long-running agents
+**https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents**
+Progress file, feature list, premature completion, end-to-end testing.
+- [`skills/orchestration/loop-engineering-for-agentic-workflows.md`](skills/orchestration/loop-engineering-for-agentic-workflows.md)
+
+### Shinn et al. — Reflexion (arXiv:2303.11366)
+**https://arxiv.org/abs/2303.11366**
+Peer-reviewed; feedback plus episodic memory.
+- [`skills/orchestration/loop-engineering-for-agentic-workflows.md`](skills/orchestration/loop-engineering-for-agentic-workflows.md)
+
+### Madaan et al. — Self-Refine (arXiv:2303.17651)
+**https://arxiv.org/abs/2303.17651**
+Peer-reviewed; iterative self-feedback.
+- [`skills/orchestration/loop-engineering-for-agentic-workflows.md`](skills/orchestration/loop-engineering-for-agentic-workflows.md)
+
+### Huang et al. — LLMs Cannot Self-Correct Reasoning Yet (arXiv:2310.01798)
+**https://arxiv.org/abs/2310.01798**
+Peer-reviewed (ICLR 2024); self-correction without external feedback can degrade results.
+- [`skills/orchestration/loop-engineering-for-agentic-workflows.md`](skills/orchestration/loop-engineering-for-agentic-workflows.md)
+
 ### A2A Protocol (Google)
 **https://a2a-protocol.org/latest/topics/what-is-a2a/**
 The Agent Card discovery mechanism, the Task object's `id`/`status`/`artifacts` fields, the full `TaskState` lifecycle enum, and the Message object's `role`/`parts` fields.
