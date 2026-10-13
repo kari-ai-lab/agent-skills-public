@@ -2,9 +2,9 @@
 
 Status of every skill category in this repo — what's available to use today vs. what's on the roadmap. See [`skills/INDEX.md`](skills/INDEX.md) for the category model and [`README.md`](README.md) for how to use a skill.
 
-## ✅ Available (133 skills across 14 categories)
+## ✅ Available (134 skills across 14 categories)
 
-### `orchestration/` — 7 skills (new category)
+### `orchestration/` — 8 skills (new category)
 Agent-to-agent task mechanics for multi-agent systems.
 - [`task-decomposition-and-routing.md`](skills/orchestration/task-decomposition-and-routing.md) — bounded subtask specification (objective, output format, tool guidance, boundaries), grounded in Anthropic's own published multi-agent research system and its named duplicate-work failure mode
 - [`inter-agent-handoff-contract.md`](skills/orchestration/inter-agent-handoff-contract.md) — a concrete task-object schema and lifecycle, grounded in Google's Agent2Agent (A2A) protocol
@@ -13,6 +13,7 @@ Agent-to-agent task mechanics for multi-agent systems.
 - [`shared-context-and-state-ownership.md`](skills/orchestration/shared-context-and-state-ownership.md) — orchestrator-owns-state ownership model, a distilled-summary return-value budget, and a single-writer rule for shared state
 - [`harness-selection-and-mapping.md`](skills/orchestration/harness-selection-and-mapping.md) — maps those decisions onto a concrete runtime (LangGraph, A2A/Google ADK, OpenAI Agents SDK, or Claude Code's own subagent model)
 - [`agent-memory-architecture-and-consolidation.md`](skills/orchestration/agent-memory-architecture-and-consolidation.md) — tiered, encrypted-at-rest, confidence-and-source persistent agent memory, grounded in MemGPT's tiered-memory research
+- [`loop-engineering-for-agentic-workflows.md`](skills/orchestration/loop-engineering-for-agentic-workflows.md) — designing the loop around an agent: a machine-checkable goal and stop condition, environment-grounded observation, a separate verifier, persistent state, hard limits and named human gates, from IBM Think's loop engineering article and corroborated by LangChain, Datadog, Anthropic, Reflexion, Self-Refine and Huang et al.; includes an evidence table separating measured claims from vendor-asserted ones
 
 ### `platform/` — 8 skills
 Engineering/runtime: monorepo, tooling, testing, infra.
