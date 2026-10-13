@@ -36,13 +36,13 @@ Source for the practical, fillable DDD templates.
 
 ### The W. Edwards Deming Institute
 **https://deming.org/**
-Primary source for the entire `Management/` skillset.
-- [`skills/Management/system-of-profound-knowledge.md`](skills/Management/system-of-profound-knowledge.md) — [Deming the Man](https://deming.org/deming-the-man/), [SoPK](https://deming.org/explore/sopk/)
-- [`skills/Management/fourteen-points-for-management.md`](skills/Management/fourteen-points-for-management.md) — [Fourteen Points](https://deming.org/explore/fourteen-points/)
-- [`skills/Management/seven-deadly-diseases.md`](skills/Management/seven-deadly-diseases.md) — [Seven Deadly Diseases](https://deming.org/explore/seven-deadly-diseases/)
-- [`skills/Management/pdsa-improvement-cycle.md`](skills/Management/pdsa-improvement-cycle.md) — [PDSA](https://deming.org/explore/pdsa/) (documented alongside its more common name, PDCA — see [Lean Enterprise Institute](https://www.lean.org/lexicon-terms/pdca/) below)
-- [`skills/Management/red-bead-experiment.md`](skills/Management/red-bead-experiment.md) — [Red Bead Experiment](https://deming.org/explore/red-bead-experiment/)
-- [`skills/Management/funnel-experiment.md`](skills/Management/funnel-experiment.md) — [The Funnel Experiment](https://deming.org/explore/the-funnel-experiment/)
+Primary source for the entire `management/` skillset.
+- [`skills/management/system-of-profound-knowledge.md`](skills/management/system-of-profound-knowledge.md) — [Deming the Man](https://deming.org/deming-the-man/), [SoPK](https://deming.org/explore/sopk/)
+- [`skills/management/fourteen-points-for-management.md`](skills/management/fourteen-points-for-management.md) — [Fourteen Points](https://deming.org/explore/fourteen-points/)
+- [`skills/management/seven-deadly-diseases.md`](skills/management/seven-deadly-diseases.md) — [Seven Deadly Diseases](https://deming.org/explore/seven-deadly-diseases/)
+- [`skills/management/pdsa-improvement-cycle.md`](skills/management/pdsa-improvement-cycle.md) — [PDSA](https://deming.org/explore/pdsa/) (documented alongside its more common name, PDCA — see [Lean Enterprise Institute](https://www.lean.org/lexicon-terms/pdca/) below)
+- [`skills/management/red-bead-experiment.md`](skills/management/red-bead-experiment.md) — [Red Bead Experiment](https://deming.org/explore/red-bead-experiment/)
+- [`skills/management/funnel-experiment.md`](skills/management/funnel-experiment.md) — [The Funnel Experiment](https://deming.org/explore/the-funnel-experiment/)
 
 ## Specifications & Standards
 
@@ -72,7 +72,7 @@ Source for resource-oriented design, standard methods, pagination, and error-mod
 - [`skills/delivery/scaled-agile-delivery-guidance.md`](skills/delivery/scaled-agile-delivery-guidance.md) — [Lean-Agile principles](https://framework.scaledagile.com/safe-lean-agile-principles/), [Big Picture](https://framework.scaledagile.com/#big-picture)
 
 ### Prioritization Frameworks (WSJF and related)
-- [`skills/Refinement/future-workstream-prioritization-wsjf-and-techniques.md`](skills/Refinement/future-workstream-prioritization-wsjf-and-techniques.md) — [SAFe WSJF](https://framework.scaledagile.com/wsjf/), [Fibery: Agile Prioritization Techniques](https://fibery.com/blog/product-management/agile-prioritization-techniques/), [Atlassian: Prioritization Framework](https://www.atlassian.com/agile/product-management/prioritization-framework)
+- [`skills/refinement/future-workstream-prioritization-wsjf-and-techniques.md`](skills/refinement/future-workstream-prioritization-wsjf-and-techniques.md) — [SAFe WSJF](https://framework.scaledagile.com/wsjf/), [Fibery: Agile Prioritization Techniques](https://fibery.com/blog/product-management/agile-prioritization-techniques/), [Atlassian: Prioritization Framework](https://www.atlassian.com/agile/product-management/prioritization-framework)
 
 ### PCI Security Standards Council documents
 Root canon for the full payment-card compliance skillset, verified directly from the official PDFs/DOCX on file (PCI-DSS v4.0.1, Secure Software Standard v2.0, Secure SLC Standard v1.1, TSP Requirements v1, SAQ Instructions v4.0.1).
@@ -84,11 +84,11 @@ Root canon for the full payment-card compliance skillset, verified directly from
 - [`skills/governance/pci-tsp-token-service-provider-requirements.md`](skills/governance/pci-tsp-token-service-provider-requirements.md) — Token Service Provider control areas for EMV Payment Token issuance
 
 ### SMART Goals
-- [`skills/Strategy/annual-goals-and-quarterly-objectives.md`](skills/Strategy/annual-goals-and-quarterly-objectives.md) — [Atlassian: How to write SMART goals](https://www.atlassian.com/blog/productivity/how-to-write-smart-goals), [SNHU: What are SMART goals](https://www.snhu.edu/about-us/newsroom/education/what-are-smart-goals), [UCOP: How to write SMART Goals (PDF)](https://www.ucop.edu/local-human-resources/_files/performance-appraisal/How+to+write+SMART+Goals+v2.pdf), [Harvard Health: Get SMART about your goals](https://www.health.harvard.edu/blog/get-smart-about-your-goals-this-strategy-can-help-you-stay-focused-and-on-track-at-any-age-2017090112113).
+- [`skills/strategy/annual-goals-and-quarterly-objectives.md`](skills/strategy/annual-goals-and-quarterly-objectives.md) — [Atlassian: How to write SMART goals](https://www.atlassian.com/blog/productivity/how-to-write-smart-goals), [SNHU: What are SMART goals](https://www.snhu.edu/about-us/newsroom/education/what-are-smart-goals), [UCOP: How to write SMART Goals (PDF)](https://www.ucop.edu/local-human-resources/_files/performance-appraisal/How+to+write+SMART+Goals+v2.pdf), [Harvard Health: Get SMART about your goals](https://www.health.harvard.edu/blog/get-smart-about-your-goals-this-strategy-can-help-you-stay-focused-and-on-track-at-any-age-2017090112113).
 
 ### INVEST (User Story / Initiative Quality Checklist)
 Originated by Bill Wake (2003); reference definition via the Agile Alliance glossary.
-- [`skills/Strategy/annual-goals-and-quarterly-objectives.md`](skills/Strategy/annual-goals-and-quarterly-objectives.md) — [Agile Alliance: INVEST](https://agilealliance.org/glossary/invest/)
+- [`skills/strategy/annual-goals-and-quarterly-objectives.md`](skills/strategy/annual-goals-and-quarterly-objectives.md) — [Agile Alliance: INVEST](https://agilealliance.org/glossary/invest/)
 
 ### Agile Manifesto — 12 Principles
 **https://agilealliance.org/agile101/12-principles-behind-the-agile-manifesto/**
@@ -135,7 +135,7 @@ Blog and 25-item template library — role clarity (PM vs. PMM), AI-native opera
 - [`skills/product/design-sprint-facilitation.md`](skills/product/design-sprint-facilitation.md) — [Design Sprint Template](https://productschool.com/resources/templates/design-sprint)
 - [`skills/product/product-launch-checklist.md`](skills/product/product-launch-checklist.md) — [Product Launch Checklist Template](https://productschool.com/resources/templates/product-launch-checklist)
 - [`skills/product/product-growth-metrics-reference.md`](skills/product/product-growth-metrics-reference.md) — [Product Growth Metrics Cheat Sheet](https://productschool.com/resources/templates/product-metrics-cheat-sheet)
-- [`skills/Refinement/product-requirements-document-template.md`](skills/Refinement/product-requirements-document-template.md) Section 11 (AI Feature Supplement) — [Prompting Template](https://productschool.com/resources/templates/ai-prompt), [AI PRD](https://productschool.com/resources/templates/ai-prd)
+- [`skills/refinement/product-requirements-document-template.md`](skills/refinement/product-requirements-document-template.md) Section 11 (AI Feature Supplement) — [Prompting Template](https://productschool.com/resources/templates/ai-prompt), [AI PRD](https://productschool.com/resources/templates/ai-prd)
 - [`skills/product/ai-feature-prompt-design.md`](skills/product/ai-feature-prompt-design.md) — [Prompting Template](https://productschool.com/resources/templates/ai-prompt)
 
 ### Strategyzer (Alexander Osterwalder)
@@ -230,22 +230,22 @@ Ox Security report: "Comments Everywhere" (90-100%) and "Over-Specification" (80
 ### Nielsen Norman Group
 **https://www.nngroup.com/articles/ab-testing/**
 Core A/B testing methodology: definition, sample-size parameters, minimum run duration, and the roughly one-in-seven test win-rate.
-- [`skills/Strategy/controlled-experiment-design-and-decision-rules.md`](skills/Strategy/controlled-experiment-design-and-decision-rules.md)
+- [`skills/strategy/controlled-experiment-design-and-decision-rules.md`](skills/strategy/controlled-experiment-design-and-decision-rules.md)
 
 ### Contentful
 **https://www.contentful.com/blog/ab-testing-best-practices/**
 Hypothesis structure, the seven-step testing process, and the "peeking"/early-stopping pitfall.
-- [`skills/Strategy/controlled-experiment-design-and-decision-rules.md`](skills/Strategy/controlled-experiment-design-and-decision-rules.md)
+- [`skills/strategy/controlled-experiment-design-and-decision-rules.md`](skills/strategy/controlled-experiment-design-and-decision-rules.md)
 
 ### Kameleoon
 **https://www.kameleoon.com/blog/ab-testing-for-pricing**
 Pricing-specific experiment context split (transactional/subscription/negotiated) and pricing guardrails (inventory dependency, competitor observability).
-- [`skills/Strategy/controlled-experiment-design-and-decision-rules.md`](skills/Strategy/controlled-experiment-design-and-decision-rules.md)
+- [`skills/strategy/controlled-experiment-design-and-decision-rules.md`](skills/strategy/controlled-experiment-design-and-decision-rules.md)
 
 ### Statsig
 **https://www.statsig.com/perspectives/ab-testing-pricing-tips**
 The two-billing-cycle minimum for subscription pricing tests, cannibalization/customer-quality risk, and the rule against segmenting by protected characteristics.
-- [`skills/Strategy/controlled-experiment-design-and-decision-rules.md`](skills/Strategy/controlled-experiment-design-and-decision-rules.md)
+- [`skills/strategy/controlled-experiment-design-and-decision-rules.md`](skills/strategy/controlled-experiment-design-and-decision-rules.md)
 
 ### Kohavi, Tang & Xu — *Trustworthy Online Controlled Experiments* (not directly cited)
 The original candidate primary source for controlled-experiment design; not freely accessible, so this skill was built from the four practitioner sources above instead — flagged in the skill's own Sources section for a later session rather than force-cited.
@@ -290,75 +290,75 @@ Official project site — "Unified API, UI & AI Test Automation" positioning and
 ### Micah Logan (Forbes)
 **https://www.forbes.com/sites/micahlogan/2024/03/13/simple-guide-to-creating-a-compelling-mission-and-vision-statement/**
 Vision/mission distinction, four blueprint questions, the one-sentence format rule, and the word-level genericness test.
-- [`skills/Strategy/mission-and-vision-critical-thought.md`](skills/Strategy/mission-and-vision-critical-thought.md)
+- [`skills/strategy/mission-and-vision-critical-thought.md`](skills/strategy/mission-and-vision-critical-thought.md)
 
 ### Jim Collins (single test only)
 "Ten Lessons I Learned from Peter Drucker" — used only for the "wouldn't happen without you" distinctive-impact test; the article itself is about executive self-management, not mission-statement craft, and is not cited beyond that one test.
-- [`skills/Strategy/mission-and-vision-critical-thought.md`](skills/Strategy/mission-and-vision-critical-thought.md)
+- [`skills/strategy/mission-and-vision-critical-thought.md`](skills/strategy/mission-and-vision-critical-thought.md)
 
 ### Nobel Prize facts pages / Britannica / Econlib / Levy Economics Institute
 Kahneman, Nash, Tirole, Friedman, Hayek, Akerlof, Shiller (Nobel), Marshall, Pigou (Britannica), Keynes, Schumpeter, Robinson/Chamberlin (Econlib), Minsky (Levy Institute) — named economic models grounding pricing/positioning and macro-risk awareness.
-- [`skills/Strategy/microeconomic-pricing-and-positioning-models.md`](skills/Strategy/microeconomic-pricing-and-positioning-models.md), [`skills/Strategy/macroeconomic-risk-awareness-for-product-strategy.md`](skills/Strategy/macroeconomic-risk-awareness-for-product-strategy.md)
+- [`skills/strategy/microeconomic-pricing-and-positioning-models.md`](skills/strategy/microeconomic-pricing-and-positioning-models.md), [`skills/strategy/macroeconomic-risk-awareness-for-product-strategy.md`](skills/strategy/macroeconomic-risk-awareness-for-product-strategy.md)
 
 ### McChrystal Group
 **https://www.mcchrystalgroup.com/about/team-of-teams**
 Four pillars (Trust, Common Purpose, Shared Consciousness, Empowered Execution).
-- [`skills/Management/team-of-teams-organizational-adaptability.md`](skills/Management/team-of-teams-organizational-adaptability.md)
+- [`skills/management/team-of-teams-organizational-adaptability.md`](skills/management/team-of-teams-organizational-adaptability.md)
 
 ### Lean Enterprise Institute — PDCA Cycle
 **https://www.lean.org/lexicon-terms/pdca/**
 PDCA's Shewhart/Deming/JUSE origin story and its four Plan-Do-Check-Act steps — documented alongside, not instead of, Deming's own Study-over-Check framing above; this source's "functionally equivalent" characterization of PDCA/PDSA is named as a real discrepancy from deming.org's stricter distinction, not smoothed over.
-- [`skills/Management/pdsa-improvement-cycle.md`](skills/Management/pdsa-improvement-cycle.md)
+- [`skills/management/pdsa-improvement-cycle.md`](skills/management/pdsa-improvement-cycle.md)
 
 ### The Decision Lab / Wikipedia — The OODA Loop
 **https://thedecisionlab.com/reference-guide/computer-science/the-ooda-loop** / **https://en.wikipedia.org/wiki/OODA_loop**
 John Boyd's Observe-Orient-Decide-Act loop: origin, the four-stage definition, Orient as the framework's cognitive core, "operating inside the opponent's loop" as the central competitive-tempo principle, and Michael Hankins' critique that the model is loose enough to fit almost any intuitive decision process after the fact.
-- [`skills/Strategy/ooda-loop-decision-cycle.md`](skills/Strategy/ooda-loop-decision-cycle.md)
+- [`skills/strategy/ooda-loop-decision-cycle.md`](skills/strategy/ooda-loop-decision-cycle.md)
 
 ### Wikipedia — Best Alternative to a Negotiated Agreement / Getting to Yes / Zone of Possible Agreement
 **https://en.wikipedia.org/wiki/Best_alternative_to_a_negotiated_agreement** / **https://en.wikipedia.org/wiki/Getting_to_Yes** / **https://en.wikipedia.org/wiki/Zone_of_possible_agreement**
 Fisher and Ury's BATNA and principled negotiation (interests not positions, objective criteria) and the book's critical reception; ZOPA and reservation prices, including the enlarge-or-walk consequence when no overlap exists. Verified via live fetch 2026-09-21.
-- [`skills/Strategy/negotiation-concession-strategy-and-tradeoff-framework.md`](skills/Strategy/negotiation-concession-strategy-and-tradeoff-framework.md)
+- [`skills/strategy/negotiation-concession-strategy-and-tradeoff-framework.md`](skills/strategy/negotiation-concession-strategy-and-tradeoff-framework.md)
 
 ### Wikipedia — Reciprocity (social psychology) / Door-in-the-face technique
 **https://en.wikipedia.org/wiki/Reciprocity_(social_psychology)** / **https://en.wikipedia.org/wiki/Door-in-the-face_technique**
 The reciprocity norm and reciprocal concessions (Cialdini); the 1975 door-in-the-face study and its boundary conditions (same requester, short delay, backfire when the first request seems unreasonable). Verified via live fetch 2026-09-21.
-- [`skills/Strategy/negotiation-concession-strategy-and-tradeoff-framework.md`](skills/Strategy/negotiation-concession-strategy-and-tradeoff-framework.md)
+- [`skills/strategy/negotiation-concession-strategy-and-tradeoff-framework.md`](skills/strategy/negotiation-concession-strategy-and-tradeoff-framework.md)
 
 ### Harvard Program on Negotiation — Value Creation in Negotiation / Procurement Tactics — Logrolling Negotiation
 **https://www.pon.harvard.edu/daily/negotiation-skills-daily/value-creation-in-negotiation/** / **https://procurementtactics.com/logrolling-negotiation/**
 Logrolling (trading across issues valued differently), multi-issue package proposals, and logrolling's stated limits — Harvard PON is the primary source; Procurement Tactics is a secondary practitioner source used only for the limits. Verified via live fetch 2026-09-21.
-- [`skills/Strategy/negotiation-concession-strategy-and-tradeoff-framework.md`](skills/Strategy/negotiation-concession-strategy-and-tradeoff-framework.md)
+- [`skills/strategy/negotiation-concession-strategy-and-tradeoff-framework.md`](skills/strategy/negotiation-concession-strategy-and-tradeoff-framework.md)
 
 ## Business & Brand Architecture
 
 ### David A. Aaker
 *Building Strong Brands* (1996) — originating source for brand architecture and the Brand Relationship Spectrum.
-- [`skills/Strategy/brand-architecture-house-of-brands-vs-branded-house.md`](skills/Strategy/brand-architecture-house-of-brands-vs-branded-house.md)
+- [`skills/strategy/brand-architecture-house-of-brands-vs-branded-house.md`](skills/strategy/brand-architecture-house-of-brands-vs-branded-house.md)
 
 ### Aaker & Joachimsthaler — The Brand Relationship Spectrum
 **https://cmr.berkeley.edu/2000/08/42-4-the-brand-relationship-spectrum-the-key-to-the-brand-architecture-challenge/**
 *California Management Review*, Vol. 42, No. 4 (Summer 2000) — the formal four-point spectrum: House of Brands, Endorsed Brands, Sub-brands, Branded House.
-- [`skills/Strategy/brand-architecture-house-of-brands-vs-branded-house.md`](skills/Strategy/brand-architecture-house-of-brands-vs-branded-house.md)
+- [`skills/strategy/brand-architecture-house-of-brands-vs-branded-house.md`](skills/strategy/brand-architecture-house-of-brands-vs-branded-house.md)
 
 ### The Branding Journal
 **https://www.thebrandingjournal.com/2022/01/brand-architecture/**
 Practitioner examples: P&G/Yum! (House of Brands), Apple/FedEx (Branded House), Marriott/Toyota-Lexus (hybrid/endorsed).
-- [`skills/Strategy/brand-architecture-house-of-brands-vs-branded-house.md`](skills/Strategy/brand-architecture-house-of-brands-vs-branded-house.md)
+- [`skills/strategy/brand-architecture-house-of-brands-vs-branded-house.md`](skills/strategy/brand-architecture-house-of-brands-vs-branded-house.md)
 
 ### U.S. Trademark Law — Spectrum of Distinctiveness
 *Abercrombie & Fitch Co. v. Hunting World, Inc.*, 537 F.2d 4 (2d Cir. 1976) — the five-category ranking (Generic/Descriptive/Suggestive/Arbitrary/Fanciful) and protectability rules, corroborated via [Manning Fulton](https://www.manningfulton.com/blog/picking-a-strong-trademark-a-spectrum-of-distinctiveness/), [Gleam Law](https://www.gleamlaw.com/blog/trademark-law/understanding-trademark-strengths-the-five-types-explained/), and [BitLaw](https://www.bitlaw.com/trademark/degrees.html).
-- [`skills/Strategy/product-naming-distinctiveness-and-4cs-framework.md`](skills/Strategy/product-naming-distinctiveness-and-4cs-framework.md)
+- [`skills/strategy/product-naming-distinctiveness-and-4cs-framework.md`](skills/strategy/product-naming-distinctiveness-and-4cs-framework.md)
 
 ### River + Wolf — The 4Cs: A Product Naming Strategy
 **https://riverandwolf.com/4-ingredients-of-naming/**
 The Character/Construction/Communication/Continuum naming framework.
-- [`skills/Strategy/product-naming-distinctiveness-and-4cs-framework.md`](skills/Strategy/product-naming-distinctiveness-and-4cs-framework.md)
+- [`skills/strategy/product-naming-distinctiveness-and-4cs-framework.md`](skills/strategy/product-naming-distinctiveness-and-4cs-framework.md)
 
 ### Nancy Friedman ("Wordworking") — The Five Types of Brand Names
 **https://wordworking.medium.com/the-five-types-of-brand-names-41e51fef8ae3**
 Practitioner naming-consultant corroboration of the distinctiveness spectrum.
-- [`skills/Strategy/product-naming-distinctiveness-and-4cs-framework.md`](skills/Strategy/product-naming-distinctiveness-and-4cs-framework.md)
+- [`skills/strategy/product-naming-distinctiveness-and-4cs-framework.md`](skills/strategy/product-naming-distinctiveness-and-4cs-framework.md)
 
 ### Business Architecture Guild — BIZBOK® Guide
 **https://cdn.ymaws.com/www.businessarchitectureguild.org/resource/resmgr/bizbok_10/glossary_v10_final.pdf**
@@ -464,22 +464,22 @@ The six-step coding-to-theme process, the collaborative clustering version of th
 ### ProdPad — Why I Invented the Now-Next-Later Roadmap
 **https://www.prodpad.com/blog/invented-now-next-later-roadmap/**
 Janna Bastow's origin story for the Now/Next/Later format and its certainty-gradient rationale.
-- [`skills/Refinement/roadmap-presentation-and-sequencing-views.md`](skills/Refinement/roadmap-presentation-and-sequencing-views.md)
+- [`skills/refinement/roadmap-presentation-and-sequencing-views.md`](skills/refinement/roadmap-presentation-and-sequencing-views.md)
 
 ### ProductPlan — Theme-Based Roadmap
 **https://www.productplan.com/learn/theme-based-roadmap/**
 Theme-based roadmaps' outcome-vs-output framing.
-- [`skills/Refinement/roadmap-presentation-and-sequencing-views.md`](skills/Refinement/roadmap-presentation-and-sequencing-views.md)
+- [`skills/refinement/roadmap-presentation-and-sequencing-views.md`](skills/refinement/roadmap-presentation-and-sequencing-views.md)
 
 ### Roman Pichler — OKRs and Product Roadmaps
 **https://www.romanpichler.com/blog/okrs-and-product-roadmaps/**
 OKR-aligned roadmap structures, and an explicit warning against roadmaps becoming a checklist of stakeholder-requested features wearing an OKR label.
-- [`skills/Refinement/roadmap-presentation-and-sequencing-views.md`](skills/Refinement/roadmap-presentation-and-sequencing-views.md)
+- [`skills/refinement/roadmap-presentation-and-sequencing-views.md`](skills/refinement/roadmap-presentation-and-sequencing-views.md)
 
 ### Wikipedia — Gantt Chart
 **https://en.wikipedia.org/wiki/Gantt_chart**
 Origin (Henry Gantt; earlier priority credited to Karol Adamiecki) and the "flattens assumptions" limitation under change.
-- [`skills/Refinement/roadmap-presentation-and-sequencing-views.md`](skills/Refinement/roadmap-presentation-and-sequencing-views.md)
+- [`skills/refinement/roadmap-presentation-and-sequencing-views.md`](skills/refinement/roadmap-presentation-and-sequencing-views.md)
 
 ## Multi-Agent Systems & Agentic AI Engineering
 
@@ -650,7 +650,7 @@ The "reviewer prompted to find gaps will usually report some, even when the work
 
 ## Agile & Lean Thought Leadership
 
-Practitioner/primary sources for the `delivery/` and `Strategy/` skillsets — several are the actual co-creators of the methods those skills guide on, cited alongside (not instead of) the frameworks' own official sites.
+Practitioner/primary sources for the `delivery/` and `strategy/` skillsets — several are the actual co-creators of the methods those skills guide on, cited alongside (not instead of) the frameworks' own official sites.
 
 - **Ron Jeffries** — XP co-founder, Agile Manifesto co-author. **https://ronjeffries.com/**
 - **Craig Larman** — LeSS co-creator (with Bas Vodde). **https://www.craiglarman.com/wiki/index.php?title=Main_Page** — cited in [`skills/delivery/less-delivery-guidance.md`](skills/delivery/less-delivery-guidance.md) alongside less.works.
@@ -658,7 +658,7 @@ Practitioner/primary sources for the `delivery/` and `Strategy/` skillsets — s
 - **Lean Enterprise Institute** — **https://www.lean.org/**
 - **Mary Poppendieck / Lean Essays** — **https://www.leanessays.com/** — first applied lean-manufacturing principles to software development.
 - **Agileism — "12 Agile Thought Leaders to Follow"** — **https://agileism.com/12-agile-thought-leaders-to-follow** — a discovery index, not a primary source in itself.
-- **KPI Fire — "House of Lean"** — **https://www.kpifire.com/continuous-improvement/house-of-lean/** — a distinct model from SAFe's House of Lean; cited in [`skills/Strategy/house-of-lean-for-product-strategy.md`](skills/Strategy/house-of-lean-for-product-strategy.md) as complementary background, not a substitute source.
+- **KPI Fire — "House of Lean"** — **https://www.kpifire.com/continuous-improvement/house-of-lean/** — a distinct model from SAFe's House of Lean; cited in [`skills/strategy/house-of-lean-for-product-strategy.md`](skills/strategy/house-of-lean-for-product-strategy.md) as complementary background, not a substitute source.
 - **MIT Sloan — "10 Agile Ideas Worth Sharing"** — **https://mitsloan.mit.edu/ideas-made-to-matter/10-agile-ideas-worth-sharing**
 
 All cited in [`skills/delivery/README.md`](skills/delivery/README.md)'s Reference Sources section.
@@ -693,7 +693,7 @@ Credited as the originating author of the rich-context-input technique.
 
 Several skills carry a generic internal-team byline rather than a named external source — these were authored in-house rather than adapted from a public source, so there's no external link to credit:
 
-- "Workspace Delivery Skills", "Workspace Strategy Skills", "Workspace Refinement Skills", "Workspace Governance Skills", "Workspace Product Skills", "Workspace Orchestration Skills", "Workspace Journeys Skills", "Workspace Engineering Skills" — internal authoring placeholders across `skills/delivery/`, `skills/Strategy/`, `skills/Refinement/`, `skills/governance/`, `skills/product/`, `skills/orchestration/`, `skills/journeys/`, `skills/engineering/`
+- "Workspace Delivery Skills", "Workspace Strategy Skills", "Workspace Refinement Skills", "Workspace Governance Skills", "Workspace Product Skills", "Workspace Orchestration Skills", "Workspace Journeys Skills", "Workspace Engineering Skills" — internal authoring placeholders across `skills/delivery/`, `skills/strategy/`, `skills/refinement/`, `skills/governance/`, `skills/product/`, `skills/orchestration/`, `skills/journeys/`, `skills/engineering/`
 - [`skills/product/no-silo-product-operating-model.md`](skills/product/no-silo-product-operating-model.md) — a workspace-authored operating principle (cross-functional coupling + four-lens awareness), not adapted from an external source; it routes to the specific external/internal sources listed elsewhere in this file for each of its component checks.
 - "PM Team" — `skills/product/competitor-analysis-synthesizer.md`, `skills/delivery/jira-epic-builder.md`, `skills/governance/defect-triage-assistant.md`
 
