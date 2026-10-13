@@ -2,7 +2,7 @@
 
 Status of every skill category in this repo — what's available to use today vs. what's on the roadmap. See [`skills/INDEX.md`](skills/INDEX.md) for the category model and [`README.md`](README.md) for how to use a skill.
 
-## ✅ Available (134 skills across 14 categories)
+## ✅ Available (135 skills across 14 categories)
 
 ### `orchestration/` — 8 skills (new category)
 Agent-to-agent task mechanics for multi-agent systems.
@@ -68,9 +68,10 @@ Planning, decomposition, QA, release, workflow execution.
 - [`bdd-framework-selection.md`](skills/delivery/bdd-framework-selection.md) — decision gate for Cucumber vs. Karate vs. Gauge by test-suite layer, before defaulting to Cucumber
 - [`spec-driven-development.md`](skills/delivery/spec-driven-development.md) — adapted from GitHub's Spec Kit and Kiro: translates an approved FRD into an AI-executable spec, plus a workspace-authored Commercialization Validation Gate (use-case coverage classification, independent human/AI validation, roadmap feedback loop)
 
-### `governance/` — 18 skills
+### `governance/` — 19 skills
 Standards, controls, monitoring, policy.
 - [`cost-aware-agent-utilization.md`](skills/governance/cost-aware-agent-utilization.md)
+- [`authentication-mandates-and-sca-by-region.md`](skills/governance/authentication-mandates-and-sca-by-region.md) — treats consumer authentication as a regional design input: per market, whether strong customer authentication is mandated or fraud-triggered, which exemptions apply, and the effect on expected approval lift
 - [`defect-triage-assistant.md`](skills/governance/defect-triage-assistant.md)
 - [`permissions-and-safety.md`](skills/governance/permissions-and-safety.md)
 - [`quality-monitoring-model.md`](skills/governance/quality-monitoring-model.md)
@@ -85,38 +86,38 @@ Standards, controls, monitoring, policy.
 - [`pci-dss-req-4-transmission-encryption.md`](skills/governance/pci-dss-req-4-transmission-encryption.md), [`pci-dss-req-6-secure-systems-and-software.md`](skills/governance/pci-dss-req-6-secure-systems-and-software.md), [`pci-dss-req-8-identify-authenticate-access.md`](skills/governance/pci-dss-req-8-identify-authenticate-access.md) — requirement-level compliance chunks
 - [`pci-secure-software-lifecycle-and-devsecops.md`](skills/governance/pci-secure-software-lifecycle-and-devsecops.md), [`pci-secure-software-standard-requirements.md`](skills/governance/pci-secure-software-standard-requirements.md), [`pci-tsp-token-service-provider-requirements.md`](skills/governance/pci-tsp-token-service-provider-requirements.md) — full PCI compliance family
 
-### `Strategy/` — 18 skills
+### `strategy/` — 18 skills
 Goal-setting, portfolio alignment, strategy evaluation.
-- [`ooda-loop-decision-cycle.md`](skills/Strategy/ooda-loop-decision-cycle.md) — Boyd's Observe-Orient-Decide-Act loop for competitive/adversarial situations (competitor moves, incidents, negotiation), explicitly distinct from PDSA's cooperative improvement cycle
-- [`negotiation-concession-strategy-and-tradeoff-framework.md`](skills/Strategy/negotiation-concession-strategy-and-tradeoff-framework.md) — a pre-agreed three-tier concession strategy required before any negotiation opens: free trade-aways (zero cost, zero risk, valued by the counterpart), priced trades (never free; a reason and an exchange), and protected terms (hard wall or gated, senior-approved exception), mapped onto BATNA/ZOPA, reciprocity, and logrolling
-- [`brand-architecture-house-of-brands-vs-branded-house.md`](skills/Strategy/brand-architecture-house-of-brands-vs-branded-house.md) — classifies a product/business on Aaker's Brand Relationship Spectrum via a two-question decision framework
-- [`product-naming-distinctiveness-and-4cs-framework.md`](skills/Strategy/product-naming-distinctiveness-and-4cs-framework.md) — picks and evaluates a candidate name using the USPTO Spectrum of Distinctiveness (legal trademark strength) and the 4Cs (Character, Construction, Communication, Continuum)
-- [`annual-goals-and-quarterly-objectives.md`](skills/Strategy/annual-goals-and-quarterly-objectives.md)
-- [`investment-portfolio-alignment.md`](skills/Strategy/investment-portfolio-alignment.md)
-- [`product-and-solution-portfolio-definition.md`](skills/Strategy/product-and-solution-portfolio-definition.md)
-- [`product-strategy-and-business-focus.md`](skills/Strategy/product-strategy-and-business-focus.md)
-- [`quarterly-strategy-evaluation-and-adjustment.md`](skills/Strategy/quarterly-strategy-evaluation-and-adjustment.md)
-- [`product-lifecycle-hierarchy-evaluation-matrix.md`](skills/Strategy/product-lifecycle-hierarchy-evaluation-matrix.md)
-- [`product-revenue-tier-investment-case.md`](skills/Strategy/product-revenue-tier-investment-case.md) (+ interactive companion visual, `product-revenue-tier-investment-case.html`)
-- [`product-proposal-viability-scoring.md`](skills/Strategy/product-proposal-viability-scoring.md)
-- [`target-state-vision-and-phased-roadmap.md`](skills/Strategy/target-state-vision-and-phased-roadmap.md) — target end-state written before vision/roadmap, phased into a 2-3 year roadmap with a year-one client delivery and a continue/rethink guardrail
-- [`house-of-lean-for-product-strategy.md`](skills/Strategy/house-of-lean-for-product-strategy.md) — structural, foundation-up audit of a strategy against the SAFe House of Lean
-- [`mission-and-vision-critical-thought.md`](skills/Strategy/mission-and-vision-critical-thought.md) — formulates mission as vision's counterpart, plus a five-test manager checklist (decision-driving, recall, genericness, trade-off survival, distinctive-impact)
-- [`microeconomic-pricing-and-positioning-models.md`](skills/Strategy/microeconomic-pricing-and-positioning-models.md) — grounds pricing/positioning in named economic models (Marshall, Pigou, Kahneman/Tversky, Nash, Tirole, Simonson, the decoy effect, Veblen goods)
-- [`macroeconomic-risk-awareness-for-product-strategy.md`](skills/Strategy/macroeconomic-risk-awareness-for-product-strategy.md) — Keynes/Friedman/Hayek/Minsky/Schumpeter/Akerlof-Shiller-grounded macro-risk awareness, plus a practical PESTLE scan
-- [`controlled-experiment-design-and-decision-rules.md`](skills/Strategy/controlled-experiment-design-and-decision-rules.md) — A/B test hypothesis-to-decision workflow, with pricing experiments treated as methodologically distinct from UI/feature tests
+- [`ooda-loop-decision-cycle.md`](skills/strategy/ooda-loop-decision-cycle.md) — Boyd's Observe-Orient-Decide-Act loop for competitive/adversarial situations (competitor moves, incidents, negotiation), explicitly distinct from PDSA's cooperative improvement cycle
+- [`negotiation-concession-strategy-and-tradeoff-framework.md`](skills/strategy/negotiation-concession-strategy-and-tradeoff-framework.md) — a pre-agreed three-tier concession strategy required before any negotiation opens: free trade-aways (zero cost, zero risk, valued by the counterpart), priced trades (never free; a reason and an exchange), and protected terms (hard wall or gated, senior-approved exception), mapped onto BATNA/ZOPA, reciprocity, and logrolling
+- [`brand-architecture-house-of-brands-vs-branded-house.md`](skills/strategy/brand-architecture-house-of-brands-vs-branded-house.md) — classifies a product/business on Aaker's Brand Relationship Spectrum via a two-question decision framework
+- [`product-naming-distinctiveness-and-4cs-framework.md`](skills/strategy/product-naming-distinctiveness-and-4cs-framework.md) — picks and evaluates a candidate name using the USPTO Spectrum of Distinctiveness (legal trademark strength) and the 4Cs (Character, Construction, Communication, Continuum)
+- [`annual-goals-and-quarterly-objectives.md`](skills/strategy/annual-goals-and-quarterly-objectives.md)
+- [`investment-portfolio-alignment.md`](skills/strategy/investment-portfolio-alignment.md)
+- [`product-and-solution-portfolio-definition.md`](skills/strategy/product-and-solution-portfolio-definition.md)
+- [`product-strategy-and-business-focus.md`](skills/strategy/product-strategy-and-business-focus.md)
+- [`quarterly-strategy-evaluation-and-adjustment.md`](skills/strategy/quarterly-strategy-evaluation-and-adjustment.md)
+- [`product-lifecycle-hierarchy-evaluation-matrix.md`](skills/strategy/product-lifecycle-hierarchy-evaluation-matrix.md)
+- [`product-revenue-tier-investment-case.md`](skills/strategy/product-revenue-tier-investment-case.md) (+ interactive companion visual, `product-revenue-tier-investment-case.html`)
+- [`product-proposal-viability-scoring.md`](skills/strategy/product-proposal-viability-scoring.md)
+- [`target-state-vision-and-phased-roadmap.md`](skills/strategy/target-state-vision-and-phased-roadmap.md) — target end-state written before vision/roadmap, phased into a 2-3 year roadmap with a year-one client delivery and a continue/rethink guardrail
+- [`house-of-lean-for-product-strategy.md`](skills/strategy/house-of-lean-for-product-strategy.md) — structural, foundation-up audit of a strategy against the SAFe House of Lean
+- [`mission-and-vision-critical-thought.md`](skills/strategy/mission-and-vision-critical-thought.md) — formulates mission as vision's counterpart, plus a five-test manager checklist (decision-driving, recall, genericness, trade-off survival, distinctive-impact)
+- [`microeconomic-pricing-and-positioning-models.md`](skills/strategy/microeconomic-pricing-and-positioning-models.md) — grounds pricing/positioning in named economic models (Marshall, Pigou, Kahneman/Tversky, Nash, Tirole, Simonson, the decoy effect, Veblen goods)
+- [`macroeconomic-risk-awareness-for-product-strategy.md`](skills/strategy/macroeconomic-risk-awareness-for-product-strategy.md) — Keynes/Friedman/Hayek/Minsky/Schumpeter/Akerlof-Shiller-grounded macro-risk awareness, plus a practical PESTLE scan
+- [`controlled-experiment-design-and-decision-rules.md`](skills/strategy/controlled-experiment-design-and-decision-rules.md) — A/B test hypothesis-to-decision workflow, with pricing experiments treated as methodologically distinct from UI/feature tests
 
-### `Refinement/` — 9 skills
+### `refinement/` — 9 skills
 Backlog and roadmap refinement techniques, plus the BRD/PRD/FRD requirements-document family.
-- [`roadmap-presentation-and-sequencing-views.md`](skills/Refinement/roadmap-presentation-and-sequencing-views.md) — lays out a prioritized workstream list as Now/Next/Later, Quarterly Themes, an OKR-aligned view, or Timeline/Gantt, matched to audience and certainty
-- [`future-workstream-prioritization-wsjf-and-techniques.md`](skills/Refinement/future-workstream-prioritization-wsjf-and-techniques.md)
-- [`refinement-plan-realism-and-capacity-risk.md`](skills/Refinement/refinement-plan-realism-and-capacity-risk.md)
-- [`workstream-prioritization-and-roadmap-refinement.md`](skills/Refinement/workstream-prioritization-and-roadmap-refinement.md)
-- [`business-requirements-document-template.md`](skills/Refinement/business-requirements-document-template.md) — BRD: why (strategic goals, revenue targets, market positioning), bookended for an executive reader
-- [`product-requirements-document-template.md`](skills/Refinement/product-requirements-document-template.md) — PRD: what and for whom, feature/deliverable structure, launch plan, and a conditional AI Feature Supplement (Section 11)
-- [`functional-requirements-document-template.md`](skills/Refinement/functional-requirements-document-template.md) — FRD: how (workflows, system logic, data rules, error handling), plus the canonical NFR category checklist
-- [`product-requirements-discovery-questionnaire.md`](skills/Refinement/product-requirements-discovery-questionnaire.md) — probing interview that pressure-tests a PRD's thinking before drafting
-- [`ai-driven-work-sizing-and-token-budgets.md`](skills/Refinement/ai-driven-work-sizing-and-token-budgets.md) — sizes AI-driven work as a tier-weighted token budget (Epic → Task, no Story layer) alongside a separate human-hours budget
+- [`roadmap-presentation-and-sequencing-views.md`](skills/refinement/roadmap-presentation-and-sequencing-views.md) — lays out a prioritized workstream list as Now/Next/Later, Quarterly Themes, an OKR-aligned view, or Timeline/Gantt, matched to audience and certainty
+- [`future-workstream-prioritization-wsjf-and-techniques.md`](skills/refinement/future-workstream-prioritization-wsjf-and-techniques.md)
+- [`refinement-plan-realism-and-capacity-risk.md`](skills/refinement/refinement-plan-realism-and-capacity-risk.md)
+- [`workstream-prioritization-and-roadmap-refinement.md`](skills/refinement/workstream-prioritization-and-roadmap-refinement.md)
+- [`business-requirements-document-template.md`](skills/refinement/business-requirements-document-template.md) — BRD: why (strategic goals, revenue targets, market positioning), bookended for an executive reader
+- [`product-requirements-document-template.md`](skills/refinement/product-requirements-document-template.md) — PRD: what and for whom, feature/deliverable structure, launch plan, and a conditional AI Feature Supplement (Section 11)
+- [`functional-requirements-document-template.md`](skills/refinement/functional-requirements-document-template.md) — FRD: how (workflows, system logic, data rules, error handling), plus the canonical NFR category checklist
+- [`product-requirements-discovery-questionnaire.md`](skills/refinement/product-requirements-discovery-questionnaire.md) — probing interview that pressure-tests a PRD's thinking before drafting
+- [`ai-driven-work-sizing-and-token-budgets.md`](skills/refinement/ai-driven-work-sizing-and-token-budgets.md) — sizes AI-driven work as a tier-weighted token budget (Epic → Task, no Story layer) alongside a separate human-hours budget
 
 ### `domains/` — 1 skill
 Domain-specific compliance/security guidance.
@@ -145,15 +146,15 @@ Product-family overlays.
 - [`ai-feature-prompt-design.md`](skills/product/ai-feature-prompt-design.md) — product-decision-layer prompt requirements for a product-owned LLM feature
 - [`monetization-model-and-commercialization-levers.md`](skills/product/monetization-model-and-commercialization-levers.md) — three lever categories for commercialization: pricing MODEL selection (eight-type taxonomy, metering-unit criteria), billing-structure/bundling alignment (Bakos & Brynjolfsson bundling economics), and discount/rewards adjustment levers
 
-### `Management/` — 7 skills
+### `management/` — 7 skills
 Management practice grounded in W. Edwards Deming's work, plus a second distinct management philosophy.
-- [`system-of-profound-knowledge.md`](skills/Management/system-of-profound-knowledge.md)
-- [`fourteen-points-for-management.md`](skills/Management/fourteen-points-for-management.md)
-- [`seven-deadly-diseases.md`](skills/Management/seven-deadly-diseases.md)
-- [`pdsa-improvement-cycle.md`](skills/Management/pdsa-improvement-cycle.md)
-- [`red-bead-experiment.md`](skills/Management/red-bead-experiment.md)
-- [`funnel-experiment.md`](skills/Management/funnel-experiment.md)
-- [`team-of-teams-organizational-adaptability.md`](skills/Management/team-of-teams-organizational-adaptability.md) — McChrystal's four pillars (Trust, Common Purpose, Shared Consciousness, Empowered Execution), a distinct structural-adaptability model alongside the Deming skillset
+- [`system-of-profound-knowledge.md`](skills/management/system-of-profound-knowledge.md)
+- [`fourteen-points-for-management.md`](skills/management/fourteen-points-for-management.md)
+- [`seven-deadly-diseases.md`](skills/management/seven-deadly-diseases.md)
+- [`pdsa-improvement-cycle.md`](skills/management/pdsa-improvement-cycle.md)
+- [`red-bead-experiment.md`](skills/management/red-bead-experiment.md)
+- [`funnel-experiment.md`](skills/management/funnel-experiment.md)
+- [`team-of-teams-organizational-adaptability.md`](skills/management/team-of-teams-organizational-adaptability.md) — McChrystal's four pillars (Trust, Common Purpose, Shared Consciousness, Empowered Execution), a distinct structural-adaptability model alongside the Deming skillset
 
 ### `communication/` — 7 skills
 Structuring written reports, memos, RFCs, briefings.
@@ -170,9 +171,9 @@ The end-to-end, per-product/solution customer-lifecycle specification (Discovery
 - [`end-to-end-journey-specification.md`](skills/journeys/end-to-end-journey-specification.md) — eight-segment document (Discovery through Offboarding) modeling each segment as a DDD bounded context, with EventStorming-derived domain events and Feature-Mapping-derived business-goal-to-example structure
 - [`journey-orchestration-and-verification.md`](skills/journeys/journey-orchestration-and-verification.md) — Process Manager vs. choreography vs. manual-gate decision per edge, workflow-as-code promotion criteria, trace-context propagation, and consumer-driven contract testing
 
-### `Financial impact analysis/` — 1 skill
+### `financial-impact-analysis/` — 1 skill
 Cost modeling, margin governance, and pricing-floor discipline.
-- [`cost-based-pricing-floor-and-margin-governance.md`](skills/Financial%20impact%20analysis/cost-based-pricing-floor-and-margin-governance.md) — two-bucket cost model, dual breakeven views, N-tier discount-approval ladder with absolute never-breach rules
+- [`cost-based-pricing-floor-and-margin-governance.md`](skills/financial-impact-analysis/cost-based-pricing-floor-and-margin-governance.md) — two-bucket cost model, dual breakeven views, N-tier discount-approval ladder with absolute never-breach rules
 
 ### `templates/` — 6 authoring templates
 Not skills themselves — starting points for writing new ones.
