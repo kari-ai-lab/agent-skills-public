@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Local guardrail mirroring .github/workflows/no-binary-docs.yml: blocks a
+# commit that stages a third-party binary document (PDF/DOCX/PPTX/XLSX/etc).
+# Not enabled by default — a repo clone must opt in with:
+#   git config core.hooksPath .githooks
+set -euo pipefail
+python3 "$(git rev-parse --show-toplevel)/tools/check_no_binary_docs.py" --staged

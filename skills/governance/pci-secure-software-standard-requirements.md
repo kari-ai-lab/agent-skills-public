@@ -108,7 +108,7 @@ Rules:
 
 ## Sources
 
-- PCI Software Security Framework — Secure Software Standard, v2.0 (Jan 2026) — `docs/PCI/PCI-Secure-Software-Standard-v2.0.pdf`
+- PCI Software Security Framework — Secure Software Standard, v2.0 (Jan 2026) — official PCI SSC standard, not redistributed in this repo; get your own copy from the [PCI SSC Document Library](https://www.pcisecuritystandards.org/document_library/).
 
 ## Related Workspace Skills
 

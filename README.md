@@ -264,6 +264,10 @@ Some skills are placeholders as they are being worked on. Please check back ofte
 
 Specifications, standards, and people whose work informed these skills are tracked in [`CREDITS.md`](CREDITS.md), linked from the specific files that cite them.
 
+## Sourcing third-party standards
+
+Some skills cite standards that are themselves licensed or purchased publications — the PCI Security Standards Council's documents (PCI-DSS, Secure Software Standard, TSP Requirements, etc.) are the current example. This repo only ever links to where you get your own copy (e.g. the [PCI SSC Document Library](https://www.pcisecuritystandards.org/document_library/)) — it never bundles the source PDF/DOCX/etc. itself. `tools/check_no_binary_docs.py` enforces this: it fails [CI](.github/workflows/no-binary-docs.yml) on any PDF/DOC/DOCX/PPT/PPTX/XLS/XLSX/ODT/ODS/ODP/RTF committed to the repo. To also catch it locally before a commit, opt into the checked-in hook with `git config core.hooksPath .githooks`.
+
 ## License
 
 MIT — see [`LICENSE`](LICENSE). Use, adapt, and redistribute freely.

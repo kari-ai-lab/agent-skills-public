@@ -138,8 +138,8 @@ Rules:
 
 ## Sources
 
-- PCI Token Service Providers — Additional Security Requirements and Assessment Procedures for Token Service Providers (EMV Payment Tokens), v1.0 (Dec 2015) — `docs/PCI/PCI_TSP_Requirements_v1.pdf`
-- PCI TSP Attestation of Compliance (AOC) v1 — `docs/PCI/PCI_TSP_AOC_v1.docx` (the fillable sign-off form paired with the requirements above; not itself normative content).
+- PCI Token Service Providers — Additional Security Requirements and Assessment Procedures for Token Service Providers (EMV Payment Tokens), v1.0 (Dec 2015) — official PCI SSC standard, not redistributed in this repo; get your own copy from the [PCI SSC Document Library](https://www.pcisecuritystandards.org/document_library/).
+- PCI TSP Attestation of Compliance (AOC) v1 (the fillable sign-off form paired with the requirements above; not itself normative content) — same source, not redistributed in this repo.
 - [PCI Security Standards Council — FAQ 1326: How does PCI DSS apply to EMVCo Payment Tokens?](https://www.pcisecuritystandards.org/faqs/1326/) — PCI SSC's own restatement of this skill's "Payment Token Scope Rule" above: a properly implemented token outside the TDE "is not considered Account Data and is therefore not in scope for PCI DSS," while PCI DSS "continues to apply wherever actual account data (such as PANs) is stored, processed, or transmitted." Also names the qualifying bar a token must meet to earn that reduced scope — a dynamic cryptogram or domain control, and no PAN recoverability from the token itself — a precondition this skill's scope rule states as settled fact but that TSP 1's scope-validation control (above) is exactly the mechanism for confirming on an ongoing basis. Verified via live fetch. Cross-referenced from `practitioner/payment-network-tokenization-and-account-updater.md` (Section 2), which cites the same FAQ from the practitioner/network-mechanics side of this same rule.
 
 ## Related Workspace Skills

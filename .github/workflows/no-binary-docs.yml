@@ -1,0 +1,21 @@
+name: No binary source documents
+
+# This repo cites licensed/purchased standards (PCI SSC, ISO, NIST, etc.) but
+# never bundles the third-party document itself — only a link to where a
+# reader gets their own copy. This workflow is the enforcement point: it
+# fails the build if a PDF/DOCX/PPTX/XLSX or similar office-document file
+# ever gets committed, regardless of whether a local pre-commit hook was
+# installed or skipped. See tools/check_no_binary_docs.py and CREDITS.md's
+# "Licensed/purchased source documents" note for the underlying policy.
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check-no-binary-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check for third-party binary documents
+        run: python3 tools/check_no_binary_docs.py

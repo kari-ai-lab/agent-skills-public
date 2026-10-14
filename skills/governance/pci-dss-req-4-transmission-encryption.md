@@ -35,5 +35,5 @@ PAN transmissions can be protected by encrypting the data itself before transmis
 
 ---
 **Governance Metadata**
-- **Framework Version:** PCI-DSS v4.0.1 (June 2024) — source: `docs/PCI/PCI-DSS-v4_0_1.pdf`
+- **Framework Version:** PCI-DSS v4.0.1 (June 2024) — official PCI SSC standard, not redistributed in this repo; get your own copy from the [PCI SSC Document Library](https://www.pcisecuritystandards.org/document_library/).
 - **Last Validated:** 2026-07-27

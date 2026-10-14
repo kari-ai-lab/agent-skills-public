@@ -98,7 +98,7 @@ Rules:
 
 ## Sources
 
-- PCI Software Security Framework — Secure Software Lifecycle Requirements and Assessment Procedures, v1.1 (Feb 2021) — `docs/PCI/PCI-Secure-SLC-Standard-v1_1.pdf`
+- PCI Software Security Framework — Secure Software Lifecycle Requirements and Assessment Procedures, v1.1 (Feb 2021) — official PCI SSC standard, not redistributed in this repo; get your own copy from the [PCI SSC Document Library](https://www.pcisecuritystandards.org/document_library/).
 
 ## Related Workspace Skills
 

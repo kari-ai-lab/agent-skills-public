@@ -9,7 +9,7 @@ description: "The entry point for every PCI-related question in this workspace: 
 
 The entry point for every PCI-related question in this workspace: which PCI Security Standards Council (PCI SSC) obligations actually apply to a given product/feature, what account-data scope it touches, and which Self-Assessment Questionnaire (SAQ) type — if any — fits the environment. This is the navigator; it routes to the more detailed skills below rather than trying to hold all of PCI DSS's ~380 pages in one file.
 
-Ground truth for this skill and everything it routes to: the actual PCI SSC documents in `docs/PCI/` — `PCI-DSS-v4_0_1.pdf` (June 2024), `SAQ-Instructions-Guidelines-PCI-DSS-v4-0-1-r1.pdf` (April 2025), plus the Secure Software Framework and TSP documents covered by the sibling skills listed under Related Workspace Skills.
+Ground truth for this skill and everything it routes to: the actual PCI SSC documents — PCI-DSS v4.0.1 (June 2024), the SAQ Instructions and Guidelines v4.0.1 r1 (April 2025), plus the Secure Software Framework and TSP documents covered by the sibling skills listed under Related Workspace Skills. These are licensed PCI SSC publications, not redistributed in this repo — get your own copy from the [PCI SSC Document Library](https://www.pcisecuritystandards.org/document_library/).
 
 ## 👤 Target Persona
 
@@ -133,8 +133,8 @@ Rules:
 
 ## Sources
 
-- PCI Data Security Standard: Requirements and Testing Procedures, v4.0.1 (June 2024) — `docs/PCI/PCI-DSS-v4_0_1.pdf`
-- PCI DSS Self-Assessment Questionnaire Instructions and Guidelines, v4.0.1 r1 (April 2025) — `docs/PCI/SAQ-Instructions-Guidelines-PCI-DSS-v4-0-1-r1.pdf`
+- PCI Data Security Standard: Requirements and Testing Procedures, v4.0.1 (June 2024) — official PCI SSC standard, not redistributed in this repo; get your own copy from the [PCI SSC Document Library](https://www.pcisecuritystandards.org/document_library/).
+- PCI DSS Self-Assessment Questionnaire Instructions and Guidelines, v4.0.1 r1 (April 2025) — same source, not redistributed in this repo.
 
 ## Related Workspace Skills
 

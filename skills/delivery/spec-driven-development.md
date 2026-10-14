@@ -7,11 +7,11 @@ description: "Closes Group H of the workspace's product-skill gap backlog: nothi
 
 ## Objective
 
-Closes Group H of the workspace's product-skill gap backlog: nothing in this workspace treated a specification as a persistent, machine-consumable source of truth that AI-generated code is built from and re-verified against — as distinct from a one-time planning artifact. `refinement/functional-requirements-document-template.md` (FRD) is a human-authored "how" document; `delivery/explore-plan-code-commit.md`'s Plan phase produces an implementation plan for a single work session. Neither is what GitHub's Spec Kit and AWS Kiro mean by a "spec": an executable, structured artifact that generates code directly, gets re-checked for contradictions and gaps before implementation, and stays the durable reference the codebase is validated against — not discarded once "real coding" starts.
+Fills a gap in this library: nothing here treated a specification as a persistent, machine-consumable source of truth that AI-generated code is built from and re-verified against — as distinct from a one-time planning artifact. `Refinement/functional-requirements-document-template.md` (FRD) is a human-authored "how" document; `delivery/explore-plan-code-commit.md`'s Plan phase produces an implementation plan for a single work session. Neither is what GitHub's Spec Kit and AWS Kiro mean by a "spec": an executable, structured artifact that generates code directly, gets re-checked for contradictions and gaps before implementation, and stays the durable reference the codebase is validated against — not discarded once "real coding" starts.
 
 **This skill translates an existing FRD into an AI-executable spec; it does not re-derive system logic, data rules, or workflows from scratch.** The FRD remains the human-readable source; this skill produces the machine-consumable structure an AI agent executes from.
 
-**This skill also adds a Commercialization Validation Gate (workspace-authored, not sourced from Spec Kit/Kiro) that neither tool's public materials specify** — a full end-to-end validation pass before spec-driven work is treated as production-ready, closing the spec-drift problem the backlog flagged as genuinely open.
+**This skill also adds a Commercialization Validation Gate (author-defined, not sourced from Spec Kit/Kiro) that neither tool's public materials specify** — a full end-to-end validation pass before spec-driven work is treated as production-ready, closing the spec-drift problem the backlog flagged as genuinely open.
 
 ## Target Persona
 
@@ -19,8 +19,8 @@ Engineering Lead, Product Manager, AI Product Lead — anyone running AI-agent-d
 
 ## Inputs Required
 
-- An approved FRD (`refinement/functional-requirements-document-template.md`) for the feature(s) in scope — this skill translates it, it does not substitute for it.
-- The task-allocation classification (`product/ai-human-task-allocation-model.md`) for the work, and the AI-driven sizing/token budget (`refinement/ai-driven-work-sizing-and-token-budgets.md`) if the work is AI-executed.
+- An approved FRD (`Refinement/functional-requirements-document-template.md`) for the feature(s) in scope — this skill translates it, it does not substitute for it.
+- The task-allocation classification (`product/ai-human-task-allocation-model.md`) for the work, and the AI-driven sizing/token budget (`Refinement/ai-driven-work-sizing-and-token-budgets.md`) if the work is AI-executed.
 - Project-level governing principles/constraints (coding standards, architectural constraints, compliance boundaries) — Spec Kit's "Constitution" concept.
 - Access to at least two independent execution/validation paths (a human tester and/or a different AI agent than the one that implemented the work) for the Commercialization Validation Gate — testing by the same agent that did the implementation does not satisfy this gate.
 
@@ -39,13 +39,13 @@ Engineering Lead, Product Manager, AI Product Lead — anyone running AI-agent-d
 
 3. **Plan** — technical implementation detail and chosen approach, informed by the FRD's Data Requirements and Integration Requirements. Kiro's automated-reasoning check belongs here: check the plan against the spec for contradictions and gaps *before* any code is generated, not discovered after.
 
-4. **Tasks** — break the plan into sequenced, executable tasks. If the work is AI-driven, size these using `refinement/ai-driven-work-sizing-and-token-budgets.md`'s Epic → Task model (no Story layer) rather than inventing a separate task-sizing scheme here.
+4. **Tasks** — break the plan into sequenced, executable tasks. If the work is AI-driven, size these using `Refinement/ai-driven-work-sizing-and-token-budgets.md`'s Epic → Task model (no Story layer) rather than inventing a separate task-sizing scheme here.
 
 5. **Implement** — execute the tasks. Multi-step, iterative refinement against the spec — not one-shot generation from a bare prompt, per Spec Kit's explicit contrast with "vibe coding."
 
 6. **Commercialization Validation Gate** — see below. Run before treating the work as production-ready; this is the workspace's addition to close the spec-drift gap, since neither source tool's public materials specify a validation step this thorough.
 
-## Commercialization Validation Gate (workspace-authored)
+## Commercialization Validation Gate (author-defined)
 
 This is the mechanism that keeps spec and implementation from drifting apart after a one-time handoff — full end-to-end validation, not just a technical pass/fail.
 
@@ -67,12 +67,12 @@ This is the mechanism that keeps spec and implementation from drifting apart aft
 
 **Independent testing requirement:** validation must be performed by testers who did NOT do the implementation — a human tester, and/or a different AI agent than the one that implemented the work. An agent grading its own implementation does not satisfy this gate; this mirrors the same accountability instinct behind `delivery/bdd-framework-selection.md`'s note on Karate Agent's "know what's safe to ship, even when AI wrote it," and `product/ai-human-task-allocation-model.md`'s Never-AI accountability test.
 
-**Gate decision (mirrors `strategy/product-proposal-viability-scoring.md`'s Ready/Not-Yet/Rejected pattern):**
+**Gate decision (mirrors `Strategy/product-proposal-viability-scoring.md`'s Ready/Not-Yet/Rejected pattern):**
 - **Ready for Production** — no Missed or materially Under-covered use cases; any Over-coverage is explicitly justified.
 - **Gap Closure Required** — Under-covered or Missed use cases exist; name them specifically before re-attempting the gate.
 - **Reject / Full Rethink** — hallucination, interpretation errors, or requirements gaps are severe enough that the spec itself (not just the implementation) needs revision, looping back to Specify.
 
-**Gap feedback loop:** any use case landing in Gap Closure Required or Reject must be returned to the roadmap explicitly — route to `refinement/workstream-prioritization-and-roadmap-refinement.md` for re-sequencing, or to `strategy/target-state-vision-and-phased-roadmap.md`'s continue/rethink guardrail if the gap is severe enough to threaten the target end-state. A gap that is found and then silently absorbed without a roadmap entry is a process failure, not a resolved issue.
+**Gap feedback loop:** any use case landing in Gap Closure Required or Reject must be returned to the roadmap explicitly — route to `Refinement/workstream-prioritization-and-roadmap-refinement.md` for re-sequencing, or to `Strategy/target-state-vision-and-phased-roadmap.md`'s continue/rethink guardrail if the gap is severe enough to threaten the target end-state. A gap that is found and then silently absorbed without a roadmap entry is a process failure, not a resolved issue.
 
 ## Core Prompt / Instructions
 
@@ -103,7 +103,7 @@ Produce the result in this order:
    and resolve it here rather than discovering it during implementation.
 
 4. TASKS: sequence the plan into executable tasks. If this is AI-driven
-   work, size the tasks with `refinement/ai-driven-work-sizing-and-token-
+   work, size the tasks with `Refinement/ai-driven-work-sizing-and-token-
    budgets.md`'s Epic -> Task model rather than inventing new sizing.
 
 5. IMPLEMENT: execute iteratively against the spec, refining as needed —
@@ -131,8 +131,8 @@ Produce the result in this order:
       / Reject-Full Rethink. Name the specific use case(s) driving any
       non-Ready decision.
    f. Route every Gap Closure Required or Reject use case back to the
-      roadmap explicitly (`refinement/workstream-prioritization-and-
-      roadmap-refinement.md`, or `strategy/target-state-vision-and-phased-
+      roadmap explicitly (`Refinement/workstream-prioritization-and-
+      roadmap-refinement.md`, or `Strategy/target-state-vision-and-phased-
       roadmap.md`'s guardrail if severe) — never let a found gap disappear
       without a roadmap entry.
 
@@ -155,7 +155,7 @@ Rules:
 - [ ] The Constitution step named real governing principles/constraints, not skipped for being "too small a feature."
 - [ ] The Specify step translated the FRD's existing content rather than re-deriving system logic from scratch.
 - [ ] A contradiction/gap check ran against the Plan before any code was generated.
-- [ ] AI-driven Tasks were sized via `refinement/ai-driven-work-sizing-and-token-budgets.md`, not an invented ad hoc scheme.
+- [ ] AI-driven Tasks were sized via `Refinement/ai-driven-work-sizing-and-token-budgets.md`, not an invented ad hoc scheme.
 - [ ] Every use case in the Commercialization Validation Gate is classified into exactly one of Over-covered/Well-covered/Under-covered/Missed.
 - [ ] Business use case coverage, support coverage, and intent modeling were all validated — not technical functionality alone.
 - [ ] Hallucination, interpretation errors, and requirements gaps were explicitly checked, not folded into a generic "bugs found" bucket.
@@ -168,20 +168,20 @@ Rules:
 - [GitHub — Spec Kit](https://github.com/github/spec-kit) — the Constitution/Specify/Plan/Tasks/Implement/Converge workflow, the "specifications become executable" framing, and the explicit inversion of code-first development ("code has been king... Spec-Driven Development changes this").
 - [Kiro](https://kiro.dev/) — the spec-as-requirements+design+tasks structure, the automated-reasoning contradiction/gap check before code generation, and the explicit contrast with "vibe coding" for complex tasks and large codebases.
 - **Checked, not substantiated:** [Tessl](https://www.tessl.io/) and its docs (docs.tessl.io) were checked directly per this workspace's sourcing standard, but neither the marketing site nor the documentation describe a spec-driven-development framework in the Spec Kit/Kiro sense — Tessl's own content frames its unit of work as "skills," not specs ("Skills are the new code. Treat them that way."). This is an honest miss, not a citation: do not attribute SDD framework claims to Tessl in this or future work without checking a different, more specific source.
-- **Workspace-authored (not sourced from Spec Kit or Kiro):** the Commercialization Validation Gate — the three-dimension validation (business use case / support / intent modeling), the AI-specific failure checks (hallucination / interpretation errors / requirements gaps), the four-state coverage classification, the independent-validator requirement, and the roadmap-feedback loop — was specified directly by the user during this closing session, not drawn from either tool's public materials.
+- **Author-defined (not sourced from Spec Kit or Kiro):** the Commercialization Validation Gate — the three-dimension validation (business use case / support / intent modeling), the AI-specific failure checks (hallucination / interpretation errors / requirements gaps), the four-state coverage classification, the independent-validator requirement, and the roadmap-feedback loop — was defined by this library's author, not drawn from either tool's public materials.
 
 ## Related Workspace Skills
 
-- `refinement/functional-requirements-document-template.md` — required input; this skill translates it, never replaces or re-derives it.
+- `Refinement/functional-requirements-document-template.md` — required input; this skill translates it, never replaces or re-derives it.
 - `product/ai-human-task-allocation-model.md` — source of task classification; the independent-validator requirement mirrors this skill's Never-AI accountability test one layer down.
-- `refinement/ai-driven-work-sizing-and-token-budgets.md` — sizes the Tasks phase for AI-driven work.
+- `Refinement/ai-driven-work-sizing-and-token-budgets.md` — sizes the Tasks phase for AI-driven work.
 - `product/product-launch-checklist.md` — source of the support-coverage check in the Commercialization Validation Gate.
-- `strategy/product-proposal-viability-scoring.md` — the Ready/Not-Yet/Rejected pattern this skill's gate decision mirrors.
-- `refinement/workstream-prioritization-and-roadmap-refinement.md` / `strategy/target-state-vision-and-phased-roadmap.md` — receive gap feedback from a non-Ready gate decision.
+- `Strategy/product-proposal-viability-scoring.md` — the Ready/Not-Yet/Rejected pattern this skill's gate decision mirrors.
+- `Refinement/workstream-prioritization-and-roadmap-refinement.md` / `Strategy/target-state-vision-and-phased-roadmap.md` — receive gap feedback from a non-Ready gate decision.
 - `delivery/bdd-framework-selection.md` — Karate Agent's "know what's safe to ship, even when AI wrote it" is the same accountability instinct behind this skill's independent-validator requirement.
 - `delivery/explore-plan-code-commit.md` — a lighter-weight, single-session workflow for work that doesn't warrant a full spec; this skill is the durable, re-verifiable counterpart for larger or AI-driven initiatives.
 - `journeys/end-to-end-journey-specification.md` — links this skill's SDD spec into whichever lifecycle segment is AI-driven, rather than re-describing its content; this skill covers one AI-executable unit of work, that skill covers the full customer lifecycle it's one piece of.
-- `strategy/controlled-experiment-design-and-decision-rules.md` — a different but adjacent gate: that skill decides whether a shipped change moved a live metric; this skill decides whether the implementation actually matches the spec's intent before it ships at all.
+- `Strategy/controlled-experiment-design-and-decision-rules.md` — a different but adjacent gate: that skill decides whether a shipped change moved a live metric; this skill decides whether the implementation actually matches the spec's intent before it ships at all.
 
 ---
 
