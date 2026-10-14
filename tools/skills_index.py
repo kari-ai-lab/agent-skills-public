@@ -40,7 +40,7 @@ EMBED_MODEL = os.environ.get("EMBED_MODEL", "nomic-embed-text")
 
 # Files/dirs that are library scaffolding, not a skill to index.
 _SKIP_NAMES = {"README.md", "INDEX.md", "CREDITS.md"}
-_SKIP_DIRS = {"templates", "migrations"}
+_SKIP_DIRS = {"templates"}
 
 
 def _embed(texts: list[str]) -> list[list[float]]:
