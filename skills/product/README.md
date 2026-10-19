@@ -103,7 +103,7 @@ Run these before `refinement/product-requirements-document-template.md` assumes 
   - A reference (not a dashboard skill) covering six growth-metric categories — Acquisition, Activation, Engagement, Retention, Referral, Revenue — sourced from Product School, with named anchor metrics per category.
   - Classifies a specific product question into the relevant category rather than reporting all six regardless of relevance, factors in product lifecycle stage, and hands off to `data:build-dashboard` for any actual visualization request. Explicitly distinct from `governance/quality-monitoring-model.md` (skill-library metrics, not product metrics).
 
-- `north-star-metric-and-review-cadence.md`
+- `north-star-metric-and-review-cadence.md` *(reference: tested twice and did not beat an unaided answer, so treat it as a lookup, not a tested method)*
   - Defines ONE North Star Metric reflecting genuine customer value (not a revenue/business-output metric) plus a small set of team-actionable input metrics — organizational alignment around a single outcome, distinct from `product-growth-metrics-reference.md`'s per-question category lookup.
   - Gives DAU/WAU/MAU/stickiness precise, usage-pattern-matched definitions and states what's actually reviewed at weekly/monthly/quarterly cadence (sourced from Amplitude's North Star Framework and Amazon's Working Backwards WBR/MBR/QBR system), handing off meeting-facilitation mechanics to `../communication/scrum-event-facilitation.md`.
 

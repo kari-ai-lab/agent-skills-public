@@ -5,6 +5,8 @@ description: "Use when a product team needs one north star metric and a review r
 
 # Skill Name: North Star Metric and Review Cadence
 
+> **Status: reference.** This skill was tested twice against an unaided answer and did not beat it (+9.4 with one regression, then +0.0 after a gaming check was added). It is kept as a lookup for the North Star framework, not as a run card. Treat its method as one reasonable approach, not as a tested improvement.
+
 ## 🎯 Objective
 
 Defines a single North Star Metric (NSM) that captures the core value the product actually delivers to customers, plus the small set of input metrics beneath it that individual teams can actually influence — so the organization has one shared metric everyone's work connects to, instead of every team optimizing a disconnected local number. Also gives DAU/WAU/MAU/stickiness precise, usage-pattern-aware definitions, and states what gets reviewed at each cadence (weekly/monthly/quarterly). Distinct from `product-growth-metrics-reference.md`: that skill answers "which metric/category answers this specific question" across six categories; this skill is about organizational alignment around ONE outcome metric and the rhythm for reviewing it.
@@ -44,6 +46,8 @@ Head of Product, Growth PM, or product leadership defining what the whole organi
 |---|---|
 | [Input 1] | [Team] |
 | [Input 2] | [Team] |
+
+**Gaming check:** [how the NSM could rise without customer value] — **counter-metric:** [metric], owner [team], limit [value]
 
 **Active-user window:** [DAU / WAU / MAU] — matched to [daily / asynchronous] usage pattern
 **Stickiness (DAU/MAU):** [X]% — benchmark for [category]: [Y]%
@@ -85,6 +89,14 @@ You are defining a North Star Metric, its input metrics, and its review cadence.
    influencing each one. An NSM with no input metrics is just a KPI
    restated with a fancier name — the actual framework is the connection
    between daily team work and the north star via inputs teams can move.
+
+3A. GUARD THE METRIC AGAINST GAMING.
+   Any single number that becomes a target can be moved without delivering
+   value (Goodhart's law). Name at least one way this NSM could be inflated
+   (counting empty or low-quality actions, nudging users to repeat an
+   action, cutting corners to hit a count) and pair it with a counter-metric
+   that must stay healthy: a quality, retention or complaint measure with a
+   limit and an owner. The counter-metric is a check, not a second target.
 
 4. STATE THE PURPOSE EXPLICITLY.
    This exists to give teams across customer, product, and business
@@ -158,6 +170,7 @@ Existing review cadence (if any): $EXISTING_CADENCE
 
 ## ✅ Success Criteria / Quality Checklist
 
+- [ ] A way the NSM could be gamed is named, with a counter-metric, an owner and a limit.
 - [ ] The NSM reflects genuine customer value, not a business-output metric (revenue) or a vanity metric standing in for one.
 - [ ] Exactly one NSM is named, not a scorecard of several.
 - [ ] A small number of input metrics are named, each with a stated owning team/function.
@@ -173,6 +186,8 @@ Existing review cadence (if any): $EXISTING_CADENCE
 - [Mixpanel — "Monthly active users (MAU): Definition, formula, and 2026 benchmarks"](https://mixpanel.com/blog/mau/) — DAU/WAU/MAU window definitions, the "meaningful action" framing, the stickiness ratio calculation, and current category benchmarks (20-38% range, correcting the outdated flat 40% B2B SaaS rule of thumb).
 - [Working Backwards — "Quarterly & Monthly Business Reviews"](https://workingbackwards.com/concepts/quarterly-monthly-business-reviews/) and the Amazon Weekly Business Review (WBR) concept — the weekly/monthly/quarterly cadence structure, the ~80% input-metric focus at the monthly level, and the weekly trailing-window (6 weeks + 12 months) format organized around the customer journey.
 
+- **Added in v1.1 (2026-10-19), the gaming check and counter-metric (step 3A):** after the case `north-star-metric-and-review-cadence__sl1` failed (+9.4; the unaided answer named a gaming risk and this skill's answer did not). Sources are practitioner write-ups of guardrail and counter-metrics, which cite Goodhart's law; Andy Grove's idea of pairing an indicator with a counter-indicator (*High Output Management*) was seen only through secondary summaries and the book was not read. The wording of the step is practitioner convention. A fresh case, `north-star-metric-and-review-cadence__sl2`, was locked before this edit.
+
 ## Related Workspace Skills
 
 - `product-growth-metrics-reference.md` — answers "which metric/category fits this specific question" across six categories; this skill is the organizational-alignment layer around ONE outcome metric plus its review rhythm. Use both together, not as substitutes.
@@ -184,6 +199,6 @@ Existing review cadence (if any): $EXISTING_CADENCE
 
 ## Metadata
 
-- **Version:** 1.0
-- **Last Updated:** 2026-08-09
+- **Version:** 1.1
+- **Last Updated:** 2026-10-19
 - **Author:** Workspace Product Skills
