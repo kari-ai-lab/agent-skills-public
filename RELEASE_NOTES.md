@@ -2,7 +2,7 @@
 
 Status of every skill category in this repo — what's available to use today vs. what's on the roadmap. See [`skills/INDEX.md`](skills/INDEX.md) for the category model and [`README.md`](README.md) for how to use a skill.
 
-## ✅ Available (137 skills across 14 categories)
+## ✅ Available (140 skills across 14 categories)
 
 ### `orchestration/` — 8 skills (new category)
 Agent-to-agent task mechanics for multi-agent systems.
@@ -125,7 +125,7 @@ Domain-specific compliance/security guidance.
 
 (`agent-zero-trust-delegation.md` and `pci-dss-req-3-4.md` moved to `governance/` — see that section.)
 
-### `product/` — 23 skills
+### `product/` — 26 skills
 Product-family overlays.
 - [`product-capability-map-and-competitor-overlay.md`](skills/product/product-capability-map-and-competitor-overlay.md) — BIZBOK-style hierarchical capability map (L1→L2→L3 by capability tier) with an actor/channel band and optional competitor overlay; includes a workspace-authored Foundation Test for load-bearing capabilities within a tier
 - [`north-star-metric-and-review-cadence.md`](skills/product/north-star-metric-and-review-cadence.md) — one North Star Metric grounded in genuine customer value plus team-owned input metrics, and a weekly/monthly/quarterly review-cadence structure
@@ -146,6 +146,9 @@ Product-family overlays.
 - [`ai-feature-prompt-design.md`](skills/product/ai-feature-prompt-design.md) — product-decision-layer prompt requirements for a product-owned LLM feature
 - [`monetization-model-and-commercialization-levers.md`](skills/product/monetization-model-and-commercialization-levers.md) — three lever categories for commercialization: pricing MODEL selection (eight-type taxonomy, metering-unit criteria), billing-structure/bundling alignment (Bakos & Brynjolfsson bundling economics), and discount/rewards adjustment levers
 - [`metrics-review-and-anomaly-investigation.md`](skills/product/metrics-review-and-anomaly-investigation.md) — weekly metrics review that checks the data pipeline first, splits a blended rate change into mix and rate effects, and ranks causes before recommending action
+- [`win-loss-analysis.md`](skills/product/win-loss-analysis.md) — splits a win-rate change into mix and rate, counts no-decision as its own loss category, compares logged with buyer-stated reasons, and plans buyer interviews
+- [`dashboard-and-alert-design.md`](skills/product/dashboard-and-alert-design.md) — one view per audience, pages only on user-visible symptoms with an owner, duration and action, a page budget and a retire rule
+- [`jobs-to-be-done-and-ideation.md`](skills/product/jobs-to-be-done-and-ideation.md) — job in its situation, forces of progress against evidence, real alternatives, then divergent ideas narrowed by criteria with a cheap test
 
 ### `management/` — 7 skills
 Management practice grounded in W. Edwards Deming's work, plus a second distinct management philosophy.

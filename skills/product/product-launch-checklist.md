@@ -1,6 +1,6 @@
 ---
 name: product-launch-checklist
-description: "Closes a gap flagged in product-school-template-toolkit.md and Group C of .agents/skills/SKILLS-GAP-BACKLOG.md: refinement/product-requirements-document-template.md's Section 10 (Launch Plan) already captures the marketing comms."
+description: "Use when a feature or product is about to reach customers and someone needs a go/no-go: runs a three-phase pre-launch, launch-day and post-launch checklist with an owner on every item, treats any unresolved pre-launch item as blocking unless a named executive grants an exception, and requires a rollback with a trigger condition."
 ---
 
 # Skill Name: Product Launch Checklist
@@ -19,7 +19,17 @@ Product Manager, Product Owner, Launch Lead, Head of Product — anyone running 
 - Support readiness: runbook status, on-call coverage, known FAQ/escalation paths.
 - Legal/compliance sign-off status, if the launch touches regulated data or claims (see `governance/privacy-law-awareness-for-product-development.md` if personal data is in scope).
 - Infrastructure readiness: monitoring/alerting, rollback plan, load/capacity check for expected launch traffic.
-- Marketing/comms readiness: timing, channels, and whether comms are gated on a GA date that might slip.
+- Marketing/comms readiness: timing, channels, audience size, whether anything cannot be recalled once sent, and whether comms are gated on a GA date that might slip.
+
+**Minimum viable input:** the pilot results against the plan's exit criteria, the rollback plan, and the list of scheduled outbound comms. If the PRD launch plan is missing, say so and proceed on the facts given.
+
+## Routing
+
+Check these before running; each fires on something visible in the input.
+
+- If personal data is in scope → `../governance/privacy-law-awareness-for-product-development.md`.
+- If an issue is security-shaped → `../governance/product-security-incident-response-readiness.md`.
+- If the PRD has no launch plan section → `../refinement/product-requirements-document-template.md` first.
 
 ## Expected Output
 
@@ -54,6 +64,13 @@ Produce the result in this order:
      data, claims, or geography (route to
      `governance/privacy-law-awareness-for-product-development.md` if
      personal data is in scope and this hasn't been checked).
+   - Scheduled outbound comms (emails, banners, announcements, partner or
+     press releases) are what create launch-day volume. Take the audience
+     size and send time as the expected traffic for the capacity check and
+     for any third-party rate limit. A capacity or rate-limit check that is
+     not done is not done: record it as not-done and blocking, not as a
+     "risk" to weigh. A comm that cannot be recalled stays on hold until
+     the capacity check and the rollback trigger are done.
    - Infrastructure: monitoring/alerting live, load/capacity verified for
      expected launch traffic, and a NAMED rollback plan with its specific
      trigger condition (not just "we can roll back if needed").
@@ -95,6 +112,7 @@ Rules:
 - [ ] The PRD's Section 10 (Launch Plan) was consumed as input, not re-derived or duplicated.
 - [ ] Pre-Launch, Launch Day, and Post-Launch checklists each cover support, legal/compliance, infrastructure, and marketing/comms at minimum.
 - [ ] Every item is marked done/not-done/not-applicable with a named owner.
+- [ ] Every scheduled outbound comm is listed with its audience and send time, that volume is what the capacity and third-party limit checks were measured against, and any comm that cannot be recalled is held until those checks are done.
 - [ ] A named rollback plan and trigger condition exist, or are flagged as a gap.
 - [ ] A post-launch monitoring window and escalation signal are named.
 - [ ] The go/no-go recommendation treats any unresolved Pre-Launch item as blocking unless an explicit executive exception is named.
@@ -102,6 +120,8 @@ Rules:
 ## Sources
 
 - [Product School — "Product Launch Checklist Template"](https://productschool.com/resources/templates/product-launch-checklist) — the three-phase (pre-launch/launch-day/post-launch) structure and the "reduces reliance on legacy knowledge, repeatable framework" purpose this skill is built around. The source page does not itself detail functional categories (legal/support/marketing/engineering); those categories in this skill are drawn from this workspace's own existing readiness concerns (`governance/privacy-law-awareness-for-product-development.md`, `governance/product-security-incident-response-readiness.md`, the PRD's own GA-requirements list) rather than asserted as sourced from Product School.
+
+- **Revised in v1.1 (2026-10-19), after the case `product-launch-checklist__go-no-go` failed (+12.5):** the description was rewritten as a trigger, and the rule linking scheduled comms to the capacity check was added. A test run had recorded a missing load test as "a risk, not an automatic blocker", contrary to the rule that an unresolved item blocks, and did not connect the announcement to the traffic. This is practitioner convention, not sourced. A fresh case, `product-launch-checklist__go-no-go-payouts`, was locked before this revision.
 
 ## Related Workspace Skills
 
@@ -114,6 +134,6 @@ Rules:
 
 ## Metadata
 
-- **Version:** 1.0
-- **Last Updated:** 2026-08-03
+- **Version:** 1.1
+- **Last Updated:** 2026-10-19
 - **Author:** Workspace Product Skills

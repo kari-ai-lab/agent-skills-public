@@ -48,7 +48,7 @@ that has gone stale.
 
 ```mermaid
 flowchart LR
-    subgraph LIB["skills/ — 137 skills, 14 categories"]
+    subgraph LIB["skills/ — 140 skills, 14 categories"]
         direction TB
         M["<b>method</b><br/>delivery · refinement<br/>communication · strategy<br/>management"]
         G["<b>governance</b><br/>PCI · privacy<br/>regional auth mandates"]

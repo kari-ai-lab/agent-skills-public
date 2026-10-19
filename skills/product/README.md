@@ -35,6 +35,15 @@ Run these before `refinement/product-requirements-document-template.md` assumes 
 - `metrics-review-and-anomaly-investigation.md`
   - Reviews a metrics report by checking the data pipeline first, then splitting a blended rate change into mix and rate effects, then ranking causes before any recommendation.
 
+- `win-loss-analysis.md`
+  - Splits a win-rate change into mix and rate effects, counts no-decision as a loss category, compares logged reasons with buyer-stated ones, and sets an interview plan.
+
+- `dashboard-and-alert-design.md`
+  - Gives each audience its own view and pages only on user-visible symptoms, each with an owner, duration and action, under a page budget and a retire rule.
+
+- `jobs-to-be-done-and-ideation.md`
+  - Reads switching interviews through the job's situation and the four forces, lists real alternatives, then diverges on ideas and narrows with criteria and cheap tests.
+
 - `research-synthesis-methodology.md`
   - Step zero for this section: turns raw interview transcripts, support tickets, survey open-ends, and field notes into named, evidenced themes — via thematic analysis (coding), affinity mapping (the collaborative version), and triangulation (cross-validating a finding against a second independent source before it drives a decision) — before any of the skills below build on "real research" that was never actually synthesized.
   - Required input to `opportunity-solution-tree.md`, `user-persona-development.md`, and `customer-journey-mapping.md`, all three of which require findings sourced to real research but never defined the synthesis method themselves.
