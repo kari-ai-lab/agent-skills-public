@@ -252,12 +252,12 @@ The original candidate primary source for controlled-experiment design; not free
 
 ### GitHub Spec Kit
 **https://github.com/github/spec-kit**
-Spec-Driven Development's Constitution/Specify/Plan/Tasks/Implement/Converge workflow and the "specifications become executable" framing.
+Spec-Driven Development's Constitution/Specify/Plan/Tasks/Implement/Converge workflow (implement and converge repeat until converged), `[NEEDS CLARIFICATION]` markers, the optional bug-fix extension, and the "specifications become executable" framing.
 - [`skills/delivery/spec-driven-development.md`](skills/delivery/spec-driven-development.md)
 
 ### Kiro
 **https://kiro.dev/**
-Spec-as-requirements+design+tasks structure, the automated-reasoning contradiction/gap check before code generation, and the explicit contrast with "vibe coding."
+Spec-as-requirements+design+tasks structure, the Analyze Requirements and automated-reasoning contradiction/gap check before design, Bugfix specs, Quick Spec, and the explicit contrast with "vibe coding."
 - [`skills/delivery/spec-driven-development.md`](skills/delivery/spec-driven-development.md)
 
 ### Tessl (checked, not substantiated)

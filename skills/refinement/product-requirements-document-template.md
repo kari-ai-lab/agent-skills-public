@@ -100,7 +100,8 @@ asked of them.)*
 ## 4. Scope
 
 - **In scope (launch-blocking):** What cannot launch without.
-- **Out of scope:** What is explicitly not needed for launch.
+- **Out of scope (non-goals), each with a reason:** What is explicitly not needed for launch, with one line per item saying why it is out (not enough impact, too large for the window, a separate initiative, premature, or blocked by a stated constraint). A bare list of exclusions is how the same items return in review.
+- **Scope-change rule:** After sign-off, any addition comes with a removal or a re-estimate, and ideas that are good but out of scope go in a named parking lot instead of the spec.
 
 ## 5. Problem Statement
 
@@ -119,7 +120,14 @@ is the detailed proof.)*
 ## 6. Goals & Metrics
 
 - **Primary goal:** Stated with the specific measurement(s) that confirm
-  the problem has been addressed.
+  the problem has been addressed. A goal such as "a big improvement" is not
+  yet a goal: propose a number and a date against the stated baseline and
+  ask the sponsor to ratify it.
+- **Leading and lagging indicators:** For each goal, a leading indicator
+  that moves within days to weeks and a lagging indicator that moves over
+  months, each with a baseline, a target (and a stretch target if used), how
+  and where it is measured, and the date it will be evaluated. A lagging
+  indicator that cannot be read before the deadline is stated as such.
 - **Secondary/tertiary goals:** Each with its own validation method — not
   assumed to share the primary goal's instrumentation.
 - **Guardrail metric(s):** For each goal above, at least one metric tracked
@@ -149,6 +157,7 @@ For each feature:
 | Dependency link | (other FEAT-### or named external work, or "none") |
 | Description | |
 | Acceptance Criteria (Gherkin) | Given [context], When [action], Then [result] |
+| Priority | P0 / P1 / P2, with a reason. P0 means the deliverable cannot ship without it: if cutting it still solves the core problem, it is not P0. If everything is P0, nothing is. |
 | Non-functional expectations | (product-level: e.g. "must feel instant," "must work offline" — engineering targets are elaborated in the FRD) |
 
 *(Write the Gherkin declaratively per `delivery/gherkin-syntax-and-writing-guide.md` — describe system behavior, not UI mechanics — and treat writing it as BDD's Formulation step per `delivery/behavior-driven-development-and-model-integration.md`, reviewed by the product owner, not drafted in isolation. Non-functional expectations here are product-level statements, not measurable specs — those get elaborated per-topic in `functional-requirements-document-template.md`.)*
@@ -179,12 +188,14 @@ disruption in market:
 
 ## 9. Open Questions
 
-| Question | Owner | Target resolution date |
-| --- | --- | --- |
-| | | |
+| Question | Owner | Blocks start? | Target resolution date |
+| --- | --- | --- | --- |
+| | | Yes / No | |
 
 *(Every open question needs an owner and a date — an unowned, undated
-question here is how a real gap becomes a launch surprise.)*
+question here is how a real gap becomes a launch surprise. Mark each
+question as blocking (must be answered before work starts) or non-blocking
+(can be resolved during delivery), and name the role that must answer it.)*
 
 ## 10. Launch Plan
 
@@ -338,11 +349,19 @@ Rules:
 - [ ] Every feature has a testable Gherkin AC and an explicit dependency link.
 - [ ] The Deliverable grouping states which included features are truly load-bearing vs. nice-to-have.
 - [ ] Every edge/error case scenario has an owner and flags customer-visible risk explicitly.
-- [ ] Every open question has an owner and a target resolution date.
+- [ ] Every open question has an owner, a target resolution date, and a blocking or non-blocking marker.
+- [ ] Every out-of-scope item has a reason, and a scope-change rule is stated.
+- [ ] Each goal has a leading and a lagging indicator with baseline, target, measurement method and evaluation date; vague goals were converted to numbers for sign-off.
+- [ ] Each feature carries a P0/P1/P2 priority with a reason, and the P0 set passes the "would it still solve the core problem without this" test.
 - [ ] Pilot/beta exit criteria and GA requirements are concrete checklists, not aspirational language.
 - [ ] Market/competitor/prior-attempt claims are sourced or explicitly marked as unvalidated assumptions.
 - [ ] Non-functional expectations are attached per-topic in Sections 6-8, not left as an unwritten fourth document or a disconnected appendix.
 - [ ] For AI/LLM-powered initiatives, Section 11 is complete (task allocation, model tier, eval bar, failure-mode UX, risk/compliance) — or the section is cleanly skipped for a non-AI initiative, never left half-filled.
+
+## Sources
+
+- **Added in v1.5 (2026-10-19), non-goal reasons, scope-change rule, leading/lagging indicator pairs, P0/P1/P2 priority with the "if everything is P0" test, and blocking versus non-blocking open questions:** these come from a comparison with Anthropic's Product Management plugin (`write-spec`, v1.2.0, Apache 2.0, read in full), which has all five without citing a source. They are standard product-requirements practice and are **not independently sourced here**, so treat them as practitioner convention. The head-to-head case `product-requirements-document-template__vs-anthropic-write-spec` found that the plugin's skill passed the non-goal-reason and blocking-question assertions and this template did not, before these additions.
+- The rest of this template predates this section and carries no list of sources of its own.
 
 ## Related Workspace Skills
 
@@ -367,6 +386,6 @@ Rules:
 
 ## Metadata
 
-- **Version:** 1.4
-- **Last Updated:** 2026-08-17
+- **Version:** 1.5
+- **Last Updated:** 2026-10-19
 - **Author:** Workspace Refinement Skills

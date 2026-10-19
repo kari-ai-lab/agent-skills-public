@@ -2,7 +2,7 @@
 
 Status of every skill category in this repo — what's available to use today vs. what's on the roadmap. See [`skills/INDEX.md`](skills/INDEX.md) for the category model and [`README.md`](README.md) for how to use a skill.
 
-## ✅ Available (135 skills across 14 categories)
+## ✅ Available (137 skills across 14 categories)
 
 ### `orchestration/` — 8 skills (new category)
 Agent-to-agent task mechanics for multi-agent systems.
@@ -66,7 +66,7 @@ Planning, decomposition, QA, release, workflow execution.
 - [`gherkin-syntax-and-writing-guide.md`](skills/delivery/gherkin-syntax-and-writing-guide.md) — full Gherkin keyword reference and the declarative-vs-imperative writing standard
 - [`behavior-driven-development-and-model-integration.md`](skills/delivery/behavior-driven-development-and-model-integration.md) — BDD's Discovery/Formulation/Automation cycle and Three Amigos model, tied back to DDD, SDLC, and Agile
 - [`bdd-framework-selection.md`](skills/delivery/bdd-framework-selection.md) — decision gate for Cucumber vs. Karate vs. Gauge by test-suite layer, before defaulting to Cucumber
-- [`spec-driven-development.md`](skills/delivery/spec-driven-development.md) — adapted from GitHub's Spec Kit and Kiro: translates an approved FRD into an AI-executable spec, plus a workspace-authored Commercialization Validation Gate (use-case coverage classification, independent human/AI validation, roadmap feedback loop)
+- [`spec-driven-development.md`](skills/delivery/spec-driven-development.md) — adapted from GitHub's Spec Kit and Kiro: four tiers (Micro, Light, Standard, Full), a Spec Kit/Kiro-based workflow with an implement/converge loop, an author-defined two-pass Commercialization Validation Gate (automated checks first, then independent review led by mutation testing), and a Spec Sync section for post-launch drift
 
 ### `governance/` — 19 skills
 Standards, controls, monitoring, policy.
@@ -125,7 +125,7 @@ Domain-specific compliance/security guidance.
 
 (`agent-zero-trust-delegation.md` and `pci-dss-req-3-4.md` moved to `governance/` — see that section.)
 
-### `product/` — 22 skills
+### `product/` — 23 skills
 Product-family overlays.
 - [`product-capability-map-and-competitor-overlay.md`](skills/product/product-capability-map-and-competitor-overlay.md) — BIZBOK-style hierarchical capability map (L1→L2→L3 by capability tier) with an actor/channel band and optional competitor overlay; includes a workspace-authored Foundation Test for load-bearing capabilities within a tier
 - [`north-star-metric-and-review-cadence.md`](skills/product/north-star-metric-and-review-cadence.md) — one North Star Metric grounded in genuine customer value plus team-owned input metrics, and a weekly/monthly/quarterly review-cadence structure
@@ -145,6 +145,7 @@ Product-family overlays.
 - [`product-launch-checklist.md`](skills/product/product-launch-checklist.md), [`product-growth-metrics-reference.md`](skills/product/product-growth-metrics-reference.md) — launch/growth measurement
 - [`ai-feature-prompt-design.md`](skills/product/ai-feature-prompt-design.md) — product-decision-layer prompt requirements for a product-owned LLM feature
 - [`monetization-model-and-commercialization-levers.md`](skills/product/monetization-model-and-commercialization-levers.md) — three lever categories for commercialization: pricing MODEL selection (eight-type taxonomy, metering-unit criteria), billing-structure/bundling alignment (Bakos & Brynjolfsson bundling economics), and discount/rewards adjustment levers
+- [`metrics-review-and-anomaly-investigation.md`](skills/product/metrics-review-and-anomaly-investigation.md) — weekly metrics review that checks the data pipeline first, splits a blended rate change into mix and rate effects, and ranks causes before recommending action
 
 ### `management/` — 7 skills
 Management practice grounded in W. Edwards Deming's work, plus a second distinct management philosophy.
@@ -156,7 +157,7 @@ Management practice grounded in W. Edwards Deming's work, plus a second distinct
 - [`funnel-experiment.md`](skills/management/funnel-experiment.md)
 - [`team-of-teams-organizational-adaptability.md`](skills/management/team-of-teams-organizational-adaptability.md) — McChrystal's four pillars (Trust, Common Purpose, Shared Consciousness, Empowered Execution), a distinct structural-adaptability model alongside the Deming skillset
 
-### `communication/` — 7 skills
+### `communication/` — 8 skills
 Structuring written reports, memos, RFCs, briefings.
 - [`bookend-communication-structure.md`](skills/communication/bookend-communication-structure.md)
 - [`bluf-bottom-line-up-front.md`](skills/communication/bluf-bottom-line-up-front.md) — the actual mechanics of a BLUF line (what needs to be known/done/when), distinct from an executive summary
@@ -165,6 +166,7 @@ Structuring written reports, memos, RFCs, briefings.
 - [`architecture-decision-records.md`](skills/communication/architecture-decision-records.md) — the canonical ADR format sourced from Michael Nygard's original proposal
 - [`scrum-event-facilitation.md`](skills/communication/scrum-event-facilitation.md) — Daily Scrum/Sprint Review/Sprint Retrospective run to their actual Scrum Guide purpose, timebox, and attendees
 - [`roadmap-change-communication.md`](skills/communication/roadmap-change-communication.md) — diagnoses "roadmap whiplash" before drafting a roadmap-change message, tailored per audience
+- [`stakeholder-update-by-audience.md`](skills/communication/stakeholder-update-by-audience.md) — one set of project news cut per audience (executive, engineering, partners, customers, board): bottom line and decision first, internal detail kept out of external updates, a length limit per audience, and a covering note of what was left out
 
 ### `journeys/` — 2 skills (new category)
 The end-to-end, per-product/solution customer-lifecycle specification (Discovery through Offboarding).

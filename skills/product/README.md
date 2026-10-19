@@ -32,6 +32,9 @@ Use this category for shared product-family overlays that apply across a product
 
 Run these before `refinement/product-requirements-document-template.md` assumes a validated problem and a known user — the workspace's strategy/portfolio/PRD layers all assume discovery already happened somewhere; these seven skills are where it happens.
 
+- `metrics-review-and-anomaly-investigation.md`
+  - Reviews a metrics report by checking the data pipeline first, then splitting a blended rate change into mix and rate effects, then ranking causes before any recommendation.
+
 - `research-synthesis-methodology.md`
   - Step zero for this section: turns raw interview transcripts, support tickets, survey open-ends, and field notes into named, evidenced themes — via thematic analysis (coding), affinity mapping (the collaborative version), and triangulation (cross-validating a finding against a second independent source before it drives a decision) — before any of the skills below build on "real research" that was never actually synthesized.
   - Required input to `opportunity-solution-tree.md`, `user-persona-development.md`, and `customer-journey-mapping.md`, all three of which require findings sourced to real research but never defined the synthesis method themselves.

@@ -37,6 +37,10 @@ These skills help anyone communicating on behalf of a team or initiative:
   - Facilitates the Daily Scrum, Sprint Review, and Sprint Retrospective to their actual Scrum Guide purpose, timebox, and attendee list, naming the specific anti-pattern (status-recitation, one-way demo, blame session) each one tends to collapse into.
   - Covers the meeting mechanics only — routes to `../delivery/sprint-goal-drafting.md` / `../delivery/sprint-capacity-planning.md` for planning content and `../delivery/retrospective-improvement.md` for the retrospective's improvement follow-through.
 
+- `stakeholder-update-by-audience.md`
+  - Cuts one set of project news into per-audience updates (executive, engineering, partners, customers, board): bottom line and any decision first, internal detail kept out of external updates, a length limit per audience, and a covering note of what was left out.
+  - Builds on `bluf-bottom-line-up-front.md` and `rag-status-reporting.md` for the structure and status conventions.
+
 - `roadmap-change-communication.md`
   - Communicates a roadmap re-sequencing, delay, or scope change without triggering "roadmap whiplash" — first diagnosing whether the change is grounded in a named, defensible criterion or unweighted-input churn, then tailoring the message per audience and stating what stays the same, not just what moved.
   - Pairs with `rag-status-reporting.md` and `roam-risk-communication.md` (ongoing health/risk signals) and hands off from `../refinement/roadmap-presentation-and-sequencing-views.md` (the skill that lays out the sequence this one explains when it changes).
