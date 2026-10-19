@@ -2,7 +2,7 @@
 
 Status of every skill category in this repo — what's available to use today vs. what's on the roadmap. See [`skills/INDEX.md`](skills/INDEX.md) for the category model and [`README.md`](README.md) for how to use a skill.
 
-## ✅ Available (141 skills across 14 categories)
+## ✅ Available (148 skills across 14 categories)
 
 ### `orchestration/` — 8 skills (new category)
 Agent-to-agent task mechanics for multi-agent systems.
@@ -86,7 +86,7 @@ Standards, controls, monitoring, policy.
 - [`pci-dss-req-4-transmission-encryption.md`](skills/governance/pci-dss-req-4-transmission-encryption.md), [`pci-dss-req-6-secure-systems-and-software.md`](skills/governance/pci-dss-req-6-secure-systems-and-software.md), [`pci-dss-req-8-identify-authenticate-access.md`](skills/governance/pci-dss-req-8-identify-authenticate-access.md) — requirement-level compliance chunks
 - [`pci-secure-software-lifecycle-and-devsecops.md`](skills/governance/pci-secure-software-lifecycle-and-devsecops.md), [`pci-secure-software-standard-requirements.md`](skills/governance/pci-secure-software-standard-requirements.md), [`pci-tsp-token-service-provider-requirements.md`](skills/governance/pci-tsp-token-service-provider-requirements.md) — full PCI compliance family
 
-### `strategy/` — 19 skills
+### `strategy/` — 21 skills
 Goal-setting, portfolio alignment, strategy evaluation.
 - [`ooda-loop-decision-cycle.md`](skills/strategy/ooda-loop-decision-cycle.md) — Boyd's Observe-Orient-Decide-Act loop for competitive/adversarial situations (competitor moves, incidents, negotiation), explicitly distinct from PDSA's cooperative improvement cycle
 - [`negotiation-concession-strategy-and-tradeoff-framework.md`](skills/strategy/negotiation-concession-strategy-and-tradeoff-framework.md) — a pre-agreed three-tier concession strategy required before any negotiation opens: free trade-aways (zero cost, zero risk, valued by the counterpart), priced trades (never free; a reason and an exchange), and protected terms (hard wall or gated, senior-approved exception), mapped onto BATNA/ZOPA, reciprocity, and logrolling
@@ -107,6 +107,8 @@ Goal-setting, portfolio alignment, strategy evaluation.
 - [`macroeconomic-risk-awareness-for-product-strategy.md`](skills/strategy/macroeconomic-risk-awareness-for-product-strategy.md) — Keynes/Friedman/Hayek/Minsky/Schumpeter/Akerlof-Shiller-grounded macro-risk awareness, plus a practical PESTLE scan
 - [`controlled-experiment-design-and-decision-rules.md`](skills/strategy/controlled-experiment-design-and-decision-rules.md) — A/B test hypothesis-to-decision workflow, with pricing experiments treated as methodologically distinct from UI/feature tests
 - [`market-trend-and-signal-assessment.md`](skills/strategy/market-trend-and-signal-assessment.md) — rates a signal's source and information separately, tells announcements from shipped capability, tests the strongest signal against competing explanations, and sets a response level with trigger, owner and review date
+- [`decision-quality-and-reversibility.md`](skills/strategy/decision-quality-and-reversibility.md) — easy- versus hard-to-reverse decisions, one decider with the other roles named, a pre-mortem for the hard ones, deadlines and review dates
+- [`product-led-vs-sales-led-motion.md`](skills/strategy/product-led-vs-sales-led-motion.md) — revenue arithmetic by motion, a written routing rule from account traits, segment measurement and a small test; the lowest-confidence skill in the set
 
 ### `refinement/` — 9 skills
 Backlog and roadmap refinement techniques, plus the BRD/PRD/FRD requirements-document family.
@@ -126,7 +128,7 @@ Domain-specific compliance/security guidance.
 
 (`agent-zero-trust-delegation.md` and `pci-dss-req-3-4.md` moved to `governance/` — see that section.)
 
-### `product/` — 26 skills
+### `product/` — 31 skills
 Product-family overlays.
 - [`product-capability-map-and-competitor-overlay.md`](skills/product/product-capability-map-and-competitor-overlay.md) — BIZBOK-style hierarchical capability map (L1→L2→L3 by capability tier) with an actor/channel band and optional competitor overlay; includes a workspace-authored Foundation Test for load-bearing capabilities within a tier
 - [`north-star-metric-and-review-cadence.md`](skills/product/north-star-metric-and-review-cadence.md) — one North Star Metric grounded in genuine customer value plus team-owned input metrics, and a weekly/monthly/quarterly review-cadence structure
@@ -150,6 +152,11 @@ Product-family overlays.
 - [`win-loss-analysis.md`](skills/product/win-loss-analysis.md) — splits a win-rate change into mix and rate, counts no-decision as its own loss category, compares logged with buyer-stated reasons, and plans buyer interviews
 - [`dashboard-and-alert-design.md`](skills/product/dashboard-and-alert-design.md) — one view per audience, pages only on user-visible symptoms with an owner, duration and action, a page budget and a retire rule
 - [`jobs-to-be-done-and-ideation.md`](skills/product/jobs-to-be-done-and-ideation.md) — job in its situation, forces of progress against evidence, real alternatives, then divergent ideas narrowed by criteria with a cheap test
+- [`discovery-interview-craft.md`](skills/product/discovery-interview-craft.md) — turns opinion and hypothetical interview questions into past-story questions, fixes recruiting, sets an interview habit and states what a few interviews can support
+- [`product-risk-assessment.md`](skills/product/product-risk-assessment.md) — the four product risks with an owner, a testable assumption, the cheapest test and a pass line set in advance, ordered so value and viability come before the build
+- [`customer-feedback-operations.md`](skills/product/customer-feedback-operations.md) — an owned two-level taxonomy, request kept apart from need and solution, counts by account with segment and revenue, and closing the loop
+- [`analytics-tracking-plan.md`](skills/product/analytics-tracking-plan.md) — a tracking plan driven by the question, with one naming rule, duplicate clean-up, owners per event and validation
+- [`beta-and-design-partner-programs.md`](skills/product/beta-and-design-partner-programs.md) — programme type, measurable goals, a small cohort sized to support capacity, cadence, exit criteria and a feedback-to-decision route
 
 ### `management/` — 7 skills
 Management practice grounded in W. Edwards Deming's work, plus a second distinct management philosophy.

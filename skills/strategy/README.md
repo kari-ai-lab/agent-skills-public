@@ -112,6 +112,12 @@ These skills help product leadership:
 - `market-trend-and-signal-assessment.md`
   - Sorts market and competitor signals into real and noise: source and information rated separately, announcements kept apart from shipped capability, the strongest signal tested against competing explanations, and a response level with trigger, owner and review date per signal.
 
+- `decision-quality-and-reversibility.md`
+  - Classifies decisions as easy or hard to reverse, names one decider and the other roles, requires a pre-mortem for hard ones and sets deadlines and review dates.
+
+- `product-led-vs-sales-led-motion.md`
+  - Computes revenue by motion, writes a routing rule from account traits, measures by segment and proposes a small test. Lowest-confidence skill: most guidance behind it is from vendors.
+
 ## Suggested Usage Order
 
 1. Start with `product-and-solution-portfolio-definition.md` to define products, solutions, overlap boundaries, and offering rationale.

@@ -44,6 +44,21 @@ Run these before `refinement/product-requirements-document-template.md` assumes 
 - `jobs-to-be-done-and-ideation.md`
   - Reads switching interviews through the job's situation and the four forces, lists real alternatives, then diverges on ideas and narrows with criteria and cheap tests.
 
+- `discovery-interview-craft.md`
+  - Diagnoses each draft interview question and rewrites it as a past-story question, fixes recruiting, sets an interview habit and states what a few interviews can and cannot support.
+
+- `product-risk-assessment.md`
+  - Separates value, usability, feasibility and business-viability risk, with an owner, a testable assumption, the cheapest test and a pass line set in advance for each.
+
+- `customer-feedback-operations.md`
+  - Sets an owned two-level taxonomy, keeps request, need and solution apart, counts accounts with segment and revenue, and closes the loop.
+
+- `analytics-tracking-plan.md`
+  - Starts from the question and metric, sets a naming rule, fixes duplicate events and adds owners and validation.
+
+- `beta-and-design-partner-programs.md`
+  - Chooses the programme type, sets measurable goals and exit criteria, sizes the cohort to support capacity and routes feedback to decisions.
+
 - `research-synthesis-methodology.md`
   - Step zero for this section: turns raw interview transcripts, support tickets, survey open-ends, and field notes into named, evidenced themes — via thematic analysis (coding), affinity mapping (the collaborative version), and triangulation (cross-validating a finding against a second independent source before it drives a decision) — before any of the skills below build on "real research" that was never actually synthesized.
   - Required input to `opportunity-solution-tree.md`, `user-persona-development.md`, and `customer-journey-mapping.md`, all three of which require findings sourced to real research but never defined the synthesis method themselves.
