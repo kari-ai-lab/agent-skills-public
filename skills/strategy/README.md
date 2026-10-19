@@ -109,6 +109,9 @@ These skills help product leadership:
   - Grounds macro-risk awareness in named models (Keynes, Friedman, Hayek, Minsky, Schumpeter, Akerlof/Shiller) so systemic economic conditions — not just competitors — are recognized as a threat to even a well-built product.
   - Carries the practical PESTLE macro-scan (six factors, likelihood/impact scoring, six-month re-run cadence) and an explicit note distinguishing it from Porter's Five Forces (industry structure, not macro-environment).
 
+- `market-trend-and-signal-assessment.md`
+  - Sorts market and competitor signals into real and noise: source and information rated separately, announcements kept apart from shipped capability, the strongest signal tested against competing explanations, and a response level with trigger, owner and review date per signal.
+
 ## Suggested Usage Order
 
 1. Start with `product-and-solution-portfolio-definition.md` to define products, solutions, overlap boundaries, and offering rationale.

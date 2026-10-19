@@ -2,7 +2,7 @@
 
 Status of every skill category in this repo — what's available to use today vs. what's on the roadmap. See [`skills/INDEX.md`](skills/INDEX.md) for the category model and [`README.md`](README.md) for how to use a skill.
 
-## ✅ Available (140 skills across 14 categories)
+## ✅ Available (141 skills across 14 categories)
 
 ### `orchestration/` — 8 skills (new category)
 Agent-to-agent task mechanics for multi-agent systems.
@@ -86,7 +86,7 @@ Standards, controls, monitoring, policy.
 - [`pci-dss-req-4-transmission-encryption.md`](skills/governance/pci-dss-req-4-transmission-encryption.md), [`pci-dss-req-6-secure-systems-and-software.md`](skills/governance/pci-dss-req-6-secure-systems-and-software.md), [`pci-dss-req-8-identify-authenticate-access.md`](skills/governance/pci-dss-req-8-identify-authenticate-access.md) — requirement-level compliance chunks
 - [`pci-secure-software-lifecycle-and-devsecops.md`](skills/governance/pci-secure-software-lifecycle-and-devsecops.md), [`pci-secure-software-standard-requirements.md`](skills/governance/pci-secure-software-standard-requirements.md), [`pci-tsp-token-service-provider-requirements.md`](skills/governance/pci-tsp-token-service-provider-requirements.md) — full PCI compliance family
 
-### `strategy/` — 18 skills
+### `strategy/` — 19 skills
 Goal-setting, portfolio alignment, strategy evaluation.
 - [`ooda-loop-decision-cycle.md`](skills/strategy/ooda-loop-decision-cycle.md) — Boyd's Observe-Orient-Decide-Act loop for competitive/adversarial situations (competitor moves, incidents, negotiation), explicitly distinct from PDSA's cooperative improvement cycle
 - [`negotiation-concession-strategy-and-tradeoff-framework.md`](skills/strategy/negotiation-concession-strategy-and-tradeoff-framework.md) — a pre-agreed three-tier concession strategy required before any negotiation opens: free trade-aways (zero cost, zero risk, valued by the counterpart), priced trades (never free; a reason and an exchange), and protected terms (hard wall or gated, senior-approved exception), mapped onto BATNA/ZOPA, reciprocity, and logrolling
@@ -106,6 +106,7 @@ Goal-setting, portfolio alignment, strategy evaluation.
 - [`microeconomic-pricing-and-positioning-models.md`](skills/strategy/microeconomic-pricing-and-positioning-models.md) — grounds pricing/positioning in named economic models (Marshall, Pigou, Kahneman/Tversky, Nash, Tirole, Simonson, the decoy effect, Veblen goods)
 - [`macroeconomic-risk-awareness-for-product-strategy.md`](skills/strategy/macroeconomic-risk-awareness-for-product-strategy.md) — Keynes/Friedman/Hayek/Minsky/Schumpeter/Akerlof-Shiller-grounded macro-risk awareness, plus a practical PESTLE scan
 - [`controlled-experiment-design-and-decision-rules.md`](skills/strategy/controlled-experiment-design-and-decision-rules.md) — A/B test hypothesis-to-decision workflow, with pricing experiments treated as methodologically distinct from UI/feature tests
+- [`market-trend-and-signal-assessment.md`](skills/strategy/market-trend-and-signal-assessment.md) — rates a signal's source and information separately, tells announcements from shipped capability, tests the strongest signal against competing explanations, and sets a response level with trigger, owner and review date
 
 ### `refinement/` — 9 skills
 Backlog and roadmap refinement techniques, plus the BRD/PRD/FRD requirements-document family.
