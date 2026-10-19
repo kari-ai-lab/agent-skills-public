@@ -1,6 +1,6 @@
 ---
 name: controlled-experiment-design-and-decision-rules
-description: "Closes Group D of the workspace's product-skill gap backlog: nothing in this workspace previously told a team how to *decide whether a shipped change actually worked*. management/pdsa-improvement-cycle.md covers process."
+description: "Use when a change (feature, UI, copy or price) is to be judged by a controlled experiment: tests one variable, fixes sample size, duration, guardrails and the ship, no-ship or inconclusive rule before launch, forbids stopping early on a good-looking trend, and treats pricing tests differently from UI tests."
 ---
 
 # Skill Name: Controlled Experiment Design and Decision Rules
@@ -176,6 +176,25 @@ Rules:
   pricing change, regardless of statistical result.
 - An inconclusive result is a valid, expected outcome — do not pressure it
   into a ship decision.
+```
+
+## Output Template
+
+```markdown
+## Experiment: [name]
+**Hypothesis:** If we change [one variable], then [metric] will [direction, size], because [reason]
+**Context:** [UI/feature | transactional pricing | subscription pricing | negotiated pricing]
+**Variable tested (one):** [..]   **Unit and assignment:** [randomised by ..]
+**Baseline:** [..]  **Minimum effect worth detecting:** [..]
+**Sample size per arm:** [..]  **Run time:** [whole weeks, no early stop]
+**Guardrails (must not worsen):** [metric, limit]
+**Decision rule, written now:**
+- Ship if [primary result at the stated threshold] and no guardrail breached
+- No-ship if [..]
+- Inconclusive if [..] (then: [extend / redesign / stop])
+**Pricing check (pricing tests only):** [fairness, consumer-protection, confounds]
+## Result record
+Outcome: [win | loss | inconclusive] · effect size: [..] · what we learned: [..]
 ```
 
 ## Success Criteria / Quality Checklist

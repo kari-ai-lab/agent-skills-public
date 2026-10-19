@@ -1,6 +1,6 @@
 ---
 name: retrospective-improvement
-description: "Turns retrospective input into concrete future improvements by identifying hindrances early, protecting high-performing practices, and creating follow-up work that measurably improves delivery."
+description: "Use after a retrospective, when notes and sprint results must become a small number of owned improvement actions: ranks the hindrances, protects strengths unless measures decline, names owners and timing, defines how to tell whether each change helped, and puts the work in the next sprint."
 ---
 
 # Skill Name: Retrospective Improvement Planning
@@ -74,6 +74,19 @@ Rules:
 - Also identify all strong areas, which should be avoided to be adjusted until measured KPI drops.
 - Prefer a small number of accountable follow-up actions over a long unfocused list.
 - Do not recommend changing strong practices without data.
+```
+
+## 📋 Output Template
+
+```markdown
+## Sprint outcome
+[Goal met or missed; spillover; defects; key numbers]
+## Hindrances (ranked by likely impact)
+| # | Hindrance | Evidence | Impact | Act now or defer |
+## Follow-up actions (about three or fewer)
+| Action | Owner | Timing | In next sprint? (capacity trade) | How we will know it helped (measure, start value, check date) |
+## Strengths to keep
+| Practice | Do not change unless: [measure] declines |
 ```
 
 ## ✅ Success Criteria / Quality Checklist

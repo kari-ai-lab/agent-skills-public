@@ -1,6 +1,6 @@
 ---
 name: story-point-calibration
-description: "Calibrates story point estimates against previously delivered work so the team uses a stable internal scale instead of reinterpreting point values every sprint."
+description: "Use when a team estimates stories in points and needs consistent numbers: anchors each new story to a named delivered reference, says whether it should be equal, lower or higher, flags drift or inflation against history, and names the missing benchmark when no anchor exists."
 ---
 
 # Skill Name: Story Point Calibration
@@ -57,6 +57,16 @@ Rules:
 - Use relative estimation, not absolute hours disguised as points.
 - Prefer comparison-based reasoning over abstract debate.
 - If no good historical anchor exists, say that explicitly and identify the missing benchmark.
+```
+
+## 📋 Output Template
+
+```markdown
+| Story | Closest reference (points) | Comparison: scope, uncertainty, dependencies, validation | Estimate | Equal / lower / higher | Anchor quality |
+## Drift check
+[Evidence that similar work has been scored higher or lower over time, and what to look into]
+## Missing anchors
+[Stories with no good reference, the benchmark that is missing, and what to do instead (for example a time-boxed investigation)]
 ```
 
 ## ✅ Success Criteria / Quality Checklist

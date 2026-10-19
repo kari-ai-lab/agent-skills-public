@@ -1,6 +1,6 @@
 ---
 name: north-star-metric-and-review-cadence
-description: "Defines a single North Star Metric (NSM) that captures the core value the product actually delivers to customers, plus the small set of input metrics beneath it that individual teams can actually influence."
+description: "Use when a product team needs one north star metric and a review rhythm: defines the customer value delivered first, rejects revenue and signups as the metric, names input metrics with owners, matches the active-user window to real usage, and sets weekly, monthly and quarterly reviews."
 ---
 
 # Skill Name: North Star Metric and Review Cadence

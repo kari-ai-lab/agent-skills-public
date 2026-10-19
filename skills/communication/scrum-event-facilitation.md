@@ -1,6 +1,6 @@
 ---
 name: scrum-event-facilitation
-description: "Facilitates the three Scrum events most often run poorly — the Daily Scrum, Sprint Review, and Sprint Retrospective — to their actual stated purpose and timebox, per the official Scrum Guide."
+description: "Use when the Daily Scrum, Sprint Review or Sprint Retrospective is running badly: states each event's purpose, scales the timebox to the sprint length, sets who attends, names the anti-pattern to watch for, and routes retrospective improvements into tracked work."
 ---
 
 # Skill Name: Scrum Event Facilitation
