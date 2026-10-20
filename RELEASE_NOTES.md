@@ -131,7 +131,7 @@ Domain-specific compliance/security guidance.
 ### `product/` — 31 skills
 Product-family overlays.
 - [`product-capability-map-and-competitor-overlay.md`](skills/product/product-capability-map-and-competitor-overlay.md) — BIZBOK-style hierarchical capability map (L1→L2→L3 by capability tier) with an actor/channel band and optional competitor overlay; includes a workspace-authored Foundation Test for load-bearing capabilities within a tier
-- [`north-star-metric-and-review-cadence.md`](skills/product/north-star-metric-and-review-cadence.md) *(reference: tested twice and did not beat an unaided answer)* — one North Star Metric grounded in genuine customer value plus team-owned input metrics, and a weekly/monthly/quarterly review-cadence structure
+- [`north-star-metric-and-review-cadence.md`](skills/product/north-star-metric-and-review-cadence.md) *(lowest confidence: cleared its third test only marginally)* — one North Star Metric grounded in genuine customer value plus team-owned input metrics, and a weekly/monthly/quarterly review-cadence structure
 - [`research-synthesis-methodology.md`](skills/product/research-synthesis-methodology.md) — turns raw research (interviews, tickets, survey open-ends) into evidenced themes via thematic analysis, affinity mapping, and triangulation
 - [`systems-thinking-and-domain-driven-design.md`](skills/product/systems-thinking-and-domain-driven-design.md) — foundational lens for this and the `strategy/`/`refinement/` categories
 - [`competitor-analysis-synthesizer.md`](skills/product/competitor-analysis-synthesizer.md)

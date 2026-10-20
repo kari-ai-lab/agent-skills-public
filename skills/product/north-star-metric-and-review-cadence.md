@@ -1,11 +1,9 @@
 ---
 name: north-star-metric-and-review-cadence
-description: "Use when a product team needs one north star metric and a review rhythm: defines the customer value delivered first, rejects revenue and signups as the metric, names input metrics with owners, matches the active-user window to real usage, and sets weekly, monthly and quarterly reviews."
+description: "Use when a product team needs one north star metric and a review rhythm: defines the customer value delivered first, rejects revenue and signups as the metric, names input metrics with owners, matches the active-user window to real usage, and sets weekly, monthly and quarterly reviews. Lowest-confidence skill: it cleared its test only marginally, so check it against your own data."
 ---
 
 # Skill Name: North Star Metric and Review Cadence
-
-> **Status: reference.** This skill was tested twice against an unaided answer and did not beat it (+9.4 with one regression, then +0.0 after a gaming check was added). It is kept as a lookup for the North Star framework, not as a run card. Treat its method as one reasonable approach, not as a tested improvement.
 
 ## 🎯 Objective
 
@@ -22,6 +20,8 @@ Head of Product, Growth PM, or product leadership defining what the whole organi
 - **The product's natural usage pattern** — is daily engagement expected (social, messaging, productivity), or is asynchronous/periodic use normal (content platforms, newsletters, docs tools)?
 - **Existing review cadences**, if any, to check against the weekly/monthly/quarterly structure below.
 
+**Minimum viable input:** the value proposition in a sentence and the product's usage pattern (daily or periodic). If current metrics are missing, derive the inputs from the value proposition and say so.
+
 ## 📤 Expected Output
 
 - One named North Star Metric, with an explicit definition of the "meaningful action" it counts.
@@ -34,6 +34,13 @@ Head of Product, Growth PM, or product leadership defining what the whole organi
 
 - **Standalone (always works):** The user describes the value proposition and any current metrics directly; the skill derives the NSM, inputs, and cadence structure from that.
 - **Supercharged (if connected):** An analytics connector (Amplitude/Mixpanel/similar) could pull actual DAU/WAU/MAU numbers and compute the real stickiness ratio directly instead of the user supplying estimates.
+
+## 🔗 Routing / Related Skills
+
+- If the question is which metric category fits one specific question (activation, retention, revenue) → `product-growth-metrics-reference.md`.
+- If a metric moved and the cause is unknown → `metrics-review-and-anomaly-investigation.md`.
+- If the candidate is a revenue figure and the question is financial impact → `financial-impact-analysis/`.
+- If the review meetings themselves are running badly → `../communication/scrum-event-facilitation.md`.
 
 ## 📋 Output Template
 
