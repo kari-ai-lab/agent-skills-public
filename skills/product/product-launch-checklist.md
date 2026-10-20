@@ -30,6 +30,7 @@ Check these before running; each fires on something visible in the input.
 - If personal data is in scope → `../governance/privacy-law-awareness-for-product-development.md`.
 - If an issue is security-shaped → `../governance/product-security-incident-response-readiness.md`.
 - If the PRD has no launch plan section → `../refinement/product-requirements-document-template.md` first.
+- If the feature was built from a spec → `../delivery/spec-driven-development.md`; its gate already runs this checklist's support checks, so do not repeat them, and confirm the gate decision is Ready before go/no-go.
 
 ## Expected Output
 

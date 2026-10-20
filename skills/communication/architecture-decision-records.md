@@ -40,6 +40,7 @@ Check these before running; each fires on something visible in the input.
 - If the decision changes delivery sequencing → `roadmap-change-communication.md`.
 - If it carries risk needing an owner → `roam-risk-communication.md`.
 - If it touches cardholder scope → `../governance/pci-dss-applicability-and-scoping.md`.
+- If a spec's constitution article is being changed, or a plan fails a constitution gate and is justified in its Complexity Tracking table → record it here (see `../delivery/spec-driven-development.md`).
 
 ## 📋 Output Template
 

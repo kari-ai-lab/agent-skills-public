@@ -29,6 +29,7 @@ Check these before running; each fires on something visible in the input.
 - If the source items are vague or oversized → `epic-story-refinement.md` first; this skill formats a refined set, it does not refine one.
 - If any story touches card data or a payment flow → `../governance/pci-requirements-for-product-owners.md` for the Definition of Done addendum.
 - If any story handles personal data → `../governance/privacy-law-awareness-for-product-development.md`.
+- If the epic will be implemented by AI agents → `spec-driven-development.md`; keep each story's Gherkin criteria and IDs unchanged so they become its use-case checks.
 
 ## 📋 Output Template
 

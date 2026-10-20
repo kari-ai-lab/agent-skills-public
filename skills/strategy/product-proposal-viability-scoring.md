@@ -48,6 +48,7 @@ Check these before running; each fires on something visible in the input.
 - If the proposal clears the gate → `../financial-impact-analysis/revenue-cost-impact-weighted-prioritization.md` to convert the evidence into a comparable score.
 - Once admitted → `../refinement/product-requirements-discovery-questionnaire.md` before any PRD is drafted.
 - If this is a program or investment ask rather than a single initiative → `../refinement/business-requirements-document-template.md`.
+- Once admitted and AI agents will build it → `../delivery/spec-driven-development.md` (the go / needs-clarification / kill question belongs here, before any spec is written).
 
 ## Core Prompt / Instructions
 

@@ -161,6 +161,7 @@ Verdict: present / weak / missing per line above
 - `governance/cost-aware-agent-utilization.md` — token budgets and tier choice for maker vs checker.
 - `governance/agent-zero-trust-delegation.md` — least-privilege tools for an unattended agent.
 - `product/ai-human-task-allocation-model.md` — which steps may be autonomous at all.
+- `delivery/spec-driven-development.md` — when the loop's goal is a feature built from a written spec: its converge check is the stop condition and its independent gate is the verifier.
 
 ---
 

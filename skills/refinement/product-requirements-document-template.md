@@ -260,6 +260,7 @@ Check these before running; each fires on something visible in the input.
 - If discovery has not been run → `product-requirements-discovery-questionnaire.md` first; this template records thinking, it does not test it.
 - When a feature needs implementation-ready detail → `functional-requirements-document-template.md`.
 - To take features into a tracker → `../delivery/jira-epic-builder.md`.
+- If AI agents will build the feature → write the FRD, then run `../delivery/spec-driven-development.md`; the PRD's Gherkin acceptance criteria become its use-case checks, so keep their IDs stable.
 
 ## 🤖 Core Prompt / Instructions
 

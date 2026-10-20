@@ -148,6 +148,7 @@ Check these before running; each fires on something visible in the input.
 - If no PRD exists yet → `product-requirements-document-template.md` first.
 - To take the result into a tracker → `../delivery/jira-epic-builder.md`.
 - If the feature touches card data → `../governance/pci-requirements-for-product-owners.md`; personal data → `../governance/privacy-law-awareness-for-product-development.md`.
+- If an AI agent will implement from this FRD → `../delivery/spec-driven-development.md`; every open question left here must arrive there as a `[NEEDS CLARIFICATION]` marker, not be guessed.
 
 ## 🤖 Core Prompt / Instructions
 

@@ -39,6 +39,7 @@ Check these against the input before refining; each fires on something visible i
 - If any story touches card data, a payment flow, or a cardholder data environment → apply the Definition of Done addendum in `../governance/pci-requirements-for-product-owners.md` (change documentation, security-impact assessment, approval, rollback) instead of assuming a generic DoD covers it.
 - If the refined set is headed for a tracker → `jira-epic-builder.md` for Gherkin acceptance criteria.
 - If refinement shows the set is larger than the increment → `sprint-capacity-planning.md` before committing.
+- If the refined stories will be built by an AI agent → `spec-driven-development.md`; the Given / When / Then criteria written here are the checks its gate counts, so keep IDs stable.
 
 ## 📋 Output Template
 

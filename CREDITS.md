@@ -252,8 +252,9 @@ The original candidate primary source for controlled-experiment design; not free
 
 ### GitHub Spec Kit
 **https://github.com/github/spec-kit**
-Spec-Driven Development's Constitution/Specify/Plan/Tasks/Implement/Converge workflow (implement and converge repeat until converged), `[NEEDS CLARIFICATION]` markers, the optional bug-fix extension, and the "specifications become executable" framing.
+Spec-Driven Development's Constitution/Specify/Plan/Tasks/Implement/Converge workflow (implement and converge repeat until converged), `[NEEDS CLARIFICATION]` markers, the optional bug-fix extension, the "specifications become executable" framing, and (from its methodology page, `spec-driven.md`) the constitution starter articles, Phase -1 gates with Complexity Tracking, the what-and-why spec-template rule, plan outputs, task order, `[P]` marking and the spec folder layout. The sync statement ("specs stay in sync with code because they generate it") is cited in the validation gate.
 - [`skills/delivery/spec-driven-development.md`](skills/delivery/spec-driven-development.md)
+- [`skills/delivery/spec-validation-gate.md`](skills/delivery/spec-validation-gate.md)
 
 ### Kiro
 **https://kiro.dev/**

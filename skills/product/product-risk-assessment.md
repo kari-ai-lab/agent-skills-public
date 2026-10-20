@@ -59,6 +59,7 @@ A four-row risk table with owner, riskiest assumption, cheapest test and pass li
 - If the assumptions feed an opportunity tree → `opportunity-solution-tree.md`.
 - If an experiment needs stop rules → `../strategy/controlled-experiment-design-and-decision-rules.md`.
 - If the idea needs a viability score → `../strategy/product-proposal-viability-scoring.md`.
+- If the feature passes its tests and an AI agent will build it → `../delivery/spec-driven-development.md`; carry the riskiest assumptions into the spec's hallucination watch and open questions.
 
 ## 📋 Output Template
 

@@ -2,7 +2,7 @@
 
 Status of every skill category in this repo — what's available to use today vs. what's on the roadmap. See [`skills/INDEX.md`](skills/INDEX.md) for the category model and [`README.md`](README.md) for how to use a skill.
 
-## ✅ Available (148 skills across 14 categories)
+## ✅ Available (149 skills across 14 categories)
 
 ### `orchestration/` — 8 skills (new category)
 Agent-to-agent task mechanics for multi-agent systems.
@@ -48,7 +48,7 @@ Reusable procedure-style instructions.
 - [`api-builder-google-standard-methods-recipe.md`](skills/recipes/api-builder-google-standard-methods-recipe.md)
 - [`payment-processing-recipe.md`](skills/recipes/payment-processing-recipe.md)
 
-### `delivery/` — 17 skills
+### `delivery/` — 18 skills
 Planning, decomposition, QA, release, workflow execution.
 - [`epic-story-refinement.md`](skills/delivery/epic-story-refinement.md)
 - [`explore-plan-code-commit.md`](skills/delivery/explore-plan-code-commit.md)
@@ -66,7 +66,8 @@ Planning, decomposition, QA, release, workflow execution.
 - [`gherkin-syntax-and-writing-guide.md`](skills/delivery/gherkin-syntax-and-writing-guide.md) — full Gherkin keyword reference and the declarative-vs-imperative writing standard
 - [`behavior-driven-development-and-model-integration.md`](skills/delivery/behavior-driven-development-and-model-integration.md) — BDD's Discovery/Formulation/Automation cycle and Three Amigos model, tied back to DDD, SDLC, and Agile
 - [`bdd-framework-selection.md`](skills/delivery/bdd-framework-selection.md) — decision gate for Cucumber vs. Karate vs. Gauge by test-suite layer, before defaulting to Cucumber
-- [`spec-driven-development.md`](skills/delivery/spec-driven-development.md) — adapted from GitHub's Spec Kit and Kiro: four tiers (Micro, Light, Standard, Full), a Spec Kit/Kiro-based workflow with an implement/converge loop, an author-defined two-pass Commercialization Validation Gate (automated checks first, then independent review led by mutation testing), and a Spec Sync section for post-launch drift
+- [`spec-driven-development.md`](skills/delivery/spec-driven-development.md) — adapted from GitHub's Spec Kit and Kiro: four tiers (Micro, Light, Standard, Full), a Spec Kit/Kiro-based workflow with an implement/converge loop, constitution starter articles with a pre-Plan gate and Complexity Tracking, and a hand-off to an independent validation gate
+- [`spec-validation-gate.md`](skills/delivery/spec-validation-gate.md) — reference file split out of the SDD skill: an author-defined lean gate (Light) and two-pass gate (Standard, Full) led by mutation testing, with Spec Sync rules
 
 ### `governance/` — 19 skills
 Standards, controls, monitoring, policy.
