@@ -107,7 +107,7 @@ Goal-setting, portfolio alignment, strategy evaluation.
 - [`macroeconomic-risk-awareness-for-product-strategy.md`](skills/strategy/macroeconomic-risk-awareness-for-product-strategy.md) — Keynes/Friedman/Hayek/Minsky/Schumpeter/Akerlof-Shiller-grounded macro-risk awareness, plus a practical PESTLE scan
 - [`controlled-experiment-design-and-decision-rules.md`](skills/strategy/controlled-experiment-design-and-decision-rules.md) — A/B test hypothesis-to-decision workflow, with pricing experiments treated as methodologically distinct from UI/feature tests
 - [`market-trend-and-signal-assessment.md`](skills/strategy/market-trend-and-signal-assessment.md) — rates a signal's source and information separately, tells announcements from shipped capability, tests the strongest signal against competing explanations, and sets a response level with trigger, owner and review date
-- [`decision-quality-and-reversibility.md`](skills/strategy/decision-quality-and-reversibility.md) *(reference: passed once, did not replicate on re-test)* — easy- versus hard-to-reverse decisions, one decider with the other roles named, a pre-mortem for the hard ones, deadlines and review dates
+- [`decision-quality-and-reversibility.md`](skills/strategy/decision-quality-and-reversibility.md) — easy- versus hard-to-reverse decisions, one decider with the other roles named, a pre-mortem for the hard ones, deadlines and review dates
 - [`product-led-vs-sales-led-motion.md`](skills/strategy/product-led-vs-sales-led-motion.md) *(reference: passed once, did not replicate on re-test)* — revenue arithmetic by motion, a written routing rule from account traits, segment measurement and a small test; the lowest-confidence skill in the set
 
 ### `refinement/` — 9 skills
