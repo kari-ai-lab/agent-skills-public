@@ -44,7 +44,7 @@ Run these before `refinement/product-requirements-document-template.md` assumes 
 - `jobs-to-be-done-and-ideation.md`
   - Reads switching interviews through the job's situation and the four forces, lists real alternatives, then diverges on ideas and narrows with criteria and cheap tests.
 
-- `discovery-interview-craft.md` *(reference: passed once, did not replicate on re-test)*
+- `discovery-interview-craft.md`
   - Diagnoses each draft interview question and rewrites it as a past-story question, fixes recruiting, sets an interview habit and states what a few interviews can and cannot support.
 
 - `product-risk-assessment.md`

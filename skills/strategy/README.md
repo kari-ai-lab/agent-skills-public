@@ -115,7 +115,7 @@ These skills help product leadership:
 - `decision-quality-and-reversibility.md`
   - Classifies decisions as easy or hard to reverse, names one decider and the other roles, requires a pre-mortem for hard ones and sets deadlines and review dates.
 
-- `product-led-vs-sales-led-motion.md` *(reference: passed once, did not replicate on re-test)*
+- `product-led-vs-sales-led-motion.md`
   - Computes revenue by motion, writes a routing rule from account traits, measures by segment and proposes a small test. Lowest-confidence skill: most guidance behind it is from vendors.
 
 ## Suggested Usage Order

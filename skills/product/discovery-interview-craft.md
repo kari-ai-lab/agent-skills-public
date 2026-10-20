@@ -5,8 +5,6 @@ description: "Use when planning, reviewing or running customer discovery intervi
 
 # Skill Name: Discovery Interview Craft
 
-> **Status: reference.** This skill passed its first test against an unaided answer (+18.8) but did not replicate on a fresh scenario (+0.0). It is kept as a lookup, not as a run card. Treat its method as one reasonable approach, not as a tested improvement.
-
 ## 🎯 Objective
 
 Makes interviews produce evidence about what people actually did, rather than opinions and promises. People describe their habits badly in general, remember specific recent events better, and tell interviewers what they think they want to hear. The skill reviews an interview guide and plan against those facts.
