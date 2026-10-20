@@ -5,6 +5,8 @@ description: "Use when decisions are slow, contested or all routed through one m
 
 # Skill Name: Decision Quality And Reversibility
 
+> **Status: reference.** This skill passed its first test against an unaided answer (+18.8) but did not replicate on a fresh scenario (+9.4, with one regression). It is kept as a lookup, not as a run card. Treat its method as one reasonable approach, not as a tested improvement.
+
 ## 🎯 Objective
 
 Matches decision effort to how reversible the decision is. Amazon's 2015 letter distinguishes one-way doors (made slowly) from two-way doors (made quickly by individuals or small groups) and warns that organisations drift into applying the heavy process to both. Bain's RAPID names who recommends, agrees, performs, gives input and decides.

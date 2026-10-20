@@ -5,6 +5,8 @@ description: "Use when deciding between self-serve, sales-led or a hybrid go-to-
 
 # Skill Name: Product Led Vs Sales Led Motion
 
+> **Status: reference.** This skill passed its first test against an unaided answer (+18.8) but did not replicate on a fresh scenario (+9.4). It is kept as a lookup, not as a run card. Treat its method as one reasonable approach, not as a tested improvement.
+
 ## 🎯 Objective
 
 Frames the choice of motion with the company's own numbers and a routing rule. Most published guidance comes from vendors and consultancies, so thresholds are directional and must be tested against your own data.
