@@ -4,6 +4,17 @@ Use this category for shared product-family overlays that apply across a product
 
 > Reference source: [Product School](https://productschool.com/) blog and template library — used for role-clarity, AI-operating-model, and ready-to-use template content in this folder. Cite the specific article/template URL used in a skill's own `## Sources` section, per this workspace's sourcing convention.
 
+## The Simplicity Test
+
+A product manager's job is to be a deep master of their area, and the proof is whether they can explain it simply. Anyone can explain a complex topic in a complex way; it takes real understanding to explain it in a simple one. (This idea is often credited to Einstein, but no verified source exists, so treat it as folk wisdom and not a citation.)
+
+The same holds for the systems the skills in this library help design. Complex systems are easy to build and break easily, like a Rube Goldberg machine where every extra step is another place to fail. Simple systems are hard to build and hard to break, because someone had to understand the problem well enough to remove everything that was not needed.
+
+Use it as a check on any output these skills produce:
+
+1. **Can the owner state the decision, the reason and the next step in a few plain sentences** to someone who has not seen the document? If not, the thinking is not finished, whatever the template says.
+2. **Is there a simpler design that does the same job?** Name it, and say why it was rejected. If nobody can, the complexity has not been earned. The simplicity gate in `../delivery/spec-driven-development.md` is the architecture version of this check.
+
 ## Foundational Skills — Run These Lenses First
 
 - `systems-thinking-and-domain-driven-design.md`

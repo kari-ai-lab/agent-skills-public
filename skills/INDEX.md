@@ -8,6 +8,7 @@ This folder is the source of truth for skills that apply across multiple project
 
 - Host the master index for shared agent skills.
 - Separate workspace-global skills from project-local `CLAUDE.md` guidance.
+- Hold every output to the [Simplicity Test](product/README.md#the-simplicity-test): can the owner explain it in a few plain sentences, and is there a simpler design that does the same job?
 - Provide stable categories for domain, platform, product, delivery, governance, template, recipe, and migration content.
 - Track the migration of legacy skill content from `Skills library/`.
 - Maintain `CREDITS.md` as the consolidated external-source attribution registry — every skill citing an external source should have a matching row there.
