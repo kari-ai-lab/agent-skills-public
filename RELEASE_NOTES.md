@@ -2,7 +2,7 @@
 
 Status of every skill category in this repo — what's available to use today vs. what's on the roadmap. See [`skills/INDEX.md`](skills/INDEX.md) for the category model and [`README.md`](README.md) for how to use a skill.
 
-## ✅ Available (149 skills across 14 categories)
+## ✅ Available (150 skills across 14 categories)
 
 ### `orchestration/` — 8 skills (new category)
 Agent-to-agent task mechanics for multi-agent systems.
@@ -48,7 +48,7 @@ Reusable procedure-style instructions.
 - [`api-builder-google-standard-methods-recipe.md`](skills/recipes/api-builder-google-standard-methods-recipe.md)
 - [`payment-processing-recipe.md`](skills/recipes/payment-processing-recipe.md)
 
-### `delivery/` — 18 skills
+### `delivery/` — 19 skills
 Planning, decomposition, QA, release, workflow execution.
 - [`epic-story-refinement.md`](skills/delivery/epic-story-refinement.md)
 - [`explore-plan-code-commit.md`](skills/delivery/explore-plan-code-commit.md)
@@ -68,6 +68,7 @@ Planning, decomposition, QA, release, workflow execution.
 - [`bdd-framework-selection.md`](skills/delivery/bdd-framework-selection.md) — decision gate for Cucumber vs. Karate vs. Gauge by test-suite layer, before defaulting to Cucumber
 - [`spec-driven-development.md`](skills/delivery/spec-driven-development.md) — adapted from GitHub's Spec Kit and Kiro: four tiers (Micro, Light, Standard, Full), a Spec Kit/Kiro-based workflow with an implement/converge loop, constitution starter articles with a pre-Plan gate and Complexity Tracking, and a hand-off to an independent validation gate
 - [`spec-validation-gate.md`](skills/delivery/spec-validation-gate.md) — reference file split out of the SDD skill: an author-defined lean gate (Light) and two-pass gate (Standard, Full) led by mutation testing, with Spec Sync rules
+- [`after-action-review.md`](skills/delivery/after-action-review.md) — a single-outcome review on the Army After Action Review's four questions (standard, facts, causes labelled confirmed or inference, at most three owned and tracked actions), blameless about people; beat an unaided answer by +18.5 and +24.0 on a first case and +49.2 and +35.6 on a fresh one.
 
 ### `governance/` — 19 skills
 Standards, controls, monitoring, policy.

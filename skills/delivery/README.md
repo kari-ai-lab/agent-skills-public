@@ -106,6 +106,10 @@ Pre-delivery upstream planning now lives in `.agents/skills/refinement/`.
 - `spec-validation-gate.md`
   - Reference file (not a run card), split out of the SDD skill: an author-defined independent check of AI-built work. A lean gate at Light tier (checks, one mutation table, untraced behaviour, one-line decision) and a two-pass gate at Standard and Full (automated checks and a traceability list, then independent review led by mutation testing) with per-use-case coverage classification (Over/Well/Under-covered/Missed), hallucination, interpretation-error and requirements-gap checks, a mandatory independent validator, a Ready/Gap Closure Required/Reject decision and a roadmap-feedback loop, plus Spec Sync rules for keeping the spec true after launch.
 
+- `after-action-review.md`
+  - Reviews one finished outcome (launch, incident, missed target, lost deal, decision) on the US Army After Action Review's four questions in order: what was supposed to happen (quoted from the plan, or flagged missing), what actually happened (dated facts with sources), why the two differ (causes labelled confirmed or inference, blameless about people), and what to sustain and improve (at most three actions, each with owner, date, measure and where it is tracked).
+  - Routes sprint retrospectives to `scrum-event-facilitation.md` and `retrospective-improvement.md`, and the pre-mortem to `decision-quality-and-reversibility.md`.
+
 - `bdd-framework-selection.md`
   - A decision gate run before the two skills above commit to Cucumber/Gherkin by default: routes UI-driven, stakeholder-readable scenarios to Cucumber (after an explicit stakeholder-readability check — if no non-developer actually reads the `.feature` files, recommends a plain code-based test instead), API/HTTP/contract-heavy suites to Karate, and very large (500+ scenario) parallel-runtime-bound suites to Gauge.
   - Names the real hybrid pattern ("Karate for API + Cucumber for UI") rather than forcing one tool across a mixed suite, and flags PCI/ISO-20022-adjacent domains as directly actionable for the Karate recommendation.

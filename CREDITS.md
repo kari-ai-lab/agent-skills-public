@@ -256,6 +256,10 @@ Spec-Driven Development's Constitution/Specify/Plan/Tasks/Implement/Converge wor
 - [`skills/delivery/spec-driven-development.md`](skills/delivery/spec-driven-development.md)
 - [`skills/delivery/spec-validation-gate.md`](skills/delivery/spec-validation-gate.md)
 
+### US Army After Action Review, Darling/Parry/Moore, Google SRE, Klein
+The four After Action Review questions come from the US Army's *TC 25-20, A Leader's Guide to After-Action Reviews* (1993; no link given because a primary URL was not verified, and a later revision exists whose number was not verified). Why business reviews often fail to change later performance: Marilyn Darling, Charles Parry and Joseph Moore, [Learning in the Thick of It](https://hbr.org/2005/07/learning-in-the-thick-of-it), *Harvard Business Review*, July-August 2005. The blameless review for incidents: Google, [Postmortem Culture: Learning from Failure](https://sre.google/sre-book/postmortem-culture/), *Site Reliability Engineering*. The pre-mortem it pairs with: Gary Klein, "Performing a Project Premortem", *Harvard Business Review*, September 2007.
+- [`skills/delivery/after-action-review.md`](skills/delivery/after-action-review.md)
+
 ### Kiro
 **https://kiro.dev/**
 Spec-as-requirements+design+tasks structure, the Analyze Requirements and automated-reasoning contradiction/gap check before design, Bugfix specs, Quick Spec, and the explicit contrast with "vibe coding."
