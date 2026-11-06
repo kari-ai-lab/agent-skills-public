@@ -45,10 +45,10 @@ tools/flow_metrics.py usl     --alpha 0.05 --beta 0.001 --n 40
 | Flow identity | Little's Law, WIP = throughput × cycle time | For a stable system, average cycle time is WIP divided by throughput | Check stability first (the calculator flags a trend; the checklist is in `wip-limits-and-flow-protection.md`). If WIP is climbing, that is the finding |
 | Queueing | Kingman's approximation: wait ≈ ρ/(1−ρ) × (Ca² + Cs²)/2 × mean service time | Waiting grows non-linearly with utilization and with variability in arrivals and task size | Utilization ρ and spread of task sizes. ρ/(1−ρ) is 3 at 75%, 4 at 80%, 9 at 90%, 19 at 95% |
 | Constraint | Theory of Constraints | Output is set by the single most limiting stage; improving elsewhere only builds a queue in front of it | Which stage has the longest queue and the highest utilization |
-| Product-development flow | Reinertsen: small batches, manage queues, cost of delay | Smaller batches cut variability and speed feedback; measure the queue, not just the timeline | Batch size, queue length per stage, cost of delay of waiting items |
+| Product-development flow | Reinertsen: small batches, manage queues, cost of delay | Batch size is an economic trade-off (holding cost against transaction cost), but smaller batches usually cut variability and speed feedback; manage queue size, a leading indicator, not just the timeline | Batch size, queue length per stage, cost of delay of waiting items |
 | Parallelism | Amdahl's Law, S = 1 / ((1−p) + p/s) | The serial part caps the speed-up from more parallel resources | Which steps are inherently serial (design review, migration, sign-off, integration) |
 | Scaling drag | Universal Scalability Law, C(N) = N / (1 + α(N−1) + βN(N−1)) | Contention (α) and crosstalk (β, grows with N²) mean throughput flattens and can fall as N grows | Team size, concurrent initiatives, merge conflicts, coordination meetings |
-| Late projects | Brooks's Law | Adding people to a late project makes it later (ramp-up and communication cost) | Whether the plan adds people to work already behind |
+| Late projects | Brooks's Law | Adding people to a late project tends to make it later (ramp-up and communication cost); Brooks called it an oversimplification, so treat it as a tendency, not a theorem | Whether the plan adds people to work already behind |
 | Boundaries | Conway's Law | Systems and handoffs copy the communication structure of the organization | Number of teams a change crosses; each handoff is a queue |
 | Measurement | Goodhart's Law | A measure used as a target stops being a good measure | Whether cycle time, points or velocity are targets, and what people do to hit them |
 
@@ -131,12 +131,13 @@ Do not state a number the inputs do not support.
 
 - John D. C. Little, "A Proof for the Queuing Formula: L = λW", *Operations Research* 9(3), 1961: holds for stationary systems with finite means; it concerns averages, not individual items.
 - J. F. C. Kingman, "The single server queue in heavy traffic", *Mathematical Proceedings of the Cambridge Philosophical Society* 57(4), 1961: an approximation for a single-server queue, exact only as utilization approaches 100%.
-- Eliyahu Goldratt, *The Goal* (1984): the Theory of Constraints.
-- Donald Reinertsen, *The Principles of Product Development Flow* (2009).
-- Gene Amdahl (1967) and Neil Gunther's Universal Scalability Law: Gunther, "A General Theory of Computational Scalability Based on Rational Functions", [arXiv:0808.1431](https://arxiv.org/abs/0808.1431) (the paper also uses σ and κ for α and β). Developed for computer systems, so its use for teams is an analogy.
-- Frederick Brooks, *The Mythical Man-Month* (1975); Melvin Conway, "How Do Committees Invent?" (1968).
+- Eliyahu Goldratt and Jeff Cox, *The Goal: A Process of Ongoing Improvement* (1984): the Theory of Constraints and its five focusing steps (identify the constraint, exploit it, subordinate everything else to it, elevate it, repeat). Title, authors and date confirmed from secondary sources; the publisher was not confirmed.
+- Donald G. Reinertsen, *The Principles of Product Development Flow: Second Generation Lean Product Development* (Celeritas Publishing, Redondo Beach, 2009): queues as the main source of poor development performance, queue size as a leading indicator, batch size as an economic trade-off (a U-shaped total cost, so smaller is not always better), and cost of delay. Confirmed from a trade review and secondary summaries; the book itself was not read.
+- Gene M. Amdahl, "Validity of the single processor approach to achieving large scale computing capabilities", *AFIPS Spring Joint Computer Conference* vol. 30, 1967, pp. 483-485 ([DOI 10.1145/1465482.1465560](https://doi.org/10.1145/1465482.1465560)). The paper argues the serial-fraction point in words; the formula S = 1 / ((1-p) + p/s) is the later, commonly stated form and is not printed in the paper.
+- Neil Gunther's Universal Scalability Law: "A General Theory of Computational Scalability Based on Rational Functions", [arXiv:0808.1431](https://arxiv.org/abs/0808.1431) (the paper also uses σ and κ for α and β). Developed for computer systems, so its use for teams is an analogy.
+- Frederick Brooks, *The Mythical Man-Month* (Addison-Wesley, 1975): Brooks's Law, with two causes (onboarding, and communication channels growing with the square of the number of people); Brooks himself called it an "outrageous oversimplification". Melvin Conway, "How Do Committees Invent?", *Datamation* 14(4), April 1968, pp. 28-31; Brooks gave it the name "Conway's Law".
 - Goodhart's Law: the wording "when a measure becomes a target, it ceases to be a good measure" is Marilyn Strathern's 1997 restatement (which she credited to Keith Hoskin), not Charles Goodhart's own 1975 words; secondary sources only, primary text not checked.
-- Not verified here: book and paper details for Goldratt, Reinertsen, Amdahl, Brooks and Conway were cited from knowledge, not re-fetched this session.
+- Verification, 2026-11-06: Little, Kingman, Gunther, Amdahl and Conway were confirmed against catalogue or reference records; Goldratt, Reinertsen and Brooks were confirmed from secondary sources and not from the books; the Strathern and Hoskin attribution for the Goodhart wording is from secondary sources only.
 
 ## Routing
 
