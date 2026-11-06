@@ -75,6 +75,12 @@ Check these before running; each fires on something visible in the input.
 | [Item] | [Date] | [Date] | [Item/None] | [Named contractual/regulatory/event reason] |
 ```
 
+## Dependencies and Capacity (apply to whichever view is chosen)
+
+**Map dependencies explicitly.** A roadmap item that waits on something else carries it on the page. Classify each dependency as **technical** (needs another piece of work first), **team** (needs another team), **external** (a vendor or partner), **knowledge** (needs a research or investigation result), or **sequential** (must ship first for shared code or a shared user flow). For every dependency name an **owner** (who resolves it), a **need-by date** (when the dependent item needs it), and a **fallback** if it slips. A dependency with no owner or no date is a risk, not a plan: put a buffer around it, flag cross-team ones early, and prefer a simpler version, an interface contract or mock, a different sequence, or absorbing the work to remove the dependency. A page full of cross-team dependencies is a sign the teams or the sequence are arranged badly, not only a scheduling problem.
+
+**Say how capacity is allocated.** State, for the period, how team capacity is divided between new customer-facing work, work that improves the product's technical health (enablers, debt, reliability) and a reserve for unplanned work and defects, and show the numbers behind the split. There is **no standard percentage**: SAFe treats the allocation as a policy that product management and engineering agree for each planning period and revisit as context changes (a new product, a mature one, a period after an incident), and published examples differ widely. Do not adopt a quoted split such as "70/20/10" as a rule; use it, if at all, as a labelled starting example. If commitments exceed capacity, cut scope; never assume the team can do more. When adding an item, ask what comes off.
+
 ## 🤖 Core Prompt / Instructions
 
 ```text
@@ -141,7 +147,14 @@ You are laying out an already-prioritized workstream list as a roadmap view.
    Now/Next/Later was invented to avoid. Never use it as the default format
    for a roadmap operating under normal product-development uncertainty.
 
-7. JUSTIFY THE CHOICE EXPLICITLY.
+7. MAP DEPENDENCIES AND STATE THE CAPACITY ALLOCATION.
+   Whatever the view, list each dependency with its type, owner, need-by date
+   and fallback, and state how capacity is split between new work, technical
+   health and an unplanned reserve, with the numbers. If the plan exceeds
+   capacity, say what comes off. Do not present a quoted percentage split as
+   a rule.
+
+8. JUSTIFY THE CHOICE EXPLICITLY.
    Whichever view is produced, state why the other three were not chosen
    for this audience/certainty combination — the format is a deliberate
    decision, not a default reached for out of habit.
@@ -167,9 +180,13 @@ Existing OKRs (if any): $EXISTING_OKRS
 - [ ] If the OKR-aligned view is used, the Objective traces to actual strategy, not a backwards-rationalized stakeholder feature list.
 - [ ] If Timeline/Gantt is used, a specific named fixed external date/dependency drove the choice, not habit or familiarity.
 - [ ] The chosen view is justified explicitly against the three alternatives, not defaulted to.
+- [ ] Every dependency has a type, an owner, a need-by date and a fallback.
+- [ ] The capacity allocation between new work, technical health and an unplanned reserve is stated with numbers, and no quoted percentage was adopted as a rule.
+- [ ] If the plan exceeds capacity, scope was cut, not assumed away.
 
 ## Sources
 
+- **Added in v1.1 (2026-10-19), dependency mapping and capacity allocation.** Dependency types, owner and need-by date, buffers and reduction tactics, and the capacity-versus-ambition rule come from a comparison with Anthropic's Product Management plugin (`roadmap-update`, v1.2.0, Apache 2.0, read in full) and are practitioner convention, **not independently sourced here**. Two supporting points were checked against secondary sources only, because the official SAFe pages returned HTTP 404 when fetched: (1) SAFe frames capacity allocation as an agreed, periodically revisited split between business features, architectural runway or enablers, technical debt and maintenance, with no single permanent formula, and examples in the secondary sources range from 15% technical debt and 5% maintenance, to 60% features and 20% each for debt and maintenance, to debt shares of 10% to 30% or more depending on the codebase (see [Leanwisdom — optimizing capacity allocation](https://www.leanwisdom.com/blog/optimizing-capacity-allocation-in-lean-agile-environments/) and [Open Exam Prep — capacity allocation and architectural runway](https://open-exam-prep.com/study-guides/safe-popm/ch04-prioritization-kanban/capacity-allocation)); (2) a SAFe program board puts milestones in a top row, one row per team, and connects dependencies to features, and a Scaled Agile retrospective article notes that too many dependencies suggest the value-stream network is not configured well (see [Scaled Agile — Program Dependency Board Retrospective](https://scaledagile.com/safe-program-dependency-board-retrospective/), reported through search results, not read directly). The plugin's own "70% planned, 20% technical health, 10% unplanned" is one example among these and is not adopted here.
 - [ProdPad — "Why I Invented the Now-Next-Later Roadmap" (Janna Bastow)](https://www.prodpad.com/blog/invented-now-next-later-roadmap/) — the framework's origin (2012, Janna Bastow and Simon Cast), the failure mode of fixed-date timeline roadmaps, the three horizons and their intentional certainty gradient.
 - [ProductPlan — "What is a Theme-Based Roadmap and Why is it Important?"](https://www.productplan.com/learn/theme-based-roadmap/) — the theme/epic/feature hierarchy, the outcome-vs-output framing, and why executives are more persuaded by theme-level roadmaps than feature lists.
 - [Roman Pichler — "OKRs and Product Roadmaps"](https://www.romanpichler.com/blog/okrs-and-product-roadmaps/) — the two OKR-roadmap integration structures, the SMART-goal requirement for roadmap objectives to work with OKRs, and the explicit warning against roadmaps becoming a checklist of stakeholder-requested features wearing an OKR label.
@@ -179,6 +196,6 @@ Existing OKRs (if any): $EXISTING_OKRS
 
 ## Metadata
 
-- **Version:** 1.0
-- **Last Updated:** 2026-08-09
+- **Version:** 1.1
+- **Last Updated:** 2026-10-19
 - **Author:** Workspace Refinement Skills

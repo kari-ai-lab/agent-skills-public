@@ -1,3 +1,8 @@
+---
+name: loop-engineering-for-agentic-workflows
+description: "Use when designing or reviewing an agent that must work toward a goal over many iterations with little human prompting (coding agent, scheduled maintenance agent, long-running task): specifies the goal and its machine-checkable stop condition, the act-observe-adjust cycle, an independent verifier, persistent state, budgets, and the points where a human must step in."
+---
+
 # Skill Name: Loop Engineering for Agentic Workflows
 
 ## 🎯 Objective
