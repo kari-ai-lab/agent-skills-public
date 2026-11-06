@@ -39,7 +39,7 @@ Check these before running; each fires on something visible in the input.
 
 - For running the retro itself → `../communication/scrum-event-facilitation.md`.
 - If improvements never get capacity → `sprint-capacity-planning.md` to make the trade explicit.
-- If the same theme recurs across retros → `wip-limits-and-flow-protection.md`, or `../management/organizational-change-readiness-and-team-disruption-penalty.md` when the cause is structural.
+- If the same theme recurs across retros → `wip-limits-and-flow-protection.md`, or `flow-effectiveness-and-anti-patterns.md` when it is about slow flow or handoffs, or `../management/organizational-change-readiness-and-team-disruption-penalty.md` when the cause is structural.
 
 ## 🤖 Core Prompt / Instructions
 

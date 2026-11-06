@@ -43,7 +43,7 @@ Product Owner, Scrum Master, Engineering Manager, Delivery Lead
 Check these before running; each fires on something visible in the input.
 
 - If the goal is unclear or item-shaped → `sprint-goal-drafting.md`.
-- If work is piling up mid-sprint → `wip-limits-and-flow-protection.md`.
+- If work is piling up mid-sprint → `wip-limits-and-flow-protection.md`; if the cause is unclear (utilization, a bottleneck stage, handoffs) → `flow-effectiveness-and-anti-patterns.md`.
 - Roll findings into the retro via `retrospective-improvement.md`.
 - For the weekly status readout → `../communication/rag-status-reporting.md`.
 
