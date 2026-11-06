@@ -5,7 +5,7 @@ description: "Gives a PM, EM, or Delivery Lead the concrete, mathematical case f
 
 # Skill Name: WIP Limits & Initiative-Overload Protection
 
-> **Evidence.** First eval (the skill had existed since August without one), case `new-initiative`, two runs against an unaided answer: +48.1 and +51.9, no regression, unaided 43 to 48 and skill 91 to 100. Independent edges in both runs: caveating the Little's Law figure because epics in flight were rising, keeping WIP, throughput and cycle time in one unit (the unaided answers brought stories into the cross-check or the review measure), labelling the Weinberg productivity figures as a heuristic and quoting them as stated, and saying the figures are long-run averages and not delivery dates. Naming a specific epic that would stop was won once and missed once. The unaided models already reach 18 weeks, offer options and route through the existing exception policy. Its pair is `flow-effectiveness-and-anti-patterns.md`.
+> **Evidence.** First eval (the skill had existed since August without one), case `new-initiative`, two runs against an unaided answer: +48.1 and +51.9, no regression, unaided 43 to 48 and skill 91 to 100. Independent edges in both runs: caveating the Little's Law figure because epics in flight were rising, keeping WIP, throughput and cycle time in one unit (the unaided answers brought stories into the cross-check or the review measure), labelling the Weinberg productivity figures as a heuristic and quoting them as stated, and saying the figures are long-run averages and not delivery dates. Naming a specific epic that would stop was won once and missed once; v1.5 (2026-11-06) tells the analyst to name a candidate as a proposal for leadership to confirm, and on a fresh case (`new-initiative-2`) it did so in both runs (+58.1 and +72.7, no regression, unaided 36 and 27). The unaided models already reach 18 weeks, offer options and route through the existing exception policy. Its pair is `flow-effectiveness-and-anti-patterns.md`.
 
 ## 🎯 Objective
 
@@ -50,7 +50,7 @@ Little's Law describes a **stable, steady-state system** — one where the rate 
 2. Compute current cycle time: `current WIP ÷ current throughput`.
 3. Model the new initiative added on top, throughput unchanged: `(current WIP + 1) ÷ current throughput` = the new cycle time for every item currently in flight, not just the new one.
 4. State the delta explicitly — e.g. "adding this initiative on top of current WIP lengthens the average cycle time for all 6 items already in flight from 3 weeks to 3.5 weeks" — as a concrete, falsifiable number, not an impression.
-5. If leadership wants cycle time to stay flat instead, the only lever Little's Law allows (without adding real throughput) is to *remove* an equivalent amount of existing WIP — name specifically what would have to stop, rather than leaving "we'll just also do this" unexamined.
+5. If leadership wants cycle time to stay flat instead, the only lever Little's Law allows (without adding real throughput) is to *remove* an equivalent amount of existing WIP — name specifically what would have to stop, rather than leaving "we'll just also do this" unexamined. **Name a candidate yourself:** propose the item (or two) you would stop first, with the basis (it frees the people being pulled onto the new work, it has made the least progress, or it has the lowest value if that is known), and mark it a proposal for leadership to confirm. Naming a candidate is not making the decision; answering "that is leadership's call" without naming one leaves the trade unexamined.
 
 ## The Context-Switching Model: Making Split-Attention Cost Visible
 
@@ -98,7 +98,7 @@ Check these before running; each fires on something visible in the input.
 - Everything already committed slips by roughly [delta] as a result — not just the new item.
 
 **If cycle time must stay flat instead:**
-- The following committed item(s) would need to stop or be deprioritized to make room: [name them].
+- The following committed item(s) would need to stop or be deprioritized to make room: [name them, as a proposal for leadership to confirm, with the basis].
 
 **People affected by staffing overlap:**
 | Person | Concurrent commitments after this starts | Approx. productive-time band (Weinberg heuristic) |
@@ -145,7 +145,10 @@ Produce the result in this order:
 
 4. If leadership instead wants cycle time to stay flat, name specifically
    what existing committed item(s) would have to stop — never leave "we'll
-   just also do this" unexamined.
+   just also do this" unexamined. Name at least one candidate yourself, with
+   the basis (frees the affected people, least progress, lowest known value),
+   marked as a proposal for leadership to confirm. "That is leadership's
+   call" without a named candidate does not meet this step.
 
 5. For any person being staffed onto the new initiative while still
    carrying existing commitments, state their new concurrency count and the
@@ -179,7 +182,8 @@ Rules:
   leadership-exception mechanism rather than creating a new approval path.
 - The decision itself belongs to leadership — this skill's job is making
   sure they're deciding with the real cost in front of them, not making
-  the decision on their behalf.
+  the decision on their behalf. Proposing a named candidate to stop is part
+  of showing the cost, not making the decision.
 
 Now apply this to the described situation:
 Current WIP: $CURRENT_WIP
@@ -196,7 +200,7 @@ People affected and their current concurrent commitments, if any: $AFFECTED_PEOP
 - [ ] A Little's Law cycle-time figure is presented as a long-run average relationship, never as a promised completion date for a specific item.
 - [ ] Current WIP, throughput, and cycle time are stated as real numbers, not impressions.
 - [ ] The cycle-time impact of adding the new initiative is computed via Little's Law and stated as a concrete delta affecting everything already in flight, not just the new item.
-- [ ] If cycle time must stay flat, the specific existing item(s) that would stop are named, not left implicit.
+- [ ] If cycle time must stay flat, the specific existing item(s) that would stop are named as a proposal with its basis, not left implicit and not deferred wholesale to leadership.
 - [ ] Any staffing overlap names the affected people's new concurrency count and the Weinberg-table productivity band, explicitly labeled as a heuristic, not a precise measurement.
 - [ ] The output ends in an explicit three-option decision request to leadership, never a one-sided argument to simply refuse the new work.
 - [ ] The decision routes through the org's existing leadership-exception mechanism rather than a new, parallel approval path.
@@ -223,6 +227,6 @@ People affected and their current concurrent commitments, if any: $AFFECTED_PEOP
 
 ## Metadata
 
-- **Version:** 1.4 (routing to the evaluate half and the calculator added; method unchanged)
+- **Version:** 1.5 (1.4: routing to the evaluate half and the calculator added; 1.5: name a candidate item to stop, as a proposal, after one run left it to leadership)
 - **Last Updated:** 2026-11-06
 - **Author:** Workspace Delivery Skills
