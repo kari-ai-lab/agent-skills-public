@@ -1,11 +1,11 @@
 ---
 name: flow-effectiveness-and-anti-patterns
-description: "Use when delivery feels slow, a team is near full utilization, or a plan adds people, parallel work or handoffs: evaluates how well work flows using Little's Law, queueing (Kingman), the Theory of Constraints, batch size and cost of delay, Amdahl and Universal Scalability limits, Brooks, Conway and Goodhart, computes the numbers from an item export, and names the scenarios to avoid with the signal that shows each one."
+description: "Use when delivery feels slow, a team runs near full utilization, or a plan adds people, parallel work or handoffs: computes WIP, throughput and cycle time from a tracker export, checks the system is stable, names the constraint, and flags scenarios to avoid (hiring into late work, speeding a non-constraint, metric targets)."
 ---
 
 # Skill Name: Flow Effectiveness and Scenarios to Avoid
 
-> **Status: reference.** New (2026-11-06) and not yet tested against an unaided answer, so it is a reference file, not a run card. It is the evaluate half of a pair: this file judges how well work flows and what to avoid; `wip-limits-and-flow-protection.md` protects flow when a new initiative is proposed. They are split so neither grows too large. The open question for a test is whether the skill adds computed numbers, the evidence check and the "when the law does not apply" caveats beyond what a strong model already recites.
+> **Evidence.** First case `delivery-slowdown`, two runs against an unaided answer: +54.7 and +56.2, no regression, unaided 44 to 45 and skill 100. Independent edges in both runs: computing the figures from the export (the unaided answers worked from open-item counts and gave no average WIP or cycle time), labelling rules of thumb as such, naming all the aged items, saying the models are an analogy, and ending in at most three owned, measured actions; stating that the system is not stable before using Little's Law won in one run. The unaided models already reject hiring into a late project, name the review constraint and flag the bonus (Goodhart). Its pair is `wip-limits-and-flow-protection.md`.
 
 ## Objective
 

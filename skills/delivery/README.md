@@ -119,7 +119,7 @@ Pre-delivery upstream planning now lives in `.agents/skills/refinement/`.
   - Supplies the actual data behind the "leadership exception" mechanism `refinement/future-workstream-prioritization-wsjf-and-techniques.md` and `refinement/refinement-plan-realism-and-capacity-risk.md` already require but don't operationalize on their own.
 
 - `flow-effectiveness-and-anti-patterns.md`
-  - The evaluate half of the flow pair (reference file, not yet tested against an unaided answer). Judges how well work flows by pairing Little's Law with Kingman's queueing approximation, the Theory of Constraints, Reinertsen's batch-size and queue principles, Amdahl and the Universal Scalability Law, Brooks, Conway and Goodhart, and lists the scenarios to avoid with the signal that shows each one.
+  - The evaluate half of the flow pair (+54.7 and +56.2 against an unaided answer on its first case). Judges how well work flows by pairing Little's Law with Kingman's queueing approximation, the Theory of Constraints, Reinertsen's batch-size and queue principles, Amdahl and the Universal Scalability Law, Brooks, Conway and Goodhart, and lists the scenarios to avoid with the signal that shows each one.
   - Computes the figures from a tracker export with `tools/flow_metrics.py` (WIP, throughput, cycle-time percentiles, a stability flag, aging WIP, flow efficiency) rather than by eye, and hands a new-initiative proposal to `wip-limits-and-flow-protection.md`.
 
 ## Suggested Usage Flow

@@ -5,6 +5,8 @@ description: "Gives a PM, EM, or Delivery Lead the concrete, mathematical case f
 
 # Skill Name: WIP Limits & Initiative-Overload Protection
 
+> **Evidence.** First eval (the skill had existed since August without one), case `new-initiative`, two runs against an unaided answer: +48.1 and +51.9, no regression, unaided 43 to 48 and skill 91 to 100. Independent edges in both runs: caveating the Little's Law figure because epics in flight were rising, keeping WIP, throughput and cycle time in one unit (the unaided answers brought stories into the cross-check or the review measure), labelling the Weinberg productivity figures as a heuristic and quoting them as stated, and saying the figures are long-run averages and not delivery dates. Naming a specific epic that would stop was won once and missed once. The unaided models already reach 18 weeks, offer options and route through the existing exception policy. Its pair is `flow-effectiveness-and-anti-patterns.md`.
+
 ## 🎯 Objective
 
 Gives a PM, EM, or Delivery Lead the concrete, mathematical case for protecting a team's committed capacity when leadership proposes starting a new initiative before current work-in-progress (WIP) is finished — replacing "we're too busy" (easily overridden by seniority or urgency) with a Little's-Law-derived cycle-time impact and a named context-switching cost, so the decision to add WIP is made visibly and deliberately by whoever has the authority to make it, not silently absorbed by the team.
