@@ -120,7 +120,7 @@ Pre-delivery upstream planning now lives in `.agents/skills/refinement/`.
 
 - `flow-effectiveness-and-anti-patterns.md`
   - The evaluate half of the flow pair (+54.7 and +56.2 against an unaided answer on its first case). Judges how well work flows by pairing Little's Law with Kingman's queueing approximation, the Theory of Constraints, Reinertsen's batch-size and queue principles, Amdahl and the Universal Scalability Law, Brooks, Conway and Goodhart, and lists the scenarios to avoid with the signal that shows each one.
-  - Computes the figures from a tracker export with `tools/flow_metrics.py` (WIP, throughput, cycle-time percentiles, a stability flag, aging WIP, flow efficiency) rather than by eye, and hands a new-initiative proposal to `wip-limits-and-flow-protection.md`.
+  - Computes the figures from a tracker export with `tools/flow_metrics.py` (WIP, throughput, cycle-time percentiles, a stability flag, aging WIP, flow efficiency, a Monte Carlo forecast and process-behaviour limits) rather than by eye, and adds further lenses (aging work, probabilistic forecasting, signal versus noise, flow efficiency, value stream maps, the Theory of Constraints steps, DORA and SPACE), and hands a new-initiative proposal to `wip-limits-and-flow-protection.md`.
 
 ## Suggested Usage Flow
 

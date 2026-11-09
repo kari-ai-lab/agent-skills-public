@@ -39,6 +39,39 @@ class Calculators(unittest.TestCase):
         self.assertGreater(fm.usl(0.05, 0.001, peak), fm.usl(0.05, 0.001, peak * 3))
 
 
+class Lenses(unittest.TestCase):
+    def test_forecast_constant_history_is_exact(self):
+        res = fm.forecast([4, 4, 4], items=18, trials=200, seed=1)
+        self.assertEqual(res, {50: 5, 85: 5, 95: 5})
+        self.assertEqual(fm.forecast([4, 4, 4], weeks=6, trials=200, seed=1), {50: 24, 85: 24, 95: 24})
+
+    def test_forecast_is_ordered_and_reproducible(self):
+        a = fm.forecast([2, 5, 3, 7, 4], items=30, trials=2000, seed=7)
+        self.assertEqual(a, fm.forecast([2, 5, 3, 7, 4], items=30, trials=2000, seed=7))
+        self.assertLessEqual(a[50], a[85])
+        self.assertLessEqual(a[85], a[95])
+        b = fm.forecast([2, 5, 3, 7, 4], weeks=6, trials=2000, seed=7)
+        self.assertGreaterEqual(b[50], b[85])
+        self.assertGreaterEqual(b[85], b[95])
+
+    def test_forecast_rejects_empty_history(self):
+        with self.assertRaises(SystemExit):
+            fm.forecast([0, 0], items=5)
+
+    def test_xmr_limits_and_signal(self):
+        steady = fm.xmr([5, 4, 6, 3, 5, 4, 7, 4, 5, 3, 6, 2])
+        self.assertAlmostEqual(steady["mean"], 4.5)
+        self.assertAlmostEqual(steady["avg_moving_range"], 25 / 11, places=2)
+        self.assertAlmostEqual(steady["upper_limit"], 4.5 + 2.66 * 25 / 11, places=1)
+        self.assertEqual(steady["outside_limits"], [])
+        spike = fm.xmr([5, 4, 5, 4, 5, 4, 5, 4, 5, 20])
+        self.assertEqual(spike["outside_limits"], [(10, 20.0)])
+
+    def test_weekly_throughput_reported(self):
+        m = fm.metrics(steady(), weeks=4, asof=ASOF)
+        self.assertEqual(m["weekly_throughput"], [7, 7, 7, 7])
+
+
 class Metrics(unittest.TestCase):
     def test_steady_state_satisfies_littles_law(self):
         m = fm.metrics(steady(), weeks=4, asof=ASOF)

@@ -5,7 +5,7 @@ description: "Use when delivery feels slow, a team runs near full utilization, o
 
 # Skill Name: Flow Effectiveness and Scenarios to Avoid
 
-> **Evidence.** First case `delivery-slowdown`, two runs against an unaided answer: +54.7 and +56.2, no regression, unaided 44 to 45 and skill 100. Independent edges in both runs: computing the figures from the export (the unaided answers worked from open-item counts and gave no average WIP or cycle time), labelling rules of thumb as such, naming all the aged items, saying the models are an analogy, and ending in at most three owned, measured actions; stating that the system is not stable before using Little's Law won in one run. The unaided models already reject hiring into a late project, name the review constraint and flag the bonus (Goodhart). Its pair is `wip-limits-and-flow-protection.md`.
+> **Evidence.** First case `delivery-slowdown`, two runs against an unaided answer: +54.7 and +56.2, no regression, unaided 44 to 45 and skill 100. Independent edges in both runs: computing the figures from the export (the unaided answers worked from open-item counts and gave no average WIP or cycle time), labelling rules of thumb as such, naming all the aged items, saying the models are an analogy, and ending in at most three owned, measured actions; stating that the system is not stable before using Little's Law won in one run. The unaided models already reject hiring into a late project, name the review constraint and flag the bonus (Goodhart). v1.2 (2026-11-06) adds seven further lenses and the `forecast` and `xmr` calculator commands. A fresh case (`forecast-noise`) exercising two of them, two runs: +30.2 and +24.5, no regression, unaided 70 and 76; the unaided models also ran a resampling forecast and a standard-deviation check when they had Python, so the edge there came from stating what was not assessed, labelling findings, caveating the model and ending in three owned actions. A re-run of the first case on v1.2: +64.1 and +46.9, no regression. Flow efficiency, value stream mapping, the Theory of Constraints steps and DORA/SPACE are added without a test of their own. Its pair is `wip-limits-and-flow-protection.md`.
 
 ## Objective
 
@@ -34,9 +34,11 @@ tools/flow_metrics.py metrics items.csv --weeks 8     # id,start,finish[,touch_d
 tools/flow_metrics.py kingman --rho 0.9 --ca 1 --cs 1  # queueing wait factor
 tools/flow_metrics.py amdahl  --p 0.9 --n 10           # speed-up and ceiling
 tools/flow_metrics.py usl     --alpha 0.05 --beta 0.001 --n 40
+tools/flow_metrics.py forecast --history 5,4,6,3 --items 18   # or --weeks 4; Monte Carlo
+tools/flow_metrics.py xmr     --values 5,4,6,3,5,4,7,4,5,3,6,2  # natural process limits
 ```
 
-`metrics` reports average WIP, weekly throughput, cycle-time percentiles (50, 85, 95), the Little's Law figures, a stability flag (a 20% change in WIP, or in starts against finishes, is called "trending"; a heuristic, not a statistical test), items in progress older than the 85th-percentile cycle time, and flow efficiency when a `touch_days` column is present. Days are counted inclusively. When the flag says trending, say so first and treat the Little's Law figures as understating delay. The Kingman, Amdahl and USL commands give the same figures as the tables below; their inputs (variability, parallel fraction, contention and crosstalk) usually have to be assumed, and the output must say they were.
+`metrics` reports average WIP, weekly throughput, cycle-time percentiles (50, 85, 95), the Little's Law figures, a stability flag (a 20% change in WIP, or in starts against finishes, is called "trending"; a heuristic, not a statistical test), items in progress older than the 85th-percentile cycle time, and flow efficiency when a `touch_days` column is present. Days are counted inclusively. When the flag says trending, say so first and treat the Little's Law figures as understating delay. `metrics` also prints the weekly throughput series, which feeds `forecast` and `xmr`. The Kingman, Amdahl and USL commands give the same figures as the tables below; their inputs (variability, parallel fraction, contention and crosstalk) usually have to be assumed, and the output must say they were.
 
 ## The Lenses
 
@@ -76,6 +78,20 @@ tools/flow_metrics.py usl     --alpha 0.05 --beta 0.001 --n 40
 | Using flow metrics as targets | Cycle time, velocity or points tied to reviews or bonuses | People optimize the number (Goodhart): fragment stories, skip tests | Use metrics to learn; pair them with quality and outcome measures |
 | Applying the formula without checking its conditions | Little's Law on a growing backlog; Kingman with no data on variability | A wrong number stated with confidence | State the assumptions; mark the result as an estimate |
 
+## Further Lenses
+
+Use these when the question calls for them; they add to the nine lenses above rather than replace them.
+
+| Lens | Use when | What it adds | How |
+|---|---|---|---|
+| Aging work and percentile cycle times | You must say which in-progress items are at risk, or how long is "normal" | Percentiles, not the average, say how long items usually take; an item older than the 85th percentile is out of the ordinary | `metrics` lists them. Quote p50, p85 and p95. Using the 85th for commitments is a practitioner convention reported second-hand, not a law |
+| Probabilistic forecast | "Will we finish N items by date X?" or "When will N be done?" | A range with confidence levels, instead of one date from the average | `forecast --history ... --items N` or `--weeks W`. It resamples past weekly throughput, so state that it assumes the future resembles the past and that item sizes and scope hold steady |
+| Signal versus noise | One bad week, or a metric moved, and someone wants to react | Process behaviour (XmR) limits show whether a point is ordinary variation | `xmr --values ...`. Inside the limits is routine variation: do not explain it or punish it. Outside: look for a cause. Only limit breaches are flagged, not the other run rules |
+| Flow efficiency | Work "waits most of its life" | Active (touch) time as a share of total elapsed time | Add `touch_days` to the export. Reported typical values run from low single digits to about a quarter and differ by source, so compare with your own history, not a benchmark |
+| Value stream map | Handoffs or silos are suspected (Conway) | A current-state map showing process time and wait at each step, then a future-state map | Draw the steps with their process time and wait; the stage-wait table in the input is a start |
+| Theory of Constraints, five steps | The constraint has been found | A procedure: identify it, exploit it, subordinate everything else to it, elevate it, repeat | Go in order; do not elevate (for example, hire) before exploiting what exists |
+| Delivery-performance and productivity measures | Cycle time or output is, or may become, a target | Speed paired with stability and human factors: the counter to Goodhart | DORA's four keys pair speed (deployment frequency, lead time for changes) with stability (change failure rate, time to restore service). SPACE names five dimensions (satisfaction and well-being, performance, activity, communication and collaboration, efficiency and flow) so no single number stands for productivity. Report at team level, not per person |
+
 ## Core Prompt / Instructions
 
 ```text
@@ -88,9 +104,12 @@ You are evaluating how well work flows through a delivery process.
 3. CONSTRAINT: which stage has the longest queue and highest utilization?
 4. SCALING: do plans add people, parallel streams or handoffs? Check Amdahl,
    USL, Brooks and Conway against the plan.
-5. MEASUREMENT: are any flow metrics used as targets?
-6. SCENARIOS: list which scenarios to avoid are present, with the signal.
-7. REPORT: findings with evidence, what is not assessed, at most three actions,
+5. MEASUREMENT: are any flow metrics used as targets? Before explaining a
+   recent change, check whether it is outside the natural process limits.
+6. FORECAST: if the question is whether or when, give a range with confidence
+   levels from the throughput history, not one date from the average.
+7. SCENARIOS: list which scenarios to avoid are present, with the signal.
+8. REPORT: findings with evidence, what is not assessed, at most three actions,
    each with an owner and a measure. State that these models are analogies.
 Do not state a number the inputs do not support.
 ```
@@ -110,6 +129,8 @@ Do not state a number the inputs do not support.
 | Scaling (people, parallel work) | [ ] | [ ] | [ ] |
 | Handoffs | [ ] | [ ] | [ ] |
 | Measurement | [ ] | [ ] | [ ] |
+| Signal versus noise (if a recent change prompted the question) | [ ] | [ ] | [ ] |
+| Forecast (if asked): range and confidence levels, assumptions | [ ] | [ ] | [ ] |
 
 **Scenarios to avoid that are present:** [scenario — signal in the input]
 **Actions (at most three):** [action — owner — date — measure]
@@ -126,6 +147,8 @@ Do not state a number the inputs do not support.
 - [ ] The result says the models are an analogy for software teams.
 - [ ] At most three actions, each owned and measurable.
 - [ ] Where an export was available, the figures come from the calculator, not from estimation by eye.
+- [ ] A recent dip or spike was checked against the natural process limits before anyone explained or acted on it.
+- [ ] A "will we make it" question got a range with confidence levels and its assumptions, not a single date.
 
 ## Sources
 
@@ -137,6 +160,14 @@ Do not state a number the inputs do not support.
 - Neil Gunther's Universal Scalability Law: "A General Theory of Computational Scalability Based on Rational Functions", [arXiv:0808.1431](https://arxiv.org/abs/0808.1431) (the paper also uses σ and κ for α and β). Developed for computer systems, so its use for teams is an analogy.
 - Frederick Brooks, *The Mythical Man-Month* (Addison-Wesley, 1975): Brooks's Law, with two causes (onboarding, and communication channels growing with the square of the number of people); Brooks himself called it an "outrageous oversimplification". Melvin Conway, "How Do Committees Invent?", *Datamation* 14(4), April 1968, pp. 28-31; Brooks gave it the name "Conway's Law".
 - Goodhart's Law: the wording "when a measure becomes a target, it ceases to be a good measure" is Marilyn Strathern's 1997 restatement (which she credited to Keith Hoskin), not Charles Goodhart's own 1975 words; secondary sources only, primary text not checked.
+- Further lenses (verified 2026-11-06 from secondary sources unless stated):
+  - Flow efficiency: Modig and Åhlström, *This Is Lean*, define it as value-adding time over total lead time (second-hand); sources give typical knowledge-work values anywhere from 1-5% to 15-25%, so no benchmark is quoted.
+  - Daniel Vacanti, *Actionable Agile Metrics for Predictability* (first edition 2014 or 2015, sources differ; [review](https://www.thoughtworks.com/en-gb/insights/blog/book-review-actionable-agile-metrics-predictability)) has chapters on percentile lines and the work item aging chart. His *When Will It Be Done?* is the usual reference for Monte Carlo forecasting from throughput history; see the [ProKanban forecasting guide](https://prokanban.org/forecasting-pocket-guide). The 85th-percentile commitment advice is second-hand.
+  - Process behaviour (XmR) charts: natural process limits are the mean plus or minus 2.66 times the average moving range (2.66 is 3 / 1.128); see [Shewhart individuals control chart](https://en.wikipedia.org/wiki/Shewhart_individuals_control_chart). Wheeler's *Understanding Variation* is the usual book reference and was not checked here. The moving-range limit constant is 3.267 (some sources print 3.268 or 3.269 from rounding).
+  - DORA's four key metrics are described in secondary summaries such as the [GitLab documentation](https://archives.docs.gitlab.com/16.11/ee/user/analytics/dora_metrics.html); the attribution to *Accelerate* (Forsgren, Humble, Kim, 2018) was not checked, and newer DORA reports may add measures, which was not verified.
+  - SPACE: Forsgren, Storey, Maddila, Zimmermann, Houck and Butler, "The SPACE of Developer Productivity", *ACM Queue* 19(1), 2021, pp. 20-48 ([article](https://queue.acm.org/detail.cfm?id=3454124)).
+  - Value stream mapping: Rother and Shook, *Learning to See* (Lean Enterprise Institute, 1999; one source says 1998): current-state and future-state maps, process time against lead time. Lead-time percentages seen in sources were not reliable and are not quoted.
+  - Theory of Constraints five focusing steps: [Wikipedia](https://en.wikipedia.org/wiki/Theory_of_constraints) and practitioner summaries; sources word the steps slightly differently.
 - Verification, 2026-11-06: Little, Kingman, Gunther, Amdahl and Conway were confirmed against catalogue or reference records; Goldratt, Reinertsen and Brooks were confirmed from secondary sources and not from the books; the Strathern and Hoskin attribution for the Goodhart wording is from secondary sources only.
 
 ## Routing
@@ -148,6 +179,6 @@ Do not state a number the inputs do not support.
 
 ## Metadata
 
-- **Version:** 1.1 (calculator added; evaluate half of the flow pair)
+- **Version:** 1.2 (1.1: calculator added; 1.2: further lenses, a forecast and an XmR command; evaluate half of the flow pair)
 - **Last Updated:** 2026-11-06
 - **Author:** Workspace Delivery Skills
